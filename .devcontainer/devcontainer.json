@@ -1,7 +1,13 @@
 {
-  "name": "Java 24 Dev Container",
-  "image": "azul/zulu-openjdk:24",
-  "features": {},
+  "name": "devcontainer with java 24, maven 3.9.6 and git",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/sdkman:1": {
+      "install: java": "24-open",
+      "install: maven": "3.9.6"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": ["vscjava.vscode-java-pack"]
