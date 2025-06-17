@@ -1,5 +1,5 @@
 {
-  "name": "Java 24 + Maven 3.9.6 + Git (installs Java version 21, update manually to 24 via [sdk install java 24-open])",
+  "name": "Java 24 + Maven 3.9.6 + Git (installs Java version 21, update manually via [sdk install java 24-open])",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
