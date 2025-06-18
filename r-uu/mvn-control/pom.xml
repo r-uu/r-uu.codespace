@@ -8,7 +8,8 @@
 
   <groupId>r-uu</groupId>
   <artifactId>r-uu-mvn-control</artifactId>
-  <version>${r-uu-mvn-control-version}</version>
+  <!-- <version>${r-uu-mvn-control-version}</version> -->
+  <version>0.0.1</version>
 
   <name>${project.artifactId}</name>
 
@@ -16,9 +17,9 @@
     <groupId>r-uu</groupId>
     <artifactId>r-uu-mvn-config</artifactId>
     <!-- TODO is there a way to read parent version from property (file) -->
-    <version>0.0.1</version>
     <!-- <version>${r-uu-mvn-config-version}</version> -->
-      <relativePath>../mvn-config</relativePath>
+    <version>0.0.1</version>
+    <relativePath>../mvn-config</relativePath>
   </parent>
 
   <properties>
