@@ -1,12 +1,12 @@
-name: build mvn-configure with maven triggered manually
+name: build module r-uu/mvn-config with maven triggered manually
 
 on:
   workflow_dispatch:
     inputs:
       module:
-        description: 'module to build'
+        description: 'module r-uu/mvn-config'
         required: true
-        default: 'r-uu/mvn-configure'
+        default: 'r-uu/mvn-config'
       skipTests:
         description: 'skip tests?'
         required: false
