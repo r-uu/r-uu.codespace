@@ -18,7 +18,7 @@
     <!-- TODO is there a way to read parent version from property (file) -->
     <version>0.0.1</version>
     <!-- <version>${r-uu-mvn-config-version}</version> -->
-    <relativePath>../mvn-config</relativePath>
+      <relativePath>../mvn-config</relativePath>
   </parent>
 
   <properties>
