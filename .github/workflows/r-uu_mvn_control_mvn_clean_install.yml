@@ -1,4 +1,4 @@
-name: build mvn-control with maven triggered by hand
+name: build mvn-control with maven triggered manually
 
 on:
   workflow_dispatch:
