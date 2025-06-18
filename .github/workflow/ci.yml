@@ -1,6 +1,8 @@
 name: Build mvn-control with Maven
 
 on:
+  commit:
+    branches: [ main ]
   push:
     branches: [ main ]
   pull_request:
