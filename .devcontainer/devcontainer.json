@@ -10,6 +10,7 @@
     },
     "ghcr.io/devcontainers/features/git:1": {}
   },
+  "postCreateCommand": "sdk default java 24-open",
   "customizations": {
     "vscode": {
       "extensions": [
