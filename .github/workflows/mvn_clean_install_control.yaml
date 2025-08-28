@@ -1,5 +1,21 @@
 name: build maven module r-uu/mvn-control manually or on push or pull request
 
+on:
+  workflow_dispatch:   # runs on manual trigger
+    inputs:
+      module:
+        description: 'module r-uu/mvn-control'
+        required: true
+        default: 'r-uu/mvn-control'
+      skipTests:
+        description: 'skip tests?'
+        required: false
+        default: 'false'
+  push:
+    branches: ["**"]   # runs on every push to any branch
+  pull_request:        # runs on every PR to any branch
+    branches: ["**"]
+
 jobs:
   build:
     runs-on: ubuntu-latest
