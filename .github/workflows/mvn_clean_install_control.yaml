@@ -1,0 +1,29 @@
+name: build maven module r-uu/mvn-control manually or on push or pull request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: determine module path
+        id: module_path
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "path=${{ inputs.module }}" >> $GITHUB_OUTPUT
+          else
+            echo "path=." >> $GITHUB_OUTPUT
+          fi
+      - name: set up java 24
+        uses: actions/setup-java@v4
+        with:
+          java-version: '24'
+          distribution: 'graalvm'
+      - name: build with maven
+        working-directory: ${{ steps.module_path.outputs.path }}
+        run: |
+          # Use an if-condition to check for the event type before using `inputs`
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.skipTests }}" == "true" ]]; then
+            mvn clean install -DskipTests
+          else
+            mvn clean install
+          fi
