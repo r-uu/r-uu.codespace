@@ -5,22 +5,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>r-uu-mvn-control</artifactId>
+  <artifactId>r-uu.codespace.mvn-control</artifactId>
   <packaging>pom</packaging>
-	<description>module that controls the sub-modules of project r-uu</description>
-
-  <modules>
-    <module>../lib</module>
-  </modules>
+  <description>module that controls the ruu.codespace-sub-modules of project r-uu</description>
+  <name>${project.artifactId}</name>
 
   <parent>
     <groupId>r-uu</groupId>
-    <artifactId>r-uu-mvn-config</artifactId>
+    <artifactId>r-uu.codespace.mvn-config</artifactId>
     <!-- TODO is there a way to read parent version from property (file) -->
     <!-- <version>${r-uu-mvn-config-version}</version> -->
     <version>0.0.1</version>
     <relativePath>../mvn-config</relativePath>
   </parent>
+
+  <modules>
+    <module>../app</module>
+    <module>../lib</module>
+  </modules>
 
   <properties>
     <!-- <r-uu-mvn-config-version>0.0.1</r-uu-mvn-config-version> -->

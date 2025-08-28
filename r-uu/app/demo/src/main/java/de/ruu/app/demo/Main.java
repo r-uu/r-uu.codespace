@@ -1,4 +1,4 @@
-package r-uu;
+package de.ruu.app.demo;
 
 public class Main {
     public static void main(String[] args) {

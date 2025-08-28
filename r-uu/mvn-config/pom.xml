@@ -5,49 +5,48 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>r-uu</groupId>
-	<artifactId>r-uu-mvn-config</artifactId>
+	<artifactId>r-uu.codespace.mvn-config</artifactId>
 	<!-- <version>${r-uu-mvn-config-version}</version> -->
 	<version>0.0.1</version>
-  <packaging>pom</packaging>
+	<packaging>pom</packaging>
+	<description>root module for ruu.codespace artifacts of group r-uu</description>
+	<name>${project.artifactId}</name>
 
-  <name>${project.artifactId}</name>
+	<url>https://github.com/r-uu/codespace</url>
 
-  <url>https://github.com/r-uu/codespace</url>
-
-  <properties>
-    <!-- use "." in normal property names -->
-    <argLine>-Duser.language=en</argLine>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
+	<properties>
+		<!-- use "." in normal property names -->
+		<argLine>-Duser.language=en</argLine>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>24</java.version>
 		<javafx.version>24</javafx.version>
-    <!-- plugin versions, use "-" from artifact names in version property names -->
+		<!-- plugin versions, use "-" from artifact names in version property names -->
 		<hibernate-jpamodelgen-version>6.4.9.Final</hibernate-jpamodelgen-version>
 		<junit-jupiter-version>5.13.1</junit-jupiter-version>
-    <maven-clean-plugin-version>3.1.0</maven-clean-plugin-version>
+		<maven-clean-plugin-version>3.1.0</maven-clean-plugin-version>
 		<maven-compiler-plugin-version>3.13.0</maven-compiler-plugin-version>
 		<maven-deploy-plugin-version>2.8.2</maven-deploy-plugin-version>
 		<maven-install-plugin-version>2.5.2</maven-install-plugin-version>
 		<maven-jar-plugin-version>3.0.2</maven-jar-plugin-version>
 		<maven-project-info-reports-plugin-version>3.0.0</maven-project-info-reports-plugin-version>
-    <maven-resource-plugin-version>3.3.1</maven-resource-plugin-version>
+		<maven-resource-plugin-version>3.3.1</maven-resource-plugin-version>
 		<maven-site-plugin-version>3.7.1</maven-site-plugin-version>
 		<maven-surefire-plugin-version>3.5.0</maven-surefire-plugin-version>
 		<maven-dependency-plugin-version>3.6.1</maven-dependency-plugin-version>
 		<org-mapstruct-version>1.6.3</org-mapstruct-version>
 		<org-projectlombok-version>1.18.34</org-projectlombok-version>
 		<properties-maven-plugin-version>1.2.1</properties-maven-plugin-version>
-    <r-uu-mvn-config-version>0.0.1</r-uu-mvn-config-version>
-    <r-uu-mvn-control-version>0.0.1</r-uu-mvn-control-version>
-  </properties>
+		<r-uu-mvn-config-version>0.0.1</r-uu-mvn-config-version>
+		<r-uu-mvn-control-version>0.0.1</r-uu-mvn-control-version>
+	</properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <!-- external dependencies -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- external dependencies -->
 			<dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
@@ -55,69 +54,69 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-    </dependencies>
-  </dependencyManagement>
+		</dependencies>
+	</dependencyManagement>
 
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>${maven-clean-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>${maven-deploy-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>${maven-install-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>${maven-jar-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${maven-project-info-reports-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>${maven-resource-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>${maven-surefire-plugin-version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${maven-site-plugin-version}</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>properties-maven-plugin</artifactId>
-        <version>${properties-maven-plugin-version}</version>
-        <executions>
-          <execution>
-            <phase>initialize</phase>
-            <goals>
-              <goal>read-project-properties</goal>
-            </goals>
-            <configuration>
-              <files>
-                <file>pom.properties</file>
-              </files>
-            </configuration>
-          </execution>
-        </executions>        
-      </plugin>
-    </plugins>
-  </build>
+	<build>
+		<pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven-clean-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${maven-install-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>${maven-project-info-reports-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resource-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin-version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>${properties-maven-plugin-version}</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>pom.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
