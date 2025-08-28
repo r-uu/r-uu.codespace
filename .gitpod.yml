@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Verify GraalVM installation
+    init: |
+      echo "=== Java version ==="
+      java -version
+      echo "=== Native Image availability ==="
+      native-image --version || echo "native-image not installed"
