@@ -17,7 +17,7 @@
 
 	<properties>
 		<!-- use "." in normal property names -->
-		<argLine>-Duser.language=en</argLine>
+		<argLine>${argLine}</argLine>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
