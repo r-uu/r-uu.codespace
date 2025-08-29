@@ -122,6 +122,31 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app-demo</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.lib</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.lib-util</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.mvn-config</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.mvn-control</artifactId>
 				<version>0.0.1</version>
 			</dependency>
