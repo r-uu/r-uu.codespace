@@ -1,7 +1,7 @@
 name: build maven modules manually or on push or pull request
 
 on:
-  workflow_dispatch:   # Manual trigger
+  workflow_dispatch:   # run workflow on manual trigger
     inputs:
       module:
         description: 'Module path to build (e.g. r-uu/mvn-control)'
@@ -11,9 +11,9 @@ on:
         description: 'Skip tests?'
         required: false
         default: 'false'
-  push:                # Run workflow on any push
+  push:                # run workflow on any push
     branches: ["**"]
-  pull_request:        # Run workflow on any pull request
+  pull_request:        # run workflow on any pull request
     branches: ["**"]
 
 jobs:

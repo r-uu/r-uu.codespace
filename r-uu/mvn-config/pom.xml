@@ -6,9 +6,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- ################################################## -->
-	<!-- maven project coordinates (cannot be externalized) -->
-	<!-- ################################################## -->
+	<!-- ######################### -->
+	<!-- maven project coordinates -->
+	<!-- ######################### -->
 
 	<groupId>r-uu</groupId>
 	<artifactId>r-uu.codespace.mvn-config</artifactId>
@@ -18,19 +18,24 @@
 	<description>root module for ruu.codespace artifacts of group r-uu</description>
 	<url>https://github.com/r-uu/codespace</url>
 
-	<!-- ###################################### -->
-	<!-- properties are externalized to pom.env -->
-	<!-- ###################################### -->
+	<!-- ########## -->
+	<!-- properties -->
+	<!-- ########## -->
 
-	<!-- only non-externalizable properties go here -->
 	<properties>
-		<!-- project.build.sourceEncoding is configured in pom.env -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<plugin.surefire.argLine>-Duser.language=en</plugin.surefire.argLine>
+
 		<!-- java.version is configured in .m2/toolchains.xml and maven.compiler.plugin (see below) -->
-		<!-- maven.compiler.* values are derived from java.version (see above) -->
+
+		<!-- remember to keep dep.* properties for dependencies in alphabetical order by dep.<artifact-id>.<version> -->
 		<dep.hamcrest.version>3.0</dep.hamcrest.version>
 		<dep.junit.version>5.13.4</dep.junit.version>
+		<dep.org.projectlombok.version>1.18.38</dep.org.projectlombok.version>
+		<dep.slf4j.version>2.0.9</dep.slf4j.version>
+		<dep.r-uu.codespace.mvn.config.version>0.0.1</dep.r-uu.codespace.mvn.config.version>
+		<dep.r-uu.codespace.mvn.control.version>0.0.1</dep.r-uu.codespace.mvn.control.version>
 	</properties>
 
 	<build>
@@ -95,7 +100,7 @@
 	</build>
 
 	<dependencyManagement>
-		<!-- remember to keep dependencies in alphabetical order by artifactId-->
+		<!-- remember to keep dependencies in alphabetical order by <artifactId> -->
 		<dependencies>
 			<dependency>
 				<groupId>org.hamcrest</groupId>
@@ -107,8 +112,18 @@
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter</artifactId>
 				<version>${dep.junit.version}</version>
-				<!-- <version>5.13.4</version> -->
 				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${dep.org.projectlombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.mvn-control</artifactId>
+				<version>0.0.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

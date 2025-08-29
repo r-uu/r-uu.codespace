@@ -1,4 +1,4 @@
-package de.ruu.codespace.app.demo;
+package de.ruu.app.demo;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

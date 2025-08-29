@@ -10,14 +10,15 @@
   <description>root module for possibly reusable library artifacts of group r-uu</description>
   <name>${project.artifactId}</name>
 
-  <modules>
-  </modules>
-
   <parent>
     <groupId>r-uu</groupId>
     <artifactId>r-uu.codespace.mvn-control</artifactId>
     <version>0.0.1</version>
     <relativePath>../mvn-control</relativePath>
   </parent>
+
+	<modules>
+		<module>util</module>
+	</modules>
 
 </project>
