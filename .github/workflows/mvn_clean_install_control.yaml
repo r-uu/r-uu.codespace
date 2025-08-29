@@ -1,10 +1,10 @@
-name: build maven module r-uu/mvn-control manually or on push or pull request
+name: build maven modules manually or on push or pull request
 
 on:
-  workflow_dispatch:   # runs on manual trigger
+  workflow_dispatch:   # manual trigger
     inputs:
       module:
-        description: 'module r-uu/mvn-control'
+        description: 'module path to build (e.g. r-uu/mvn-control)'
         required: true
         default: 'r-uu/mvn-control'
       skipTests:
@@ -12,32 +12,58 @@ on:
         required: false
         default: 'false'
   push:
-    branches: ["**"]   # runs on every push to any branch
-  pull_request:        # runs on every PR to any branch
+    branches: ["**"]
+  pull_request:
     branches: ["**"]
 
 jobs:
-  build:
+  detect-modules:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
-      - name: determine module path
-        id: module_path
+        with:
+          fetch-depth: 0   # need full history for git diff
+
+      - id: set-matrix
         run: |
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "path=${{ inputs.module }}" >> $GITHUB_OUTPUT
+            echo "matrix=[\"${{ inputs.module }}\"]" >> $GITHUB_OUTPUT
           else
-            echo "path=." >> $GITHUB_OUTPUT
+            BASE_REF="${{ github.event.pull_request.base.sha || github.event.before }}"
+            HEAD_REF="${{ github.sha }}"
+            echo "Comparing $BASE_REF..$HEAD_REF"
+
+            CHANGED=$(git diff --name-only "$BASE_REF" "$HEAD_REF" | cut -d/ -f1-2 | sort -u | grep '^r-uu/' || true)
+
+            if [[ -z "$CHANGED" ]]; then
+              echo "No changed r-uu modules found, defaulting to r-uu/mvn-control"
+              echo 'matrix=["r-uu/mvn-control"]' >> $GITHUB_OUTPUT
+            else
+              JSON=$(printf '%s\n' $CHANGED | jq -R . | jq -s .)
+              echo "matrix=$JSON" >> $GITHUB_OUTPUT
+            fi
           fi
+
+  build:
+    needs: detect-modules
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: ${{ fromJSON(needs.detect-modules.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
       - name: set up java 24
         uses: actions/setup-java@v4
         with:
           java-version: '24'
           distribution: 'graalvm'
+
       - name: build with maven
-        working-directory: ${{ steps.module_path.outputs.path }}
+        working-directory: ${{ matrix.module }}
         run: |
-          # Use an if-condition to check for the event type before using `inputs`
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.skipTests }}" == "true" ]]; then
             mvn clean install -DskipTests
           else
