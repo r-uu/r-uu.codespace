@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<toolchains>
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <version>24</version>
+      <vendor>oracle</vendor>
+    </provides>
+    <configuration>
+      <!-- for gitpod  -->
+      <!-- <jdkHome>/home/gitpod/.sdkman/candidates/java/current/bin/java</jdkHome> -->
+      <!-- for windows -->
+      <jdkHome>/software/develop/java/jdk</jdkHome>
+    </configuration>
+  </toolchain>
+</toolchains>
