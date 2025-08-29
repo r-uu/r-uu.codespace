@@ -1,19 +1,19 @@
 name: build maven modules manually or on push or pull request
 
 on:
-  workflow_dispatch:   # manual trigger
+  workflow_dispatch:   # Manual trigger
     inputs:
       module:
-        description: 'module path to build (e.g. r-uu/mvn-control)'
+        description: 'Module path to build (e.g. r-uu/mvn-control)'
         required: true
         default: 'r-uu/mvn-control'
       skipTests:
-        description: 'skip tests?'
+        description: 'Skip tests?'
         required: false
         default: 'false'
-  push:
+  push:                # Run workflow on any push
     branches: ["**"]
-  pull_request:
+  pull_request:        # Run workflow on any pull request
     branches: ["**"]
 
 jobs:
@@ -24,25 +24,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # need full history for git diff
+          fetch-depth: 0   # Full history needed for git diff
 
       - id: set-matrix
         run: |
+          # Case 1: Workflow triggered manually (workflow_dispatch)
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "matrix=[\"${{ inputs.module }}\"]" >> $GITHUB_OUTPUT
+            # Directly set matrix to the provided input
+            echo "matrix=[\"${{ inputs.module }}\"]" >> "$GITHUB_OUTPUT"
           else
+            # Case 2: Workflow triggered by push or pull_request
             BASE_REF="${{ github.event.pull_request.base.sha || github.event.before }}"
             HEAD_REF="${{ github.sha }}"
             echo "Comparing $BASE_REF..$HEAD_REF"
 
+            # Detect changed modules under r-uu/
             CHANGED=$(git diff --name-only "$BASE_REF" "$HEAD_REF" | cut -d/ -f1-2 | sort -u | grep '^r-uu/' || true)
 
             if [[ -z "$CHANGED" ]]; then
+              # No relevant changes → fallback to default module
               echo "No changed r-uu modules found, defaulting to r-uu/mvn-control"
-              echo 'matrix=["r-uu/mvn-control"]' >> $GITHUB_OUTPUT
+              echo 'matrix=["r-uu/mvn-control"]' >> "$GITHUB_OUTPUT"
             else
-              JSON=$(printf '%s\n' $CHANGED | jq -R . | jq -s .)
-              echo "matrix=$JSON" >> $GITHUB_OUTPUT
+              # Convert changed paths into a compact JSON array (for matrix)
+              JSON=$(printf '%s\n' $CHANGED | jq -R . | jq -s -c .)
+              echo "matrix=$JSON" >> "$GITHUB_OUTPUT"
             fi
           fi
 
@@ -64,6 +70,7 @@ jobs:
       - name: build with maven
         working-directory: ${{ matrix.module }}
         run: |
+          # Skip tests only if triggered manually AND skipTests input is "true"
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.skipTests }}" == "true" ]]; then
             mvn clean install -DskipTests
           else
