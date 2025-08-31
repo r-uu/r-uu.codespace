@@ -7,7 +7,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-08-31T16:05:14+0000",
+    date = "2025-08-31T16:21:38+0000",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (GraalVM Community)"
 )
 public class Map_Task_FXBean_BeanImpl implements Map_Task_FXBean_Bean {
