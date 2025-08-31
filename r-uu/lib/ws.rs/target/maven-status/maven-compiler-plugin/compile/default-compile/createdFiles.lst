@@ -1,5 +1,5 @@
-de/ruu/lib/ws/rs/ExceptionDTO.class
-de/ruu/lib/ws/rs/filter/logging/ContainerLoggingFilter.class
-de/ruu/lib/ws/rs/filter/logging/ClientLoggingFilter.class
-de/ruu/lib/ws/rs/RestClientCallException.class
-de/ruu/lib/ws/rs/filter/logging/Util.class
+de\ruu\lib\ws\rs\filter\logging\Util.class
+de\ruu\lib\ws\rs\RestClientCallException.class
+de\ruu\lib\ws\rs\ExceptionDTO.class
+de\ruu\lib\ws\rs\filter\logging\ClientLoggingFilter.class
+de\ruu\lib\ws\rs\filter\logging\ContainerLoggingFilter.class

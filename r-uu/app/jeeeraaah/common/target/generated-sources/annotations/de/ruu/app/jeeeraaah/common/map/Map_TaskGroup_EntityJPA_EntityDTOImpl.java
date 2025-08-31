@@ -7,8 +7,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-08-31T16:05:13+0000",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (GraalVM Community)"
+    date = "2025-08-31T18:27:54+0200",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 public class Map_TaskGroup_EntityJPA_EntityDTOImpl implements Map_TaskGroup_EntityJPA_EntityDTO {
 

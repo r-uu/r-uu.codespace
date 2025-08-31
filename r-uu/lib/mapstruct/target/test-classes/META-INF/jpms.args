@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.mapstruct=_
+--add-reads
+de.ruu.lib.mapstruct=ALL-UNNAMED
