@@ -14,9 +14,16 @@
 	<artifactId>r-uu.codespace.mvn-config</artifactId>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
-	<name>r-uu.codespace.mvn-config</name>
+	<name>${project.artifactId}</name>
 	<description>root module for ruu.codespace artifacts of group r-uu</description>
 	<url>https://github.com/r-uu/codespace</url>
+
+	<repositories>
+		<repository>
+			<id>openjfx</id>
+			<url>https://maven.azul.com/openjdk/</url>
+		</repository>
+	</repositories>
 
 	<!-- ########## -->
 	<!-- properties -->
@@ -25,82 +32,61 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<plugin.surefire.argLine>-Duser.language=en</plugin.surefire.argLine>
+		<plugin.maven-surefire-plugin.argLine>-Duser.language=en</plugin.maven-surefire-plugin.argLine>
+
+		<plugin.maven-clean-plugin.version>3.1.0</plugin.maven-clean-plugin.version>
+		<plugin.maven-compiler-plugin.version>3.13.0</plugin.maven-compiler-plugin.version>
+		<plugin.maven-deploy-plugin.version>2.8.2</plugin.maven-deploy-plugin.version>
+		<plugin.maven-install-plugin.version>2.5.2</plugin.maven-install-plugin.version>
+		<plugin.maven-jar-plugin.version>3.0.2</plugin.maven-jar-plugin.version>
+		<plugin.maven-project-info-reports-plugin.version>3.0.0</plugin.maven-project-info-reports-plugin.version>
+		<plugin.maven-resources-plugin.version>3.3.1</plugin.maven-resources-plugin.version>
+		<plugin.maven-site-plugin.version>3.7.1</plugin.maven-site-plugin.version>
+		<plugin.maven-surefire-plugin.version>3.5.0</plugin.maven-surefire-plugin.version>
 
 		<!-- java.version is configured in .m2/toolchains.xml and maven.compiler.plugin (see below) -->
 
 		<!-- remember to keep dep.* properties for dependencies in alphabetical order by dep.<artifact-id>.<version> -->
+		<!-- (except the dependencies belong together as those for logging, see dependency groups) -->
 		<dep.hamcrest.version>3.0</dep.hamcrest.version>
-		<dep.junit.version>5.13.4</dep.junit.version>
-		<dep.org.projectlombok.version>1.18.38</dep.org.projectlombok.version>
-		<dep.slf4j.version>2.0.9</dep.slf4j.version>
+		<dep.hibernate-jpamodelgen.version>6.4.4.Final</dep.hibernate-jpamodelgen.version>
+		<dep.jackson-annotations.version>2.18.2</dep.jackson-annotations.version>
+		<dep.jackson-databind.version>2.18.2</dep.jackson-databind.version>
+		<dep.jakarta.annotation-api.version>3.0.0</dep.jakarta.annotation-api.version>
+		<dep.jakarta.persistence-api.version>3.2.0</dep.jakarta.persistence-api.version>
+		<dep.jakarta.ws.rs-api.version>4.0.0</dep.jakarta.ws.rs-api.version>
+		<dep.javafx.version>24.0.2</dep.javafx.version>
+		<dep.junit-jupiter.version>5.13.4</dep.junit-jupiter.version>
+		<dep.lombok.version>1.18.38</dep.lombok.version>
+		<dep.lombok-mapstruct-binding>0.2.0</dep.lombok-mapstruct-binding>
+		<dep.mapstruct.version>1.6.3</dep.mapstruct.version>
+		<dep.mapstruc-processor.version>1.6.3</dep.mapstruc-processor.version>
+		<dep.r-uu.codespace.app.version>0.0.1</dep.r-uu.codespace.app.version>
+		<dep.r-uu.codespace.app-demo.version>0.0.1</dep.r-uu.codespace.app-demo.version>
+		<dep.r-uu.codespace.lib.version>0.0.1</dep.r-uu.codespace.lib.version>
+		<dep.r-uu.codespace.lib-jpa-core.version>0.0.1</dep.r-uu.codespace.lib-jpa-core.version>
+		<dep.r-uu.codespace.lib-mapstruct.version>0.0.1</dep.r-uu.codespace.lib-mapstruct.version>
+		<dep.r-uu.codespace.lib-util.version>0.0.1</dep.r-uu.codespace.lib-util.version>
+		<dep.r-uu.codespace.lib-ws.rs.version>0.0.1</dep.r-uu.codespace.lib-ws.rs.version>
 		<dep.r-uu.codespace.mvn.config.version>0.0.1</dep.r-uu.codespace.mvn.config.version>
 		<dep.r-uu.codespace.mvn.control.version>0.0.1</dep.r-uu.codespace.mvn.control.version>
+		<dep.slf4j-api.version>2.0.9</dep.slf4j-api.version>
+
+		<!-- dependency groups ######################################### -->
+		<!-- - dependency group for logging with slf4j und apache log4j2 -->
+		<dep.slf4j-api.version>2.0.12</dep.slf4j-api.version>
+		<dep.log4j-api.version>2.20.0</dep.log4j-api.version>
+		<dep.log4j-core.version>2.20.0</dep.log4j-core.version>
+		<dep.log4j-slf4j2-impl.version>2.20.0</dep.log4j-slf4j2-impl.version>
+		<!-- - dependency group for jsonb with eclipse yasson -->
+		<dep.jakarta.json.bind-api.version>3.0.1</dep.jakarta.json.bind-api.version>
+		<dep.yasson.version>3.0.4</dep.yasson.version>
+
 	</properties>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<artifactId>maven-clean-plugin</artifactId>
-					<!-- <version>${plugin.clean.version}</version> -->
-					<version>3.1.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<!-- <version>${plugin.compiler.version}</version> -->
-					<version>3.13.0</version>
-					<configuration>
-						<release>24</release> <!-- sets both source and target -->
-					</configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<!-- <version>${plugin.deploy.version}</version> -->
-					<version>2.8.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-install-plugin</artifactId>
-					<!-- <version>${plugin.install.version}</version> -->
-					<version>2.5.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-jar-plugin</artifactId>
-					<!-- <version>${plugin.jar.version}</version> -->
-					<version>3.0.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<!-- <version>${plugin.project.info.reports.version}</version> -->
-					<version>${3.0.0}</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<!-- <version>${plugin.resources.version}</version> -->
-					<version>3.3.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-site-plugin</artifactId>
-					<!-- <version>${plugin.site.version}</version> -->
-					<version>3.7.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<!-- <version>${plugin.surefire.version}</version> -->
-					<version>3.5.0</version>
-					<configuration>
-						<argLine>${plugin.surefire.argLine}</argLine>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
-		<plugins>
-		</plugins>
-	</build>
-
 	<dependencyManagement>
-		<!-- remember to keep dependencies in alphabetical order by <artifactId> -->
+		<!-- remember to keep dependencies in alphabetical order by <artifactId>                   -->
+		<!-- (except the dependencies belong together as those for logging, see dependency groups) -->
 		<dependencies>
 			<dependency>
 				<groupId>org.hamcrest</groupId>
@@ -109,48 +95,263 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
+				<groupId>org.hibernate.orm</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+				<version>${dep.hibernate-jpamodelgen.version}</version>
+			</dependency>
+<!--			<dependency>-->
+<!--				<groupId>org.openjfx</groupId>-->
+<!--				<artifactId>javafx</artifactId>-->
+<!--				<version>${dep.javafx.version}</version>-->
+<!--				<type>pom</type> &lt;!&ndash; pom delivers all javafx modules in aggregated form &ndash;&gt;-->
+<!--			</dependency>-->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${dep.jackson-annotations.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${dep.jackson-databind.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.annotation</groupId>
+				<artifactId>jakarta.annotation-api</artifactId>
+				<version>${dep.jakarta.annotation-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.persistence</groupId>
+				<artifactId>jakarta.persistence-api</artifactId>
+				<version>${dep.jakarta.persistence-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.ws.rs</groupId>
+				<artifactId>jakarta.ws.rs-api</artifactId>
+				<version>${dep.jakarta.ws.rs-api.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter</artifactId>
-				<version>${dep.junit.version}</version>
+				<version>${dep.junit-jupiter.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
-				<version>${dep.org.projectlombok.version}</version>
+				<version>${dep.lombok.version}</version>
 				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok-mapstruct-binding</artifactId>
+				<version>${dep.lombok-mapstruct-binding}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${dep.mapstruct.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${dep.mapstruc-processor.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.app</artifactId>
-				<version>0.0.1</version>
+				<version>${dep.r-uu.codespace.app.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.app-demo</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<version>${dep.r-uu.codespace.app-demo.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.lib</artifactId>
-				<version>0.0.1</version>
+				<version>${dep.r-uu.codespace.lib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.lib-jpa-core</artifactId>
+				<version>${dep.r-uu.codespace.lib-jpa-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.lib-mapstruct</artifactId>
+				<version>${dep.r-uu.codespace.lib-mapstruct.version}</version>
+				<scope>compile</scope>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.lib-util</artifactId>
-				<version>0.0.1</version>
+				<version>${dep.r-uu.codespace.lib-util.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.lib-ws.rs</artifactId>
+				<version>${dep.r-uu.codespace.lib-ws.rs.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.mvn-config</artifactId>
-				<version>0.0.1</version>
+				<version>${dep.r-uu.codespace.mvn.config.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.mvn-control</artifactId>
-				<version>0.0.1</version>
+				<version>${dep.r-uu.codespace.mvn.control.version}</version>
 			</dependency>
+
+			<!-- dependency groups ######################################### -->
+			<!-- - dependency group for jsonb with eclipse yasson -->
+			<dependency>
+				<groupId>jakarta.json.bind</groupId>
+				<artifactId>jakarta.json.bind-api</artifactId>
+				<version>${dep.jakarta.json.bind-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse</groupId>
+				<artifactId>yasson</artifactId>
+				<version>${dep.yasson.version}</version>
+			</dependency>
+			<!-- - dependency group for javafx -->
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-base</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-graphics</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-fxml</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-media</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-swing</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-web</artifactId>
+				<version>${dep.javafx.version}</version>
+			</dependency>
+			<!-- - dependency group for logging with slf4j und apache log4j2 -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${dep.slf4j-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${dep.log4j-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${dep.log4j-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j2-impl</artifactId>
+				<version>${dep.log4j-slf4j2-impl.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${plugin.maven-clean-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${plugin.maven-compiler-plugin.version}</version>
+					<configuration>
+						<release>24</release> <!-- sets both source and target -->
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${plugin.maven-deploy-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${plugin.maven-install-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${plugin.maven-jar-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>${plugin.maven-project-info-reports-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${plugin.maven-resources-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${plugin.maven-site-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${plugin.maven-surefire-plugin.version}</version>
+					<configuration>
+						<argLine>${plugin.maven-surefire-plugin.argLine}</argLine>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
+						<path>
+							<groupId>org.hibernate.orm</groupId>
+							<artifactId>hibernate-jpamodelgen</artifactId>
+						</path>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${dep.mapstruc-processor.version}</version>
+						</path>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok-mapstruct-binding</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

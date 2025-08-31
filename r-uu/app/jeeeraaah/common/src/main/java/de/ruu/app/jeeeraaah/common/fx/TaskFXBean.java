@@ -1,0 +1,330 @@
+package de.ruu.app.jeeeraaah.common.fx;
+
+import de.ruu.app.jeeeraaah.common.Task;
+import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.map.Map_Task_FXBean_Bean;
+import de.ruu.lib.jpa.core.AbstractEntity;
+import de.ruu.lib.jpa.core.Entity;
+import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.util.Strings;
+import jakarta.annotation.Nullable;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableSet;
+import lombok.AccessLevel;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
+
+import static java.lang.System.identityHashCode;
+import static java.util.Objects.isNull;
+
+@Getter
+@Accessors(fluent = true)
+// EqualsAndHashCode is for documenting the intent of manually created equals and hashCode methods
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false, doNotUseGetters = true)
+public class TaskFXBean
+		implements
+				Task<TaskGroupFXBean, TaskFXBean>,
+				Entity<Long>
+{
+	/**
+	 * may be <pre>null</pre> if instance was not (yet) persisted
+	 * <p>may not be modified from outside type hierarchy (from non-{@link AbstractEntity}-subclasses)
+	 * <p>not {@code final} or {@code @NonNull} because otherwise there has to be a constructor with {@code id}-parameter
+	 */
+	@EqualsAndHashCode.Include // documents intent of including id for equals() and hashCode() but both methods are
+	                           // manually created
+	@Setter(AccessLevel.NONE) @Nullable private Long  id;
+
+	/** may be <pre>null</pre> if instance was not (yet) persisted */
+	@Setter(AccessLevel.NONE) @Nullable private Short version;
+
+	private final StringProperty            nameProperty        = new SimpleStringProperty  ();
+	private final StringProperty            descriptionProperty = new SimpleStringProperty  ();
+	private final ObjectProperty<LocalDate> startProperty       = new SimpleObjectProperty<>();
+	private final ObjectProperty<LocalDate> endProperty         = new SimpleObjectProperty<>();
+	private final BooleanProperty           closedProperty      = new SimpleBooleanProperty ();
+
+	private final ObjectProperty<TaskGroupFXBean> taskGroupProperty = new SimpleObjectProperty<>();
+	private final ObjectProperty<TaskFXBean>      superTaskProperty = new SimpleObjectProperty<>();
+
+	@Nullable private ObservableSet<TaskFXBean> subTasks;
+	@Nullable private ObservableSet<TaskFXBean> predecessors;
+	@Nullable private ObservableSet<TaskFXBean> successors;
+
+	///////////////
+	// constructors
+	///////////////
+
+	private TaskFXBean() { closed(false); }
+
+	@Override public boolean equals(Object o)
+	{
+		if (this == o) return true;
+		if (!(o instanceof TaskFXBean other)) return false;
+		if (id != null && other.id != null) return id.equals(other.id);
+		return false;
+	}
+
+	@Override public int hashCode() { return (id != null) ? id.hashCode() : identityHashCode(this); }
+
+	/** provide handmade required args constructor to properly handle relationships */
+	public TaskFXBean(@NonNull TaskGroupFXBean taskGroup, @NonNull String name)
+	{
+		this();
+		taskGroupProperty.setValue(taskGroup);
+		nameProperty     .setValue(name     );
+		taskGroup.addTask(this);
+	}
+
+	//////////////////////
+	// mapstruct callbacks
+	//////////////////////
+
+	public void beforeMapping(@NonNull TaskBean in, @NonNull ReferenceCycleTracking context)
+	{
+		id      = in.id();
+		version = in.version();
+
+		nameProperty  .setValue(in.name  ());
+		closedProperty.setValue(in.closed());
+
+		in.description().ifPresent(descriptionProperty::setValue);
+		in.start      ().ifPresent(startProperty      ::setValue);
+		in.end        ().ifPresent(endProperty        ::setValue);
+	}
+
+	public void afterMapping(TaskBean in, @NonNull ReferenceCycleTracking context)
+	{
+		if (in.superTask().isPresent())
+		{
+			TaskBean   relatedTask       = in.superTask().get();
+			// check if related task was already mapped
+			TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
+			if (isNull(relatedTaskMapped))
+					// start new mapping for related task
+					superTask(relatedTask.toFXBean(context));
+			else
+					// use already mapped related task
+					superTask(relatedTaskMapped);
+		}
+		if (in.subTasks().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.subTasks().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
+				if (isNull(relatedTaskMapped))
+						// start new mapping for related task
+						addSubTask(relatedTask.toFXBean(context));
+				else
+						// use already mapped related task
+						addSubTask(relatedTaskMapped);
+			}
+		}
+		if (in.predecessors().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.predecessors().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
+				if (isNull(relatedTaskMapped))
+						// start new mapping for related task
+						addPredecessor(relatedTask.toFXBean(context));
+				else
+						// use already mapped related task
+						addPredecessor(relatedTaskMapped);
+			}
+		}
+		if (in.successors().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.successors().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
+				if (isNull(relatedTaskMapped))
+						// start new mapping for related task
+						addSuccessor(relatedTask.toFXBean(context));
+				else
+						// use already mapped related task
+						addSuccessor(relatedTaskMapped);
+			}
+		}
+	}
+
+	@NonNull public TaskBean toBean(ReferenceCycleTracking context)
+	{
+		return Map_Task_FXBean_Bean.INSTANCE.map(this, context);
+	}
+
+	////////////////////////////////////////////////////////////////////////
+	// fluent style accessors generated by lombok if not specified otherwise
+	////////////////////////////////////////////////////////////////////////
+
+	@Override public @NonNull TaskGroupFXBean taskGroup() { return taskGroupProperty.getValue(); }
+
+	@Override @NonNull public String name() { return nameProperty.getValue(); }
+
+	@Override public Optional<String   > description() { return Optional.ofNullable(descriptionProperty.getValue()); }
+	@Override public Optional<LocalDate> start      () { return Optional.ofNullable(startProperty      .getValue()); }
+	@Override public Optional<LocalDate> end        () { return Optional.ofNullable(endProperty        .getValue()); }
+
+	@Override public @NonNull TaskFXBean taskGroup(@NonNull TaskGroupFXBean taskGroupFX)
+	{
+		if (taskGroupFX.tasks().isPresent())
+		{
+			// create a new HashSet with most recent hash-codes even for elements that might be modified while this code is
+			// running
+			HashSet<TaskFXBean> tasksInGroup = new HashSet<>(taskGroupFX.tasks().get());
+			if (tasksInGroup.contains(this)) return this; // do nothing
+		}
+		taskGroupProperty.get().removeTask(this);
+		taskGroupProperty.setValue(taskGroupFX);
+		taskGroupFX.addTask(this);
+		return this;
+	}
+
+	@Override public @NonNull Boolean closed() { return closedProperty.getValue(); }
+
+	@Override @NonNull public TaskFXBean description(String description)
+	{
+		descriptionProperty.setValue(description);
+		return this;
+	}
+
+	@Override @NonNull public TaskFXBean start(LocalDate start)
+	{
+		startProperty.setValue(start);
+		return this;
+	}
+
+	@Override public @NonNull TaskFXBean end(LocalDate end)
+	{
+		endProperty.setValue(end);
+		return this;
+	}
+
+	@Override public @NonNull TaskFXBean closed(Boolean closed)
+	{
+		closedProperty.setValue(closed);
+		return this;
+	}
+
+	@Override public Optional<TaskFXBean> superTask() { return Optional.ofNullable(superTaskProperty.get()); }
+
+	@Override public @NonNull TaskFXBean superTask(TaskFXBean task)
+	{
+		superTaskProperty.setValue(task);
+		return this;
+	}
+
+	@Override public Optional<Set<TaskFXBean>> subTasks()
+	{
+		if (isNull(subTasks)) return Optional.empty();
+		return Optional.of(Collections.unmodifiableSet(subTasks));
+	}
+
+	@Override public Optional<Set<TaskFXBean>> predecessors()
+	{
+		if (isNull(predecessors)) return Optional.empty();
+		return Optional.of(Collections.unmodifiableSet(predecessors));
+	}
+
+	@Override public Optional<Set<TaskFXBean>> successors()
+	{
+		if (isNull(successors)) return Optional.empty();
+		return Optional.of(Collections.unmodifiableSet(successors));
+	}
+
+	@Override public boolean addSubTask(@NonNull TaskFXBean task)
+	{
+		return nonNullChildren().add(task);
+	}
+
+	@Override public boolean addPredecessor(@NonNull TaskFXBean task)
+	{
+		return nonNullPredecessors().add(task);
+	}
+
+	@Override public boolean addSuccessor(@NonNull TaskFXBean task)
+	{
+		return nonNullSuccessors().add(task);
+	}
+
+	@Override public boolean removeSubTask(@NonNull TaskFXBean task)
+	{
+		return nonNullChildren().remove(task);
+	}
+
+	@Override public boolean removePredecessor(@NonNull TaskFXBean task)
+	{
+		return nonNullPredecessors().remove(task);
+	}
+
+	@Override public boolean removeSuccessor(@NonNull TaskFXBean task)
+	{
+		return nonNullSuccessors().remove(task);
+	}
+
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	// java bean style accessors for those who do not work with fluent style accessors (mapstruct)
+	//////////////////////////////////////////////////////////////////////////////////////////////
+
+	@NonNull
+	public String    getName                                      () { return name();                               }
+	public void      setName       (@NonNull String     name       )
+	{
+		if (Strings.isEmptyOrBlank(name)) throw new IllegalArgumentException("name must not be empty or blank");
+    nameProperty.set(name);
+	}
+
+	@Nullable
+	public String    getDescription                               () { return descriptionProperty.get();            }
+	public void      setDescription(@Nullable String    description) {        descriptionProperty.set(description); }
+
+	@Nullable
+	public LocalDate getStart                                     () { return startProperty.get();                  }
+	public void      setStart      (@Nullable LocalDate start      ) {        startProperty.set(start);             }
+
+	@Nullable
+	public LocalDate getEnd                                       () { return endProperty.get();                    }
+	public void      setEnd        (@Nullable LocalDate end        ) {        endProperty.set(end);                 }
+
+	public boolean   getClosed                                    () { return closedProperty.get();                 }
+	public void      setClosed     (          boolean   closed     ) {        closedProperty.set(closed);           }
+
+	private @NonNull Set<TaskFXBean> nonNullChildren()
+	{
+		if (isNull(subTasks)) subTasks = FXCollections.observableSet();
+		return subTasks;
+	}
+
+	private @NonNull Set<TaskFXBean> nonNullPredecessors()
+	{
+		if (isNull(predecessors)) predecessors = FXCollections.observableSet();
+		return predecessors;
+	}
+
+	private @NonNull Set<TaskFXBean> nonNullSuccessors()
+	{
+		if (isNull(successors)) successors = FXCollections.observableSet();
+		return successors;
+	}
+}

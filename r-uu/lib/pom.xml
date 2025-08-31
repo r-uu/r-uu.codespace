@@ -19,6 +19,9 @@
 
 	<modules>
 		<module>util</module>
+		<module>jpa</module>
+		<module>mapstruct</module>
+		<module>ws.rs</module>
 	</modules>
 
 </project>

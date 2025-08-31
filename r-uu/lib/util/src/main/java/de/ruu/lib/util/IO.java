@@ -51,7 +51,7 @@ public interface IO
 		// capture output in memory
 		ByteArrayOutputStream capturingStreamAsBinaryArrayOutputStream =
 				new ByteArrayOutputStream();
-		PrintStream           capturingStreamAsPrintStream =
+		PrintStream           capturingStreamAsPrintStream             =
 				new PrintStream(capturingStreamAsBinaryArrayOutputStream, true);
 
 		try

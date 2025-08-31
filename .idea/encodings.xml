@@ -3,12 +3,24 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/r-uu/app/demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/lib/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/lib/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/lib/util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/lib/util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/mvn-config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/mvn-config/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/mvn-control/src/main/java" charset="UTF-8" />

@@ -1,14 +1,13 @@
 package de.ruu.lib.util;
 
-import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.PrintStream;
-import java.net.ServerSocket;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+
+import java.io.ByteArrayInputStream;
+import java.net.ServerSocket;
+
+import org.junit.jupiter.api.Test;
 
 class IOTest
 {
