@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.util=_
+--add-reads
+de.ruu.lib.util=ALL-UNNAMED

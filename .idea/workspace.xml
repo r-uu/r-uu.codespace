@@ -69,6 +69,7 @@
     "Maven.r-uu.codespace.lib-util [install].executor": "Run",
     "Maven.r-uu.codespace.mvn-config [clean].executor": "Run",
     "Maven.r-uu.codespace.mvn-config [install].executor": "Run",
+    "Maven.r-uu.codespace.mvn-control [clean,install].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [clean...].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [clean].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [install].executor": "Run",
@@ -98,22 +99,7 @@
       <recent name="de.ruu.lib.jpa.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.r-uu-mvn-control [clean install]">
-    <configuration name="CollectionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="r-uu.codespace.lib-util" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.ruu.lib.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.ruu.lib.util" />
-      <option name="MAIN_CLASS_NAME" value="de.ruu.lib.util.CollectionsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Maven.r-uu.codespace.mvn-control [clean,install]">
     <configuration name="r-uu-mvn-control [clean install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -269,9 +255,40 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="r-uu.codespace.mvn-control [clean,install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-control" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JUnit.CollectionsTest" />
       <item itemvalue="Maven.r-uu-mvn-control [clean install]" />
+      <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
       <item itemvalue="Maven.r-uu-mvn-control [install]" />
       <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
       <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
@@ -279,11 +296,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
         <item itemvalue="Maven.r-uu-mvn-control [install]" />
         <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
         <item itemvalue="Maven.r-uu.codespace.mvn-config [install]" />
         <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
-        <item itemvalue="JUnit.CollectionsTest" />
       </list>
     </recent_temporary>
   </component>
