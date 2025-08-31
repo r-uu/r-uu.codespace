@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.common.jpa.TaskGroupEntityJPA;
-import de.ruu.app.jeeeraaah.common.map.lazy.bean.Map_TaskGroup_Lazy_Bean;
+import de.ruu.app.jeeeraaah.common.map.Map_TaskGroup_Lazy_Bean;
 import de.ruu.lib.jpa.core.Entity;
 import de.ruu.lib.util.Strings;
 import jakarta.annotation.Nullable;

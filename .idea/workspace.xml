@@ -5,113 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/CommonTaskGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/CommonTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/DataFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/InterTaskRelationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/Paths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/RemoveNeighboursFromTaskConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskCreationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupServiceFlat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskRelationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskRelationExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/TaskServiceLazy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/bean/BeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/bean/Collector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/bean/PreconditionCheckRelationalOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/bean/TaskBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/bean/TaskGroupBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/DTOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskEntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskGroupEntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskGroupFlat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskGroupLazy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskLazy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/fx/TaskFXBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/fx/TaskGroupFXBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/JPAFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskGroupEntityJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskGroupRepositoryJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskGroupServiceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskRepositoryJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskServiceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_Lazy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_Lazy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/AbstractDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/AbstractEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/AbstractPersistenceUnitInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/AbstractRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/DTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/DurationConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/GraphType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/de/ruu/lib/jpa/core/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/BiMappedSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/BiMappedTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/Mappable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/MappableCyclic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/MappableCyclicMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/MappableMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/de/ruu/lib/mapstruct/ReferenceCycleTracking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Files.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Reflection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Slf4jLogProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/StringBuffers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/StringBuilders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Strings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/ExceptionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/RestClientCallException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/ClientLoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/ContainerLoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Collections.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/Collections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/IO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/BooleanFunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/BooleanFunctionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/CollectionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/CollectionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/IOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/test/java/de/ruu/lib/util/IOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/target/r-uu.codespace.app-demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/demo/target/r-uu.codespace.app-demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskGroupLazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskGroupLazy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskLazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskLazy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/r-uu.codespace.app-jeeeraaah-common-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/r-uu.codespace.lib-jpa-core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/r-uu.codespace.lib-jpa-core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/r-uu.codespace.lib-mapstruct-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/r-uu.codespace.lib-mapstruct-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/r-uu.codespace.lib-util-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/r-uu.codespace.lib-util-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/r-uu.codespace.lib-ws.rs-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/r-uu.codespace.lib-ws.rs-0.0.1.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +128,7 @@
       <recent name="de.ruu.lib.jpa.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.r-uu-mvn-control [install]">
+  <component name="RunManager" selected="Maven.r-uu-mvn-control [clean install]">
     <configuration name="CollectionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="r-uu.codespace.lib-util" />
       <extension name="coverage">
@@ -235,6 +158,8 @@
               <list>
                 <option value="clean" />
                 <option value="install" />
+                <option value="-rf" />
+                <option value="pom.xml" />
               </list>
             </option>
             <option name="multimoduleDir" />
