@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for r-uu.codespace.mvn-control" enabled="true">
+      <profile name="Annotation profile for r-uu.codespace.mvn-config" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -64,8 +64,8 @@
         </processorPath>
         <module name="r-uu.codespace.app-jeeeraaah-common" />
         <module name="r-uu.codespace.lib-mapstruct" />
-        <module name="r-uu.codespace.lib-ws.rs" />
         <module name="r-uu.codespace.lib-util" />
+        <module name="r-uu.codespace.lib-ws.rs" />
         <module name="r-uu.codespace.lib-jpa-core" />
         <module name="r-uu.codespace.app-demo" />
       </profile>

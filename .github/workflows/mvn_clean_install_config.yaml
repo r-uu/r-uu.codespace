@@ -6,7 +6,7 @@ on:
       module:
         description: 'Module path to build (e.g. r-uu/mvn-control)'
         required: true
-        default: 'r-uu/mvn-control'
+        default: 'r-uu/mvn-config'
       skipTests:
         description: 'Skip tests?'
         required: false

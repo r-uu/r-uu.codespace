@@ -18,6 +18,10 @@
 	<description>root module for ruu.codespace artifacts of group r-uu</description>
 	<url>https://github.com/r-uu/codespace</url>
 
+	<modules>
+		<module>../mvn-control</module>
+	</modules>
+
 	<repositories>
 		<repository>
 			<id>central</id>

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="" />
+    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/mvn_clean_install_control.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/mvn_clean_install_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,8 +103,8 @@
       <recent name="de.ruu.lib.jpa.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.r-uu.codespace.mvn-control [clean,install]">
-    <configuration name="r-uu-mvn-control [clean install]" type="MavenRunConfiguration" factoryName="Maven">
+  <component name="RunManager" selected="Maven.r-uu-mvn-config [clean install resume]">
+    <configuration name="r-uu-mvn-config [clean install resume]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -127,13 +131,13 @@
               <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-control" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-config" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="r-uu-mvn-control [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration name="r-uu-mvn-config [install resume]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -159,7 +163,7 @@
               <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-control" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-config" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -287,9 +291,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.r-uu-mvn-control [clean install]" />
+      <item itemvalue="Maven.r-uu-mvn-config [clean install resume]" />
       <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
-      <item itemvalue="Maven.r-uu-mvn-control [install]" />
+      <item itemvalue="Maven.r-uu-mvn-config [install resume]" />
       <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
       <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
       <item itemvalue="Maven.r-uu.codespace.mvn-config [install]" />
@@ -297,7 +301,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
-        <item itemvalue="Maven.r-uu-mvn-control [install]" />
+        <item itemvalue="Maven.r-uu-mvn-config [install resume]" />
         <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
         <item itemvalue="Maven.r-uu.codespace.mvn-config [install]" />
         <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
