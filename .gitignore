@@ -94,3 +94,6 @@ $RECYCLE.BIN/
 ###############################################
 # end of .gitignore
 ###############################################
+# Ignore build outputs
+/target/
+*.class
