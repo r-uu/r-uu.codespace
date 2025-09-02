@@ -6,7 +6,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-01T08:49:23+0200",
+    date = "2025-09-02T19:31:08+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 public class Map_Task_EntityJPA_LazyImpl implements Map_Task_EntityJPA_Lazy {

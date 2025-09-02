@@ -7,7 +7,13 @@
         <option value="$PROJECT_DIR$/r-uu/lib/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="graalvm-24" project-jdk-type="JavaSDK">

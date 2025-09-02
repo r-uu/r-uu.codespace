@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>r-uu.app-jeeeraaah-client-fx-executable</artifactId>
+
+    <parent>
+        <groupId>r-uu</groupId>
+        <artifactId>r-uu.app-jeeeraaah-client</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <appName>jeeeraaah</appName>
+        <jar.filename>${project.artifactId}-${project.version}</jar.filename>
+        <!-- TODO find out why no java version greater than 18 is supported -->
+        <java.version>18</java.version>
+        <jpackage.maven.plugin>0.1.5</jpackage.maven.plugin>
+        <lombok.version>1.18.34</lombok.version>
+        <main.class>de.ruu.app.jeeeraaah.client.fx.executable.Main</main.class>
+        <maven.compiler.plugin>3.13.0</maven.compiler.plugin>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <maven.dependency.plugin>3.7.1</maven.dependency.plugin>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>r-uu</groupId>
+            <artifactId>r-uu.app-jeeeraaah-client-fx</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <!-- Copy dependencies -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven.dependency.plugin}</version>
+                <executions>
+                    <!-- erstmal Abhängigkeiten für den Class-Path kopieren -->
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/modules</outputDirectory>
+                            <includeScope>runtime</includeScope>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+
+                    <!-- dazu noch das Projekt-JAR -->
+                    <execution>
+                        <id>copy</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/modules</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>${project.packaging}</type>
+                                    <destFileName>${project.build.finalName}.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.akman</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>${jpackage.maven.plugin}</version>
+                <configuration>
+                    <name>${appName}</name>
+                    <type>IMAGE</type>
+                    <mainclass>${main.class}</mainclass>
+                    <input>${project.build.directory}/modules</input>
+                    <mainjar>${jar.filename}.jar</mainjar>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jpackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,2255 @@
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\software\develop\build\maven
+Java version: 24.0.2, vendor: Oracle Corporation, runtime: c:\software\develop\java\jdk
+Default locale: de_DE, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.graph < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.util < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Created adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from C:\software\develop\build\maven\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\r-uu\.m2\settings.xml
+[DEBUG] Reading global toolchains from C:\software\develop\build\maven\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\r-uu\.m2\toolchains.xml
+[DEBUG] Using local repository at C:\Users\r-uu\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\r-uu\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.root:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.client:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.client.fx:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.client.rs:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.client.rs.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.common:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.common.jpa.ee:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.common.jpa.se:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.app.jeeeraaah.server:war:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging war from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.archunit:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.cdi:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.cdi.common:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.cdi.se.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.cdi.se:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.fx:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.fx.core:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.fx.comp:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.fx.comp.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.fx.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.core:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.core:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx.bean:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx.bean.editor:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx.bean.editor.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx.comp:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.gen.java.fx.tableview:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jackson:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jdbc:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jdbc.core:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jdbc.postgres:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa:pom:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.core:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.core.mapstruct:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.se:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.se.eclipselink:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.se.hibernate:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.se.hibernate.postgres:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jpa.se.hibernate.postgres.demo:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.jsonb:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.junit:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.mapstruct:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.mp.config:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.postgres:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.util:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project r-uu:r-uu.codespace.lib.ws.rs:jar:0.0.1: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] r-uu.codespace.root                                                [pom]
+[INFO] r-uu.codespace.app                                                 [pom]
+[INFO] r-uu.codespace.app.demo                                            [jar]
+[INFO] r-uu.codespace.lib                                                 [pom]
+[INFO] r-uu.codespace.lib.util                                            [jar]
+[INFO] r-uu.codespace.lib.jpa                                             [pom]
+[INFO] r-uu.codespace.lib.jpa.core                                        [jar]
+[INFO] r-uu.codespace.lib.mapstruct                                       [jar]
+[INFO] r-uu.codespace.lib.ws.rs                                           [jar]
+[INFO] r-uu.codespace.app.jeeeraaah                                       [pom]
+[INFO] r-uu.codespace.app.jeeeraaah.common                                [jar]
+[INFO] r-uu.codespace.lib.cdi                                             [pom]
+[INFO] r-uu.codespace.lib.cdi.common                                      [jar]
+[INFO] r-uu.codespace.lib.junit                                           [jar]
+[INFO] r-uu.codespace.lib.cdi.se                                          [jar]
+[INFO] r-uu.codespace.lib.jpa.se                                          [jar]
+[INFO] r-uu.codespace.lib.jdbc                                            [pom]
+[INFO] r-uu.codespace.lib.jdbc.core                                       [jar]
+[INFO] r-uu.codespace.lib.jdbc.postgres                                   [jar]
+[INFO] r-uu.codespace.lib.jpa.se.hibernate                                [jar]
+[INFO] r-uu.codespace.lib.jpa.se.hibernate.postgres                       [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.common.jpa.se                         [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.common.jpa.ee                         [jar]
+[INFO] r-uu.codespace.lib.jackson                                         [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.client                                [pom]
+[INFO] r-uu.codespace.app.jeeeraaah.client.rs                             [jar]
+[INFO] r-uu.codespace.lib.fx                                              [pom]
+[INFO] r-uu.codespace.lib.fx.comp                                         [jar]
+[INFO] r-uu.codespace.lib.gen                                             [pom]
+[INFO] r-uu.codespace.lib.gen.core                                        [jar]
+[INFO] r-uu.codespace.lib.archunit                                        [jar]
+[INFO] r-uu.codespace.lib.gen.java                                        [pom]
+[INFO] r-uu.codespace.lib.gen.java.core                                   [jar]
+[INFO] r-uu.codespace.lib.gen.java.fx                                     [pom]
+[INFO] r-uu.codespace.lib.gen.java.fx.comp                                [jar]
+[INFO] r-uu.codespace.lib.fx.core                                         [jar]
+[INFO] r-uu.codespace.lib.gen.java.fx.bean                                [jar]
+[INFO] r-uu.codespace.lib.gen.java.fx.bean.editor                         [jar]
+[INFO] r-uu.codespace.lib.gen.java.fx.tableview                           [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.client.fx                             [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.client.rs.demo                        [jar]
+[INFO] r-uu.codespace.app.jeeeraaah.server                                [war]
+[INFO] r-uu.codespace.lib.cdi.se.demo                                     [jar]
+[INFO] r-uu.codespace.lib.fx.comp.demo                                    [jar]
+[INFO] r-uu.codespace.lib.fx.demo                                         [jar]
+[INFO] r-uu.codespace.lib.gen.java.fx.bean.editor.demo                    [jar]
+[INFO] r-uu.codespace.lib.jpa.core.mapstruct                              [jar]
+[INFO] r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional           [jar]
+[INFO] r-uu.codespace.lib.jpa.se.eclipselink                              [jar]
+[INFO] r-uu.codespace.lib.jpa.se.hibernate.postgres.demo                  [jar]
+[INFO] r-uu.codespace.lib.jsonb                                           [jar]
+[INFO] r-uu.codespace.lib.mp.config                                       [jar]
+[INFO] r-uu.codespace.lib.postgres                                        [jar]
+[DEBUG] Resolving plugin prefix dependency from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Creating adapter using nameMapper 'gav' and factory 'rwlock-local'
+[DEBUG] Resolved plugin prefix dependency to org.apache.maven.plugins:maven-dependency-plugin from POM r-uu:r-uu.codespace.root:pom:0.0.1
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: r-uu:r-uu.codespace.root:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.util:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.core:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.mapstruct:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.ws.rs:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.common:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.cdi:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.cdi.common:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.junit:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.cdi.se:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.se:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jdbc:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jdbc.core:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jdbc.postgres:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.se.hibernate:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.se.hibernate.postgres:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.common.jpa.se:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.common.jpa.ee:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jackson:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.client:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.client.rs:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.fx:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.fx.comp:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.core:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.archunit:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.core:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx:pom:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx.comp:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.fx.core:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx.bean:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx.bean.editor:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx.tableview:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.client.fx:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.client.rs.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.app.jeeeraaah.server:war:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.cdi.se.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.fx.comp.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.fx.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.gen.java.fx.bean.editor.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.core.mapstruct:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.se.eclipselink:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jpa.se.hibernate.postgres.demo:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.jsonb:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.mp.config:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: r-uu:r-uu.codespace.lib.postgres:jar:0.0.1
+[DEBUG] Tasks:   [clean, compile, dependency:analyze]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] ----------------------< r-uu:r-uu.codespace.root >----------------------
+[INFO] Building r-uu.codespace.root 0.0.1                                [1/53]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Resolving plugin prefix dependency from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix dependency to org.apache.maven.plugins:maven-dependency-plugin from POM r-uu:r-uu.codespace.root:pom:0.0.1
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       r-uu:r-uu.codespace.root:0.0.1
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [test]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${maven.clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <fast default-value="false">${maven.clean.fast}</fast>
+  <fastDir>${maven.clean.fastDir}</fastDir>
+  <fastMode default-value="background">${maven.clean.fastMode}</fastMode>
+  <followSymLinks default-value="false">${maven.clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.build.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${maven.clean.verbose}</verbose>
+</configuration>
+[DEBUG] --- init fork of r-uu:r-uu.codespace.root:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] --- exit fork of r-uu:r-uu.codespace.root:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <analyzer default-value="default">${analyzer}</analyzer>
+  <baseDir default-value="${basedir}"/>
+  <excludedClasses>${mdep.analyze.excludedClasses}</excludedClasses>
+  <failOnWarning default-value="false">${failOnWarning}</failOnWarning>
+  <ignoreAllNonTestScoped default-value="false">${ignoreAllNonTestScoped}</ignoreAllNonTestScoped>
+  <ignoreNonCompile default-value="false">${ignoreNonCompile}</ignoreNonCompile>
+  <ignoreUnusedRuntime default-value="false">${ignoreUnusedRuntime}</ignoreUnusedRuntime>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <outputXML default-value="false">${outputXML}</outputXML>
+  <scriptableFlag default-value="$$$%%%">${scriptableFlag}</scriptableFlag>
+  <scriptableOutput default-value="false">${scriptableOutput}</scriptableOutput>
+  <skip default-value="false">${mdep.analyze.skip}</skip>
+  <verbose default-value="false">${verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=62900, ConflictMarker.markTime=66200, ConflictMarker.nodeCount=1, ConflictIdSorter.graphTime=20600, ConflictIdSorter.topsortTime=791600, ConflictIdSorter.conflictIdCount=0, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1589700, ConflictResolver.conflictItemCount=0, DfDependencyCollector.collectTime=143100, DfDependencyCollector.transformTime=4239300}
+[DEBUG] r-uu:r-uu.codespace.root:pom:0.0.1
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ r-uu.codespace.root ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=527500, ConflictMarker.markTime=139600, ConflictMarker.nodeCount=2, ConflictIdSorter.graphTime=87000, ConflictIdSorter.topsortTime=22400, ConflictIdSorter.conflictIdCount=2, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1555600, ConflictResolver.conflictItemCount=2, DfDependencyCollector.collectTime=25402600, DfDependencyCollector.transformTime=2359700}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:3.4.0
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:3.4.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:4.0.1
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean:default-clean' with basic configurator -->
+[DEBUG]   (f) directory = C:\Users\r-uu\develop\github\codespace\r-uu\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fast = false
+[DEBUG]   (f) fastMode = background
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\target\classes
+[DEBUG]   (f) reportDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\target\classes
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\target\test-classes
+[DEBUG] -- end configuration --
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\target
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\target\classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\target\test-classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\target\classes
+[INFO] 
+[INFO] >>> dependency:3.7.0:analyze (default-cli) > test-compile @ r-uu.codespace.root >>>
+[INFO] 
+[INFO] <<< dependency:3.7.0:analyze (default-cli) < test-compile @ r-uu.codespace.root <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.7.0:analyze (default-cli) @ r-uu.codespace.root ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for codehaus.snapshots (http://snapshots.repository.codehaus.org).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=876100, ConflictMarker.markTime=586200, ConflictMarker.nodeCount=159, ConflictIdSorter.graphTime=215500, ConflictIdSorter.topsortTime=66400, ConflictIdSorter.conflictIdCount=61, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=5211000, ConflictResolver.conflictItemCount=120, DfDependencyCollector.collectTime=642603600, DfDependencyCollector.transformTime=7007800}
+[DEBUG] org.apache.maven.plugins:maven-dependency-plugin:jar:3.7.0
+[DEBUG]    org.apache.maven.doxia:doxia-sink-api:jar:1.12.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-logging-api:jar:1.12.0:compile
+[DEBUG]    org.apache.maven.reporting:maven-reporting-api:jar:3.1.1:compile
+[DEBUG]    org.apache.maven.reporting:maven-reporting-impl:jar:3.2.0:compile
+[DEBUG]       org.apache.maven.doxia:doxia-decoration-model:jar:1.11.1:compile
+[DEBUG]       org.apache.maven.doxia:doxia-core:jar:1.11.1:compile
+[DEBUG]          org.apache.commons:commons-lang3:jar:3.8.1:compile
+[DEBUG]          org.apache.commons:commons-text:jar:1.12.0:compile (version managed from default)
+[DEBUG]          org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[DEBUG]             commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.4.14:compile
+[DEBUG]       org.apache.maven.doxia:doxia-integration-tools:jar:1.11.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.26:compile
+[DEBUG]       org.apache.maven.doxia:doxia-site-renderer:jar:1.11.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-skin-model:jar:1.11.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-module-xhtml:jar:1.11.1:compile
+[DEBUG]          org.apache.maven.doxia:doxia-module-xhtml5:jar:1.11.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-velocity:jar:1.2:compile
+[DEBUG]          org.apache.velocity:velocity:jar:1.7:compile
+[DEBUG]             commons-lang:commons-lang:jar:2.4:compile
+[DEBUG]          org.apache.velocity:velocity-tools:jar:2.0:compile
+[DEBUG]             commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[DEBUG]             commons-digester:commons-digester:jar:1.8:compile
+[DEBUG]             commons-chain:commons-chain:jar:1.1:compile
+[DEBUG]             dom4j:dom4j:jar:1.1:compile
+[DEBUG]             oro:oro:jar:2.0.8:compile
+[DEBUG]          commons-collections:commons-collections:jar:3.2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:4.9.2:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]       commons-io:commons-io:jar:2.15.1:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.26.1:compile
+[DEBUG]       commons-codec:commons-codec:jar:1.16.1:compile
+[DEBUG]       org.iq80.snappy:snappy:jar:0.4:compile
+[DEBUG]       org.tukaani:xz:jar:1.9:runtime
+[DEBUG]       com.github.luben:zstd-jni:jar:1.5.5-11:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-xml:jar:3.0.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-io:jar:3.4.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-i18n:jar:1.0-beta-10:compile
+[DEBUG]    org.apache.maven.shared:maven-dependency-analyzer:jar:1.14.1:compile
+[DEBUG]       org.ow2.asm:asm:jar:9.7:compile
+[DEBUG]    org.apache.maven.shared:maven-dependency-tree:jar:3.3.0:compile
+[DEBUG]    org.apache.maven.shared:maven-common-artifact-filters:jar:3.3.2:compile
+[DEBUG]    org.apache.maven.shared:maven-artifact-transfer:jar:0.13.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:2.0.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+[DEBUG]    org.apache.maven.resolver:maven-resolver-util:jar:1.4.1:compile
+[DEBUG]       org.apache.maven.resolver:maven-resolver-api:jar:1.4.1:compile
+[DEBUG]    org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-dependency-plugin:jar:3.7.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.12.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-logging-api:jar:1.12.0
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:3.1.1
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-impl:jar:3.2.0
+[DEBUG]   Included: org.apache.maven.doxia:doxia-decoration-model:jar:1.11.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-core:jar:1.11.1
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.8.1
+[DEBUG]   Included: org.apache.commons:commons-text:jar:1.12.0
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.5.13
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.2
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.4.14
+[DEBUG]   Included: org.apache.maven.doxia:doxia-integration-tools:jar:1.11.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: org.apache.maven.doxia:doxia-site-renderer:jar:1.11.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-skin-model:jar:1.11.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-xhtml:jar:1.11.1
+[DEBUG]   Included: org.apache.maven.doxia:doxia-module-xhtml5:jar:1.11.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-velocity:jar:1.2
+[DEBUG]   Included: org.apache.velocity:velocity:jar:1.7
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.4
+[DEBUG]   Included: org.apache.velocity:velocity-tools:jar:2.0
+[DEBUG]   Included: commons-beanutils:commons-beanutils:jar:1.7.0
+[DEBUG]   Included: commons-digester:commons-digester:jar:1.8
+[DEBUG]   Included: commons-chain:commons-chain:jar:1.1
+[DEBUG]   Included: dom4j:dom4j:jar:1.1
+[DEBUG]   Included: oro:oro:jar:2.0.8
+[DEBUG]   Included: commons-collections:commons-collections:jar:3.2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:4.9.2
+[DEBUG]   Included: commons-io:commons-io:jar:2.15.1
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.26.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.16.1
+[DEBUG]   Included: org.iq80.snappy:snappy:jar:0.4
+[DEBUG]   Included: org.tukaani:xz:jar:1.9
+[DEBUG]   Included: com.github.luben:zstd-jni:jar:1.5.5-11
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:4.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-xml:jar:3.0.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:3.4.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-i18n:jar:1.0-beta-10
+[DEBUG]   Included: org.apache.maven.shared:maven-dependency-analyzer:jar:1.14.1
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.7
+[DEBUG]   Included: org.apache.maven.shared:maven-dependency-tree:jar:3.3.0
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:3.3.2
+[DEBUG]   Included: org.apache.maven.shared:maven-artifact-transfer:jar:0.13.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:2.0.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.4.2
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze:default-cli' with basic configurator -->
+[DEBUG]   (f) analyzer = default
+[DEBUG]   (f) baseDir = C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG]   (f) excludedClasses = []
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) ignoreAllNonTestScoped = false
+[DEBUG]   (f) ignoreNonCompile = false
+[DEBUG]   (f) ignoreUnusedRuntime = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\target
+[DEBUG]   (f) outputXML = false
+[DEBUG]   (f) scriptableFlag = $$%%%
+[DEBUG]   (f) scriptableOutput = false
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] Skipping pom project
+[INFO] 
+[INFO] ----------------------< r-uu:r-uu.codespace.app >-----------------------
+[INFO] Building r-uu.codespace.app 0.0.1                                 [2/53]
+[INFO]   from app\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Resolving plugin prefix dependency from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix dependency to org.apache.maven.plugins:maven-dependency-plugin from POM r-uu:r-uu.codespace.app:pom:0.0.1
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       r-uu:r-uu.codespace.app:0.0.1
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [test]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${maven.clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <fast default-value="false">${maven.clean.fast}</fast>
+  <fastDir>${maven.clean.fastDir}</fastDir>
+  <fastMode default-value="background">${maven.clean.fastMode}</fastMode>
+  <followSymLinks default-value="false">${maven.clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.build.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${maven.clean.verbose}</verbose>
+</configuration>
+[DEBUG] --- init fork of r-uu:r-uu.codespace.app:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] --- exit fork of r-uu:r-uu.codespace.app:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <analyzer default-value="default">${analyzer}</analyzer>
+  <baseDir default-value="${basedir}"/>
+  <excludedClasses>${mdep.analyze.excludedClasses}</excludedClasses>
+  <failOnWarning default-value="false">${failOnWarning}</failOnWarning>
+  <ignoreAllNonTestScoped default-value="false">${ignoreAllNonTestScoped}</ignoreAllNonTestScoped>
+  <ignoreNonCompile default-value="false">${ignoreNonCompile}</ignoreNonCompile>
+  <ignoreUnusedRuntime default-value="false">${ignoreUnusedRuntime}</ignoreUnusedRuntime>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <outputXML default-value="false">${outputXML}</outputXML>
+  <scriptableFlag default-value="$$$%%%">${scriptableFlag}</scriptableFlag>
+  <scriptableOutput default-value="false">${scriptableOutput}</scriptableOutput>
+  <skip default-value="false">${mdep.analyze.skip}</skip>
+  <verbose default-value="false">${verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=11700, ConflictMarker.markTime=12000, ConflictMarker.nodeCount=1, ConflictIdSorter.graphTime=2600, ConflictIdSorter.topsortTime=5000, ConflictIdSorter.conflictIdCount=0, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=12700, ConflictResolver.conflictItemCount=0, DfDependencyCollector.collectTime=7500, DfDependencyCollector.transformTime=57900}
+[DEBUG] r-uu:r-uu.codespace.app:pom:0.0.1
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ r-uu.codespace.app ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean:default-clean' with basic configurator -->
+[DEBUG]   (f) directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fast = false
+[DEBUG]   (f) fastMode = background
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\target\classes
+[DEBUG]   (f) reportDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\target\classes
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\target\test-classes
+[DEBUG] -- end configuration --
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\target
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\target\classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\target\test-classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\target\classes
+[INFO] 
+[INFO] >>> dependency:3.7.0:analyze (default-cli) > test-compile @ r-uu.codespace.app >>>
+[INFO] 
+[INFO] <<< dependency:3.7.0:analyze (default-cli) < test-compile @ r-uu.codespace.app <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.7.0:analyze (default-cli) @ r-uu.codespace.app ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze:default-cli' with basic configurator -->
+[DEBUG]   (f) analyzer = default
+[DEBUG]   (f) baseDir = C:\Users\r-uu\develop\github\codespace\r-uu\app
+[DEBUG]   (f) excludedClasses = []
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) ignoreAllNonTestScoped = false
+[DEBUG]   (f) ignoreNonCompile = false
+[DEBUG]   (f) ignoreUnusedRuntime = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\target
+[DEBUG]   (f) outputXML = false
+[DEBUG]   (f) scriptableFlag = $$%%%
+[DEBUG]   (f) scriptableOutput = false
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] Skipping pom project
+[INFO] 
+[INFO] --------------------< r-uu:r-uu.codespace.app.demo >--------------------
+[INFO] Building r-uu.codespace.app.demo 0.0.1                            [3/53]
+[INFO]   from app\demo\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Resolving plugin prefix dependency from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix dependency to org.apache.maven.plugins:maven-dependency-plugin from POM r-uu:r-uu.codespace.app.demo:jar:0.0.1
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       r-uu:r-uu.codespace.app.demo:0.0.1
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, test]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${maven.clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <fast default-value="false">${maven.clean.fast}</fast>
+  <fastDir>${maven.clean.fastDir}</fastDir>
+  <fastMode default-value="background">${maven.clean.fastMode}</fastMode>
+  <followSymLinks default-value="false">${maven.clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.build.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${maven.clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPaths>
+    <path>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-jpamodelgen</artifactId>
+      <version>6.6.4.Final</version>
+    </path>
+    <path>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.6.3</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.38</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok-mapstruct-binding</artifactId>
+      <version>0.2.0</version>
+    </path>
+  </annotationProcessorPaths>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <moduleVersion default-value="${project.version}">${maven.compiler.moduleVersion}</moduleVersion>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}">${maven.compiler.outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>24</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] --- init fork of r-uu:r-uu.codespace.app.demo:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, test]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPaths>
+    <path>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-jpamodelgen</artifactId>
+      <version>6.6.4.Final</version>
+    </path>
+    <path>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.6.3</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.38</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok-mapstruct-binding</artifactId>
+      <version>0.2.0</version>
+    </path>
+  </annotationProcessorPaths>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <moduleVersion default-value="${project.version}">${maven.compiler.moduleVersion}</moduleVersion>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}">${maven.compiler.outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>24</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.14.0:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <annotationProcessorPaths>
+    <path>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-jpamodelgen</artifactId>
+      <version>6.6.4.Final</version>
+    </path>
+    <path>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.6.3</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.38</version>
+    </path>
+    <path>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok-mapstruct-binding</artifactId>
+      <version>0.2.0</version>
+    </path>
+  </annotationProcessorPaths>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac-test"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <release>24</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">${maven.compiler.target}</target>
+  <testPath default-value="${project.testClasspathElements}"/>
+  <testRelease>${maven.compiler.testRelease}</testRelease>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <useModulePath default-value="true"/>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] --- exit fork of r-uu:r-uu.codespace.app.demo:0.0.1 for org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <analyzer default-value="default">${analyzer}</analyzer>
+  <baseDir default-value="${basedir}"/>
+  <excludedClasses>${mdep.analyze.excludedClasses}</excludedClasses>
+  <failOnWarning default-value="false">${failOnWarning}</failOnWarning>
+  <ignoreAllNonTestScoped default-value="false">${ignoreAllNonTestScoped}</ignoreAllNonTestScoped>
+  <ignoreNonCompile default-value="false">${ignoreNonCompile}</ignoreNonCompile>
+  <ignoreUnusedRuntime default-value="false">${ignoreUnusedRuntime}</ignoreUnusedRuntime>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <outputXML default-value="false">${outputXML}</outputXML>
+  <scriptableFlag default-value="$$$%%%">${scriptableFlag}</scriptableFlag>
+  <scriptableOutput default-value="false">${scriptableOutput}</scriptableOutput>
+  <skip default-value="false">${mdep.analyze.skip}</skip>
+  <verbose default-value="false">${verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=88100, ConflictMarker.markTime=23800, ConflictMarker.nodeCount=18, ConflictIdSorter.graphTime=28900, ConflictIdSorter.topsortTime=15900, ConflictIdSorter.conflictIdCount=9, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1009400, ConflictResolver.conflictItemCount=17, DfDependencyCollector.collectTime=21248400, DfDependencyCollector.transformTime=1220600}
+[DEBUG] r-uu:r-uu.codespace.app.demo:jar:0.0.1
+[DEBUG]    org.hamcrest:hamcrest:jar:3.0:test
+[DEBUG]    org.junit.jupiter:junit-jupiter:jar:5.11.4:test
+[DEBUG]       org.junit.jupiter:junit-jupiter-api:jar:5.11.4:test (version managed from 5.11.4)
+[DEBUG]          org.opentest4j:opentest4j:jar:1.3.0:test
+[DEBUG]          org.junit.platform:junit-platform-commons:jar:1.11.4:test (version managed from 1.11.4)
+[DEBUG]          org.apiguardian:apiguardian-api:jar:1.1.2:test
+[DEBUG]       org.junit.jupiter:junit-jupiter-params:jar:5.11.4:test
+[DEBUG]       org.junit.jupiter:junit-jupiter-engine:jar:5.11.4:test
+[DEBUG]          org.junit.platform:junit-platform-engine:jar:1.11.4:test
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:3.4.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean:default-clean' with basic configurator -->
+[DEBUG]   (f) directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fast = false
+[DEBUG]   (f) fastMode = background
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (f) reportDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\META-INF\jpms.args
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\META-INF
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\de\ruu\app\demo\MainTest.class
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\de\ruu\app\demo
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\de\ruu\app
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\de\ruu
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes\de
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\r-uu.codespace.app.demo-0.0.1.jar
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\inputFiles.lst
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\createdFiles.lst
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\testCompile
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\compile\default-compile
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin\compile
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status\maven-compiler-plugin
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-status
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-archiver\pom.properties
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\maven-archiver
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\module-info.class
+[INFO] Deleting file C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[INFO] Deleting directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[DEBUG] Skipping non-existing directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ r-uu.codespace.app.demo ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=46900, ConflictMarker.markTime=22000, ConflictMarker.nodeCount=13, ConflictIdSorter.graphTime=14600, ConflictIdSorter.topsortTime=13600, ConflictIdSorter.conflictIdCount=9, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=252000, ConflictResolver.conflictItemCount=13, DfDependencyCollector.collectTime=22861700, DfDependencyCollector.transformTime=531100}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.26:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.5.1:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:3.3.1:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.12.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.3.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.12.0
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources:default-resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used:
+[DEBUG] classworlds.conf: C:\software\develop\build\maven\bin\m2.conf
+[DEBUG] dep.r-uu.codespace.version: 0.0.1
+[DEBUG] env.=C:: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.=EXITCODE: 00000000
+[DEBUG] env.ALLUSERSPROFILE: C:\ProgramData
+[DEBUG] env.APPDATA: C:\Users\r-uu\AppData\Roaming
+[DEBUG] env.CLASSWORLDS_JAR: "C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar"
+[DEBUG] env.CLASSWORLDS_LAUNCHER: org.codehaus.plexus.classworlds.launcher.Launcher
+[DEBUG] env.COMMONPROGRAMFILES: C:\Program Files\Common Files
+[DEBUG] env.COMMONPROGRAMFILES(X86): C:\Program Files (x86)\Common Files
+[DEBUG] env.COMMONPROGRAMW6432: C:\Program Files\Common Files
+[DEBUG] env.COMPUTERNAME: ZNBK14
+[DEBUG] env.COMSPEC: C:\WINDOWS\system32\cmd.exe
+[DEBUG] env.DIR_PROJECT: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.DRIVERDATA: C:\Windows\System32\Drivers\DriverData
+[DEBUG] env.EFC_11740_1592913036: 1
+[DEBUG] env.ERROR_CODE: 0
+[DEBUG] env.EXEC_DIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.HOMEDRIVE: C:
+[DEBUG] env.HOMEPATH: \Users\r-uu
+[DEBUG] env.INTELLIJ IDEA COMMUNITY EDITION: C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;
+[DEBUG] env.JAVACMD: c:\software\develop\java\jdk\bin\java.exe
+[DEBUG] env.JAVA_HOME: c:\software\develop\java\jdk
+[DEBUG] env.JVMCONFIG: \.mvn\jvm.config
+[DEBUG] env.LOCALAPPDATA: C:\Users\r-uu\AppData\Local
+[DEBUG] env.LOGONSERVER: \\ZNBK14
+[DEBUG] env.MAVEN_CMD_LINE_ARGS: clean compile dependency:analyze -X
+[DEBUG] env.MAVEN_EXPERIMENTAL: true
+[DEBUG] env.MAVEN_HOME: C:\software\develop\build\maven
+[DEBUG] env.MAVEN_OPTS: --enable-native-access=ALL-UNNAMED 
+[DEBUG] env.MAVEN_PROJECTBASEDIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.NUMBER_OF_PROCESSORS: 22
+[DEBUG] env.ONEDRIVE: C:\Users\r-uu\OneDrive
+[DEBUG] env.ONEDRIVECONSUMER: C:\Users\r-uu\OneDrive
+[DEBUG] env.OS: Windows_NT
+[DEBUG] env.PATH: C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin
+[DEBUG] env.PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[DEBUG] env.PROCESSOR_ARCHITECTURE: AMD64
+[DEBUG] env.PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 170 Stepping 4, GenuineIntel
+[DEBUG] env.PROCESSOR_LEVEL: 6
+[DEBUG] env.PROCESSOR_REVISION: aa04
+[DEBUG] env.PROGRAMDATA: C:\ProgramData
+[DEBUG] env.PROGRAMFILES: C:\Program Files
+[DEBUG] env.PROGRAMFILES(X86): C:\Program Files (x86)
+[DEBUG] env.PROGRAMW6432: C:\Program Files
+[DEBUG] env.PROMPT: $P$G
+[DEBUG] env.PSMODULEPATH: C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+[DEBUG] env.PUBLIC: C:\Users\Public
+[DEBUG] env.SESSIONNAME: Console
+[DEBUG] env.SYSTEMDRIVE: C:
+[DEBUG] env.SYSTEMROOT: C:\WINDOWS
+[DEBUG] env.TEMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.TMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.USERDOMAIN: znbk14
+[DEBUG] env.USERDOMAIN_ROAMINGPROFILE: znbk14
+[DEBUG] env.USERNAME: r-uu
+[DEBUG] env.USERPROFILE: C:\Users\r-uu
+[DEBUG] env.WDIR: C:\
+[DEBUG] env.WINDIR: C:\WINDOWS
+[DEBUG] env.ZES_ENABLE_SYSMAN: 1
+[DEBUG] file.encoding: UTF-8
+[DEBUG] file.separator: \
+[DEBUG] java.class.path: C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar
+[DEBUG] java.class.version: 68.0
+[DEBUG] java.home: c:\software\develop\java\jdk
+[DEBUG] java.io.tmpdir: C:\Users\r-uu\AppData\Local\Temp\
+[DEBUG] java.library.path: c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin;.
+[DEBUG] java.runtime.name: Java(TM) SE Runtime Environment
+[DEBUG] java.runtime.version: 24.0.2+11-jvmci-b01
+[DEBUG] java.specification.name: Java Platform API Specification
+[DEBUG] java.specification.vendor: Oracle Corporation
+[DEBUG] java.specification.version: 24
+[DEBUG] java.vendor: Oracle Corporation
+[DEBUG] java.vendor.url: https://java.oracle.com/
+[DEBUG] java.vendor.url.bug: https://bugreport.java.com/bugreport/
+[DEBUG] java.vendor.version: Oracle GraalVM 24.0.2+11.1
+[DEBUG] java.version: 24.0.2
+[DEBUG] java.version.date: 2025-07-15
+[DEBUG] java.vm.compressedOopsMode: Zero based
+[DEBUG] java.vm.info: mixed mode, sharing
+[DEBUG] java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+[DEBUG] java.vm.specification.name: Java Virtual Machine Specification
+[DEBUG] java.vm.specification.vendor: Oracle Corporation
+[DEBUG] java.vm.specification.version: 24
+[DEBUG] java.vm.vendor: Oracle Corporation
+[DEBUG] java.vm.version: 24.0.2+11-jvmci-b01
+[DEBUG] jdk.debug: release
+[DEBUG] jdk.internal.vm.ci.enabled: true
+[DEBUG] library.jansi.path: C:\software\develop\build\maven\lib\jansi-native
+[DEBUG] line.separator: 
+
+[DEBUG] maven.build.timestamp: 2025-09-02T17:36:40Z
+[DEBUG] maven.build.version: Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+[DEBUG] maven.compiler.parallel: true
+[DEBUG] maven.conf: C:\software\develop\build\maven/conf
+[DEBUG] maven.home: C:\software\develop\build\maven
+[DEBUG] maven.multiModuleProjectDirectory: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] maven.resolver.transport: wagon
+[DEBUG] maven.version: 3.9.11
+[DEBUG] native.encoding: Cp1252
+[DEBUG] os.arch: amd64
+[DEBUG] os.name: Windows 11
+[DEBUG] os.version: 10.0
+[DEBUG] path.separator: ;
+[DEBUG] project.baseUri: file:/C:/Users/r-uu/develop/github/codespace/r-uu/app/demo/
+[DEBUG] project.build.sourceEncoding: UTF-8
+[DEBUG] stderr.encoding: cp850
+[DEBUG] stdout.encoding: Cp1252
+[DEBUG] sun.arch.data.model: 64
+[DEBUG] sun.boot.library.path: c:\software\develop\java\jdk\bin
+[DEBUG] sun.cpu.endian: little
+[DEBUG] sun.cpu.isalist: amd64
+[DEBUG] sun.io.unicode.encoding: UnicodeLittle
+[DEBUG] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher clean compile dependency:analyze -X
+[DEBUG] sun.java.launcher: SUN_STANDARD
+[DEBUG] sun.jnu.encoding: Cp1252
+[DEBUG] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[DEBUG] sun.os.patch.level: 
+[DEBUG] user.country: DE
+[DEBUG] user.dir: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] user.home: C:\Users\r-uu
+[DEBUG] user.language: de
+[DEBUG] user.name: r-uu
+[DEBUG] user.script: 
+[DEBUG] user.variant: 
+[DEBUG] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] Using 'UTF-8' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[DEBUG] no user filter components
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ r-uu.codespace.app.demo ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=261000, ConflictMarker.markTime=27200, ConflictMarker.nodeCount=22, ConflictIdSorter.graphTime=200700, ConflictIdSorter.topsortTime=34800, ConflictIdSorter.conflictIdCount=14, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=512200, ConflictResolver.conflictItemCount=22, DfDependencyCollector.collectTime=33136200, DfDependencyCollector.transformTime=1060000}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.14.0
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]       commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-java:jar:1.4.0:compile
+[DEBUG]       org.ow2.asm:asm:jar:9.7.1:compile
+[DEBUG]       com.thoughtworks.qdox:qdox:jar:2.2.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.15.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.15.0:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.codehaus.plexus:plexus-xml:jar:3.0.1:compile (version managed from default)
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.15.0:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.14.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.4.2
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:1.4.0
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.7.1
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.2.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-xml:jar:3.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.15.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:4.0.1
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile:default-compile' with basic configurator -->
+[DEBUG]   (s) groupId = org.hibernate.orm
+[DEBUG]   (s) artifactId = hibernate-jpamodelgen
+[DEBUG]   (s) version = 6.6.4.Final
+[DEBUG]   (s) groupId = org.mapstruct
+[DEBUG]   (s) artifactId = mapstruct-processor
+[DEBUG]   (s) version = 1.6.3
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok
+[DEBUG]   (s) version = 1.18.38
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok-mapstruct-binding
+[DEBUG]   (s) version = 0.2.0
+[DEBUG]   (f) annotationProcessorPaths = [org.hibernate.orm:hibernate-jpamodelgen:6.6.4.Final.jar, org.mapstruct:mapstruct-processor:1.6.3.jar, org.projectlombok:lombok:1.18.38.jar, org.projectlombok:lombok-mapstruct-binding:0.2.0.jar]
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) basedir = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo
+[DEBUG]   (f) buildDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG]   (f) compilePath = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes]
+[DEBUG]   (f) compileSourceRoots = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG]   (f) moduleVersion = 0.0.1
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (f) projectArtifact = r-uu:r-uu.codespace.app.demo:jar:0.0.1
+[DEBUG]   (s) release = 24
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 1.8
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations to compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java
+[DEBUG] New compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=152900, ConflictMarker.markTime=26600, ConflictMarker.nodeCount=34, ConflictIdSorter.graphTime=79600, ConflictIdSorter.topsortTime=16700, ConflictIdSorter.conflictIdCount=23, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=509500, ConflictResolver.conflictItemCount=33, DfDependencyCollector.collectTime=81390800, DfDependencyCollector.transformTime=809600}
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] 	Stale source detected: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java\module-info.java
+[INFO] 	Stale source detected: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java\de\ruu\app\demo\Main.java
+[INFO] 	Input tree files (+): C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java\de\ruu\app\demo\Main.java
+[INFO] 	Input tree files (+): C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java\module-info.java
+[INFO] Recompiling the module because of changed source code.
+[DEBUG] Classpath:
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG] Source roots:
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG] Command line options:
+[DEBUG] -d C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes -classpath C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes; -sourcepath C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java;C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations; -s C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations -processorpath C:\Users\r-uu\.m2\repository\org\hibernate\orm\hibernate-jpamodelgen\6.6.4.Final\hibernate-jpamodelgen-6.6.4.Final.jar;C:\Users\r-uu\.m2\repository\org\hibernate\orm\hibernate-core\6.6.4.Final\hibernate-core-6.6.4.Final.jar;C:\Users\r-uu\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\r-uu\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\r-uu\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\r-uu\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\r-uu\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\r-uu\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\r-uu\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\r-uu\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\r-uu\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\r-uu\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\r-uu\.m2\repository\org\mapstruct\mapstruct-processor\1.6.3\mapstruct-processor-1.6.3.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok-mapstruct-binding\0.2.0\lombok-mapstruct-binding-0.2.0.jar; -g --release 24 -encoding UTF-8 --module-version 0.0.1 -XDuseUnsharedTable=true
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 2 source files with javac [debug release 24] to target\classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] Hibernate compile-time tooling 6.6.4.Final
+[INFO] 
+[INFO] >>> dependency:3.7.0:analyze (default-cli) > test-compile @ r-uu.codespace.app.demo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources:default-resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used:
+[DEBUG] classworlds.conf: C:\software\develop\build\maven\bin\m2.conf
+[DEBUG] dep.r-uu.codespace.version: 0.0.1
+[DEBUG] env.=C:: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.=EXITCODE: 00000000
+[DEBUG] env.ALLUSERSPROFILE: C:\ProgramData
+[DEBUG] env.APPDATA: C:\Users\r-uu\AppData\Roaming
+[DEBUG] env.CLASSWORLDS_JAR: "C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar"
+[DEBUG] env.CLASSWORLDS_LAUNCHER: org.codehaus.plexus.classworlds.launcher.Launcher
+[DEBUG] env.COMMONPROGRAMFILES: C:\Program Files\Common Files
+[DEBUG] env.COMMONPROGRAMFILES(X86): C:\Program Files (x86)\Common Files
+[DEBUG] env.COMMONPROGRAMW6432: C:\Program Files\Common Files
+[DEBUG] env.COMPUTERNAME: ZNBK14
+[DEBUG] env.COMSPEC: C:\WINDOWS\system32\cmd.exe
+[DEBUG] env.DIR_PROJECT: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.DRIVERDATA: C:\Windows\System32\Drivers\DriverData
+[DEBUG] env.EFC_11740_1592913036: 1
+[DEBUG] env.ERROR_CODE: 0
+[DEBUG] env.EXEC_DIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.HOMEDRIVE: C:
+[DEBUG] env.HOMEPATH: \Users\r-uu
+[DEBUG] env.INTELLIJ IDEA COMMUNITY EDITION: C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;
+[DEBUG] env.JAVACMD: c:\software\develop\java\jdk\bin\java.exe
+[DEBUG] env.JAVA_HOME: c:\software\develop\java\jdk
+[DEBUG] env.JVMCONFIG: \.mvn\jvm.config
+[DEBUG] env.LOCALAPPDATA: C:\Users\r-uu\AppData\Local
+[DEBUG] env.LOGONSERVER: \\ZNBK14
+[DEBUG] env.MAVEN_CMD_LINE_ARGS: clean compile dependency:analyze -X
+[DEBUG] env.MAVEN_EXPERIMENTAL: true
+[DEBUG] env.MAVEN_HOME: C:\software\develop\build\maven
+[DEBUG] env.MAVEN_OPTS: --enable-native-access=ALL-UNNAMED 
+[DEBUG] env.MAVEN_PROJECTBASEDIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.NUMBER_OF_PROCESSORS: 22
+[DEBUG] env.ONEDRIVE: C:\Users\r-uu\OneDrive
+[DEBUG] env.ONEDRIVECONSUMER: C:\Users\r-uu\OneDrive
+[DEBUG] env.OS: Windows_NT
+[DEBUG] env.PATH: C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin
+[DEBUG] env.PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[DEBUG] env.PROCESSOR_ARCHITECTURE: AMD64
+[DEBUG] env.PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 170 Stepping 4, GenuineIntel
+[DEBUG] env.PROCESSOR_LEVEL: 6
+[DEBUG] env.PROCESSOR_REVISION: aa04
+[DEBUG] env.PROGRAMDATA: C:\ProgramData
+[DEBUG] env.PROGRAMFILES: C:\Program Files
+[DEBUG] env.PROGRAMFILES(X86): C:\Program Files (x86)
+[DEBUG] env.PROGRAMW6432: C:\Program Files
+[DEBUG] env.PROMPT: $P$G
+[DEBUG] env.PSMODULEPATH: C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+[DEBUG] env.PUBLIC: C:\Users\Public
+[DEBUG] env.SESSIONNAME: Console
+[DEBUG] env.SYSTEMDRIVE: C:
+[DEBUG] env.SYSTEMROOT: C:\WINDOWS
+[DEBUG] env.TEMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.TMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.USERDOMAIN: znbk14
+[DEBUG] env.USERDOMAIN_ROAMINGPROFILE: znbk14
+[DEBUG] env.USERNAME: r-uu
+[DEBUG] env.USERPROFILE: C:\Users\r-uu
+[DEBUG] env.WDIR: C:\
+[DEBUG] env.WINDIR: C:\WINDOWS
+[DEBUG] env.ZES_ENABLE_SYSMAN: 1
+[DEBUG] file.encoding: UTF-8
+[DEBUG] file.separator: \
+[DEBUG] java.class.path: C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar
+[DEBUG] java.class.version: 68.0
+[DEBUG] java.home: c:\software\develop\java\jdk
+[DEBUG] java.io.tmpdir: C:\Users\r-uu\AppData\Local\Temp\
+[DEBUG] java.library.path: c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin;.
+[DEBUG] java.runtime.name: Java(TM) SE Runtime Environment
+[DEBUG] java.runtime.version: 24.0.2+11-jvmci-b01
+[DEBUG] java.specification.name: Java Platform API Specification
+[DEBUG] java.specification.vendor: Oracle Corporation
+[DEBUG] java.specification.version: 24
+[DEBUG] java.vendor: Oracle Corporation
+[DEBUG] java.vendor.url: https://java.oracle.com/
+[DEBUG] java.vendor.url.bug: https://bugreport.java.com/bugreport/
+[DEBUG] java.vendor.version: Oracle GraalVM 24.0.2+11.1
+[DEBUG] java.version: 24.0.2
+[DEBUG] java.version.date: 2025-07-15
+[DEBUG] java.vm.compressedOopsMode: Zero based
+[DEBUG] java.vm.info: mixed mode, sharing
+[DEBUG] java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+[DEBUG] java.vm.specification.name: Java Virtual Machine Specification
+[DEBUG] java.vm.specification.vendor: Oracle Corporation
+[DEBUG] java.vm.specification.version: 24
+[DEBUG] java.vm.vendor: Oracle Corporation
+[DEBUG] java.vm.version: 24.0.2+11-jvmci-b01
+[DEBUG] jdk.debug: release
+[DEBUG] jdk.internal.vm.ci.enabled: true
+[DEBUG] library.jansi.path: C:\software\develop\build\maven\lib\jansi-native
+[DEBUG] line.separator: 
+
+[DEBUG] maven.build.timestamp: 2025-09-02T17:36:41Z
+[DEBUG] maven.build.version: Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+[DEBUG] maven.compiler.parallel: true
+[DEBUG] maven.conf: C:\software\develop\build\maven/conf
+[DEBUG] maven.home: C:\software\develop\build\maven
+[DEBUG] maven.multiModuleProjectDirectory: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] maven.resolver.transport: wagon
+[DEBUG] maven.version: 3.9.11
+[DEBUG] native.encoding: Cp1252
+[DEBUG] os.arch: amd64
+[DEBUG] os.name: Windows 11
+[DEBUG] os.version: 10.0
+[DEBUG] path.separator: ;
+[DEBUG] project.baseUri: file:/C:/Users/r-uu/develop/github/codespace/r-uu/app/demo/
+[DEBUG] project.build.sourceEncoding: UTF-8
+[DEBUG] stderr.encoding: cp850
+[DEBUG] stdout.encoding: Cp1252
+[DEBUG] sun.arch.data.model: 64
+[DEBUG] sun.boot.library.path: c:\software\develop\java\jdk\bin
+[DEBUG] sun.cpu.endian: little
+[DEBUG] sun.cpu.isalist: amd64
+[DEBUG] sun.io.unicode.encoding: UnicodeLittle
+[DEBUG] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher clean compile dependency:analyze -X
+[DEBUG] sun.java.launcher: SUN_STANDARD
+[DEBUG] sun.jnu.encoding: Cp1252
+[DEBUG] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[DEBUG] sun.os.patch.level: 
+[DEBUG] user.country: DE
+[DEBUG] user.dir: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] user.home: C:\Users\r-uu
+[DEBUG] user.language: de
+[DEBUG] user.name: r-uu
+[DEBUG] user.script: 
+[DEBUG] user.variant: 
+[DEBUG] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] Using 'UTF-8' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[DEBUG] no user filter components
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile:default-compile' with basic configurator -->
+[DEBUG]   (s) groupId = org.hibernate.orm
+[DEBUG]   (s) artifactId = hibernate-jpamodelgen
+[DEBUG]   (s) version = 6.6.4.Final
+[DEBUG]   (s) groupId = org.mapstruct
+[DEBUG]   (s) artifactId = mapstruct-processor
+[DEBUG]   (s) version = 1.6.3
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok
+[DEBUG]   (s) version = 1.18.38
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok-mapstruct-binding
+[DEBUG]   (s) version = 0.2.0
+[DEBUG]   (f) annotationProcessorPaths = [org.hibernate.orm:hibernate-jpamodelgen:6.6.4.Final.jar, org.mapstruct:mapstruct-processor:1.6.3.jar, org.projectlombok:lombok:1.18.38.jar, org.projectlombok:lombok-mapstruct-binding:0.2.0.jar]
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) basedir = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo
+[DEBUG]   (f) buildDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG]   (f) compilePath = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes]
+[DEBUG]   (f) compileSourceRoots = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java, C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG]   (f) moduleVersion = 0.0.1
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (f) projectArtifact = r-uu:r-uu.codespace.app.demo:jar:0.0.1
+[DEBUG]   (s) release = 24
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 1.8
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations to compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG] New compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\main\java
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-sources\annotations
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=152700, ConflictMarker.markTime=44300, ConflictMarker.nodeCount=34, ConflictIdSorter.graphTime=59100, ConflictIdSorter.topsortTime=44800, ConflictIdSorter.conflictIdCount=23, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=933300, ConflictResolver.conflictItemCount=33, DfDependencyCollector.collectTime=8527500, DfDependencyCollector.transformTime=1520800}
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:testResources:default-testResources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used:
+[DEBUG] classworlds.conf: C:\software\develop\build\maven\bin\m2.conf
+[DEBUG] dep.r-uu.codespace.version: 0.0.1
+[DEBUG] env.=C:: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.=EXITCODE: 00000000
+[DEBUG] env.ALLUSERSPROFILE: C:\ProgramData
+[DEBUG] env.APPDATA: C:\Users\r-uu\AppData\Roaming
+[DEBUG] env.CLASSWORLDS_JAR: "C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar"
+[DEBUG] env.CLASSWORLDS_LAUNCHER: org.codehaus.plexus.classworlds.launcher.Launcher
+[DEBUG] env.COMMONPROGRAMFILES: C:\Program Files\Common Files
+[DEBUG] env.COMMONPROGRAMFILES(X86): C:\Program Files (x86)\Common Files
+[DEBUG] env.COMMONPROGRAMW6432: C:\Program Files\Common Files
+[DEBUG] env.COMPUTERNAME: ZNBK14
+[DEBUG] env.COMSPEC: C:\WINDOWS\system32\cmd.exe
+[DEBUG] env.DIR_PROJECT: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.DRIVERDATA: C:\Windows\System32\Drivers\DriverData
+[DEBUG] env.EFC_11740_1592913036: 1
+[DEBUG] env.ERROR_CODE: 0
+[DEBUG] env.EXEC_DIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.HOMEDRIVE: C:
+[DEBUG] env.HOMEPATH: \Users\r-uu
+[DEBUG] env.INTELLIJ IDEA COMMUNITY EDITION: C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;
+[DEBUG] env.JAVACMD: c:\software\develop\java\jdk\bin\java.exe
+[DEBUG] env.JAVA_HOME: c:\software\develop\java\jdk
+[DEBUG] env.JVMCONFIG: \.mvn\jvm.config
+[DEBUG] env.LOCALAPPDATA: C:\Users\r-uu\AppData\Local
+[DEBUG] env.LOGONSERVER: \\ZNBK14
+[DEBUG] env.MAVEN_CMD_LINE_ARGS: clean compile dependency:analyze -X
+[DEBUG] env.MAVEN_EXPERIMENTAL: true
+[DEBUG] env.MAVEN_HOME: C:\software\develop\build\maven
+[DEBUG] env.MAVEN_OPTS: --enable-native-access=ALL-UNNAMED 
+[DEBUG] env.MAVEN_PROJECTBASEDIR: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] env.NUMBER_OF_PROCESSORS: 22
+[DEBUG] env.ONEDRIVE: C:\Users\r-uu\OneDrive
+[DEBUG] env.ONEDRIVECONSUMER: C:\Users\r-uu\OneDrive
+[DEBUG] env.OS: Windows_NT
+[DEBUG] env.PATH: C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin
+[DEBUG] env.PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[DEBUG] env.PROCESSOR_ARCHITECTURE: AMD64
+[DEBUG] env.PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 170 Stepping 4, GenuineIntel
+[DEBUG] env.PROCESSOR_LEVEL: 6
+[DEBUG] env.PROCESSOR_REVISION: aa04
+[DEBUG] env.PROGRAMDATA: C:\ProgramData
+[DEBUG] env.PROGRAMFILES: C:\Program Files
+[DEBUG] env.PROGRAMFILES(X86): C:\Program Files (x86)
+[DEBUG] env.PROGRAMW6432: C:\Program Files
+[DEBUG] env.PROMPT: $P$G
+[DEBUG] env.PSMODULEPATH: C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+[DEBUG] env.PUBLIC: C:\Users\Public
+[DEBUG] env.SESSIONNAME: Console
+[DEBUG] env.SYSTEMDRIVE: C:
+[DEBUG] env.SYSTEMROOT: C:\WINDOWS
+[DEBUG] env.TEMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.TMP: C:\Users\r-uu\AppData\Local\Temp
+[DEBUG] env.USERDOMAIN: znbk14
+[DEBUG] env.USERDOMAIN_ROAMINGPROFILE: znbk14
+[DEBUG] env.USERNAME: r-uu
+[DEBUG] env.USERPROFILE: C:\Users\r-uu
+[DEBUG] env.WDIR: C:\
+[DEBUG] env.WINDIR: C:\WINDOWS
+[DEBUG] env.ZES_ENABLE_SYSMAN: 1
+[DEBUG] file.encoding: UTF-8
+[DEBUG] file.separator: \
+[DEBUG] java.class.path: C:\software\develop\build\maven\boot\plexus-classworlds-2.9.0.jar
+[DEBUG] java.class.version: 68.0
+[DEBUG] java.home: c:\software\develop\java\jdk
+[DEBUG] java.io.tmpdir: C:\Users\r-uu\AppData\Local\Temp\
+[DEBUG] java.library.path: c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;\software\develop\java\jdk\bin;.
+[DEBUG] java.runtime.name: Java(TM) SE Runtime Environment
+[DEBUG] java.runtime.version: 24.0.2+11-jvmci-b01
+[DEBUG] java.specification.name: Java Platform API Specification
+[DEBUG] java.specification.vendor: Oracle Corporation
+[DEBUG] java.specification.version: 24
+[DEBUG] java.vendor: Oracle Corporation
+[DEBUG] java.vendor.url: https://java.oracle.com/
+[DEBUG] java.vendor.url.bug: https://bugreport.java.com/bugreport/
+[DEBUG] java.vendor.version: Oracle GraalVM 24.0.2+11.1
+[DEBUG] java.version: 24.0.2
+[DEBUG] java.version.date: 2025-07-15
+[DEBUG] java.vm.compressedOopsMode: Zero based
+[DEBUG] java.vm.info: mixed mode, sharing
+[DEBUG] java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+[DEBUG] java.vm.specification.name: Java Virtual Machine Specification
+[DEBUG] java.vm.specification.vendor: Oracle Corporation
+[DEBUG] java.vm.specification.version: 24
+[DEBUG] java.vm.vendor: Oracle Corporation
+[DEBUG] java.vm.version: 24.0.2+11-jvmci-b01
+[DEBUG] jdk.debug: release
+[DEBUG] jdk.internal.vm.ci.enabled: true
+[DEBUG] library.jansi.path: C:\software\develop\build\maven\lib\jansi-native
+[DEBUG] line.separator: 
+
+[DEBUG] maven.build.timestamp: 2025-09-02T17:36:42Z
+[DEBUG] maven.build.version: Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+[DEBUG] maven.compiler.parallel: true
+[DEBUG] maven.conf: C:\software\develop\build\maven/conf
+[DEBUG] maven.home: C:\software\develop\build\maven
+[DEBUG] maven.multiModuleProjectDirectory: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] maven.resolver.transport: wagon
+[DEBUG] maven.version: 3.9.11
+[DEBUG] native.encoding: Cp1252
+[DEBUG] os.arch: amd64
+[DEBUG] os.name: Windows 11
+[DEBUG] os.version: 10.0
+[DEBUG] path.separator: ;
+[DEBUG] project.baseUri: file:/C:/Users/r-uu/develop/github/codespace/r-uu/app/demo/
+[DEBUG] project.build.sourceEncoding: UTF-8
+[DEBUG] stderr.encoding: cp850
+[DEBUG] stdout.encoding: Cp1252
+[DEBUG] sun.arch.data.model: 64
+[DEBUG] sun.boot.library.path: c:\software\develop\java\jdk\bin
+[DEBUG] sun.cpu.endian: little
+[DEBUG] sun.cpu.isalist: amd64
+[DEBUG] sun.io.unicode.encoding: UnicodeLittle
+[DEBUG] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher clean compile dependency:analyze -X
+[DEBUG] sun.java.launcher: SUN_STANDARD
+[DEBUG] sun.jnu.encoding: Cp1252
+[DEBUG] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[DEBUG] sun.os.patch.level: 
+[DEBUG] user.country: DE
+[DEBUG] user.dir: C:\Users\r-uu\develop\github\codespace\r-uu
+[DEBUG] user.home: C:\Users\r-uu
+[DEBUG] user.language: de
+[DEBUG] user.name: r-uu
+[DEBUG] user.script: 
+[DEBUG] user.variant: 
+[DEBUG] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] Using 'UTF-8' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource from src\test\resources to target\test-classes
+[DEBUG] no user filter components
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.14.0:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.14.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.14.0:testCompile:default-testCompile' with basic configurator -->
+[DEBUG]   (s) groupId = org.hibernate.orm
+[DEBUG]   (s) artifactId = hibernate-jpamodelgen
+[DEBUG]   (s) version = 6.6.4.Final
+[DEBUG]   (s) groupId = org.mapstruct
+[DEBUG]   (s) artifactId = mapstruct-processor
+[DEBUG]   (s) version = 1.6.3
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok
+[DEBUG]   (s) version = 1.18.38
+[DEBUG]   (s) groupId = org.projectlombok
+[DEBUG]   (s) artifactId = lombok-mapstruct-binding
+[DEBUG]   (s) version = 0.2.0
+[DEBUG]   (f) annotationProcessorPaths = [org.hibernate.orm:hibernate-jpamodelgen:6.6.4.Final.jar, org.mapstruct:mapstruct-processor:1.6.3.jar, org.projectlombok:lombok:1.18.38.jar, org.projectlombok:lombok-mapstruct-binding:0.2.0.jar]
+[DEBUG]   (f) annotationProcessorPathsUseDepMgmt = false
+[DEBUG]   (f) basedir = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo
+[DEBUG]   (f) buildDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG]   (f) compileSourceRoots = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac-test
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) fileExtensions = [jar, class]
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) forceLegacyJavacApi = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.14.0:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: r-uu:r-uu.codespace.app.demo:0.0.1 @ C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\pom.xml
+[DEBUG]   (s) release = 24
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@bfc14b9
+[DEBUG]   (f) showCompilationChanges = false
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 1.8
+[DEBUG]   (f) testPath = [C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes, C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes, C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar, C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar, C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar, C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar, C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar, C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar, C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar, C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar, C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar]
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) useModulePath = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations to test-compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java
+[DEBUG] New test-compile source roots:
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java
+  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=69900, ConflictMarker.markTime=28600, ConflictMarker.nodeCount=34, ConflictIdSorter.graphTime=26400, ConflictIdSorter.topsortTime=22900, ConflictIdSorter.conflictIdCount=23, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1432600, ConflictResolver.conflictItemCount=33, DfDependencyCollector.collectTime=850100, DfDependencyCollector.transformTime=1611300}
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] 	New dependency detected: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class
+[INFO] 	Stale source detected: C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java\de\ruu\app\demo\MainTest.java
+[INFO] 	Input tree files (+): C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java\de\ruu\app\demo\MainTest.java
+[INFO] Recompiling the module because of changed dependency.
+[DEBUG] Classpath:
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar
+[DEBUG]  C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar
+[DEBUG] Modulepath:
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes
+[DEBUG] Source roots:
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java
+[DEBUG]  C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations
+[DEBUG] Command line options:
+[DEBUG] -d C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes -classpath C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\test-classes;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar; --module-path C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes; -sourcepath C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java;C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations; -s C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations -processorpath C:\Users\r-uu\.m2\repository\org\hibernate\orm\hibernate-jpamodelgen\6.6.4.Final\hibernate-jpamodelgen-6.6.4.Final.jar;C:\Users\r-uu\.m2\repository\org\hibernate\orm\hibernate-core\6.6.4.Final\hibernate-core-6.6.4.Final.jar;C:\Users\r-uu\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\r-uu\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\r-uu\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\r-uu\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\r-uu\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\r-uu\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\r-uu\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\r-uu\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\r-uu\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\r-uu\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\r-uu\.m2\repository\org\mapstruct\mapstruct-processor\1.6.3\mapstruct-processor-1.6.3.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok-mapstruct-binding\0.2.0\lombok-mapstruct-binding-0.2.0.jar; -g --release 24 -encoding UTF-8 --patch-module de.ruu.codespace.app.demo=C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes;C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\src\test\java;C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\generated-test-sources\test-annotations; --add-reads de.ruu.codespace.app.demo=ALL-UNNAMED -XDuseUnsharedTable=true
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 1 source file with javac [debug release 24 module-path] to target\test-classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] Hibernate compile-time tooling 6.6.4.Final
+[INFO] 
+[INFO] <<< dependency:3.7.0:analyze (default-cli) < test-compile @ r-uu.codespace.app.demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.7.0:analyze (default-cli) @ r-uu.codespace.app.demo ---
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-dependency-plugin:3.7.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze:default-cli' with basic configurator -->
+[DEBUG]   (f) analyzer = default
+[DEBUG]   (f) baseDir = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo
+[DEBUG]   (f) excludedClasses = []
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) ignoreAllNonTestScoped = false
+[DEBUG]   (f) ignoreNonCompile = false
+[DEBUG]   (f) ignoreUnusedRuntime = false
+[DEBUG]   (f) outputDirectory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target
+[DEBUG]   (f) outputXML = false
+[DEBUG]   (f) scriptableFlag = $$%%%
+[DEBUG]   (f) scriptableOutput = false
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for r-uu.codespace.root 0.0.1:
+[INFO] 
+[INFO] r-uu.codespace.root ................................ SUCCESS [  1.190 s]
+[INFO] r-uu.codespace.app ................................. SUCCESS [  0.007 s]
+[INFO] r-uu.codespace.app.demo ............................ FAILURE [  2.299 s]
+[INFO] r-uu.codespace.lib ................................. SKIPPED
+[INFO] r-uu.codespace.lib.util ............................ SKIPPED
+[INFO] r-uu.codespace.lib.jpa ............................. SKIPPED
+[INFO] r-uu.codespace.lib.jpa.core ........................ SKIPPED
+[INFO] r-uu.codespace.lib.mapstruct ....................... SKIPPED
+[INFO] r-uu.codespace.lib.ws.rs ........................... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah ....................... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.common ................ SKIPPED
+[INFO] r-uu.codespace.lib.cdi ............................. SKIPPED
+[INFO] r-uu.codespace.lib.cdi.common ...................... SKIPPED
+[INFO] r-uu.codespace.lib.junit ........................... SKIPPED
+[INFO] r-uu.codespace.lib.cdi.se .......................... SKIPPED
+[INFO] r-uu.codespace.lib.jpa.se .......................... SKIPPED
+[INFO] r-uu.codespace.lib.jdbc ............................ SKIPPED
+[INFO] r-uu.codespace.lib.jdbc.core ....................... SKIPPED
+[INFO] r-uu.codespace.lib.jdbc.postgres ................... SKIPPED
+[INFO] r-uu.codespace.lib.jpa.se.hibernate ................ SKIPPED
+[INFO] r-uu.codespace.lib.jpa.se.hibernate.postgres ....... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.common.jpa.se ......... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.common.jpa.ee ......... SKIPPED
+[INFO] r-uu.codespace.lib.jackson ......................... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.client ................ SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.client.rs ............. SKIPPED
+[INFO] r-uu.codespace.lib.fx .............................. SKIPPED
+[INFO] r-uu.codespace.lib.fx.comp ......................... SKIPPED
+[INFO] r-uu.codespace.lib.gen ............................. SKIPPED
+[INFO] r-uu.codespace.lib.gen.core ........................ SKIPPED
+[INFO] r-uu.codespace.lib.archunit ........................ SKIPPED
+[INFO] r-uu.codespace.lib.gen.java ........................ SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.core ................... SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx ..................... SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx.comp ................ SKIPPED
+[INFO] r-uu.codespace.lib.fx.core ......................... SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx.bean ................ SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx.bean.editor ......... SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx.tableview ........... SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.client.fx ............. SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.client.rs.demo ........ SKIPPED
+[INFO] r-uu.codespace.app.jeeeraaah.server ................ SKIPPED
+[INFO] r-uu.codespace.lib.cdi.se.demo ..................... SKIPPED
+[INFO] r-uu.codespace.lib.fx.comp.demo .................... SKIPPED
+[INFO] r-uu.codespace.lib.fx.demo ......................... SKIPPED
+[INFO] r-uu.codespace.lib.gen.java.fx.bean.editor.demo .... SKIPPED
+[INFO] r-uu.codespace.lib.jpa.core.mapstruct .............. SKIPPED
+[INFO] r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional SKIPPED
+[INFO] r-uu.codespace.lib.jpa.se.eclipselink .............. SKIPPED
+[INFO] r-uu.codespace.lib.jpa.se.hibernate.postgres.demo .. SKIPPED
+[INFO] r-uu.codespace.lib.jsonb ........................... SKIPPED
+[INFO] r-uu.codespace.lib.mp.config ....................... SKIPPED
+[INFO] r-uu.codespace.lib.postgres ........................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.070 s
+[INFO] Finished at: 2025-09-02T19:36:42+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) on project r-uu.codespace.app.demo: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze failed: Byte code of 'de.ruu.app.demo.Main' is corrupt from directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes, path = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class: Unsupported class file major version 68 -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze (default-cli) on project r-uu.codespace.app.demo: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze failed: Byte code of 'de.ruu.app.demo.Main' is corrupt from directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes, path = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:565)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.7.0:analyze failed: Byte code of 'de.ruu.app.demo.Main' is corrupt from directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes, path = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:133)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:565)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.RuntimeException: Byte code of 'de.ruu.app.demo.Main' is corrupt from directory = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes, path = C:\Users\r-uu\develop\github\codespace\r-uu\app\demo\target\classes\de\ruu\app\demo\Main.class
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.acceptDirectory (ClassFileVisitorUtils.java:102)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.accept (ClassFileVisitorUtils.java:59)
+    at org.apache.maven.shared.dependency.analyzer.asm.ASMDependencyAnalyzer.analyze (ASMDependencyAnalyzer.java:45)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildDependencyClasses (DefaultProjectDependencyAnalyzer.java:215)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildMainDependencyClasses (DefaultProjectDependencyAnalyzer.java:203)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.analyze (DefaultProjectDependencyAnalyzer.java:71)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.checkDependencies (AbstractAnalyzeMojo.java:332)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.execute (AbstractAnalyzeMojo.java:299)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:565)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.shared.dependency.analyzer.asm.VisitClassException: Byte code of 'de.ruu.app.demo.Main' is corrupt
+    at org.apache.maven.shared.dependency.analyzer.asm.DependencyClassFileVisitor.visitClass (DependencyClassFileVisitor.java:97)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.visitClass (ClassFileVisitorUtils.java:120)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.visitClass (ClassFileVisitorUtils.java:112)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.acceptDirectory (ClassFileVisitorUtils.java:98)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.accept (ClassFileVisitorUtils.java:59)
+    at org.apache.maven.shared.dependency.analyzer.asm.ASMDependencyAnalyzer.analyze (ASMDependencyAnalyzer.java:45)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildDependencyClasses (DefaultProjectDependencyAnalyzer.java:215)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildMainDependencyClasses (DefaultProjectDependencyAnalyzer.java:203)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.analyze (DefaultProjectDependencyAnalyzer.java:71)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.checkDependencies (AbstractAnalyzeMojo.java:332)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.execute (AbstractAnalyzeMojo.java:299)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:565)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 68
+    at org.objectweb.asm.ClassReader.<init> (ClassReader.java:200)
+    at org.objectweb.asm.ClassReader.<init> (ClassReader.java:180)
+    at org.objectweb.asm.ClassReader.<init> (ClassReader.java:166)
+    at org.apache.maven.shared.dependency.analyzer.asm.DependencyClassFileVisitor.visitClass (DependencyClassFileVisitor.java:75)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.visitClass (ClassFileVisitorUtils.java:120)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.visitClass (ClassFileVisitorUtils.java:112)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.acceptDirectory (ClassFileVisitorUtils.java:98)
+    at org.apache.maven.shared.dependency.analyzer.ClassFileVisitorUtils.accept (ClassFileVisitorUtils.java:59)
+    at org.apache.maven.shared.dependency.analyzer.asm.ASMDependencyAnalyzer.analyze (ASMDependencyAnalyzer.java:45)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildDependencyClasses (DefaultProjectDependencyAnalyzer.java:215)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.buildMainDependencyClasses (DefaultProjectDependencyAnalyzer.java:203)
+    at org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer.analyze (DefaultProjectDependencyAnalyzer.java:71)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.checkDependencies (AbstractAnalyzeMojo.java:332)
+    at org.apache.maven.plugins.dependency.analyze.AbstractAnalyzeMojo.execute (AbstractAnalyzeMojo.java:299)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:565)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :r-uu.codespace.app.demo
+[DEBUG] Shutting down adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[DEBUG] Shutting down 'file-lock' factory
+[DEBUG] Shutting down 'rwlock-local' factory
+[DEBUG] Shutting down 'semaphore-local' factory
+[DEBUG] Shutting down 'noop' factory

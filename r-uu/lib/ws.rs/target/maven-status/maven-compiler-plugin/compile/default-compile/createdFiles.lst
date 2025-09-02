@@ -1,5 +1,6 @@
 de\ruu\lib\ws\rs\filter\logging\Util.class
 de\ruu\lib\ws\rs\RestClientCallException.class
+module-info.class
 de\ruu\lib\ws\rs\ExceptionDTO.class
 de\ruu\lib\ws\rs\filter\logging\ClientLoggingFilter.class
 de\ruu\lib\ws\rs\filter\logging\ContainerLoggingFilter.class

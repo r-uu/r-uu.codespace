@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jpa.iml" filepath="$PROJECT_DIR$/jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/r-uu.codespace.iml" filepath="$PROJECT_DIR$/.idea/r-uu.codespace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/r-uu/lib/jpa/r-uu.codespace.lib-jpa.iml" filepath="$PROJECT_DIR$/r-uu/lib/jpa/r-uu.codespace.lib-jpa.iml" />
     </modules>
   </component>
 </project>

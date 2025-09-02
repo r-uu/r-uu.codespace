@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../r-uu.maven-parent"
+		},
+		{
+			"path": "../../../r-uu.lib"
+		},
+		{
+			"path": "../../../r-uu.app"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}

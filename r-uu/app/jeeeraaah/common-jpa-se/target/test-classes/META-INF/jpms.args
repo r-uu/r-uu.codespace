@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.app.jeeeraaah.common.jpa.se=_
+--add-reads
+de.ruu.app.jeeeraaah.common.jpa.se=ALL-UNNAMED

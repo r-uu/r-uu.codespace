@@ -39,6 +39,7 @@ de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_Bean_FXBean.class
 de\ruu\app\jeeeraaah\common\map\Map_Task_Lazy_BeanImpl.class
 de\ruu\app\jeeeraaah\common\TaskGroupServiceFlat.class
 de\ruu\app\jeeeraaah\common\bean\PreconditionCheckRelationalOperations.class
+module-info.class
 de\ruu\app\jeeeraaah\common\dto\TaskGroupEntityDTO.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityDTO_EntityJPA.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityDTO_BeanImpl.class

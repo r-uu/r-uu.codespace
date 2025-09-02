@@ -12,15 +12,24 @@
 
   <parent>
     <groupId>r-uu</groupId>
-    <artifactId>r-uu.codespace.mvn-control</artifactId>
+    <artifactId>r-uu.codespace.root</artifactId>
     <version>0.0.1</version>
-    <relativePath>../mvn-control</relativePath>
   </parent>
 
 	<modules>
-		<module>util</module>
+		<module>archunit</module>
+		<module>cdi</module>
+		<module>fx</module>
+		<module>gen</module>
+		<module>jackson</module>
+		<module>jdbc</module>
 		<module>jpa</module>
+		<module>jsonb</module>
+		<module>junit</module>
 		<module>mapstruct</module>
+		<module>mp.config</module>
+		<module>postgres</module>
+		<module>util</module>
 		<module>ws.rs</module>
 	</modules>
 

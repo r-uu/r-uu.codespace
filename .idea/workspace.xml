@@ -4,7 +4,74 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="" />
+    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/demo/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/target/r-uu.codespace.app-demo-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA_.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/jpa/TaskGroupEntityJPA_.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/jpa/TaskGroupEntityJPA_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/target/r-uu.codespace.app-jeeeraaah-common-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/generated-sources/annotations/de/ruu/lib/jpa/core/AbstractEntity_.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/generated-sources/annotations/de/ruu/lib/jpa/core/AbstractEntity_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/r-uu.codespace.lib-jpa-core-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mapstruct/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/r-uu.codespace.lib-mapstruct-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/r-uu.codespace.lib-util-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/r-uu.codespace.lib-ws.rs-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/mvn-control/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +80,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="module-info" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -34,6 +101,12 @@
   }
 }</component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="C:\software\develop\build\maven" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadAnnotationsAutomatically" value="true" />
@@ -43,6 +116,12 @@
     </option>
   </component>
   <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="environmentProperties">
+      <map>
+        <entry key="MAVEN_EXPERIMENTAL" value="true" />
+      </map>
+    </option>
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectColorInfo">{
@@ -61,19 +140,34 @@
   "keyToString": {
     "JUnit.CollectionsTest.executor": "Run",
     "JUnit.IOTest.executor": "Run",
+    "Maven.codespace-root [clean,install].executor": "Debug",
+    "Maven.codespace-root [install].executor": "Run",
+    "Maven.codespace-root-resume [clean,install].executor": "Run",
     "Maven.r-uu-mvn-config [clean install resume].executor": "Run",
     "Maven.r-uu-mvn-config [install].executor": "Run",
     "Maven.r-uu-mvn-control [clean install].executor": "Run",
     "Maven.r-uu-mvn-control [install].executor": "Run",
     "Maven.r-uu.codespace.app-jeeeraaah-common [install].executor": "Run",
+    "Maven.r-uu.codespace.app.jeeeraaah.client.fx [install].executor": "Run",
+    "Maven.r-uu.codespace.app.jeeeraaah.client.rs [install].executor": "Run",
+    "Maven.r-uu.codespace.app.jeeeraaah.common [install].executor": "Run",
+    "Maven.r-uu.codespace.app.jeeeraaah.common.jpa.ee [install].executor": "Run",
+    "Maven.r-uu.codespace.lib [install].executor": "Run",
+    "Maven.r-uu.codespace.lib-archunit [install].executor": "Run",
     "Maven.r-uu.codespace.lib-mapstruct [install].executor": "Run",
     "Maven.r-uu.codespace.lib-util [install].executor": "Run",
+    "Maven.r-uu.codespace.lib.fx.demo [install].executor": "Run",
+    "Maven.r-uu.codespace.lib.jpa.core [install].executor": "Run",
+    "Maven.r-uu.codespace.lib.jpa.se.hibernate [install].executor": "Run",
+    "Maven.r-uu.codespace.lib.ws.rs [install].executor": "Run",
     "Maven.r-uu.codespace.mvn-config [clean].executor": "Run",
     "Maven.r-uu.codespace.mvn-config [install].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [clean,install].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [clean...].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [clean].executor": "Run",
     "Maven.r-uu.codespace.mvn-control [install].executor": "Run",
+    "Maven.r-uu.codespace.mvn-root [clean,install].executor": "Run",
+    "Maven.r-uu.mvn-config [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -84,7 +178,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "com.codeium.AppSettingsConfigurable"
+    "settings.editor.selected.configurable": "preferences.externalTools"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -100,163 +194,8 @@
       <recent name="de.ruu.lib.jpa.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.r-uu-mvn-config [clean install resume]">
-    <configuration name="r-uu-mvn-config [clean install resume]" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="install" />
-                <option value="-rf" />
-                <option value="pom.xml" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-config" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="r-uu-mvn-config [install resume]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-                <option value="-rf" />
-                <option value="pom.xml" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-config" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="r-uu.codespace.app-jeeeraaah-common [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/app/jeeeraaah/common" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="r-uu.codespace.lib-util [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/lib/util" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="r-uu.codespace.mvn-config [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-config" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="r-uu.codespace.mvn-control [clean,install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+  <component name="RunManager" selected="Maven.codespace-root [clean,install]">
+    <configuration name="codespace-root [clean,install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -281,27 +220,50 @@
               <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu/mvn-control" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="codespace-root [install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/r-uu" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.r-uu-mvn-config [clean install resume]" />
-      <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
-      <item itemvalue="Maven.r-uu-mvn-config [install resume]" />
-      <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
-      <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
-      <item itemvalue="Maven.r-uu.codespace.mvn-config [install]" />
+      <item itemvalue="Maven.codespace-root [install]" />
+      <item itemvalue="Maven.codespace-root [clean,install]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.r-uu.codespace.mvn-control [clean,install]" />
-        <item itemvalue="Maven.r-uu-mvn-config [install resume]" />
-        <item itemvalue="Maven.r-uu.codespace.app-jeeeraaah-common [install]" />
-        <item itemvalue="Maven.r-uu.codespace.mvn-config [install]" />
-        <item itemvalue="Maven.r-uu.codespace.lib-util [install]" />
+        <item itemvalue="Maven.codespace-root [clean,install]" />
       </list>
     </recent_temporary>
   </component>

@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.fx.core=_
+--add-reads
+de.ruu.lib.fx.core=ALL-UNNAMED

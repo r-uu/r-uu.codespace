@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>r-uu.codespace.lib-jpa</artifactId>
+	<artifactId>r-uu.codespace.lib.jpa</artifactId>
 	<packaging>pom</packaging>
 	<description>parent module for possibly reusable jpa library artifacts of group r-uu</description>
 	<name>${project.artifactId}</name>
@@ -18,6 +18,13 @@
 
 	<modules>
 		<module>core</module>
+		<module>core.mapstruct</module>
+		<module>core.mapstruct.demo.bidirectional</module>
+		<module>se</module>
+		<module>se.eclipselink</module>
+		<module>se.hibernate</module>
+		<module>se.hibernate.postgres</module>
+		<module>se.hibernate.postgres.demo</module>
 	</modules>
 
 </project>

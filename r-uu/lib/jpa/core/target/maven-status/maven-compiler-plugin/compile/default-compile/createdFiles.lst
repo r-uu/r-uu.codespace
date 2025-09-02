@@ -12,6 +12,7 @@ de\ruu\lib\jpa\core\Repository.class
 de\ruu\lib\jpa\core\criteria\Criteria.class
 de\ruu\lib\jpa\core\criteria\restriction\NotExpression.class
 de\ruu\lib\jpa\core\criteria\restriction\NullExpression.class
+module-info.class
 de\ruu\lib\jpa\core\criteria\restriction\PropertyExpression.class
 de\ruu\lib\jpa\core\criteria\restriction\SizeExpression.class
 de\ruu\lib\jpa\core\GraphType.class

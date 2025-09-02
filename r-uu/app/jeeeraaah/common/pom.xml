@@ -5,16 +5,35 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>r-uu.codespace.app-jeeeraaah-common</artifactId>
+	<artifactId>r-uu.codespace.app.jeeeraaah.common</artifactId>
 	<name>${project.artifactId}</name>
 
 	<parent>
 		<groupId>r-uu</groupId>
-		<artifactId>r-uu.codespace.app-jeeeraaah</artifactId>
+		<artifactId>r-uu.codespace.app.jeeeraaah</artifactId>
 		<version>0.0.1</version>
 	</parent>
 
 	<dependencies>
+		<!-- Internal dependencies -->
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.jpa.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.ws.rs</artifactId>
+		</dependency>
+
+		<!-- External dependencies -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -30,22 +49,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib-jpa-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib-mapstruct</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib-util</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib-ws.rs</artifactId>
 		</dependency>
 	</dependencies>
 

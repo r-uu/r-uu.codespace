@@ -1,0 +1,21 @@
+package de.ruu.app.jeeeraaah.common.jpa.ee;
+
+import de.ruu.app.jeeeraaah.common.jpa.TaskRepositoryJPA;
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import lombok.extern.slf4j.Slf4j;
+
+import static java.util.Objects.nonNull;
+
+@ApplicationScoped
+@Slf4j
+public class TaskRepositoryJPAEE extends TaskRepositoryJPA
+{
+	@PersistenceContext(name = "jeeeraaah") private EntityManager entityManager;
+
+	@PostConstruct private void postConstruct() { log.debug("entity manager available: {}", nonNull(entityManager)); }
+
+	@Override protected EntityManager entityManager() { return entityManager; }
+}

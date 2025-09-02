@@ -8,8 +8,21 @@ import jakarta.persistence.metamodel.StaticMetamodel;
 import java.time.LocalDate;
 
 @StaticMetamodel(TaskEntityJPA.class)
-@Generated("org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@Generated("org.hibernate.processor.HibernateProcessor")
 public abstract class TaskEntityJPA_ {
+
+	public static final String PREDECESSORS = "predecessors";
+	public static final String SUB_TASKS = "subTasks";
+	public static final String START = "start";
+	public static final String SUPER_TASK = "superTask";
+	public static final String SUCCESSORS = "successors";
+	public static final String DESCRIPTION = "description";
+	public static final String VERSION = "version";
+	public static final String TASK_GROUP = "taskGroup";
+	public static final String NAME = "name";
+	public static final String CLOSED = "closed";
+	public static final String END = "end";
+	public static final String ID = "id";
 
 	
 	/**
@@ -76,19 +89,6 @@ public abstract class TaskEntityJPA_ {
 	 * @see de.ruu.app.jeeeraaah.common.jpa.TaskEntityJPA
 	 **/
 	public static volatile EntityType<TaskEntityJPA> class_;
-
-	public static final String PREDECESSORS = "predecessors";
-	public static final String SUB_TASKS = "subTasks";
-	public static final String START = "start";
-	public static final String SUPER_TASK = "superTask";
-	public static final String SUCCESSORS = "successors";
-	public static final String DESCRIPTION = "description";
-	public static final String VERSION = "version";
-	public static final String TASK_GROUP = "taskGroup";
-	public static final String NAME = "name";
-	public static final String CLOSED = "closed";
-	public static final String END = "end";
-	public static final String ID = "id";
 
 }
 

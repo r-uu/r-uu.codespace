@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: postgres
+    hostname: ${postgres_host_name}
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: ${postgres_db}
+      POSTGRES_USER: ${postgres_user}
+      POSTGRES_PASSWORD: ${postgres_password}
+    ports:
+      - ${postgres_host_port}:${postgres_container_port}
+    volumes:
+      - ruu_data:/var/lib/postgresql/data
+      - ./database-init/database-init.sql:/docker-entrypoint-initdb.d/database-init.sql
+    networks:
+      - ruu_network
+
+#  neo4j:
+#    container_name: 'neo4j'
+#    image: neo4j:latest
+#    restart: always
+#    volumes:
+#      - ./neo4j_db/data:/data
+#      - ./neo4j_db/logs:/logs
+#      - ./neo4j_db/import:/var/lib/neo4j/import
+#      - ./neo4j_db/plugins:/plugins
+##    volumes:
+##      - ruu_data:/var/lib/neo4j/data
+#    environment:
+#      NEO4J_AUTH: neo4j/secret00
+#    ports:
+#      - "7474:7474"
+#      - "7687:7687"
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+
+volumes:
+  ruu_data:
+    driver: local
+
+networks:
+  ruu_network:
+    driver: bridge
+    name: ruu_network
