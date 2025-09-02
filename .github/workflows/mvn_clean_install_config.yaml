@@ -29,9 +29,9 @@ jobs:
           java-version: 24
           cache: maven
 
-      # Build all modules starting from the root pom (mvn-config)
+      # Build all modules starting from the root pom
       - name: Build with Maven
-        working-directory: r-uu/mvn-config
+        working-directory: r-uu
         run: |
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.skipTests }}" == "true" ]]; then
             mvn -B clean install -DskipTests
