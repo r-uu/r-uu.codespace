@@ -24,5 +24,13 @@ tasks:
 
       echo ""
       echo "Postgres is running on port 5432"
-      echo "Connect inside workspace with:"
+      echo "Inside workspace connect with:"
       echo "  psql -h localhost -U gitpod -d gitpod"
+      echo ""
+      echo "Outside workspace connect with (Gitpod forwarded port):"
+      echo "  psql -h <gitpod-forwarded-host> -p 5432 -U gitpod -d gitpod"
+
+ports:
+  - port: 5432
+    onOpen: notify
+    visibility: public
