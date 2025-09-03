@@ -1,15 +1,5 @@
-FROM gitpod/workspace-full
+# Verwende ein offizielles GraalVM-Image als Basis
+FROM ghcr.io/graalvm/jdk-community:24
 
-# Install GraalVM JDK 24 into /home/gitpod/.graalvm
-RUN curl -fsSL -o /tmp/graalvm.tar.gz \
-      https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_linux-x64_bin.tar.gz \
-    && mkdir -p /home/gitpod/.graalvm/graalvm-24 \
-    && tar -xzf /tmp/graalvm.tar.gz -C /home/gitpod/.graalvm/graalvm-24 --strip-components=1 \
-    && rm /tmp/graalvm.tar.gz
-
-# Set environment variables for GraalVM
-ENV JAVA_HOME=/home/gitpod/.graalvm/graalvm-24
-ENV PATH=$JAVA_HOME/bin:$PATH
-
-# Optional: Install native-image
-# RUN gu install native-image
+# Setze die Umgebungsvariable für JAVA_HOME
+ENV JAVA_HOME /opt/graalvm

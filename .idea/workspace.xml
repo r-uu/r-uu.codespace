@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/mvn_clean_install_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/mvn_clean_install_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
