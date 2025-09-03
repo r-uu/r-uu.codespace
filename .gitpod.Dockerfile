@@ -1,36 +1,20 @@
-image:
-  file: .gitpod.Dockerfile
+FROM gitpod/workspace-full:latest
 
-tasks:
-  - name: Init GraalVM & Postgres
-    init: |
-      echo "=== Java (GraalVM) Version ==="
-      java -version
-      echo "=== Native Image Availability ==="
-      native-image --version || echo "native-image not installed"
+# ---- GraalVM installieren ----
+USER root
+RUN wget -qO- https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_linux-x64_bin.tar.gz \
+    | tar xvz -C /opt/ \
+    && ln -s /opt/graalvm-* /opt/graalvm
 
-      echo "=== Initializing PostgreSQL Data Directory ==="
-      if [ ! -d "$PGDATA/base" ]; then
-        sudo -u postgres initdb -D $PGDATA
-      fi
+ENV JAVA_HOME=/opt/graalvm
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
-    command: |
-      echo "=== Starting PostgreSQL with pg_ctl ==="
-      sudo -u postgres pg_ctl -D $PGDATA -l $PGDATA/logfile start
-      sleep 2
-      echo "=== Ensuring default DB and user exist ==="
-      sudo -u postgres psql -c "CREATE USER gitpod WITH SUPERUSER PASSWORD 'gitpod';" || true
-      sudo -u postgres psql -c "CREATE DATABASE gitpod OWNER gitpod;" || true
+# ---- Postgres installieren ----
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      postgresql postgresql-contrib \
+    && rm -rf /var/lib/apt/lists/*
 
-      echo ""
-      echo "Postgres is running on port 5432"
-      echo "Inside workspace connect with:"
-      echo "  psql -h localhost -U gitpod -d gitpod"
-      echo ""
-      echo "Outside workspace connect with (Gitpod forwarded port):"
-      echo "  psql -h <gitpod-forwarded-host> -p 5432 -U gitpod -d gitpod"
+ENV PGDATA=/var/lib/postgresql/data
+RUN mkdir -p $PGDATA && chown -R postgres:postgres $PGDATA
 
-ports:
-  - port: 5432
-    onOpen: notify
-    visibility: public
+USER gitpod
