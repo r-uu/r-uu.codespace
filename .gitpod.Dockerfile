@@ -1,23 +1,28 @@
-# Gitpod Basis-Image mit vielen Dev-Tools
-FROM gitpod/workspace-full:latest
+image:
+  file: .gitpod.Dockerfile
 
-# ---- GraalVM 24 installieren ----
-USER root
-RUN wget -qO- https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_linux-x64_bin.tar.gz \
-    | tar xvz -C /opt/ \
-    && ln -s /opt/graalvm-* /opt/graalvm
+tasks:
+  - name: Init GraalVM & Postgres
+    init: |
+      echo "=== Java (GraalVM) Version ==="
+      java -version
+      echo "=== Native Image Availability ==="
+      native-image --version || echo "native-image not installed"
 
-ENV JAVA_HOME=/opt/graalvm
-ENV PATH="${JAVA_HOME}/bin:${PATH}"
+      echo "=== Initializing PostgreSQL Data Directory ==="
+      if [ ! -d "$PGDATA/base" ]; then
+        sudo -u postgres initdb -D $PGDATA
+      fi
 
-# ---- Postgres installieren ----
-# client + server + contrib für zusätzliche Funktionen
-RUN apt-get update && apt-get install -y --no-install-recommends \
-      postgresql postgresql-contrib \
-    && rm -rf /var/lib/apt/lists/*
+    command: |
+      echo "=== Starting PostgreSQL with pg_ctl ==="
+      sudo -u postgres pg_ctl -D $PGDATA -l $PGDATA/logfile start
+      sleep 2
+      echo "=== Ensuring default DB and user exist ==="
+      sudo -u postgres psql -c "CREATE USER gitpod WITH SUPERUSER PASSWORD 'gitpod';" || true
+      sudo -u postgres psql -c "CREATE DATABASE gitpod OWNER gitpod;" || true
 
-# Postgres-Konfiguration: Standard-Port & Datenverzeichnis
-ENV PGDATA=/var/lib/postgresql/data
-RUN mkdir -p $PGDATA && chown -R postgres:postgres $PGDATA
-
-USER gitpod
+      echo ""
+      echo "Postgres is running on port 5432"
+      echo "Connect inside workspace with:"
+      echo "  psql -h localhost -U gitpod -d gitpod"
