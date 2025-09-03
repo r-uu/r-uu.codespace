@@ -18,13 +18,7 @@
 		<!-- Internal dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.jpa.ee</artifactId>
-			<version>0.0.1</version>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.ee.jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -95,12 +89,6 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
 		</dependency>
-		<!-- Uncomment if needed:
-		<dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-binding</artifactId>
-		</dependency>
-		-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -133,16 +121,6 @@
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.jackson</artifactId>
 		</dependency>
-		<!--        <dependency>-->
-		<!--            <groupId>r-uu</groupId>-->
-		<!--            <artifactId>r-uu.lib-jpa-se</artifactId>-->
-		<!--            <scope>test</scope>-->
-		<!--        </dependency>-->
-		<!--        <dependency>-->
-		<!--            <groupId>r-uu</groupId>-->
-		<!--            <artifactId>r-uu.app-jeeeraaah-common-jpadto-se</artifactId>-->
-		<!--            <scope>test</scope>-->
-		<!--        </dependency>-->
 	</dependencies>
 
 </project>

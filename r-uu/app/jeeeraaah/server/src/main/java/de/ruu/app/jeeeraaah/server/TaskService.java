@@ -69,7 +69,6 @@ import static jakarta.ws.rs.core.Response.status;
 @OpenAPIDefinition(info = @Info(version = "a version", title = "a title"))
 @Timed
 @Slf4j
-//@MappingContextClearing // clears mapping context before each method call, this mimics request scope behaviour
 public class TaskService
 {
 	@Inject private TaskGroupServiceJPA taskGroupService;
@@ -80,16 +79,13 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response create(TaskCreationData data)
 	{
-//		log.debug( "input:\n{}", data);
 		// find persistent task group jpa from task group id in data
 		Optional<? extends TaskGroupEntityJPA> optional = taskGroupService.read(data.taskGroupId());
 		if (not(optional.isPresent()))
 				return status(NOT_FOUND).entity("task group with id " + data.taskGroupId() + " not found").build();
 		TaskGroupEntityJPA taskGroupEntityJPAPersistent = optional.get();
-//		log.debug( "task group jpa:\n{}", taskGroupEntityJPAPersistent);
 		// TODO find a way to avoid jpa -> dto -> jpa -> dto
 		TaskGroupEntityDTO taskGroupEntityDTOPersistent = taskGroupEntityJPAPersistent.toDTO(new ReferenceCycleTracking());
-//		log.debug( "task group dto:\n{}", taskGroupEntityDTOPersistent);
 		// complete preparation of task dto with task group dto, otherwise mapping will fail because the task has no task group
 		data.task().taskGroup(taskGroupEntityDTOPersistent);
 		// map task dto in data to task jpa
@@ -99,7 +95,6 @@ public class TaskService
 		// persist task jpa
 		TaskEntityJPA taskEntityJPAPersistent = taskService.create(taskEntityJPATransient);
 		TaskEntityDTO result                  = taskEntityJPAPersistent.toDTO(new ReferenceCycleTracking());
-//		log.debug("output:\n{}", result);
 		return status(CREATED).entity(result).build();
 	}
 
@@ -110,10 +105,8 @@ public class TaskService
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
-		log.debug( "input:\n{}", dto);
 		TaskEntityJPA entity = taskService.update(dto.toEntity(context));
 		TaskEntityDTO result = entity.toDTO(context);
-		log.debug("output:\n{}", result);
 		return ok(result).build();
 	}
 
@@ -156,7 +149,6 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response find(@PathParam("id") Long id)
 	{
-		log.debug("id: {}", id);
 		Optional<? extends TaskEntityJPA> optional = taskService.read(id);
 		if (not(optional.isPresent()))
 				return status(NOT_FOUND).entity("task with id " + id + " not found").build();
@@ -175,7 +167,6 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response findWithRelated(@PathParam("id") Long id)
 	{
-		log.debug("id: {}", id);
 		Optional<? extends TaskEntityJPA> optional = taskService.findWithRelated(id);
 		if (not(optional.isPresent()))
 				return status(NOT_FOUND).entity("task with id " + id + " not found").build();
@@ -192,7 +183,6 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response findWithRelatedLazy(@PathParam("id") Long id)
 	{
-//		log.debug("id: {}", id);
 		Optional<TaskEntityJPA> optional = taskService.findWithRelated(id);
 		if (not(optional.isPresent()))
 			return status(NOT_FOUND).entity("task with id " + id + " not found").build();
@@ -209,7 +199,6 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response findWithRelatedLazy(Set<Long> ids)
 	{
-//		log.debug("ids.length: {}", ids.size());
 		Set<TaskLazy> result = taskService.findTasksLazy(ids);
 		return ok(result).build();
 	}
@@ -222,11 +211,6 @@ public class TaskService
 	{
 		log.debug("id task: {}, id sub task: {}", data.id(), data.idRelated());
 		taskService.addSubTask(data.id(), data.idRelated());
-//		try { taskService.addSubTask(data.id(), data.idRelated()); }
-//		catch (NotFoundException e)
-//				{ return status(NOT_FOUND).entity(e.getMessage()).build(); }
-////		catch (TaskRelationException e) // do not catch here, let it be mapped by TaskRelationExceptionMapper
-////				{ return status(BAD_REQUEST).entity(e.getMessage()).build(); }
 		return ok().build();
 	}
 
@@ -236,7 +220,6 @@ public class TaskService
 	@Produces(APPLICATION_JSON)
 	public Response addPredecessor(@NonNull InterTaskRelationData data)
 	{
-		log.debug("id task: {}, id predecessor task: {}", data.id(), data.idRelated());
 		try { taskService.addPredecessor(data.id(), data.idRelated()); }
 		catch (Throwable t)
 		{

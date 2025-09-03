@@ -18,7 +18,11 @@
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.client.rs</artifactId>
-			<version>0.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.se</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -31,6 +35,10 @@
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.jdbc.postgres</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
 		</dependency>
 
 		<!-- External dependencies -->

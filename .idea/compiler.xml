@@ -43,9 +43,11 @@
         <module name="r-uu.codespace.lib-postgres" />
         <module name="r-uu.lib-jpa-core-mapstruct" />
         <module name="r-uu.codespace.lib-jsonb" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.ee.jpa" />
         <module name="r-uu.codespace.lib-gen-java-fx-tableview" />
-        <module name="r-uu.app-jeeeraaah-common-jpa-ee" />
+        <module name="se" />
         <module name="r-uu.codespace.lib-mapstruct" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.se.jpa" />
         <module name="r-uu.codespace.lib-fx-comp" />
         <module name="r-uu.codespace.lib-gen-java-fx-bean-editor" />
         <module name="r-uu.codespace.lib-util" />
@@ -66,14 +68,12 @@
         <module name="r-uu.codespace.lib-jackson" />
         <module name="r-uu.lib-jpa-core-mapstruct-demo-bidirectional" />
         <module name="r-uu.app-jeeeraaah-client-rs-demo" />
-        <module name="r-uu.app-jeeeraaah-common-jpa-se" />
         <module name="r-uu.lib-jpa-se-hibernate-postgres-demo" />
         <module name="r-uu.codespace.lib-mp.config" />
         <module name="r-uu.codespace.app-jeeeraaah-server" />
         <module name="r-uu.codespace.lib-archunit" />
         <module name="r-uu.lib-jpa-se" />
         <module name="r-uu.lib-jpa-se-eclipselink" />
-        <module name="r-uu.codespace.app.jeeeraaah.common" />
         <module name="r-uu.codespace.lib-gen-java-fx-comp" />
         <module name="r-uu.lib-jpa-se-hibernate" />
         <module name="r-uu.codespace.lib-cdi-common" />
@@ -82,9 +82,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="r-uu.app-jeeeraaah-common-jpa-ee" target="24" />
+      <module name="r-uu.app-jeeeraaah-common-jpa-se" target="24" />
       <module name="r-uu.codespace.app-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-common" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.common" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.common.jpa.ee" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.common.jpa.se" target="24" />
       <module name="r-uu.codespace.lib-jpa" target="24" />
       <module name="r-uu.codespace.mvn-config" target="24" />
       <module name="r-uu.codespace.mvn-control" target="24" />

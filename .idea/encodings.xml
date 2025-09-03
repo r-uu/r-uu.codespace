@@ -11,12 +11,20 @@
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common-jpa-ee/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common-jpa-ee/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common-jpa-se/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common-jpa-se/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee-jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee.jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee.jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se-jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se.jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se.jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common_old/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common_old/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/src/main/java" charset="UTF-8" />

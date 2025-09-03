@@ -24,12 +24,7 @@
 		<!-- Internal dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.jpa.ee</artifactId>
-			<version>0.0.1</version>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.ee.jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
