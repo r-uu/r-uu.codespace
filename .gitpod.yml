@@ -11,16 +11,16 @@ tasks:
 
       echo "=== Initializing PostgreSQL Data Directory ==="
       if [ ! -d "$PGDATA/base" ]; then
-        sudo -u postgres initdb -D $PGDATA
+        su postgres -c "initdb -D $PGDATA"
       fi
 
     command: |
       echo "=== Starting PostgreSQL with pg_ctl ==="
-      sudo -u postgres pg_ctl -D $PGDATA -l $PGDATA/logfile start
+      su postgres -c "pg_ctl -D $PGDATA -l $PGDATA/logfile start"
       sleep 2
       echo "=== Ensuring default DB and user exist ==="
-      sudo -u postgres psql -c "CREATE USER gitpod WITH SUPERUSER PASSWORD 'gitpod';" || true
-      sudo -u postgres psql -c "CREATE DATABASE gitpod OWNER gitpod;" || true
+      su postgres -c "psql -c \"CREATE USER gitpod WITH SUPERUSER PASSWORD 'gitpod';\"" || true
+      su postgres -c "psql -c \"CREATE DATABASE gitpod OWNER gitpod;\"" || true
 
       echo ""
       echo "Postgres is running on port 5432"
