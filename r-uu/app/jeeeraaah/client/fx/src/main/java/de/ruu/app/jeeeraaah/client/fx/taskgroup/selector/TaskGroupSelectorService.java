@@ -27,11 +27,12 @@ public interface TaskGroupSelectorService extends FXCService
 	public class TaskGroupSelectorComponentReadyEvent extends AbstractEvent<TaskGroupSelector, TaskGroupSelectorService>
 	{
 		public TaskGroupSelectorComponentReadyEvent(
-				final TaskGroupSelector component,
+				final TaskGroupSelector        component,
 				final TaskGroupSelectorService service) { super(component, service); }
 
 		@ApplicationScoped
-		public static class TaskGroupSelectorComponentReadyEventDispatcher extends EventDispatcher<TaskGroupSelectorComponentReadyEvent> { }
+		public static class TaskGroupSelectorComponentReadyEventDispatcher
+				extends EventDispatcher<TaskGroupSelectorComponentReadyEvent> { }
 
 		/** programmatically specify command line vm option {@code --add-reads de.ruu.lib.fx.comp=ALL-UNNAMED} */
 		public static void addReadsUnnamedModule()

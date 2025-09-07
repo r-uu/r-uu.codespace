@@ -7,5 +7,5 @@ import java.util.Set;
 
 public interface TaskServiceLazy
 {
-	Set<TaskLazy> findTasksLazy(@NonNull Set<Long> ids);
+	Set<TaskLazy> findTasksLazy(@NonNull Set<Long> ids) throws Exception;
 }

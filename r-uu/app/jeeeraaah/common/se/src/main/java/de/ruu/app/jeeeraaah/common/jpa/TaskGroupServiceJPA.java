@@ -2,6 +2,8 @@ package de.ruu.app.jeeeraaah.common.jpa;
 
 import de.ruu.app.jeeeraaah.common.TaskGroupService;
 import de.ruu.app.jeeeraaah.common.TaskGroupServiceFlat;
+import de.ruu.app.jeeeraaah.common.TaskService;
+import de.ruu.app.jeeeraaah.common.TaskService.TaskNotFoundException;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupLazy;
 import lombok.NonNull;
@@ -20,14 +22,15 @@ public abstract class TaskGroupServiceJPA
 
 //	@PostConstruct private void postConstruct() { log.debug("repository available: {}", not(isNull(repository()))); }
 
-	@Override public @NonNull TaskGroupEntityJPA           create(@NonNull TaskGroupEntityJPA entity)
+	@Override public @NonNull TaskGroupEntityJPA  create(@NonNull TaskGroupEntityJPA entity)
 			{ return repository().save  (entity); }
-	@Override public @NonNull Optional<TaskGroupEntityJPA> read  (@NonNull Long               id    )
+	@Override public Optional<TaskGroupEntityJPA> read  (@NonNull Long               id    )
 			{ return repository().find  (id    ); }
-	@Override public @NonNull TaskGroupEntityJPA           update(@NonNull TaskGroupEntityJPA entity)
+	@Override public @NonNull TaskGroupEntityJPA  update(@NonNull TaskGroupEntityJPA entity)
 			{ return repository().save  (entity); }
-	@Override public          boolean                      delete(@NonNull Long               id    )
-			{ return repository().delete(id    ); }
+	@Override public          void                delete(@NonNull Long               id    )
+			throws TaskGroupNotFoundException
+			{       repository().delete(id     ); }
 
 	@Override public @NonNull Set<TaskGroupEntityJPA>      findAll()
 			{ return new HashSet<>(repository().findAll()); }
@@ -36,8 +39,9 @@ public abstract class TaskGroupServiceJPA
 	@Override public @NonNull Set<TaskGroupFlat>           findAllFlat()
 			{ return new HashSet<>(repository().findAllFlat()); }
 
-	@Override public boolean removeFromGroup(@NonNull Long idGroup, @NonNull Long idTask)
-			{ return repository().deleteFromGroup(idGroup, idTask); }
+	@Override public void                                  removeFromGroup(@NonNull Long idGroup, @NonNull Long idTask)
+			throws TaskGroupNotFoundException, TaskNotFoundException
+			{        repository().deleteFromGroup(idGroup, idTask); }
 
 	@Override public Optional<TaskGroupLazy>               findGroupLazy(@NonNull Long id)
 			{ return repository().findGroupLazy(id); }

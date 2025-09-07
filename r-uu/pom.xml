@@ -385,7 +385,12 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.client.rs</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs.demo</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
@@ -530,7 +535,7 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.lib.jpa</artifactId>
+				<artifactId>lib-jpa</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>

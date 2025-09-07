@@ -3,7 +3,7 @@ package de.ruu.app.jeeeraaah.server;
 import de.ruu.app.jeeeraaah.common.InterTaskRelationData;
 import de.ruu.app.jeeeraaah.common.RemoveNeighboursFromTaskConfig;
 import de.ruu.app.jeeeraaah.common.TaskCreationData;
-import de.ruu.app.jeeeraaah.common.TaskRelationException;
+import de.ruu.app.jeeeraaah.common.TaskService.TaskRelationException;
 import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
 import de.ruu.app.jeeeraaah.common.dto.TaskLazy;
@@ -64,20 +64,20 @@ import static jakarta.ws.rs.core.Response.status;
  *
  * @author r-uu
  */
+// TODO fix exception handling
 @RequestScoped
 @Path(PATH_APPENDER_TO_DOMAIN_TASK)
+@Consumes(APPLICATION_JSON)
+@Produces(APPLICATION_JSON)
 @OpenAPIDefinition(info = @Info(version = "a version", title = "a title"))
 @Timed
 @Slf4j
 public class TaskService
 {
 	@Inject private TaskGroupServiceJPA taskGroupService;
-	@Inject private TaskServiceJPA taskService;
+	@Inject private TaskServiceJPA      taskService;
 
-	@POST
-	@Consumes(APPLICATION_JSON)
-	@Produces(APPLICATION_JSON)
-	public Response create(TaskCreationData data)
+	@POST public Response create(TaskCreationData data)
 	{
 		// find persistent task group jpa from task group id in data
 		Optional<? extends TaskGroupEntityJPA> optional = taskGroupService.read(data.taskGroupId());
@@ -98,10 +98,7 @@ public class TaskService
 		return status(CREATED).entity(result).build();
 	}
 
-	@PUT
-	@Consumes(APPLICATION_JSON)
-	@Produces(APPLICATION_JSON)
-	public Response update(TaskEntityDTO dto)
+	@PUT public Response update(TaskEntityDTO dto)
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
@@ -110,10 +107,7 @@ public class TaskService
 		return ok(result).build();
 	}
 
-	@DELETE
-	@Path(BY_ID)
-	@Produces(APPLICATION_JSON)
-	public Response delete(@PathParam("id") Long id)
+	@DELETE @Path(BY_ID) public Response delete(@PathParam("id") Long id)
 	{
 		try
 		{

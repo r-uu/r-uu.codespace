@@ -1,13 +1,18 @@
 package de.ruu.app.jeeeraaah.client.fx.taskgroup;
 
 import de.ruu.app.jeeeraaah.client.fx.taskgroup.edit.TaskGroupEditor;
-import de.ruu.app.jeeeraaah.client.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
 import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.lib.cdi.common.CDIUtil;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
+import de.ruu.lib.fx.control.dialog.AlertDialog;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import jakarta.enterprise.inject.spi.CDI;
 import jakarta.inject.Inject;
 import javafx.beans.value.ObservableValue;
@@ -28,8 +33,10 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 
 import static de.ruu.lib.fx.FXUtil.getStage;
+import static javafx.scene.control.Alert.AlertType.ERROR;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
 import static javafx.scene.control.ButtonType.CANCEL;
 import static javafx.scene.control.ButtonType.OK;
@@ -81,13 +88,19 @@ class TaskGroupManagementController
 
 		TableViewConfigurator.configure(tv);
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
-		client.findAll().forEach(tg -> tv.getItems().add(tg.toBean(context).toFXBean(context)));
-		tv.getSelectionModel()
-		  .selectedItemProperty()
-			.addListener((obs, old, val) -> onSelectedTaskGroupChanged(obs, old, val));
-		btnAdd .setOnAction(e -> onAdd (e));
-		btnEdit.setOnAction(e -> onEdit(e));
-		btnExit.setOnAction(e -> onExit(e));
+		try
+		{
+			client.findAll().forEach(tg -> tv.getItems().add(tg.toFXBean(context)));
+		}
+		catch (TechnicalException | NonTechnicalException e)
+		{
+			ExceptionDialog.showAndWait("failure retrieving task groups from backend", e);
+		}
+
+		tv.getSelectionModel().selectedItemProperty().addListener((obs, old, val) -> onSelectedTaskGroupChanged(obs, old, val));
+		btnAdd .setOnAction(e -> onAdd ());
+		btnEdit.setOnAction(e -> onEdit());
+		btnExit.setOnAction(e -> onExit());
 
 		getStage(root).ifPresent(s -> s.setTitle(APP_TITLE));
 	}
@@ -106,7 +119,7 @@ class TaskGroupManagementController
 		}
 	}
 
-	private void onAdd(ActionEvent e)
+	private void onAdd()
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 		// populate editor with new item, call to getService() has to be done after call to getLocalRoot() to make sure
@@ -131,21 +144,24 @@ class TaskGroupManagementController
 			taskGroupFXBean = optional.get();
 			taskGroupBean   = taskGroupFXBean.toBean(context);
 
-			// create a task group dto from task group bean (which is a task group dto)
-			TaskGroupEntityDTO taskGroupEntityDTO = taskGroupBean.toDTO(context);
-
-			// let client create a new item in db
-			taskGroupEntityDTO = client.create(taskGroupEntityDTO);
-			// create fx bean from entity dto
-			taskGroupFXBean = taskGroupEntityDTO.toBean(context).toFXBean(context);
-
-			// add and select item with retrieved item
-			tv.getItems().add(taskGroupFXBean);
-			tv.getSelectionModel().select(taskGroupFXBean);
+			// let client create a new item in backend
+			try
+			{
+				taskGroupBean = client.create(taskGroupBean);
+				// create fx bean from entity dto
+				taskGroupFXBean = taskGroupBean.toFXBean(context);
+				// add and select item with retrieved item
+				tv.getItems().add(taskGroupFXBean);
+				tv.getSelectionModel().select(taskGroupFXBean);
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait("failure creating task groups in backend", e);
+			}
 		}
 	}
 
-	private void onEdit(ActionEvent e)
+	private void onEdit()
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 		// populate editor with selected item, call to getService() has to be done after call to getLocalRoot() to make sure
@@ -167,25 +183,25 @@ class TaskGroupManagementController
 		if (optional.isPresent())
 		{
 			taskGroupFXBean = optional.get();
-			TaskGroupBean taskGroupBean = taskGroupFXBean.toBean(context);
+			TaskGroupBean taskGroupBean = optional.get().toBean(context);
 
-			// create a task group dto from task group bean (which is a task group dto)
-			TaskGroupEntityDTO taskGroupEntityDTO = taskGroupBean.toDTO(context);
-
-			// let client create a new item in db
-			taskGroupEntityDTO = client.update(taskGroupEntityDTO);
-			// create fx bean from entity dto
-			taskGroupFXBean = taskGroupEntityDTO.toBean(context).toFXBean(context);
-
-			// add and select item with retrieved item
-			tv.getSelectionModel().select(taskGroupFXBean);
+			// let client update the item in background
+			try
+			{
+				taskGroupBean = client.update(taskGroupBean);
+				// create fx bean from entity dto
+				taskGroupFXBean = taskGroupBean.toFXBean(context);
+				// add and select item with retrieved item
+				tv.getSelectionModel().select(taskGroupFXBean);
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait("failure updating task groups in backend", e);
+			}
 		}
 	}
 
-	private void onExit(ActionEvent e)
-	{
-		CDI.current().getBeanManager().getEvent().fire(new TaskGroupManagementDisposeRequestEvent(this));
-	}
+	private void onExit() { CDIUtil.fire(new TaskGroupManagementDisposeRequestEvent(this)); }
 
 	private TaskGroupFXBean dialogResultConverterFXBean(ButtonType btn)
 	{

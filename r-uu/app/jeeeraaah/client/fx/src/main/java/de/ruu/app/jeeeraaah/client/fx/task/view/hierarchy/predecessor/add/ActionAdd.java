@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add;
 
-import de.ruu.app.jeeeraaah.client.rs.TaskServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import javafx.scene.control.TreeItem;
@@ -14,9 +14,9 @@ import static javafx.scene.control.Alert.AlertType.INFORMATION;
 
 /**
  * <code>TaskHierarchyPredecessorsController</code> creates <code>ActionAdd</code> instances and invokes their #execute()
- * Action to add a new predecessor relation to the selected predecessor task or super/sub task.
+ * Action to add a new predecessor relation to the selected predecessor or super/sub task.
  * <p>
- * This action determines the context of the selected predecessor tree item and the selected super/sub task,
+ * This action determines the context of the selected predecessor tree item and the selected super/sub tree item,
  * and delegates the creation of a new predecessor-successor relation accordingly.
  */
 public class ActionAdd
@@ -27,8 +27,8 @@ public class ActionAdd
 	 * <p>
 	 * Contains
 	 * <ul>
-	 *   <li>the selected predecessor tree item (or the invisible root tree item from predecessor tree view),</li>
 	 *   <li>the selected super/sub task tree item (or the invisible root tree item from super/sub tree view) and</li>
+	 *   <li>the selected predecessor tree item (or the invisible root tree item from predecessor tree view),</li>
 	 *   <li>the task service client.</li>
 	 * </ul>
 	 * The context is used to determine how to add a new predecessor relation based on the current selection.
@@ -80,7 +80,7 @@ public class ActionAdd
 				new ActionAddToSuperSubOrPredecessor(context).execute();
 		else if (not(isRoot(context.treeItemSelectedSuperSubTask)))
 				// if only a super/sub task is selected, the predecessor relation is targeted to the super/sub task
-				new ActionAddToSuperSub             (context).execute();
+				new ActionAddToSuperSub(context).execute();
 		else
 				AlertDialog.showAndWait(
 						"unexpected task selection",

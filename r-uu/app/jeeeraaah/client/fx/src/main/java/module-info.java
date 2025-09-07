@@ -65,4 +65,5 @@ module de.ruu.app.jeeeraaah.client.fx
 	requires javafx.graphics;
 	requires jakarta.inject;
 	requires jakarta.ws.rs;
+	requires de.ruu.lib.ws.rs;
 }

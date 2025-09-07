@@ -4,17 +4,216 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="" />
+    <list default="true" id="d89dc5ba-0eec-4d14-a73d-b60867617046" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws.rs/NonTechnicalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws.rs/TechnicalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/demo/target/r-uu.codespace.app.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/demo/target/r-uu.codespace.app.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/dash/DashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/dash/DashController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/TaskManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/TaskManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/TaskHierarchyControllerAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/TaskHierarchyControllerAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/TaskHierarchyPredecessorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/TaskHierarchyPredecessorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAddToSuperSub.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAddToSuperSub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAddToSuperSubOrPredecessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/predecessor/add/ActionAddToSuperSubOrPredecessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/TaskHierarchySuccessorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/TaskHierarchySuccessorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAddToSuperSub.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAddToSuperSub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAddToSuperSubOrSuccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/successor/add/ActionAddToSuperSubOrSuccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/ActionAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/add/ActionAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/ActionAddMainOrSubTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/add/ActionAddMainOrSubTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/ActionAddMainTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/add/ActionAddMainTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/ActionRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/add/ActionRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/TaskHierarchySuperSubTasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/task/view/hierarchy/supersub/TaskHierarchySuperSubTasksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/TaskGroupManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/TaskGroupManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/selector/TaskGroupSelectorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/selector/TaskGroupSelectorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/selector/TaskGroupSelectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/de/ruu/app/jeeeraaah/client/fx/taskgroup/selector/TaskGroupSelectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/r-uu.codespace.app.jeeeraaah.client.fx-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/target/r-uu.codespace.app.jeeeraaah.client.fx-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/java/de/ruu/app/jeeeraaah/client/rs/demo/DBClean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/java/de/ruu/app/jeeeraaah/client/rs/demo/DBCommandRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/java/de/ruu/app/jeeeraaah/client/rs/demo/DBPopulate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/java/de/ruu/app/jeeeraaah/client/rs/demo/DBPopulateTiny.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/test/java/de/ruu/app/jeeeraaah/client/rs/demo/TestDBCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/src/test/resources/META-INF/microprofile-config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/classes/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/r-uu.codespace.app.jeeeraaah.client.rs.demo-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/test-classes/META-INF/jpms.args" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs-demo/target/test-classes/META-INF/microprofile-config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/java/de/ruu/app/jeeeraaah/client/rs/TaskGroupServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/java/de/ruu/app/jeeeraaah/client/rs/TaskServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/java/de/ruu/app/jeeeraaah/client/rs/dto/TaskGroupLazyDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/test/java/de/ruu/app/jeeeraaah/client/rs/TestTaskGroupServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/test/java/de/ruu/app/jeeeraaah/client/rs/TestTaskServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/test/resources/META-INF/microprofile-config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/src/test/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/classes/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/r-uu.codespace.app.jeeeraaah.client.rs-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/test-classes/META-INF/jpms.args" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/test-classes/META-INF/microprofile-config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/rs/target/test-classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee.jpa/target/r-uu.codespace.app.jeeeraaah.common.ee.jpa-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee.jpa/target/r-uu.codespace.app.jeeeraaah.common.ee.jpa-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se.jpa/target/r-uu.codespace.app.jeeeraaah.common.se.jpa-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se.jpa/target/r-uu.codespace.app.jeeeraaah.common.se.jpa-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupServiceFlat.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskGroupServiceFlat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskRelationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskRelationExceptionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskServiceLazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/TaskServiceLazy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskEntityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/dto/TaskEntityDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskEntityJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskGroupServiceJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskGroupServiceJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskServiceJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/src/main/java/de/ruu/app/jeeeraaah/common/jpa/TaskServiceJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_TaskGroup_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Bean_FXBeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityDTO_EntityJPAImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_EntityDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_EntityJPA_LazyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_FXBean_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/generated-sources/annotations/de/ruu/app/jeeeraaah/common/map/Map_Task_Lazy_BeanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/r-uu.codespace.app.jeeeraaah.common.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/target/r-uu.codespace.app.jeeeraaah.common.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/NotFoundExceptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/ExceptionMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/RequestExecutionProblemDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/TaskGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/TaskGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/de/ruu/app/jeeeraaah/server/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server.war" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.ee.jpa-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.ee.jpa-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.se.jpa-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.app.jeeeraaah.common.se.jpa-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.cdi.common-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.cdi.common-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.cdi.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.cdi.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jackson-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jackson-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jdbc.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jdbc.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jdbc.postgres-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jdbc.postgres-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se.hibernate-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se.hibernate-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se.hibernate.postgres-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.jpa.se.hibernate.postgres-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.mapstruct-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.mapstruct-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.util-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.util-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.ws.rs-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/target/r-uu.codespace.app.jeeeraaah.server/WEB-INF/lib/r-uu.codespace.lib.ws.rs-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/archunit/target/r-uu.codespace.lib.archunit-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/archunit/target/r-uu.codespace.lib.archunit-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/cdi/common/target/r-uu.codespace.lib.cdi.common-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/cdi/common/target/r-uu.codespace.lib.cdi.common-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/cdi/demo/target/r-uu.codespace.lib.cdi.se.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/cdi/demo/target/r-uu.codespace.lib.cdi.se.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/cdi/se/target/r-uu.codespace.lib.cdi.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/cdi/se/target/r-uu.codespace.lib.cdi.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/fx/comp.demo/target/r-uu.codespace.lib.fx.comp.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/fx/comp.demo/target/r-uu.codespace.lib.fx.comp.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/fx/comp/target/r-uu.codespace.lib.fx.comp-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/fx/comp/target/r-uu.codespace.lib.fx.comp-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/fx/core/target/r-uu.codespace.lib.fx.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/fx/core/target/r-uu.codespace.lib.fx.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/fx/demo/target/r-uu.codespace.lib.fx.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/fx/demo/target/r-uu.codespace.lib.fx.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/core/target/r-uu.codespace.lib.gen.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/core/target/r-uu.codespace.lib.gen.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/core/target/r-uu.codespace.lib.gen.java.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/core/target/r-uu.codespace.lib.gen.java.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean.editor.demo/target/r-uu.codespace.lib.gen.java.fx.bean.editor.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean.editor.demo/target/r-uu.codespace.lib.gen.java.fx.bean.editor.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean.editor/target/r-uu.codespace.lib.gen.java.fx.bean.editor-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean.editor/target/r-uu.codespace.lib.gen.java.fx.bean.editor-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean/target/r-uu.codespace.lib.gen.java.fx.bean-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/bean/target/r-uu.codespace.lib.gen.java.fx.bean-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/comp/target/r-uu.codespace.lib.gen.java.fx.comp-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/comp/target/r-uu.codespace.lib.gen.java.fx.comp-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/tableview/target/r-uu.codespace.lib.gen.java.fx.tableview-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/gen/java/fx/tableview/target/r-uu.codespace.lib.gen.java.fx.tableview-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jackson/target/r-uu.codespace.lib.jackson-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jackson/target/r-uu.codespace.lib.jackson-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jdbc/core/target/r-uu.codespace.lib.jdbc.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jdbc/core/target/r-uu.codespace.lib.jdbc.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jdbc/postgres/target/r-uu.codespace.lib.jdbc.postgres-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jdbc/postgres/target/r-uu.codespace.lib.jdbc.postgres-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/bidirectional/MapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/bidirectional/MapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeEntityNodeDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeEntityNodeDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeSimpleNodeDTOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeSimpleNodeDTOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeSimpleNodeEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/generated-sources/annotations/de/ruu/lib/jpa/core/mapstruct/demo/tree/MapperNodeSimpleNodeEntityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct.demo.bidirectional/target/r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/target/generated-test-sources/test-annotations/de/ruu/lib/jpa/core/mapstruct/MapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/target/generated-test-sources/test-annotations/de/ruu/lib/jpa/core/mapstruct/MapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/target/r-uu.codespace.lib.jpa.core.mapstruct-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core.mapstruct/target/r-uu.codespace.lib.jpa.core.mapstruct-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/r-uu.codespace.lib.jpa.core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/core/target/r-uu.codespace.lib.jpa.core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.eclipselink/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.eclipselink/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.eclipselink/target/r-uu.codespace.lib.jpa.se.eclipselink-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.eclipselink/target/r-uu.codespace.lib.jpa.se.eclipselink-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres.demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres.demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres.demo/target/r-uu.codespace.lib.jpa.se.hibernate.postgres.demo-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres.demo/target/r-uu.codespace.lib.jpa.se.hibernate.postgres.demo-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres/target/r-uu.codespace.lib.jpa.se.hibernate.postgres-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate.postgres/target/r-uu.codespace.lib.jpa.se.hibernate.postgres-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate/target/r-uu.codespace.lib.jpa.se.hibernate-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se.hibernate/target/r-uu.codespace.lib.jpa.se.hibernate-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jpa/se/target/r-uu.codespace.lib.jpa.se-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jpa/se/target/r-uu.codespace.lib.jpa.se-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jsonb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jsonb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/jsonb/target/r-uu.codespace.lib.jsonb-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/jsonb/target/r-uu.codespace.lib.jsonb-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/junit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/junit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/junit/target/r-uu.codespace.lib.junit-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/junit/target/r-uu.codespace.lib.junit-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/r-uu.codespace.lib.mapstruct-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mapstruct/target/r-uu.codespace.lib.mapstruct-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mp.config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mp.config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/mp.config/target/r-uu.codespace.lib.mp.config-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/mp.config/target/r-uu.codespace.lib.mp.config-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/postgres/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/postgres/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/postgres/target/r-uu.codespace.lib.postgres-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/postgres/target/r-uu.codespace.lib.postgres-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/rs/ExceptionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/rs/RestClientCallException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/rs/filter/logging/ClientLoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/rs/filter/logging/ContainerLoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/de/ruu/lib/util/rs/filter/logging/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/ExceptionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/RestClientCallException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/ClientLoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/ContainerLoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/src/main/java/de/ruu/lib/ws/rs/filter/logging/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/r-uu.codespace.lib.ws.rs-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/lib/ws.rs/target/r-uu.codespace.lib.ws.rs-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r-uu/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/r-uu/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,6 +256,9 @@
     </option>
     <option name="skipTests" value="true" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -66,6 +268,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -111,9 +314,9 @@
     "last_opened_file_path": "C:/Users/r-uu/develop/github/codespace",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.34390244",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.externalTools"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -125,8 +328,17 @@
       <recent name="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\common\src\main\java\de\ruu\app\jeeeraaah\common\map\bean" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\client\fx\src\main\java\de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub" />
+      <recent name="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\client\fx\src\main\java\de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\add" />
       <recent name="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\common\se" />
       <recent name="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\common" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add" />
+      <recent name="de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add" />
+    </key>
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="de.ruu.app.jeeeraaah.client.ws.rs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.ruu.lib.util" />

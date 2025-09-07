@@ -41,7 +41,6 @@ de\ruu\app\jeeeraaah\client\fx\task\TaskManagementDisposeRequestEvent$TaskManage
 de\ruu\app\jeeeraaah\client\fx\task\TaskManagementAppRunner.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\edit\TaskGroupEditorService.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\TaskGroupManagementDisposeRequestEvent.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionAddMainTask.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\TaskHierarchyPredecessorsApp.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\add\super_sub_or_predecessor\ConfiguratorController.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\edit\TaskGroupEditorController.class
@@ -49,8 +48,6 @@ de\ruu\app\jeeeraaah\client\fx\task\TableViewConfigurator.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighboursApp.class
 de\ruu\app\jeeeraaah\client\fx\task\view\list\directneighbours\TaskListDirectNeighboursService.class
 de\ruu\app\jeeeraaah\client\fx\task\gantt\TaskTreeTableCellValueFactory.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionRemove$Context.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionAdd.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\add\ActionAddToSuperSub.class
 de\ruu\app\jeeeraaah\client\fx\task\TaskManagementDisposeRequestEvent.class
 de\ruu\app\jeeeraaah\client\fx\task\edit\TaskEditorController.class
@@ -60,9 +57,11 @@ de\ruu\app\jeeeraaah\client\fx\taskgroup\selector\TaskGroupSelector.class
 de\ruu\app\jeeeraaah\client\fx\task\view\list\directneighbours\TaskListDirectNeighboursService$NeighbourType.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\successor\add\super_sub_or_successor\ConfiguratorApp.class
 de\ruu\app\jeeeraaah\client\fx\MainApp.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionRemove.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\successor\add\super_sub_or_successor\ConfiguratorController.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\TaskGroupManagement.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\successor\TaskHierarchySuccessorsAppRunner.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionAddMainTask.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\edit\TaskGroupEditorRunner.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighboursAppRunner$TaskViewWithDirectNeighboursServiceReadyEventConsumer.class
 de\ruu\app\jeeeraaah\client\fx\Main.class
@@ -76,10 +75,11 @@ de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\successor\TaskHierarchySucces
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\add\super_sub_or_predecessor\ConfiguratorService.class
 de\ruu\app\jeeeraaah\client\fx\task\gantt\TaskUtil$StartEstimatedComparator.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\selector\TaskGroupSelectorService$TaskGroupSelectorComponentReadyEvent$TaskGroupSelectorComponentReadyEventDispatcher.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionAdd$Context.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\TaskHierarchyAbstract.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\TaskHierarchyService$TaskHierarchyComponentReadyEvent$TaskHierarchyComponentReadyEventDispatcher.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionAddMainOrSubTask.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\TaskHierarchyPredecessorsController$1.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionAddMainOrSubTask.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskDirectNeighbourSuperController.class
 de\ruu\app\jeeeraaah\client\fx\task\selector\TaskSelectorController.class
 de\ruu\app\jeeeraaah\client\fx\task\view\TaskViewService.class
@@ -87,7 +87,6 @@ de\ruu\app\jeeeraaah\client\fx\task\view\TaskView.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighbours.class
 de\ruu\app\jeeeraaah\client\fx\task\view\TaskViewApp.class
 de\ruu\app\jeeeraaah\client\fx\task\TaskManagementController.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionRemove.class
 de\ruu\app\jeeeraaah\client\fx\test\TableCellColorExample$Item.class
 de\ruu\app\jeeeraaah\client\fx\task\gantt\TaskTreeTable.class
 de\ruu\app\jeeeraaah\client\fx\task\TaskManagementApp.class
@@ -121,6 +120,7 @@ de\ruu\app\jeeeraaah\client\fx\taskgroup\edit\TaskGroupEditor.class
 de\ruu\app\jeeeraaah\client\fx\MainService.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\successor\add\super_sub_or_successor\ConfiguratorService$ActionAddToSuperSubOrSuccessorConfigurationResult.class
 de\ruu\app\jeeeraaah\client\fx\taskgroup\edit\TaskGroupEditorApp.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionAdd.class
 de\ruu\app\jeeeraaah\client\fx\MainController.class
 de\ruu\app\jeeeraaah\client\fx\task\TreeCellFactory$1$1.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighboursService$TaskViewWithDirectNeighboursServiceReadyEvent$TaskViewWithDirectNeighboursServiceReadyEventDispatcher.class
@@ -131,13 +131,13 @@ de\ruu\app\jeeeraaah\client\fx\dash\DashService.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\TaskHierarchyPredecessorsAppRunner.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\predecessor\add\ActionAdd$Context.class
 de\ruu\app\jeeeraaah\client\fx\MainAppRunner.class
-de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\ActionAdd$Context.class
 de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\TaskHierarchyControllerAbstract.class
 de\ruu\app\jeeeraaah\client\fx\task\view\TaskViewNarrow.class
 de\ruu\app\jeeeraaah\client\fx\task\view\TaskViewController$1.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighboursService$TaskViewWithDirectNeighboursServiceReadyEvent.class
 de\ruu\app\jeeeraaah\client\fx\task\TreeCellFactory$1.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskDirectNeighbourSuperApp.class
+de\ruu\app\jeeeraaah\client\fx\task\view\hierarchy\supersub\add\ActionRemove$Context.class
 de\ruu\app\jeeeraaah\client\fx\task\selector\TaskSelectorApp.class
 de\ruu\app\jeeeraaah\client\fx\TaskTableView.class
 de\ruu\app\jeeeraaah\client\fx\task\view\directneighbours\TaskWithDirectNeighboursController.class

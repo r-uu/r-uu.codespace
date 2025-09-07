@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import de.ruu.app.jeeeraaah.common.Task;
-import de.ruu.app.jeeeraaah.common.TaskRelationException;
+import de.ruu.app.jeeeraaah.common.TaskService;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.jpa.TaskEntityJPA;
 import de.ruu.app.jeeeraaah.common.map.Map_Task_EntityDTO_Bean;
@@ -33,6 +33,7 @@ import java.util.Set;
 import java.util.UUID;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
+import static de.ruu.app.jeeeraaah.common.TaskService.*;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static java.util.UUID.randomUUID;

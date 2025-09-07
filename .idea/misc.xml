@@ -4,7 +4,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/r-uu/lib/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/mvn-config/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/pom.xml" />

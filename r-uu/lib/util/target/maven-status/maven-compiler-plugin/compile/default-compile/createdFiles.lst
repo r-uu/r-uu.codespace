@@ -1,4 +1,3 @@
-de\ruu\lib\util\rs\filter\logging\ContainerLoggingFilter.class
 de\ruu\lib\util\StringBuilders.class
 de\ruu\lib\util\bimapped\BiMappable.class
 de\ruu\lib\util\file\DirectoryEntryProvider$DirectoryEntryProviderSimple.class
@@ -27,7 +26,6 @@ de\ruu\lib\util\classpath\ClasspathResourceFile.class
 de\ruu\lib\util\classpath\Classpath.class
 de\ruu\lib\util\classpath\ResourceContainerDirectory.class
 de\ruu\lib\util\Strings.class
-de\ruu\lib\util\rs\filter\logging\ClientLoggingFilter.class
 de\ruu\lib\util\Time.class
 de\ruu\lib\util\Types.class
 de\ruu\lib\util\csv\CSVRowProcessor$CSVRowProcessorSimple.class
@@ -36,7 +34,6 @@ module-info.class
 de\ruu\lib\util\Files$1.class
 de\ruu\lib\util\csv\CSVFileProcessor.class
 de\ruu\lib\util\lang\model\JavaLangMetaModel$TypeElementProviderVisitor.class
-de\ruu\lib\util\rs\RestClientCallException.class
 de\ruu\lib\util\classpath\ClasspathResource.class
 de\ruu\lib\util\annotation\MarkerAnnotation.class
 de\ruu\lib\util\Constants.class
@@ -45,7 +42,6 @@ de\ruu\lib\util\lang\model\JavaLangMetaModel$PackageElementProviderVisitor.class
 de\ruu\lib\util\annotation\MarkerAnnotationType.class
 de\ruu\lib\util\bimapped\BiMappedTarget.class
 de\ruu\lib\util\file\BufferedFileRowsProvider$BufferedFileRowsProcessorSimple.class
-de\ruu\lib\util\rs\ExceptionDTO.class
 de\ruu\lib\util\lang\model\JavaLangMetaModel$VariableElementProviderVisitor.class
 de\ruu\lib\util\annotation\Utils.class
 de\ruu\lib\util\csv\CSVFileProcessor$CSVFileProcessorSimple.class
@@ -57,4 +53,3 @@ de\ruu\lib\util\classpath\ZipEntryFilter.class
 de\ruu\lib\util\Slf4jLogProvider.class
 de\ruu\lib\util\file\BufferedFileRowsProvider.class
 de\ruu\lib\util\annotation\MarkerAnnotationPackageType.class
-de\ruu\lib\util\rs\filter\logging\Util.class

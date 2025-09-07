@@ -17,4 +17,5 @@ module de.ruu.app.jeee_raaa.server
 	requires org.slf4j;
 	requires de.ruu.lib.mapstruct;
 	requires jakarta.inject;
+	requires de.ruu.lib.ws.rs;
 }

@@ -1,7 +1,6 @@
 de\ruu\app\jeeeraaah\common\CommonTaskGroupService.class
 de\ruu\app\jeeeraaah\common\TaskServiceLazy.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityJPA_LazyImpl.class
-de\ruu\app\jeeeraaah\common\TaskRelationException.class
 de\ruu\app\jeeeraaah\common\map\Map_Task_EntityJPA_EntityDTOImpl.class
 de\ruu\app\jeeeraaah\common\map\Map_Task_Bean_FXBean.class
 de\ruu\app\jeeeraaah\common\TaskCreationData.class
@@ -27,11 +26,14 @@ de\ruu\app\jeeeraaah\common\TaskGroup.class
 de\ruu\app\jeeeraaah\common\jpa\TaskEntityJPA.class
 de\ruu\app\jeeeraaah\common\map\Map_Task_EntityDTO_EntityJPAImpl.class
 de\ruu\app\jeeeraaah\common\fx\TaskFXBean.class
+de\ruu\app\jeeeraaah\common\TaskService$TaskRelationException.class
 de\ruu\app\jeeeraaah\common\map\Map_Task_Lazy_Bean.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_Bean_EntityDTOImpl.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_Lazy_Bean.class
+de\ruu\app\jeeeraaah\common\TaskService$TaskNotFoundException.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_FXBean_Bean.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_FXBean_BeanImpl.class
+de\ruu\app\jeeeraaah\common\TaskGroupService$TaskGroupNotFoundException.class
 de\ruu\app\jeeeraaah\common\dto\TaskGroupFlat.class
 de\ruu\app\jeeeraaah\common\InterTaskRelationData.class
 de\ruu\app\jeeeraaah\common\dto\TaskGroupLazy.class
@@ -59,7 +61,6 @@ de\ruu\app\jeeeraaah\common\map\Map_Task_EntityJPA_EntityDTO.class
 de\ruu\app\jeeeraaah\common\CommonTaskService.class
 de\ruu\app\jeeeraaah\common\TaskGroupService.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityDTO_EntityJPAImpl.class
-de\ruu\app\jeeeraaah\common\TaskRelationExceptionMapper.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityDTO_Bean.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_EntityJPA_EntityDTO.class
 de\ruu\app\jeeeraaah\common\map\Map_TaskGroup_Lazy_BeanImpl.class

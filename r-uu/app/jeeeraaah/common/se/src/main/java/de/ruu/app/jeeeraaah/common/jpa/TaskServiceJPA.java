@@ -28,9 +28,9 @@ public abstract class TaskServiceJPA
 	@Override public @NonNull TaskEntityJPA           create(@NonNull TaskEntityJPA entity) { return repository().save(entity); }
 	@Override public @NonNull Optional<TaskEntityJPA> read  (@NonNull Long          id    ) { return repository().find(id    ); }
 	@Override public @NonNull TaskEntityJPA           update(@NonNull TaskEntityJPA entity) { return repository().save(entity); }
-	@Override public          void                    delete(@NonNull Long id             )
+	@Override public          void                    delete(@NonNull Long id             ) throws TaskNotFoundException
 	{
-		                                           repository().delete(id);
+		repository().delete(id);
 	}
 
 	@Override public @NonNull Set<TaskEntityJPA> findAll()
@@ -75,38 +75,37 @@ public abstract class TaskServiceJPA
 		repository().removeSuccessor(task.id(), successor.id());
 	}
 
-	@Override public boolean removeNeighboursFromTask(@NonNull RemoveNeighboursFromTaskConfig removeNeighboursFromTaskConfig)
+	@Override public void removeNeighboursFromTask(@NonNull RemoveNeighboursFromTaskConfig removeNeighboursFromTaskConfig)
 	{
 		repository().removeNeighboursFromTask(removeNeighboursFromTaskConfig);
-		return false;
 	}
 
-	public void addSubTask(@NonNull Long idTask, @NonNull Long idSubTask) throws NotFoundException
+	public void addSubTask(@NonNull Long idTask, @NonNull Long idSubTask) throws TaskRelationException
 	{
 		repository().addSubTask(idTask, idSubTask);
 	}
 
-	public void addPredecessor(@NonNull Long idTask, @NonNull Long idSucTask) throws NotFoundException
+	public void addPredecessor(@NonNull Long idTask, @NonNull Long idSucTask) throws TaskRelationException
 	{
 		repository().addPredecessor(idTask, idSucTask);
 	}
 
-	public void addSuccessor(@NonNull Long idTask, @NonNull Long idSubTask) throws NotFoundException
+	public void addSuccessor(@NonNull Long idTask, @NonNull Long idSubTask) throws TaskRelationException
 	{
 		repository().addSuccessor(idTask, idSubTask);
 	}
 
-	public void removeSubTask(@NonNull Long idTask, @NonNull Long idSubTask) throws NotFoundException
+	public void removeSubTask(@NonNull Long idTask, @NonNull Long idSubTask) throws TaskRelationException
 	{
 		repository().removeSubTask(idTask, idSubTask);
 	}
 
-	public void removePredecessor(@NonNull Long idTask, @NonNull Long idSubTask) throws NotFoundException
+	public void removePredecessor(@NonNull Long idTask, @NonNull Long idSubTask) throws TaskRelationException
 	{
 		repository().removePredecessor(idTask, idSubTask);
 	}
 
-	public void removeSuccessor(@NonNull Long idTask, @NonNull Long idSubTask) throws NotFoundException
+	public void removeSuccessor(@NonNull Long idTask, @NonNull Long idSubTask) throws TaskRelationException
 	{
 		repository().removeSuccessor(idTask, idSubTask);
 	}

@@ -3,10 +3,13 @@ package de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.client.rs.TaskServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import jakarta.inject.Inject;
 import javafx.fxml.FXML;
 import javafx.scene.control.TreeItem;
@@ -118,17 +121,28 @@ class TaskHierarchyPredecessorsController
 
 		if (selectedPredecessor.successors().isPresent())
 		{
-			// remove selected predecessor for all it's successors, prepare ...
-			Set<TaskBean>          successors             = selectedPredecessor.successors().get();
-			ReferenceCycleTracking referenceCycleTracking = new ReferenceCycleTracking();
-
-			for (TaskBean successor : successors)
+			// remove selected predecessor for all it's successors
+			Exception e = null;
+			for (TaskBean successor : selectedPredecessor.successors().get())
 			{
-				// ... and execute
 				// - remove the predecessor-successor relation in the db
-				taskServiceClient.removePredecessor(
-						successor.toDTO(referenceCycleTracking), selectedPredecessor.toDTO(referenceCycleTracking));
+				try
+				{
+					taskServiceClient.removePredecessor(successor, selectedPredecessor);
+				}
+				catch (TechnicalException | NonTechnicalException ex)
+				{
+					e = ex;
+					break;
+				}
+
+				if (not(isNull(e)))
+				{
+					ExceptionDialog.showAndWait("failure removing predecessor", e);
+					return;
+				}
 			}
+
 			// remove the predecessor-successor relation in the ui model
 			TreeItem<TaskBean> parent = selectedPredecessorTreeItem.getParent();
 			if (parent != null) parent.getChildren().remove(selectedPredecessorTreeItem);

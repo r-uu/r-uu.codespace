@@ -2,10 +2,10 @@ package de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add;
 
 import de.ruu.app.jeeeraaah.client.fx.task.selector.TaskSelector;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.common.TaskRelationException;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.lib.fx.control.dialog.AlertDialog;
-import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import jakarta.enterprise.inject.spi.CDI;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
@@ -15,7 +15,6 @@ import lombok.NonNull;
 
 import java.util.Optional;
 
-import static javafx.scene.control.Alert.AlertType.ERROR;
 import static javafx.scene.control.ButtonType.CANCEL;
 import static javafx.scene.control.ButtonType.OK;
 
@@ -49,35 +48,42 @@ class ActionAddToSuperSub
 
 		Optional<TaskBean> optional = dialog.showAndWait();
 
-		optional.ifPresent
-		(
-				chosenPredecessorTaskBean ->
-				{
-					try
-					{
-						context.taskServiceClient().addPredecessor
-						(
-								context.treeItemSelectedSuperSubTask().getValue().toDTO(new ReferenceCycleTracking()),
-								chosenPredecessorTaskBean                        .toDTO(new ReferenceCycleTracking())
-						);
-						TreeItem<TaskBean> newItemInPredecessorTree = new TreeItem<>(chosenPredecessorTaskBean);
-						context.treeItemSelectedPredecessorTask().getChildren().add(newItemInPredecessorTree);
-						populateTreeForPredecessorsOf(newItemInPredecessorTree);
-						// add the chosen predecessor task to the predecessor tasks of the selected super/sub task
-						context.treeItemSelectedSuperSubTask().getValue().addPredecessor(chosenPredecessorTaskBean);
-					}
-					catch (TaskRelationException e)
-					{
-						AlertDialog.showAndWait
-						(
-								"error adding predecessor relation",
-								"An error occurred while adding the predecessor relation:\n" + e.message(),
-								"Please check the task selection and try again.",
-								ERROR
-						);
-					}
-				}
-		);
+		if (optional.isPresent())
+		{
+			// fetch new task bean from dialog
+			TaskBean chosenPredecessorTaskBean = optional.get();
+
+			// fetch the selected super/sub task from the tree view
+			TaskBean superSubTask = context.treeItemSelectedSuperSubTask().getValue();
+
+			try
+			{
+				// let task service client create a new item in the backend
+				context.taskServiceClient().addPredecessor(superSubTask, chosenPredecessorTaskBean);
+
+				TreeItem<TaskBean> newItemInPredecessorTree = new TreeItem<>(chosenPredecessorTaskBean);
+
+				// update the context
+				context.treeItemSelectedPredecessorTask().getChildren().add(newItemInPredecessorTree);
+
+				// update the tree view
+				populateTreeForPredecessorsOf(newItemInPredecessorTree);
+
+				// add the chosen predecessor task to the predecessor tasks of the selected super/sub task
+				superSubTask.addPredecessor(chosenPredecessorTaskBean);
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait
+				(
+						"failure creating new subtask relation",
+						"the predecessor relation between\n" + superSubTask + "\nand\n" +
+								chosenPredecessorTaskBean + "\ncould not be created in the backend",
+						e.getMessage(),
+						e
+				);
+			}
+		}
 	}
 
 	private void populateTreeForPredecessorsOf(TreeItem<TaskBean> newItemInPredecessorTree)

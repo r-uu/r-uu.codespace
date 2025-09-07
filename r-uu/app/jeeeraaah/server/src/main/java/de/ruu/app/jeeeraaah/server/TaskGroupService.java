@@ -1,5 +1,8 @@
 package de.ruu.app.jeeeraaah.server;
 
+import de.ruu.app.jeeeraaah.common.TaskGroupService.TaskGroupNotFoundException;
+import de.ruu.app.jeeeraaah.common.TaskService;
+import de.ruu.app.jeeeraaah.common.TaskService.TaskNotFoundException;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupLazy;
@@ -49,6 +52,7 @@ import static jakarta.ws.rs.core.Response.status;
  *
  * @author r-uu
  */
+// TODO fix exception handling
 @Path(PATH_APPENDER_TO_DOMAIN_TASK_GROUP)
 @OpenAPIDefinition(info = @Info(version = "a version", title = "a title"))
 @Timed
@@ -61,8 +65,7 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response findAll()
 	{
-		Set<TaskGroupEntityDTO> result = new HashSet<>();
-
+		Set<TaskGroupEntityDTO> result  = new HashSet<>();
 		ReferenceCycleTracking  context = new ReferenceCycleTracking();
 		Set<TaskGroupEntityJPA> all     = service.findAll();
 
@@ -70,7 +73,7 @@ public class TaskGroupService
 		{
 			TaskGroupEntityDTO dto = taskGroupEntity.toDTO(context);
 			result.add(dto);
-			log.debug("found task group {}", dto);
+//			log.debug("found task group {}", dto);
 		}
 
 		return ok(result).build();
@@ -81,7 +84,6 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response find(@PathParam("id") Long id)
 	{
-		log.debug("id: {}", id);
 		Optional<? extends TaskGroupEntityJPA> optional = service.read(id);
 		if (not(optional.isPresent()))
 				return status(NOT_FOUND).entity("task group with id " + id + " not found").build();
@@ -90,7 +92,7 @@ public class TaskGroupService
 			ReferenceCycleTracking context = new ReferenceCycleTracking();
 
 			TaskGroupEntityDTO result = optional.get().toDTO(context);
-			log.debug("found task group for id {}\n{}", id, result);
+//			log.debug("found task group for id {}\n{}", id, result);
 			return ok(result).build();
 		}
 	}
@@ -100,7 +102,6 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response findWithTasks(@PathParam("id") Long id)
 	{
-		log.debug("id: {}", id);
 		Optional<? extends TaskGroupEntityJPA> optional = service.findWithTasks(id);
 
 		if (not(optional.isPresent()))
@@ -126,11 +127,10 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response findWithTasksLazy(@PathParam("id") Long id)
 	{
-		log.debug("id: {}", id);
 		Optional<TaskGroupEntityJPA> optional = service.findWithTasks(id);
 
 		if (not(optional.isPresent()))
-			return status(NOT_FOUND).entity("company with id " + id + " not found").build();
+				return status(NOT_FOUND).entity("company with id " + id + " not found").build();
 		else
 		{
 			TaskGroupEntityJPA resultJPA = optional.get();
@@ -155,10 +155,10 @@ public class TaskGroupService
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
-		log.debug( "input:\n{}", dto);
+//		log.debug( "input:\n{}", dto);
 		TaskGroupEntityJPA entity = service.create(dto.toEntity(context));
 		TaskGroupEntityDTO result = entity.toDTO(context);
-		log.debug("output:\n{}", result);
+//		log.debug("output:\n{}", result);
 		return status(CREATED).entity(result).build();
 	}
 
@@ -179,11 +179,16 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response delete(@PathParam("id") Long id)
 	{
-		boolean deleted = service.delete(id);
-		return
-		    deleted ? ok().build()
-				        : status(NOT_FOUND)
-				              .entity("task group with id " + id + " not found").build();
+		try
+		{
+			service.delete(id);
+		}
+		catch (TaskGroupNotFoundException e)
+		{
+			return status(NOT_FOUND).entity("task group with id " + id + " not found").build();
+		}
+
+		return ok().build();
 	}
 
 	@DELETE
@@ -191,12 +196,19 @@ public class TaskGroupService
 	@Produces(APPLICATION_JSON)
 	public Response removeFromGroup(@PathParam("idGroup") Long idGroup, @PathParam("idTask") Long idTask)
 	{
-		boolean removed = service.removeFromGroup(idGroup, idTask);
-		return
-				removed ? ok().build()
-								: status(NOT_FOUND)
-											.entity(
-														"task group with id "     + idGroup
-													+ " and / or task with id " + idTask + " not found").build();
+		try
+		{
+			service.removeFromGroup(idGroup, idTask);
+		}
+		catch (TaskGroupNotFoundException e)
+		{
+			return status(NOT_FOUND).entity("task group with id " + idGroup + "not found").build();
+		}
+		catch (TaskNotFoundException e)
+		{
+			return status(NOT_FOUND).entity("task with id " + idTask + " not found").build();
+		}
+
+		return ok().build();
 	}
 }

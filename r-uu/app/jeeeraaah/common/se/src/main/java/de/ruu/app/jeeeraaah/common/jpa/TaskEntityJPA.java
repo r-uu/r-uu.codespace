@@ -1,7 +1,8 @@
 package de.ruu.app.jeeeraaah.common.jpa;
 
 import de.ruu.app.jeeeraaah.common.Task;
-import de.ruu.app.jeeeraaah.common.TaskRelationException;
+import de.ruu.app.jeeeraaah.common.TaskService;
+import de.ruu.app.jeeeraaah.common.TaskService.TaskRelationException;
 import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
 import de.ruu.app.jeeeraaah.common.dto.TaskLazy;
 import de.ruu.app.jeeeraaah.common.map.Map_Task_EntityJPA_EntityDTO;

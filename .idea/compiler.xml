@@ -38,47 +38,47 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="r-uu.codespace.lib-gen-java-fx-bean-editor-demo" />
-        <module name="r-uu.codespace.lib-jdbc-postgres" />
-        <module name="r-uu.codespace.lib-postgres" />
-        <module name="r-uu.lib-jpa-core-mapstruct" />
-        <module name="r-uu.codespace.lib-jsonb" />
+        <module name="r-uu.codespace.lib.jdbc.postgres" />
+        <module name="r-uu.codespace.lib.mp.config" />
+        <module name="r-uu.codespace.lib.cdi.common" />
+        <module name="r-uu.codespace.lib.cdi.se.demo" />
+        <module name="r-uu.codespace.app.jeeeraaah.client.fx" />
+        <module name="r-uu.codespace.lib.cdi.se" />
+        <module name="r-uu.codespace.lib.gen.java.core" />
+        <module name="r-uu.codespace.lib.postgres" />
+        <module name="r-uu.codespace.lib.fx.comp" />
+        <module name="r-uu.codespace.lib.util" />
+        <module name="r-uu.codespace.lib.gen.java.fx.tableview" />
+        <module name="r-uu.codespace.lib.jdbc.core" />
+        <module name="r-uu.codespace.lib.jpa.se.eclipselink" />
+        <module name="r-uu.codespace.lib.gen.java.fx.bean.editor.demo" />
+        <module name="r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional" />
         <module name="r-uu.codespace.app.jeeeraaah.common.ee.jpa" />
-        <module name="r-uu.codespace.lib-gen-java-fx-tableview" />
-        <module name="se" />
-        <module name="r-uu.codespace.lib-mapstruct" />
+        <module name="r-uu.codespace.app.jeeeraaah.server" />
+        <module name="r-uu.codespace.lib.gen.core" />
+        <module name="r-uu.codespace.lib.jpa.se" />
         <module name="r-uu.codespace.app.jeeeraaah.common.se.jpa" />
-        <module name="r-uu.codespace.lib-fx-comp" />
-        <module name="r-uu.codespace.lib-gen-java-fx-bean-editor" />
-        <module name="r-uu.codespace.lib-util" />
-        <module name="r-uu.codespace.lib-ws.rs" />
-        <module name="r-uu.app-jeeeraaah-client-rs" />
-        <module name="r-uu.codespace.lib-jdbc-core" />
         <module name="r-uu.codespace.app.demo" />
-        <module name="r-uu.lib-jpa-se-hibernate-postgres" />
-        <module name="r-uu.codespace.lib-gen-java-fx-bean" />
-        <module name="r-uu.codespace.lib-cdi-se" />
-        <module name="r-uu.codespace.lib-fx-comp-demo" />
-        <module name="r-uu.codespace.lib-fx-demo" />
-        <module name="r-uu.codespace.lib-cdi-se-demo" />
-        <module name="r-uu.codespace.lib-gen-core" />
-        <module name="r-uu.codespace.lib-fx-core" />
-        <module name="r-uu.app-jeeeraaah-client-fx" />
-        <module name="r-uu.codespace.lib-jpa-core" />
-        <module name="r-uu.codespace.lib-jackson" />
-        <module name="r-uu.lib-jpa-core-mapstruct-demo-bidirectional" />
-        <module name="r-uu.app-jeeeraaah-client-rs-demo" />
-        <module name="r-uu.lib-jpa-se-hibernate-postgres-demo" />
-        <module name="r-uu.codespace.lib-mp.config" />
-        <module name="r-uu.codespace.app-jeeeraaah-server" />
-        <module name="r-uu.codespace.lib-archunit" />
-        <module name="r-uu.lib-jpa-se" />
-        <module name="r-uu.lib-jpa-se-eclipselink" />
-        <module name="r-uu.codespace.lib-gen-java-fx-comp" />
-        <module name="r-uu.lib-jpa-se-hibernate" />
-        <module name="r-uu.codespace.lib-cdi-common" />
-        <module name="r-uu.codespace.lib-junit" />
-        <module name="r-uu.codespace.lib-gen-java-core" />
+        <module name="r-uu.codespace.lib.jpa.core.mapstruct" />
+        <module name="r-uu.codespace.lib.gen.java.fx.bean" />
+        <module name="r-uu.codespace.lib.gen.java.fx.bean.editor" />
+        <module name="r-uu.codespace.lib.jsonb" />
+        <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres.demo" />
+        <module name="r-uu.codespace.lib.fx.comp.demo" />
+        <module name="r-uu.codespace.lib.jackson" />
+        <module name="r-uu.codespace.lib.junit" />
+        <module name="r-uu.codespace.lib.ws.rs" />
+        <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.se" />
+        <module name="r-uu.codespace.lib.fx.demo" />
+        <module name="r-uu.codespace.lib.archunit" />
+        <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs.demo" />
+        <module name="r-uu.codespace.lib.fx.core" />
+        <module name="r-uu.codespace.lib.jpa.core" />
+        <module name="r-uu.codespace.lib.gen.java.fx.comp" />
+        <module name="r-uu.codespace.lib.jpa.se.hibernate" />
+        <module name="r-uu.codespace.lib.mapstruct" />
+        <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -86,13 +86,46 @@
       <module name="r-uu.app-jeeeraaah-common-jpa-se" target="24" />
       <module name="r-uu.codespace.app-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah" target="24" />
-      <module name="r-uu.codespace.app-jeeeraaah-common" target="24" />
+      <module name="r-uu.codespace.app-jeeeraaah-client-fx" target="24" />
+      <module name="r-uu.codespace.app-jeeeraaah-client-rs" target="24" />
+      <module name="r-uu.codespace.app-jeeeraaah-client-rs-demo" target="24" />
+      <module name="r-uu.codespace.app-jeeeraaah-common-se" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs.demo" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.ee" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.se" target="24" />
+      <module name="r-uu.codespace.lib-gen" target="24" />
+      <module name="r-uu.codespace.lib-gen-core" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-core" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-fx-bean" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-fx-bean-editor" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-fx-bean-editor-demo" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-fx-comp" target="24" />
+      <module name="r-uu.codespace.lib-gen-java-fx-tableview" target="24" />
+      <module name="r-uu.codespace.lib-jackson" target="24" />
+      <module name="r-uu.codespace.lib-jdbc" target="24" />
+      <module name="r-uu.codespace.lib-jdbc-core" target="24" />
+      <module name="r-uu.codespace.lib-jdbc-postgres" target="24" />
       <module name="r-uu.codespace.lib-jpa" target="24" />
+      <module name="r-uu.codespace.lib-jpa-core" target="24" />
+      <module name="r-uu.codespace.lib-jpa-core-mapstruct" target="24" />
+      <module name="r-uu.codespace.lib-jpa-core-mapstruct-demo-bidirectional" target="24" />
+      <module name="r-uu.codespace.lib-jpa-se" target="24" />
+      <module name="r-uu.codespace.lib-jpa-se-eclipselink" target="24" />
+      <module name="r-uu.codespace.lib-jpa-se-hibernate" target="24" />
+      <module name="r-uu.codespace.lib-jpa-se-hibernate-postgres" target="24" />
+      <module name="r-uu.codespace.lib-jpa-se-hibernate-postgres-demo" target="24" />
+      <module name="r-uu.codespace.lib-jsonb" target="24" />
+      <module name="r-uu.codespace.lib-junit" target="24" />
+      <module name="r-uu.codespace.lib-mapstruct" target="24" />
+      <module name="r-uu.codespace.lib-mp.config" target="24" />
+      <module name="r-uu.codespace.lib-postgres" target="24" />
+      <module name="r-uu.codespace.lib-util" target="24" />
+      <module name="r-uu.codespace.lib-ws.rs" target="24" />
       <module name="r-uu.codespace.mvn-config" target="24" />
       <module name="r-uu.codespace.mvn-control" target="24" />
+      <module name="r-uu.codespace.mvn-root" target="24" />
       <module name="r-uu.lib-archunit" target="1.5" />
       <module name="r-uu.lib-cdi" target="1.5" />
       <module name="r-uu.lib-cdi-common" target="1.5" />

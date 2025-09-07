@@ -18,8 +18,8 @@
 	<modules>
 		<module>fx</module>
 		<!--        <module>fx-executable</module>-->
-		<module>rs</module>
-		<module>rs-demo</module>
+		<module>ws_rs</module>
+		<module>ws_rs.demo</module>
 	</modules>
 
 </project>

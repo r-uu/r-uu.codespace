@@ -3,77 +3,78 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional</artifactId>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional</artifactId>
+	<name>${project.artifactId}</name>
 
-    <parent>
-        <groupId>r-uu</groupId>
-        <artifactId>r-uu.codespace.lib.jpa</artifactId>
-        <version>0.0.1</version>
-    </parent>
+	<parent>
+		<groupId>r-uu</groupId>
+		<artifactId>r-uu.codespace.lib.jpa</artifactId>
+		<version>0.0.1</version>
+	</parent>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j2-impl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>r-uu</groupId>
-            <artifactId>r-uu.codespace.lib.jpa.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>r-uu</groupId>
-            <artifactId>r-uu.codespace.lib.jpa.core.mapstruct</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>r-uu</groupId>
-            <artifactId>r-uu.codespace.lib.mapstruct</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.jpa.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.jpa.core.mapstruct</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>${java.version}</source>-->
-<!--                    <target>${java.version}</target>-->
-<!--                    <release>${java.version}</release>-->
-<!--                    <compilerArgs>&#45;&#45;enable-preview</compilerArgs>-->
-<!--                    <annotationProcessorPaths>-->
-<!--                        <path>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                        </path>-->
-<!--                        <path>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok-mapstruct-binding</artifactId>-->
-<!--                        </path>-->
-<!--                        <path>-->
-<!--                            <groupId>org.mapstruct</groupId>-->
-<!--                            <artifactId>mapstruct-processor</artifactId>-->
-<!--                        </path>-->
-<!--                    </annotationProcessorPaths>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+	<!--    <build>-->
+	<!--        <plugins>-->
+	<!--            <plugin>-->
+	<!--                <groupId>org.apache.maven.plugins</groupId>-->
+	<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+	<!--                <configuration>-->
+	<!--                    <source>${java.version}</source>-->
+	<!--                    <target>${java.version}</target>-->
+	<!--                    <release>${java.version}</release>-->
+	<!--                    <compilerArgs>&#45;&#45;enable-preview</compilerArgs>-->
+	<!--                    <annotationProcessorPaths>-->
+	<!--                        <path>-->
+	<!--                            <groupId>org.projectlombok</groupId>-->
+	<!--                            <artifactId>lombok</artifactId>-->
+	<!--                        </path>-->
+	<!--                        <path>-->
+	<!--                            <groupId>org.projectlombok</groupId>-->
+	<!--                            <artifactId>lombok-mapstruct-binding</artifactId>-->
+	<!--                        </path>-->
+	<!--                        <path>-->
+	<!--                            <groupId>org.mapstruct</groupId>-->
+	<!--                            <artifactId>mapstruct-processor</artifactId>-->
+	<!--                        </path>-->
+	<!--                    </annotationProcessorPaths>-->
+	<!--                </configuration>-->
+	<!--            </plugin>-->
+	<!--        </plugins>-->
+	<!--    </build>-->
 
 </project>

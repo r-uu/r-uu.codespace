@@ -7,8 +7,8 @@ import de.ruu.app.jeeeraaah.client.fx.taskgroup.edit.TaskGroupEditor;
 import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelector;
 import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent;
 import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent.TaskGroupSelectorComponentReadyEventDispatcher;
-import de.ruu.app.jeeeraaah.client.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.rs.TaskServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
@@ -20,7 +20,10 @@ import de.ruu.lib.fx.FXUtil;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent.FXCAppStartedEventDispatcher;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import jakarta.inject.Inject;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -133,10 +136,17 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 	private void fetchGroupsAndPopulateTaskGroupSelector()
 	{
 		// create and populate groups
-		Set<TaskGroupFlat> groups = new HashSet<>(taskGroupServiceClient.findAllFlat());
+		try
+		{
+			Set<TaskGroupFlat> groups = new HashSet<>(taskGroupServiceClient.findAllFlat());
 
-		// now we are ready to hand over the groups to groupSelector
-		taskGroupSelector.service().items(groups);
+			// now we are ready to hand over the groups to groupSelector
+			taskGroupSelector.service().items(groups);
+		}
+		catch (TechnicalException | NonTechnicalException e)
+		{
+			ExceptionDialog.showAndWait("failure fetching task groups from backend", e);
+		}
 	}
 
 	/**
@@ -156,32 +166,46 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		if (isNull(selectedTaskGroupFlat)) return;
 
 		// fetch the task group with the ids of all it's tasks from the server
-		Optional<TaskGroupLazy> optionalGroupLazy = taskGroupServiceClient.findGroupLazy(selectedTaskGroupFlat.id());
-
-		if (optionalGroupLazy.isPresent())
+		try
 		{
-			TaskGroupLazy groupLazy = optionalGroupLazy.get();
+			Optional<TaskGroupLazy> optionalGroupLazy = taskGroupServiceClient.findGroupLazy(selectedTaskGroupFlat.id());
+			if (optionalGroupLazy.isPresent())
+			{
+				TaskGroupLazy groupLazy = optionalGroupLazy.get();
 
-			// fetch all of group's tasks together with the ids of their related tasks from the server
-			Set<TaskLazy> groupTasksLazy = taskServiceClient.findTasksLazy(groupLazy.taskIds());
+				// fetch all of group's tasks together with the ids of their related tasks from the server
+				Set<TaskLazy> groupTasksLazy = null;
+				try
+				{
+					groupTasksLazy = taskServiceClient.findTasksLazy(groupLazy.taskIds());
 
-			// build the main tasks as fully populated task beans from the lazy tasks
-			List<TaskBean> mainTasks = new ArrayList<>(mainTaskBeansBuilder.build(groupLazy, groupTasksLazy));
-			mainTasks.sort(COMPARATOR);
+					// build the main tasks as fully populated task beans from the lazy tasks
+					List<TaskBean> mainTasks = new ArrayList<>(mainTaskBeansBuilder.build(groupLazy, groupTasksLazy));
+					mainTasks.sort(COMPARATOR);
 
-			taskHierarchySuperSubTasks.service().populate(mainTasks);
-			taskHierarchySuperSubTasks.service().focusRootItem();
+					taskHierarchySuperSubTasks.service().populate(mainTasks);
+					taskHierarchySuperSubTasks.service().focusRootItem();
 
-			TaskGroupBean taskGroupBean = groupLazy.toBeanWithoutRelated();
+					TaskGroupBean taskGroupBean = groupLazy.toBeanWithoutRelated();
 
-			taskHierarchyPredecessors .service().activeTaskGroupProperty().setValue(taskGroupBean);
-			taskHierarchySuperSubTasks.service().activeTaskGroupProperty().setValue(taskGroupBean);
-			taskHierarchySuccessors   .service().activeTaskGroupProperty().setValue(taskGroupBean);
+					taskHierarchyPredecessors .service().activeTaskGroupProperty().setValue(taskGroupBean);
+					taskHierarchySuperSubTasks.service().activeTaskGroupProperty().setValue(taskGroupBean);
+					taskHierarchySuccessors   .service().activeTaskGroupProperty().setValue(taskGroupBean);
 
-			taskHierarchySuperSubTasks.service().activeTaskGroupProperty().addListener(
-					(obs, old, act) -> onActiveTaskPropertyChangedInSuperSubTaskHierarchy(act));
+					taskHierarchySuperSubTasks.service().activeTaskGroupProperty().addListener(
+							(obs, old, act) -> onActiveTaskPropertyChangedInSuperSubTaskHierarchy(act));
+				}
+				catch (TechnicalException | NonTechnicalException e)
+				{
+					ExceptionDialog.showAndWait("failure fetching tasks from backend for group with id: " + groupLazy.id(), e);
+				}
+			}
+			else log.debug("no lazy group could be retrieved");
 		}
-		else log.debug("no lazy group could be retrieved");
+		catch (TechnicalException | NonTechnicalException e)
+		{
+			ExceptionDialog.showAndWait("failure fetching task group from backend", e);
+		}
 	}
 
 	private void onAppStarted(FXCAppStartedEvent e) { getStage(hBxGroupSelector).ifPresent(s -> s.setTitle("jeee RAAAH - dashboard")); }
@@ -211,14 +235,24 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 			taskGroupFXBean = optional.get();
 			taskGroupBean   = taskGroupFXBean.toBean(new ReferenceCycleTracking());
 
-			// create a task group dto from task group bean (which is a task group dto)
-			TaskGroupEntityDTO taskGroupEntityDTO = taskGroupBean.toDTO(new ReferenceCycleTracking());
-
 			// let client create a new item in db
-			taskGroupEntityDTO = taskGroupServiceClient.create(taskGroupEntityDTO);
+			try
+			{
+				taskGroupBean = taskGroupServiceClient.create(taskGroupBean);
 
-			// repopulate and then focus task group selector
-			fetchGroupsAndPopulateTaskGroupSelector();
+				// repopulate and then focus task group selector
+				fetchGroupsAndPopulateTaskGroupSelector();
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait
+				(
+						"failure creating task group",
+						"task\n\n" + taskGroupBean + "\n\ncould not be created",
+						e.getMessage(),
+						e
+				);
+			}
 		}
 	}
 

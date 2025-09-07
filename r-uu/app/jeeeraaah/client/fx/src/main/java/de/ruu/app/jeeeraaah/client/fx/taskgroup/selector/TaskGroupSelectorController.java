@@ -67,7 +67,7 @@ class TaskGroupSelectorController
 		root.getChildren().add(textField);
 		textField.valueProperty().addListener((obs, old, val) -> onTaskGroupSelectionCommittedChanged(val));
 
-		// fire ecent to indicate that component is available
+		// fire event to indicate that component is available
 		// users of TaskGroupSelector should wait for this event to make sure that initialisation is completed before
 		// accessing fields like textField
 		fire(new TaskGroupSelectorComponentReadyEvent(view(), this));

@@ -6,5 +6,5 @@ import java.util.Set;
 
 public interface TaskGroupServiceFlat
 {
-	Set<TaskGroupFlat> findAllFlat();
+	Set<TaskGroupFlat> findAllFlat() throws Exception;
 }

@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add;
 
-import de.ruu.app.jeeeraaah.client.rs.TaskServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import javafx.scene.control.TreeItem;
@@ -14,10 +14,10 @@ import static javafx.scene.control.Alert.AlertType.INFORMATION;
 
 /**
  * <code>TaskHierarchySuccessorsController</code> creates <code>ActionAdd</code> instances and invokes their #execute()
- * Action to add a new successor relation to the selected successor task or super/sub task.
+ * Action to add a new successor relation to the selected successor or super/sub task.
  * <p>
- * This action determines the context of the selected successor tree item and the selected super/sub task,
- * and delegates the creation of a new successor-successor relation accordingly.
+ * This action determines the context of the selected successor tree item and the selected super/sub tree item,
+ * and delegates the creation of a new successor-predecessor relation accordingly.
  */
 public class ActionAdd
 {
@@ -27,8 +27,8 @@ public class ActionAdd
 	 * <p>
 	 * Contains
 	 * <ul>
-	 *   <li>the selected successor tree item (or the invisible root tree item from successor tree view),</li>
 	 *   <li>the selected super/sub task tree item (or the invisible root tree item from super/sub tree view) and</li>
+	 *   <li>the selected successor tree item (or the invisible root tree item from successor tree view),</li>
 	 *   <li>the task service client.</li>
 	 * </ul>
 	 * The context is used to determine how to add a new successor relation based on the current selection.

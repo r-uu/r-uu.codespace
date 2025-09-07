@@ -3,8 +3,10 @@ package de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.super_sub_or_successor.Configurator;
 import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.super_sub_or_successor.ConfiguratorService.ActionAddToSuperSubOrSuccessorConfigurationResult;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import jakarta.enterprise.inject.spi.CDI;
 import javafx.scene.Parent;
 import javafx.scene.control.ButtonType;
@@ -51,25 +53,45 @@ class ActionAddToSuperSubOrSuccessor
 		pane.getButtonTypes().addAll(CANCEL, OK);
 
 		dialog.setOnShown(e -> pane.getScene().getWindow().sizeToScene()); // make sure window resizes correctly
+
 		Optional<ActionAddToSuperSubOrSuccessorConfigurationResult> optional = dialog.showAndWait();
 
-		optional.ifPresent
-		(
-				configurationResult ->
-				{
-					context.taskServiceClient().addSuccessor
-					(
-							configurationResult.targetTask               ().toDTO(new ReferenceCycleTracking()),
-							configurationResult.chosenSuccessorTaskBean().toDTO(new ReferenceCycleTracking())
-					);
-					TreeItem<TaskBean> newItemInSuccessorTree = new TreeItem<>(configurationResult.chosenSuccessorTaskBean());
-					context.treeItemSelectedSuccessorTask().getChildren().add(newItemInSuccessorTree);
-					populateTreeForSuccessorsOf(newItemInSuccessorTree);
-					// add the chosen predecessor task to the predecessor tasks of the selected super/sub task
-					context
-							.treeItemSelectedSuperSubTask().getValue().addPredecessor(configurationResult.chosenSuccessorTaskBean());
-				}
-		);
+		if (optional.isPresent())
+		{
+			// fetch the configuration result from dialog
+			ActionAddToSuperSubOrSuccessorConfigurationResult configurationResult = optional.get();
+
+			TaskBean targetTask    = configurationResult.targetTask();
+			TaskBean successorTask = configurationResult.chosenSuccessorTaskBean();
+
+			try
+			{
+				// let the task service add the successor relation
+				context.taskServiceClient().addSuccessor(targetTask, successorTask);
+
+				TreeItem<TaskBean> newItemInSuccessorTree = new TreeItem<>(configurationResult.chosenSuccessorTaskBean());
+
+				// update the context
+				context.treeItemSelectedSuccessorTask().getChildren().add(newItemInSuccessorTree);
+
+				// update the tree view
+				populateTreeForSuccessorsOf(newItemInSuccessorTree);
+
+				// add the successor task to the target task
+				targetTask.addSuccessor(successorTask);
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait
+				(
+						"failure creating new successor relation",
+						"the successor relation between\n" + targetTask + "\nand\n" +
+								successorTask + "\ncould not be created in the backend",
+						e.getMessage(),
+						e
+				);
+			}
+		}
 	}
 
 	private void populateTreeForSuccessorsOf(TreeItem<TaskBean> newItemInSuccessorTree)

@@ -5,14 +5,17 @@ import de.ruu.app.jeeeraaah.client.fx.task.TreeItemTaskBean;
 import de.ruu.app.jeeeraaah.client.fx.task.edit.TaskEditor;
 import de.ruu.app.jeeeraaah.client.fx.task.view.TaskViewNarrow;
 import de.ruu.app.jeeeraaah.client.fx.task.view.TaskViewNarrowQualifier;
-import de.ruu.app.jeeeraaah.client.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.rs.TaskServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
 import de.ruu.app.jeeeraaah.common.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
 import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import jakarta.inject.Inject;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -88,8 +91,8 @@ public abstract class TaskHierarchyControllerAbstract
 		treeView.getSelectionModel().setSelectionMode(SINGLE);
 		treeView.getSelectionModel().selectedItemProperty().addListener((obs, old, act) -> onSelectedTaskChanged(act));
 
-		buttonEdit  .setOnAction(e -> onEdit  (e));
-		buttonRemove.setOnAction(e -> onRemove(e));
+		buttonEdit  .setOnAction(e -> onEdit  ());
+		buttonRemove.setOnAction(e -> onRemove());
 
 //		CDIUtil.fire(new TaskHierarchyComponentReadyEvent(view(), this));
 	}
@@ -122,7 +125,7 @@ public abstract class TaskHierarchyControllerAbstract
 
 	protected abstract TreeItem<TaskBean> populateTreeNode(TreeItem<TaskBean> root, TaskBean task);
 
-	protected void onEdit(ActionEvent e)
+	protected void onEdit()
 	{
 		TreeItem<TaskBean> selectedItem = treeView().getSelectionModel().getSelectedItem();
 		if (isNull(selectedItem)) return;
@@ -151,16 +154,22 @@ public abstract class TaskHierarchyControllerAbstract
 			taskFXBean = optional.get();
 			taskBean   = taskFXBean.toBean(new ReferenceCycleTracking());
 
-			TaskEntityDTO taskEntityDTO = taskServiceClient.update(taskBean.toDTO(new ReferenceCycleTracking()));
+			try
+			{
+				taskBean = taskServiceClient.update(taskBean);
 
-			taskBean = taskEntityDTO.toBean(new ReferenceCycleTracking());
-
-			taskView.service().populateViewFor(taskFXBean);
-			selectedItem.setValue(taskBean);
+				taskView.service().populateViewFor(taskFXBean);
+				selectedItem.setValue(taskBean);
+			}
+			catch (TechnicalException | NonTechnicalException e)
+			{
+				ExceptionDialog.showAndWait("failure updating task\n\n" + taskBean + "\n\n in backend", e);
+			}
 		}
 	}
 
-	protected void onRemove(ActionEvent e)
+	// TODO is there no operation in the backend necessary?
+	protected void onRemove()
 	{
 		TreeItem<TaskBean> selectedItem = treeView().getSelectionModel().getSelectedItem();
 		if (isNull(selectedItem)) return;
