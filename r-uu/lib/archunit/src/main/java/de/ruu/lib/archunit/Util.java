@@ -27,30 +27,30 @@ public interface Util
 						.isPresent();
 	}
 
-	static List<FieldAndAccessors> fieldsAndAccessors(Class<?> clazz)
+	static List<FieldWithAccessors> fieldsWithAccessors(Class<?> clazz)
 	{
-		List<FieldAndAccessors> result = new ArrayList<>();
+		List<FieldWithAccessors> result = new ArrayList<>();
 
 		JavaClass javaClass = new ClassFileImporter().importClass(clazz);
-		javaClass.getAllFields().forEach(field -> result.add(new FieldAndAccessors(field)));
+		javaClass.getAllFields().forEach(field -> result.add(new FieldWithAccessors(field)));
 
 		return result;
 	}
 
 	static boolean isCollection(JavaClass clazz) { return clazz.isAssignableTo(Collection.class); }
 	static boolean isCollection(JavaType  type ) { return isCollection(type.toErasure()); }
-	static boolean isGeneric(JavaClass    clazz) { return clazz.getTypeParameters().isEmpty() == false; }
-	static boolean isGeneric(JavaType     type ) { return isGeneric(type.toErasure()); }
-	static boolean isPrimitive(JavaClass  clazz) { return clazz.isPrimitive(); }
-	static boolean isPrimitive(JavaType   type ) { return isPrimitive(type.toErasure()); }
-	static boolean isNumeric(JavaClass    clazz)
+	static boolean isGeneric   (JavaClass clazz) { return clazz.getTypeParameters().isEmpty() == false; }
+	static boolean isGeneric   (JavaType  type ) { return isGeneric(type.toErasure()); }
+	static boolean isPrimitive (JavaClass clazz) { return clazz.isPrimitive(); }
+	static boolean isPrimitive (JavaType  type ) { return isPrimitive(type.toErasure()); }
+	static boolean isNumeric   (JavaClass clazz)
 	{
 		String name = clazz.getName();
 
-		if (   name.equals(Double .class.getSimpleName())
-				|| name.equals(Float  .class.getSimpleName())
-				|| name.equals(Integer.class.getSimpleName())
-				|| name.equals(Long   .class.getSimpleName()))
+		if (   name.equals(Double .class.getName())
+				|| name.equals(Float  .class.getName())
+				|| name.equals(Integer.class.getName())
+				|| name.equals(Long   .class.getName()))
 		{
 			return true;
 		}

@@ -23,77 +23,88 @@ import static org.hamcrest.Matchers.*;
  * <p>We use simple Java classes (e.g. {@link String}, {@link Integer}, and collections)
  * as input to check the behavior.</p>
  */
-// TODO: adjust formatting
 class UtilTest
 {
-    private final ClassFileImporter importer = new ClassFileImporter();
+		private final ClassFileImporter importer = new ClassFileImporter();
 
     // --- isPublic ------------------------------------------------------------
 
-    @Test
-    void isPublic_shouldReturnTrueForPublicMethod() {
-        JavaClass javaClass = importer.importClass(Sample.class);
-        JavaMethod method = javaClass.getMethod("publicMethod");
+		@Test void isPublic_shouldReturnTrueForPublicMethod()
+		{
+        JavaClass  javaClass = importer.importClass(Sample.class);
+        JavaMethod method    = javaClass.getMethod("publicMethod");
 
         assertThat(Util.isPublic(method), is(true));
     }
 
-    @Test
-    void isPublic_shouldReturnFalseForPrivateMethod() {
-        JavaClass javaClass = importer.importClass(Sample.class);
-        JavaMethod method = javaClass.getMethod("privateMethod");
+    @Test void isPublic_shouldReturnFalseForPrivateMethod()
+    {
+        JavaClass  javaClass = importer.importClass(Sample.class);
+        JavaMethod method    = javaClass.getMethod("privateMethod");
 
         assertThat(Util.isPublic(method), is(false));
     }
 
     // --- fieldsAndAccessors --------------------------------------------------
 
-    @Test
-    void fieldsAndAccessors_shouldReturnAllFields() {
-        List<FieldAndAccessors> result = Util.fieldsAndAccessors(Sample.class);
+    @Test void fieldsAndAccessors_shouldReturnAllFields()
+    {
+			List<FieldWithAccessors> fields = Util.fieldsWithAccessors(Sample.class);
 
-        assertThat(result, is(not(empty())));
-        assertThat(result.get(0).getField().getName(), is("field"));
+			assertThat(fields, is(not(empty())));
+			assertThat(tryToExtractFrom(fields, "stringField").isPresent(), is(true));
+			assertThat(tryToExtractFrom(fields, "intField"   ).isPresent(), is(true));
     }
 
     // --- type checks ---------------------------------------------------------
 
-    @Test
-    void isCollection_shouldDetectCollections() {
+    @Test void isCollection_shouldDetectCollections()
+    {
         JavaClass listClass = importer.importClass(List.class);
         assertThat(Util.isCollection(listClass), is(true));
     }
 
-    @Test
-    void isGeneric_shouldDetectParameterizedTypes() {
+    @Test void isGeneric_shouldDetectParameterizedTypes()
+    {
         JavaClass listClass = importer.importClass(List.class);
         assertThat(Util.isGeneric(listClass), is(true));
     }
 
-    @Test
-    void isPrimitive_shouldDetectPrimitiveTypes() {
-        JavaClass intClass = importer.importClass(int.class);
-        assertThat(Util.isPrimitive(intClass), is(true));
+    @Test void isPrimitive_shouldDetectPrimitiveTypes()
+    {
+	    List<FieldWithAccessors> fields = Util.fieldsWithAccessors(Sample.class);
+
+	    assertThat(fields, is(not(empty())));
+
+	    Optional<FieldWithAccessors> optional =
+			    fields
+              .stream()
+              .filter(field -> "intField".equals(field.field().getName()))
+              .findFirst();
+
+	    assertThat(optional.isPresent(), is(true));
+
+	    FieldWithAccessors fieldWithAccessors = optional.get();
+			assertThat(Util.isPrimitive(fieldWithAccessors.field().getType()), is(true));
     }
 
-    @Test
-    void isNumeric_shouldDetectIntegerAsNumeric() {
+    @Test void isNumeric_shouldDetectIntegerAsNumeric()
+    {
         JavaClass integerClass = importer.importClass(Integer.class);
         assertThat(Util.isNumeric(integerClass), is(true));
     }
 
-    @Test
-    void isNumeric_shouldReturnFalseForNonNumericClass() {
+    @Test void isNumeric_shouldReturnFalseForNonNumericClass()
+    {
         JavaClass stringClass = importer.importClass(String.class);
         assertThat(Util.isNumeric(stringClass), is(false));
     }
 
     // --- generic type arguments ----------------------------------------------
 
-    @Test
-    void actualTypeArguments_shouldReturnTypeArgumentsForParameterizedType() {
-        JavaType type = importer.importClass(SampleGeneric.class)
-                .getField("list").getType();
+    @Test void actualTypeArguments_shouldReturnTypeArgumentsForParameterizedType()
+    {
+        JavaType type = importer.importClass(SampleGeneric.class).getField("list").getType();
 
         Optional<List<JavaType>> args = Util.actualTypeArguments(type);
 
@@ -101,56 +112,65 @@ class UtilTest
         assertThat(args.get(), hasSize(1));
     }
 
-    @Test
-    void firstActualTypeArgument_shouldReturnFirstArgument() {
-        JavaType type = importer.importClass(SampleGeneric.class)
-                .getField("list").getType();
+    @Test void firstActualTypeArgument_shouldReturnFirstArgument()
+    {
+        JavaType type = importer.importClass(SampleGeneric.class).getField("list").getType();
 
         Optional<JavaType> arg = Util.firstActualTypeArgument(type);
 
         assertThat(arg.isPresent(), is(true));
     }
 
-    @Test
-    void isParameterisedType_shouldDetectParameterizedType() {
-        JavaType type = importer.importClass(SampleGeneric.class)
-                .getField("list").getType();
+    @Test void isParameterisedType_shouldDetectParameterizedType()
+    {
+        JavaType type = importer.importClass(SampleGeneric.class).getField("list").getType();
 
         assertThat(Util.isParameterisedType(type), is(true));
     }
 
     // --- publicMethodsWithAnnotationAndSortedByName --------------------------
 
-    @Test
-    void publicMethodsWithAnnotationAndSortedByName_shouldReturnMethodsSortedByName() {
-        JavaClass javaClass = importer.importClass(Sample.class);
-
-        List<JavaMethod> methods = Util.publicMethodsWithAnnotationAndSortedByName(javaClass, Deprecated.class);
+    @Test void publicMethodsWithAnnotationAndSortedByName_shouldReturnMethodsSortedByName()
+    {
+        JavaClass        javaClass = importer.importClass(Sample.class);
+        List<JavaMethod> methods   = Util.publicMethodsWithAnnotationAndSortedByName(javaClass, Deprecated.class);
 
         // collect method names to check order
-        List<String> methodNames = methods.stream()
+        List<String> methodNames =
+		        methods
+				        .stream()
                 .map(JavaMethod::getName)
                 .collect(Collectors.toList());
 
         // ensure list is sorted alphabetically
-        List<String> sortedNames = methodNames.stream()
+        List<String> sortedNames =
+		        methodNames
+				        .stream()
                 .sorted(Comparator.naturalOrder())
                 .collect(Collectors.toList());
 
         assertThat(methodNames, is(sortedNames));
     }
 
+		private Optional<FieldWithAccessors> tryToExtractFrom(List<FieldWithAccessors> fields, String name)
+		{
+			return fields.stream().filter(field -> name.equals(field.field().getName())).findFirst();
+		}
+
     // --- helper classes for testing ------------------------------------------
 
-    static class Sample {
-        public String field;
+    static class Sample
+    {
+      public String stringField;
+	    public int    intField;
 
-        public void publicMethod() {}
+        public  void publicMethod () {}
         private void privateMethod() {}
-        public void anotherMethod() {}
+        public  void anotherMethod() {}
     }
 
-    static class SampleGeneric {
+    static class SampleGeneric
+    {
         public List<String> list;
     }
 }

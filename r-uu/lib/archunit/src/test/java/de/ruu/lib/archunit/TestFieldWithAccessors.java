@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-class TestFieldAndAccessors
+class TestFieldWithAccessors
 {
 	@Getter
 	@Setter
@@ -24,8 +24,8 @@ class TestFieldAndAccessors
 	{
 		JavaClass clazz = new ClassFileImporter().importClass(ClassWithFluentAccessorsOnly.class);
 
-		FieldAndAccessors fieldAndAccessors =
-				new FieldAndAccessors(clazz.getAllFields().iterator().next());
+		FieldWithAccessors fieldAndAccessors =
+				new FieldWithAccessors(clazz.getAllFields().iterator().next());
 
 		assertThat(fieldAndAccessors.getterJavaBeanStyle().isPresent(), is(false));
 		assertThat(fieldAndAccessors.setterJavaBeanStyle().isPresent(), is(false));

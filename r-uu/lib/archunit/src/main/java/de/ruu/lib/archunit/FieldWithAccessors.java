@@ -15,16 +15,20 @@ import java.util.Optional;
  */
 @Getter
 @Accessors(fluent = true)
-public class FieldAndAccessors
+public class FieldWithAccessors
 {
+	private final @NonNull JavaField field;
+
 	private final Optional<JavaMethod> getterJavaBeanStyle;
 	private final Optional<JavaMethod> setterJavaBeanStyle;
 
 	private final Optional<JavaMethod> getterFluentStyle;
 	private final Optional<JavaMethod> setterFluentStyle;
 
-	public FieldAndAccessors(@NonNull JavaField field)
+	public FieldWithAccessors(@NonNull JavaField field)
 	{
+		this.field = field;
+
 		getterJavaBeanStyle = findGetterJavaBeanStyle(field);
 		setterJavaBeanStyle = findSetterJavaBeanStyle(field);
 
@@ -37,7 +41,7 @@ public class FieldAndAccessors
 	 * @param field
 	 * @return java bean style getter or empty optional if none was found
 	 */
-	private Optional<JavaMethod> findGetterJavaBeanStyle(JavaField field)
+	private Optional<JavaMethod> findGetterJavaBeanStyle(@NonNull JavaField field)
 	{
 		JavaClass clazz = field.getOwner();
 
@@ -54,7 +58,7 @@ public class FieldAndAccessors
 	 * @param field
 	 * @return java bean style setter or empty optional if none was found
 	 */
-	private Optional<JavaMethod> findSetterJavaBeanStyle(JavaField field)
+	private Optional<JavaMethod> findSetterJavaBeanStyle(@NonNull JavaField field)
 	{
 		JavaClass clazz = field.getOwner();
 
@@ -72,7 +76,7 @@ public class FieldAndAccessors
 	 * @param field
 	 * @return fluent style getter or empty optional if none was found
 	 */
-	private Optional<JavaMethod> findGetterFluentStyle(JavaField field)
+	private Optional<JavaMethod> findGetterFluentStyle(@NonNull JavaField field)
 	{
 		JavaClass clazz = field.getOwner();
 
@@ -88,7 +92,7 @@ public class FieldAndAccessors
 	 * @param field
 	 * @return fluent style setter or empty optional if none was found
 	 */
-	private Optional<JavaMethod> findSetterFluentStyle(JavaField field)
+	private Optional<JavaMethod> findSetterFluentStyle(@NonNull JavaField field)
 	{
 		JavaClass clazz = field.getOwner();
 
