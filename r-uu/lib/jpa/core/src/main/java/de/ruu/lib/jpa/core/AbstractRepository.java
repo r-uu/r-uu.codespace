@@ -142,14 +142,8 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	{
 		EntityManager entityManager = entityManager();
 
-		if (object.getId() != null)
-		{
-			object = entityManager.merge(object);
-		}
-		else
-		{
-			entityManager.persist(object);
-		}
+		if (object.getId() != null) object = entityManager.merge(object);
+		else                                 entityManager.persist(object);
 
 		// no entityManager.flush() here, because it is not necessary
 		// and it may cause problems with optimistic locking in some cases

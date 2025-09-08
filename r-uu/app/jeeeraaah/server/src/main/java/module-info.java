@@ -18,4 +18,5 @@ module de.ruu.app.jeee_raaa.server
 	requires de.ruu.lib.mapstruct;
 	requires jakarta.inject;
 	requires de.ruu.lib.ws.rs;
+	requires jakarta.validation;
 }

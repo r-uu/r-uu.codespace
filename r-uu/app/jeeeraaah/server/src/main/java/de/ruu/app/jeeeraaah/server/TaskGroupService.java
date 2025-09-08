@@ -1,7 +1,6 @@
 package de.ruu.app.jeeeraaah.server;
 
 import de.ruu.app.jeeeraaah.common.TaskGroupService.TaskGroupNotFoundException;
-import de.ruu.app.jeeeraaah.common.TaskService;
 import de.ruu.app.jeeeraaah.common.TaskService.TaskNotFoundException;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
 import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
@@ -9,7 +8,9 @@ import de.ruu.app.jeeeraaah.common.dto.TaskGroupLazy;
 import de.ruu.app.jeeeraaah.common.jpa.TaskGroupEntityJPA;
 import de.ruu.app.jeeeraaah.common.jpa.TaskGroupServiceJPA;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.ErrorResponse;
 import jakarta.inject.Inject;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -23,7 +24,12 @@ import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
+import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.info.Info;
+import org.eclipse.microprofile.openapi.annotations.media.Content;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -35,9 +41,10 @@ import static de.ruu.app.jeeeraaah.common.Paths.BY_ID_LAZY;
 import static de.ruu.app.jeeeraaah.common.Paths.BY_ID_WITH_TASKS;
 import static de.ruu.app.jeeeraaah.common.Paths.PATH_APPENDER_TO_DOMAIN_TASK_GROUP;
 import static de.ruu.app.jeeeraaah.common.Paths.REMOVE_TASK_FROM_GROUP;
-import static de.ruu.lib.util.BooleanFunctions.not;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
+import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
 import static jakarta.ws.rs.core.Response.Status.CREATED;
+import static jakarta.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
 import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
 import static jakarta.ws.rs.core.Response.ok;
 import static jakarta.ws.rs.core.Response.status;
@@ -52,163 +59,399 @@ import static jakarta.ws.rs.core.Response.status;
  *
  * @author r-uu
  */
-// TODO fix exception handling
 @Path(PATH_APPENDER_TO_DOMAIN_TASK_GROUP)
 @OpenAPIDefinition(info = @Info(version = "a version", title = "a title"))
+@Produces(APPLICATION_JSON)
+@Consumes(APPLICATION_JSON)
 @Timed
 @Slf4j
 public class TaskGroupService
 {
+	private static final String MSG_TASK_NOT_FOUND               = "task with id %d not found";
+	private static final String MSG_TASK_GROUP_NOT_FOUND         = "task group with id %d not found";
+	private static final String MSG_TASK_GROUP_READ_FAILED       = "failed to read task group with id %d: %s";
+	private static final String MSG_TASK_GROUP_READ_FAILED_XCPTN = "failed to create task group with id %d: %s";
+	private static final String MSG_TASK_GROUP_CREATE_FAILED     = "failed to create task group: %s";
+	private static final String MSG_TASK_GROUP_UPDATE_FAILED     = "failed to update task group with id %d: %s";
+	private static final String MSG_TASK_GROUP_DELETE_FAILED     = "failed to delete task group with id %d: %s";
+	private static final String MSG_TASK_REMOVAL_FAILED          = "failed to remove task with id %d from group %d: %s";
+
 	@Inject private TaskGroupServiceJPA service;
 
+	@Operation(summary = "get all task groups", description = "returns a list of all task groups with their details")
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "successfully retrieved all task groups",
+			content      = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = TaskGroupEntityDTO.class))
+	)
 	@GET
-	@Produces(APPLICATION_JSON)
 	public Response findAll()
 	{
-		Set<TaskGroupEntityDTO> result  = new HashSet<>();
-		ReferenceCycleTracking  context = new ReferenceCycleTracking();
-		Set<TaskGroupEntityJPA> all     = service.findAll();
-
-		for (TaskGroupEntityJPA taskGroupEntity : all)
+		try
 		{
-			TaskGroupEntityDTO dto = taskGroupEntity.toDTO(context);
-			result.add(dto);
-//			log.debug("found task group {}", dto);
-		}
+			Set<TaskGroupEntityDTO> result  = new HashSet<>();
+			ReferenceCycleTracking  context = new ReferenceCycleTracking();
+			Set<TaskGroupEntityJPA> all     = service.findAll();
 
-		return ok(result).build();
-	}
+			all.forEach(taskGroup -> result.add(taskGroup.toDTO(context)));
 
-	@GET
-	@Path(BY_ID)
-	@Produces(APPLICATION_JSON)
-	public Response find(@PathParam("id") Long id)
-	{
-		Optional<? extends TaskGroupEntityJPA> optional = service.read(id);
-		if (not(optional.isPresent()))
-				return status(NOT_FOUND).entity("task group with id " + id + " not found").build();
-		else
-		{
-			ReferenceCycleTracking context = new ReferenceCycleTracking();
-
-			TaskGroupEntityDTO result = optional.get().toDTO(context);
-//			log.debug("found task group for id {}\n{}", id, result);
 			return ok(result).build();
+		}
+		catch (Exception e)
+		{
+			// TODO: use internalServerError
+			log.error("error retrieving task groups", e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity("error retrieving task groups: " + e.getMessage())
+							.build();
 		}
 	}
 
-	@GET
-	@Path(BY_ID_WITH_TASKS)
-	@Produces(APPLICATION_JSON)
-	public Response findWithTasks(@PathParam("id") Long id)
+	@Operation(summary = "get task group by ID", description = "returns a task group by its ID")
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "task group found",
+			content      = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = TaskGroupEntityDTO.class))
+	)
+	@APIResponse
+	(
+			responseCode = "404",
+			description  = "task group not found"
+	)
+	@GET @Path(BY_ID)
+	public Response find
+			(@Parameter(description = "ID of the task group", required = true) @PathParam("id") @NonNull Long id)
 	{
-		Optional<? extends TaskGroupEntityJPA> optional = service.findWithTasks(id);
-
-		if (not(optional.isPresent()))
-				return status(NOT_FOUND).entity("company with id " + id + " not found").build();
-		else
+		try
 		{
-			ReferenceCycleTracking context = new ReferenceCycleTracking();
-
-			TaskGroupEntityJPA resultJPA = optional.get();
-			TaskGroupEntityDTO result    = resultJPA.toDTO(context);
-			return ok(result).build();
+			return
+					service
+							.read(id)
+							.map
+							(
+									taskGroup ->
+									ok(taskGroup.toDTO(new ReferenceCycleTracking()))
+									.build()
+							)
+							.orElseGet(() -> status(NOT_FOUND).entity(String.format(MSG_TASK_GROUP_NOT_FOUND, id))
+							.build());
+		}
+		catch (Exception e)
+		{
+			log.error(String.format(MSG_TASK_GROUP_READ_FAILED, id), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity(String.format(MSG_TASK_GROUP_READ_FAILED_XCPTN, id, e.getMessage()))
+							.build();
 		}
 	}
 
 	/**
-	 * This method is used to find task groups together with the ids of its related tasks.
+	 * Retrieves a task group by its ID including all associated tasks.
 	 *
-	 * @param id the id of the task group
-	 * @return the task group with ids of related tasks
+	 * @param id the ID of the task group to retrieve
+	 * @return a {@link Response} containing the task group with its tasks or an error response
+	 *
+	 * @response 200 Task group found and returned successfully
+	 * @response 404 Task group with the specified ID was not found
+	 * @response 500 An internal server error occurred
 	 */
+	@Operation(summary = "get task group with tasks", description = "retrieves a task group with all its associated tasks by ID")
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "Task group found",
+			content      = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = TaskGroupEntityDTO.class))
+	)
+	@APIResponse
+	(
+			responseCode = "404",
+			description  = "Task group not found",
+			content      = @Content(schema = @Schema(implementation = ErrorResponse.class))
+	)
+	@APIResponse
+	(
+			responseCode = "500",
+			description  = "Internal server error",
+			content      = @Content(schema = @Schema(implementation = ErrorResponse.class))
+	)
 	@GET
-	@Path(BY_ID_LAZY)
-	@Produces(APPLICATION_JSON)
-	public Response findWithTasksLazy(@PathParam("id") Long id)
+	@Path(BY_ID_WITH_TASKS)
+	public Response findWithTasks
+	(
+			@Parameter(description = "ID of the task group to retrieve", required = true)
+			@PathParam("id") @NonNull Long id
+	)
 	{
-		Optional<TaskGroupEntityJPA> optional = service.findWithTasks(id);
-
-		if (not(optional.isPresent()))
-				return status(NOT_FOUND).entity("company with id " + id + " not found").build();
-		else
+		try
 		{
-			TaskGroupEntityJPA resultJPA = optional.get();
-			TaskGroupLazy      result    = resultJPA.toLazy();
-			return ok(result).build();
+			Optional<TaskGroupEntityJPA> optional = service.findWithTasks(id);
+
+			if (optional.isPresent())
+			{
+				TaskGroupEntityDTO result = optional.get().toDTO(new ReferenceCycleTracking());
+				return ok(result).build();
+			}
+			else
+			{
+				return status(NOT_FOUND).entity(String.format(MSG_TASK_GROUP_NOT_FOUND, id)).build();
+			}
+		}
+		catch (Exception e)
+		{
+			log.error(String.format(MSG_TASK_GROUP_READ_FAILED, id), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity(String.format(MSG_TASK_GROUP_READ_FAILED_XCPTN, id, e.getMessage()))
+							.build();
 		}
 	}
 
+	/**
+	 * Retrieves a task group with only the IDs of its related tasks (lazy loading).
+	 * This is more efficient when only task references are needed rather than full task details.
+	 *
+	 * @param id the ID of the task group to retrieve
+	 * @return a {@link Response} containing the task group with task IDs or an error response
+	 *
+	 * @response 200 Task group found and returned successfully
+	 * @response 404 Task group with the specified ID was not found
+	 * @response 500 An internal server error occurred
+	 */
+	@Operation(summary = "get task group with task IDs", description = "retrieves a task group with only the IDs of its associated tasks for efficient loading")
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "task group found",
+			content      = @Content(mediaType = APPLICATION_JSON,schema = @Schema(implementation = TaskGroupLazy.class))
+	)
+	@APIResponse
+		(
+			responseCode = "404",
+			description  = "task group not found",
+			content      = @Content(schema = @Schema(implementation = ErrorResponse.class))
+	)
+	@APIResponse
+	(
+			responseCode = "500",
+			description  = "internal server error",
+			content      = @Content(schema = @Schema(implementation = ErrorResponse.class))
+	)
+	@GET @Path(BY_ID_LAZY)
+	public Response findWithTasksLazy(@PathParam("id") @NonNull Long id)
+	{
+		try
+		{
+			Optional<TaskGroupEntityJPA> optional = service.findWithTasks(id);
+
+			if (optional.isPresent())
+			{
+				TaskGroupEntityJPA resultJPA = optional.get();
+				TaskGroupLazy      result    = resultJPA.toLazy();
+				return ok(result).build();
+			}
+			else
+					return status(NOT_FOUND).entity("company with id " + id + " not found").build();
+		}
+		catch (Exception e)
+		{
+			log.error(MSG_TASK_GROUP_READ_FAILED, id, e.getMessage(), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity(String.format(MSG_TASK_GROUP_READ_FAILED_XCPTN, id, e.getMessage()))
+							.build();
+		}
+	}
+
+	/**
+	 * Retrieves a flat list of all task groups with minimal information.
+	 * This is optimized for performance when only basic task group information is needed.
+	 *
+	 * @return a {@link Response} containing a set of flattened task group information
+	 *
+	 * @response 200 List of task groups retrieved successfully
+	 * @response 500 An internal server error occurred
+	 */
+	@Operation
+	(
+			summary     = "get all task groups (flat)",
+			description = "retrieves a flat list of all task groups with minimal information for efficient loading"
+	)
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "list of task groups retrieved successfully",
+			content      = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = TaskGroupEntityDTO.class))
+	)
+	@APIResponse
+	(
+			responseCode = "500",
+			description  = "internal server error",
+			content      = @Content(schema = @Schema(implementation = ErrorResponse.class))
+	)
 	@GET
 	@Path(ALL_FLAT)
-	@Produces(APPLICATION_JSON)
 	public Response findAllFlat()
 	{
-		@NonNull Set<TaskGroupFlat> result = service.findAllFlat();
-		return ok(result).build();
+		try
+		{
+			return ok(service.findAllFlat()).build();
+		}
+		catch (Exception e)
+		{
+			// TODO: use internalServerError
+			log.error("Failed to retrieve flat list of task groups: {}", e.getMessage(), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+					.entity("Failed to retrieve task groups list: " + e.getMessage())
+					.build();
+//					internalServerError(e, "Failed to retrieve task groups list");
+		}
 	}
 
+	@Operation(summary = "create a new task group", description = "creates a new task group with the provided details")
+	@APIResponse
+	(
+			responseCode = "201",
+			description  = "ask group created successfully",
+			content      =
+					@Content
+					(
+							mediaType = APPLICATION_JSON,
+							schema = @Schema(implementation = TaskGroupEntityDTO.class)
+					)
+	)
+	@APIResponse(responseCode = "400", description = "invalid input provided")
 	@POST
-	@Consumes(APPLICATION_JSON)
-	@Produces(APPLICATION_JSON)
-	public Response create(TaskGroupEntityDTO dto)
+	public Response create(@Valid @NonNull TaskGroupEntityDTO dto)
 	{
-		ReferenceCycleTracking context = new ReferenceCycleTracking();
-
-//		log.debug( "input:\n{}", dto);
-		TaskGroupEntityJPA entity = service.create(dto.toEntity(context));
-		TaskGroupEntityDTO result = entity.toDTO(context);
-//		log.debug("output:\n{}", result);
-		return status(CREATED).entity(result).build();
+		try
+		{
+			ReferenceCycleTracking context = new ReferenceCycleTracking();
+			TaskGroupEntityJPA     entity  = service.create(dto.toEntity(context));
+			return
+					status(CREATED)
+							.entity(entity.toDTO(context))
+							.build();
+		}
+		catch (Exception e)
+		{
+			log.error("Error creating task group", e);
+			return
+					status(BAD_REQUEST)
+							.entity(String.format(MSG_TASK_GROUP_CREATE_FAILED, e.getMessage()))
+							.build();
+		}
 	}
 
+	@Operation
+	(
+			summary     = "update a persistent task group or create a new task group",
+			description = "updates a persistent task group with the provided details or creates a new task group"
+	)
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "persistent task group updated or non-persistent task group created successfully",
+			content      =
+			@Content
+			(
+					mediaType = APPLICATION_JSON,
+					schema    = @Schema(implementation = TaskGroupEntityDTO.class)
+			)
+	)
+	@APIResponse
+	(
+			responseCode = "400",
+			description  = "invalid input provided"
+	)
 	@PUT
-	@Consumes(APPLICATION_JSON)
-	@Produces(APPLICATION_JSON)
-	public Response update(TaskGroupEntityDTO dto)
+	public Response update(@Valid @NonNull TaskGroupEntityDTO dto)
 	{
-		ReferenceCycleTracking context = new ReferenceCycleTracking();
-
-		TaskGroupEntityJPA entity = service.update(dto.toEntity(context));
-		TaskGroupEntityDTO result = entity.toDTO(context);
-		return ok(result).build();
+		try
+		{
+			ReferenceCycleTracking context = new ReferenceCycleTracking();
+			TaskGroupEntityJPA     entity  = service.update(dto.toEntity(context));
+			return ok(entity.toDTO(context)).build();
+		}
+		catch (TaskGroupNotFoundException e)
+		{
+			return
+					status(NOT_FOUND)
+							.entity(String.format(MSG_TASK_GROUP_NOT_FOUND, dto.getId()))
+							.build();
+		}
+		catch (Exception e)
+		{
+			log.error(String.format("error updating task group with id %d", dto.getId()), e);
+			return
+					status(BAD_REQUEST)
+							.entity(String.format(MSG_TASK_GROUP_UPDATE_FAILED, dto.getId(), e.getMessage()))
+							.build();
+		}
 	}
 
-	@DELETE
-	@Path(BY_ID)
-	@Produces(APPLICATION_JSON)
-	public Response delete(@PathParam("id") Long id)
+	@Operation(summary = "delete a task group", description = "deletes a task group by its ID")
+	@APIResponse
+	(
+			responseCode = "200",
+			description  = "task group deleted successfully"
+	)
+	@APIResponse
+	(
+			responseCode = "404",
+			description = "task group not found"
+	)
+	@DELETE @Path(BY_ID)
+	public Response delete(
+			@Parameter(description = "ID of the task group to delete", required = true)
+			@PathParam("id") @NonNull Long id)
 	{
 		try
 		{
 			service.delete(id);
+			return ok().build();
 		}
 		catch (TaskGroupNotFoundException e)
 		{
-			return status(NOT_FOUND).entity("task group with id " + id + " not found").build();
+			return
+					status(NOT_FOUND)
+							.entity(String.format(MSG_TASK_GROUP_NOT_FOUND, id))
+							.build();
 		}
-
-		return ok().build();
+		catch (Exception e)
+		{
+			log.error(String.format(MSG_TASK_GROUP_DELETE_FAILED, id, e.getMessage()), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity(String.format(MSG_TASK_GROUP_DELETE_FAILED, id, e.getMessage()))
+							.build();
+		}
 	}
 
-	@DELETE
-	@Path(REMOVE_TASK_FROM_GROUP)
-	@Produces(APPLICATION_JSON)
-	public Response removeFromGroup(@PathParam("idGroup") Long idGroup, @PathParam("idTask") Long idTask)
+	@DELETE @Path(REMOVE_TASK_FROM_GROUP)
+	public Response removeFromGroup(
+			@PathParam("idGroup") @NonNull Long idGroup, @PathParam("idTask") @NonNull Long idTask)
 	{
 		try
 		{
 			service.removeFromGroup(idGroup, idTask);
+			return ok().build();
 		}
 		catch (TaskGroupNotFoundException e)
-		{
-			return status(NOT_FOUND).entity("task group with id " + idGroup + "not found").build();
-		}
+				{ return status(NOT_FOUND).entity(String.format(MSG_TASK_GROUP_NOT_FOUND, idGroup)).build(); }
 		catch (TaskNotFoundException e)
+				{ return status(NOT_FOUND).entity(String.format(MSG_TASK_NOT_FOUND      , idTask)).build(); }
+		catch (Exception e)
 		{
-			return status(NOT_FOUND).entity("task with id " + idTask + " not found").build();
+			log.error(String.format(MSG_TASK_REMOVAL_FAILED, idTask, idGroup, e.getMessage()), e);
+			return
+					status(INTERNAL_SERVER_ERROR)
+							.entity(String.format(MSG_TASK_REMOVAL_FAILED, idTask, idGroup, e.getMessage()))
+							.build();
 		}
-
-		return ok().build();
 	}
 }
