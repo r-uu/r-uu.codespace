@@ -24,9 +24,17 @@ public class CDIExtension implements Extension
 
 	void afterDeploymentValidation(@Observes AfterDeploymentValidation adv, BeanManager bm)
 	{
-		StringBuilder sb = new StringBuilder("finished the deployment validation process, managed beans:\n");
-		bm.getBeans(Object.class).forEach(bean -> sb.append(bean.getBeanClass().getName()).append("\n"));
-		log.debug(sb.toString());
+	    List<String> beanClasses =
+				bm.getBeans(Object.class)
+						.stream()
+        				.map(bean -> bean.getBeanClass().getName())
+		    		    .sorted()
+        				.toList();
+
+	    String logOutput =
+				"finished the deployment validation process, managed beans:\n" + String.join("\n", beanClasses);
+
+	    log.debug(logOutput);
 	}
 
 	void afterBeanDiscovery(@Observes AfterBeanDiscovery abd)
