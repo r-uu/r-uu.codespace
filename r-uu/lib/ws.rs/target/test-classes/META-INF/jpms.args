@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.ws.rs=_
+--add-reads
+de.ruu.lib.ws.rs=ALL-UNNAMED

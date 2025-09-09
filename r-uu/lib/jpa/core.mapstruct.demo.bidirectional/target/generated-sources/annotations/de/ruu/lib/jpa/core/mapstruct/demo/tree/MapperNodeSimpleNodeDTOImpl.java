@@ -4,7 +4,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-09T07:17:31+0200",
+    date = "2025-09-09T22:46:20+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 class MapperNodeSimpleNodeDTOImpl extends MapperNodeSimpleNodeDTO {

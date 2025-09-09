@@ -9,6 +9,8 @@ import jakarta.enterprise.inject.spi.Extension;
 import jakarta.enterprise.inject.spi.ProcessAnnotatedType;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
+
 @Slf4j
 public class CDIExtension implements Extension
 {
@@ -22,19 +24,19 @@ public class CDIExtension implements Extension
 		log.debug("scanning type: " + pat.getAnnotatedType().getJavaClass().getName());
 	}
 
-	void afterDeploymentValidation(@Observes AfterDeploymentValidation adv, BeanManager bm)
+	void afterDeploymentValidation(@Observes AfterDeploymentValidation adv, BeanManager beanManager)
 	{
-	    List<String> beanClasses =
-				bm.getBeans(Object.class)
+		List<String> beanClasses =
+				beanManager
+						.getBeans(Object.class)
 						.stream()
-        				.map(bean -> bean.getBeanClass().getName())
-		    		    .sorted()
-        				.toList();
+	          .map(bean -> bean.getBeanClass().getName())
+	          .sorted()
+	          .toList();
 
-	    String logOutput =
-				"finished the deployment validation process, managed beans:\n" + String.join("\n", beanClasses);
+    String logOutput = "finished the deployment validation process, managed beans:\n" + String.join("\n", beanClasses);
 
-	    log.debug(logOutput);
+    log.debug(logOutput);
 	}
 
 	void afterBeanDiscovery(@Observes AfterBeanDiscovery abd)
