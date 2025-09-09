@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.postgres=_
---add-reads
-de.ruu.lib.postgres=ALL-UNNAMED

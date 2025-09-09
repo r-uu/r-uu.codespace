@@ -90,9 +90,10 @@
       <module name="r-uu.codespace.app-jeeeraaah-client-rs" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-client-rs-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-common-se" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.rs" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.rs.demo" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs.demo" target="24" />
-      <module name="r-uu.codespace.app.jeeeraaah.common" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.ee" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.se" target="24" />
       <module name="r-uu.codespace.lib-gen" target="24" />
