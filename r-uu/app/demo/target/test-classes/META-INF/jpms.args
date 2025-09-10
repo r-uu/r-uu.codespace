@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.codespace.app.demo=_
+--add-reads
+de.ruu.codespace.app.demo=ALL-UNNAMED
