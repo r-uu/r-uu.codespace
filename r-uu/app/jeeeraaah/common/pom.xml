@@ -17,7 +17,7 @@
 
 	<modules>
 		<module>se</module>
-		<module>ee.jpa</module>
+		<module>ee</module>
 	</modules>
 
 </project>

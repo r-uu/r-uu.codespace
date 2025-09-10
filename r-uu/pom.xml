@@ -365,7 +365,7 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.common.ee.jpa</artifactId>
+				<artifactId>ee</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
