@@ -29,10 +29,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.se.jpa</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>jakarta.transaction</groupId>
 			<artifactId>jakarta.transaction-api</artifactId>
 			<scope>compile</scope>
