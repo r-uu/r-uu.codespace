@@ -24,10 +24,6 @@
 		<!-- Internal dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>ee</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.jackson</artifactId>
 		</dependency>
 
@@ -93,6 +89,10 @@
 		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.se</artifactId>
 		</dependency>
 	</dependencies>
 

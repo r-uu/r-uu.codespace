@@ -18,10 +18,6 @@
 		<!-- Internal dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs.demo</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.common.se</artifactId>
 			<scope>compile</scope>
 		</dependency>
@@ -110,6 +106,10 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs</artifactId>
 		</dependency>
 	</dependencies>
 

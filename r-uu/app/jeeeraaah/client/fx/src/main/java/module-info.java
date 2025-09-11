@@ -51,7 +51,6 @@ module de.ruu.app.jeeeraaah.client.fx
 	requires de.ruu.lib.mapstruct;
 	requires de.ruu.lib.util;
 
-	requires de.ruu.app.jeeeraaah.client.rs;
 	requires de.ruu.app.jeeeraaah.common;
 
 	requires jakarta.activation;
@@ -66,4 +65,5 @@ module de.ruu.app.jeeeraaah.client.fx
 	requires jakarta.inject;
 	requires jakarta.ws.rs;
 	requires de.ruu.lib.ws.rs;
+	requires de.ruu.app.jeeeraaah.client.rs;
 }

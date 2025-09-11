@@ -18,10 +18,6 @@
 		<!-- Internal dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>ee</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.jdbc.postgres</artifactId>
 		</dependency>
 		<dependency>
@@ -128,6 +124,10 @@
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.cdi.se</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.se</artifactId>
 		</dependency>
 	</dependencies>
 
