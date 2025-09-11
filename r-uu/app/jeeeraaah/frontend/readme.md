@@ -1,0 +1,1 @@
+This module provides the frontend for the jeeeraaah application. It contains a sub-module (api.client) for accessing the backend via its backend api and a sub-module for the ui client implementations.
