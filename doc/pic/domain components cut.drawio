@@ -89,7 +89,7 @@
           <mxGeometry x="1020" y="760" width="280" height="20" as="geometry" />
         </mxCell>
         <mxCell id="wta64vAaMNE9IC4yqiWH-1" value="de.ruu.app.jeeeraaah.backend&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="760" width="280" height="40" as="geometry" />
+          <mxGeometry x="20" y="760" width="280" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
