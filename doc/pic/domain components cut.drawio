@@ -65,13 +65,13 @@
           <mxGeometry x="120" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-5" value="frontend" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="560" width="80" height="40" as="geometry" />
+          <mxGeometry x="1160" y="560" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-6" value="api.client" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="640" width="80" height="40" as="geometry" />
+          <mxGeometry x="1160" y="640" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-7" value="ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="720" width="80" height="40" as="geometry" />
+          <mxGeometry x="1160" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-8" value="common" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="560" width="80" height="40" as="geometry" />
@@ -86,10 +86,16 @@
           <mxGeometry x="540" y="760" width="280" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-12" value="de.ruu.app.jeeeraaah.frontend.api.client.ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1020" y="760" width="280" height="20" as="geometry" />
+          <mxGeometry x="1060" y="760" width="280" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wta64vAaMNE9IC4yqiWH-1" value="de.ruu.app.jeeeraaah.backend&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="wta64vAaMNE9IC4yqiWH-1" value="de.ruu.app.jeeeraaah.backend.api.ws.rs&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="760" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wta64vAaMNE9IC4yqiWH-2" value="backend&lt;br&gt;mapping" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="560" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wta64vAaMNE9IC4yqiWH-3" value="frontend&lt;br&gt;mapping" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="560" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
