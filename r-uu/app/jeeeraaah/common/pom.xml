@@ -16,8 +16,7 @@
 	</parent>
 
 	<modules>
-		<module>se</module>
-		<module>ee</module>
+		<module>api</module>
 	</modules>
 
 </project>

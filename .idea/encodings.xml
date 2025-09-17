@@ -3,10 +3,16 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/r-uu/app/demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend.common.mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend.common.mapping/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/api/ws.rs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/api/ws.rs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/persistence/jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/persistence/jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/persistence/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/persistence/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/backend/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/src/main/java" charset="UTF-8" />
@@ -21,6 +27,12 @@
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/ws_rs.demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/ws_rs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/client/ws_rs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/bean/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/bean/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/mapping/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common/api/ws.rs/src/main/java" charset="UTF-8" />
@@ -41,12 +53,24 @@
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/common_old/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend.common.mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend.common.mapping/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/api.client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/api.client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/api.client/ws.rs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/api.client/ws.rs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/mapping/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx.executable/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx.executable/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx.model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx.model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/fx/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/ui/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/r-uu/app/jeeeraaah/src/main/java" charset="UTF-8" />

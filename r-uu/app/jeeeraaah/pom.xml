@@ -16,12 +16,11 @@
 	</parent>
 
 	<modules>
-		<module>frontend</module>
-		<module>client</module>
 		<module>common</module>
-		<module>server</module>
-    <module>data</module>
 		<module>backend</module>
+		<module>backend.common.mapping</module>
+		<module>frontend</module>
+		<module>frontend.common.mapping</module>
 	</modules>
 
 </project>

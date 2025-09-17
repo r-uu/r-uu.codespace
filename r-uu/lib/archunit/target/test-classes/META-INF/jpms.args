@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.archunit=_
---add-reads
-de.ruu.lib.archunit=ALL-UNNAMED

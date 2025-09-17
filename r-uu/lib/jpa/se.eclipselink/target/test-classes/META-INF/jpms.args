@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.jpa.se.eclipselink=_
---add-reads
-de.ruu.lib.jpa.se.eclipselink=ALL-UNNAMED

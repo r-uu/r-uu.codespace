@@ -7,6 +7,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
+import jakarta.persistence.LockModeType;
+import jakarta.persistence.OptimisticLockException;
 import lombok.NonNull;
 
 import java.io.Serializable;
@@ -15,6 +17,8 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * Abstract implementation of generic DAO.
@@ -131,6 +135,9 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	/**
 	 * Saves the given object to the database. If the object has an ID, it will be merged; otherwise, it will be persisted.
 	 *
+	 * Deprecated: Prefer load-then-apply APIs: {@link #create(Entity)} for new entities and
+	 * {@link #update(Serializable, Short, Consumer)} for updates.
+	 *
 	 * @param object
 	 * @return the saved object, which may be a different instance than the one passed in
 	 * @throws IllegalArgumentException if the object is null or does not have a valid ID
@@ -138,6 +145,7 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	 * @see EntityManager#persist(Object)
 	 * @see EntityManager#merge(Object)
 	 */
+	@Deprecated
 	@Override public @NonNull T save(@NonNull T object)
 	{
 		EntityManager entityManager = entityManager();
@@ -150,26 +158,6 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 
 		return object;
 	}
-
-//	@Override public T save(final T object)
-//	{
-//		T result;
-//		EntityManager entityManager = entityManager();
-//
-//		if (object.getId() != null)
-//		{
-//			result = entityManager.merge(object);
-//		}
-//		else
-//		{
-//			entityManager.persist(object);
-//			result = object;
-//		}
-//
-//		entityManager.flush(); // execute flush to update version to the correct value
-//
-//		return result;
-//	}
 
 	//	@SafeVarargs
 	@Override public void save(final T... entities)
@@ -208,6 +196,88 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	{
 		entityManager().flush();
 		entityManager().clear();
+	}
+
+	//////////////////////////////
+	// Load-then-apply operations
+	//////////////////////////////
+
+	/**
+	 * Persist a brand-new entity. The entity MUST NOT have an id set.
+	 */
+	public @NonNull T create(@NonNull T transientEntity)
+	{
+		if (transientEntity.getId() != null)
+			throw new IllegalArgumentException("create() requires entity with id == null");
+		entityManager().persist(transientEntity);
+		return transientEntity;
+	}
+
+	/**
+	 * Load-then-apply update with optional optimistic-lock check.
+	 * Loads the managed entity by id, verifies expectedVersion if provided, applies mutator, and relies on JPA dirty checking.
+	 */
+	public @NonNull T update(@NonNull I id, Short expectedVersion, @NonNull Consumer<T> mutator)
+	{
+		final T managed = findOrThrow(id);
+
+		// Optionally use DB-level optimistic locking
+		// entityManager().lock(managed, LockModeType.OPTIMISTIC);
+
+		if (expectedVersion != null)
+		{
+			final Short current = managed.getVersion();
+			if (current == null || !current.equals(expectedVersion))
+				throw new OptimisticLockException(
+						String.format("Version mismatch for %s id=%s: expected=%s, actual=%s",
+								entityClass().getSimpleName(), id, expectedVersion, current));
+		}
+
+		mutator.accept(managed);
+		return managed;
+	}
+
+	/**
+	 * Same as {@link #update(Serializable, Short, Consumer)} but returns a mapped value.
+	 */
+	public <R> R updateAndMap(@NonNull I id, Short expectedVersion, @NonNull Function<T, R> work)
+	{
+		final T managed = update(id, expectedVersion, t -> {});
+		return work.apply(managed);
+	}
+
+	/**
+	 * Delete entity after optional version check using load-then-delete semantics.
+	 */
+	public boolean deleteIfVersionMatches(@NonNull I id, Short expectedVersion)
+	{
+		final T managed = findOrThrow(id);
+		if (expectedVersion != null)
+		{
+			final Short current = managed.getVersion();
+			if (current == null || !current.equals(expectedVersion))
+				throw new OptimisticLockException(
+						String.format("Version mismatch for delete of %s id=%s: expected=%s, actual=%s",
+								entityClass().getSimpleName(), id, expectedVersion, current));
+		}
+		entityManager().remove(managed);
+		return true;
+	}
+
+	/** Find by id or throw an IllegalArgumentException if not found. */
+	public @NonNull T findOrThrow(@NonNull I id)
+	{
+		return find(id).orElseThrow(() ->
+				new IllegalArgumentException(
+						String.format("%s id=%s not found", entityClass().getSimpleName(), id)));
+	}
+
+	/** Optionally force DB-level optimistic lock on an already-loaded entity. */
+	public @NonNull T loadForUpdate(@NonNull I id)
+	{
+		final T managed = findOrThrow(id);
+		entityManager().lock(managed, LockModeType.OPTIMISTIC);
+		return managed;
 	}
 
 	/**

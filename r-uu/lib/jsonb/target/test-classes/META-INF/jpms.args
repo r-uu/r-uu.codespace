@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.jsonb=_
---add-reads
-de.ruu.lib.jsonb=ALL-UNNAMED

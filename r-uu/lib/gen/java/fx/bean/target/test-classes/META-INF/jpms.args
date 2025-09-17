@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.gen.java.fx.bean=_
---add-reads
-de.ruu.lib.gen.java.fx.bean=ALL-UNNAMED

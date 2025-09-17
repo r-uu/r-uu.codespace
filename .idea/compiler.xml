@@ -42,26 +42,30 @@
         <module name="r-uu.codespace.lib.mp.config" />
         <module name="r-uu.codespace.lib.cdi.common" />
         <module name="r-uu.codespace.lib.cdi.se.demo" />
-        <module name="r-uu.codespace.app.jeeeraaah.client.fx" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.api.domain" />
         <module name="r-uu.codespace.lib.cdi.se" />
         <module name="r-uu.codespace.lib.gen.java.core" />
         <module name="r-uu.codespace.lib.postgres" />
+        <module name="backend.common.mapping" />
         <module name="r-uu.codespace.lib.fx.comp" />
         <module name="r-uu.codespace.lib.util" />
         <module name="r-uu.codespace.lib.gen.java.fx.tableview" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.api.bean" />
         <module name="r-uu.codespace.lib.jdbc.core" />
         <module name="r-uu.codespace.lib.jpa.se.eclipselink" />
         <module name="r-uu.codespace.lib.gen.java.fx.bean.editor.demo" />
         <module name="r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional" />
-        <module name="r-uu.codespace.app.jeeeraaah.server" />
         <module name="r-uu.codespace.lib.gen.core" />
+        <module name="fx.executable" />
+        <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx" />
         <module name="r-uu.codespace.lib.jpa.se" />
+        <module name="r-uu.codespace.app.jeeeraaah.frontend.common.mapping" />
         <module name="r-uu.codespace.app.demo" />
         <module name="r-uu.codespace.lib.jpa.core.mapstruct" />
         <module name="r-uu.codespace.lib.gen.java.fx.bean" />
         <module name="r-uu.codespace.lib.gen.java.fx.bean.editor" />
+        <module name="r-uu.codespace.app.jeeeraaah.common.api.mapping" />
         <module name="r-uu.codespace.lib.jsonb" />
-        <module name="ee" />
         <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres.demo" />
         <module name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs" />
         <module name="r-uu.codespace.lib.fx.comp.demo" />
@@ -69,12 +73,10 @@
         <module name="r-uu.codespace.lib.junit" />
         <module name="r-uu.codespace.lib.ws.rs" />
         <module name="r-uu.codespace.app.jeeeraaah.common.api.ws.rs" />
-        <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs" />
-        <module name="r-uu.codespace.app.jeeeraaah.common.se" />
         <module name="r-uu.codespace.lib.fx.demo" />
         <module name="r-uu.codespace.app.jeeeraaah.frontend.api.client.ws.rs" />
         <module name="r-uu.codespace.lib.archunit" />
-        <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs.demo" />
+        <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.model" />
         <module name="r-uu.codespace.lib.fx.core" />
         <module name="r-uu.codespace.lib.jpa.core" />
         <module name="r-uu.codespace.lib.gen.java.fx.comp" />
@@ -82,24 +84,46 @@
         <module name="r-uu.codespace.lib.mapstruct" />
         <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres" />
       </profile>
+      <profile name="Annotation profile for r-uu.codespace.app.jeeeraaah.backend.persistence.jpa" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="mapstruct.defaultComponentModel" value="cdi" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/6.6.4.Final/lombok-6.6.4.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/1.18.38/lombok-mapstruct-binding-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-jpamodelgen/0.2.0/hibernate-jpamodelgen-0.2.0.jar" />
+        </processorPath>
+        <module name="r-uu.codespace.app.jeeeraaah.backend.persistence.jpa" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ee" target="24" />
       <module name="r-uu.app-jeeeraaah-common-jpa-ee" target="24" />
       <module name="r-uu.app-jeeeraaah-common-jpa-se" target="24" />
       <module name="r-uu.codespace.app-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah" target="24" />
+      <module name="r-uu.codespace.app-jeeeraaah-client" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-client-fx" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-client-rs" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-client-rs-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-common-se" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.fx" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.rs" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.rs.demo" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.client.ws.rs.demo" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.ws_rs.demo" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.ee" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.ee" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.jpa.se" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.common.se" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.common.se.jpa" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.data" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.frontend.api.client.fx" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.frontend.mapping" target="24" />
+      <module name="r-uu.codespace.app.jeeeraaah.server" target="24" />
       <module name="r-uu.codespace.lib-gen" target="24" />
       <module name="r-uu.codespace.lib-gen-core" target="24" />
       <module name="r-uu.codespace.lib-gen-java-core" target="24" />
@@ -160,5 +184,10 @@
       <module name="r-uu.lib-postgres" target="1.5" />
       <module name="r-uu.lib-util-config" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="r-uu.codespace.app.jeeeraaah.backend.persistence.jpa" options="-Amapstruct.defaultComponentModel=cdi" />
+    </option>
   </component>
 </project>

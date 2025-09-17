@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html"},{"p":"de.ruu.app.jeeeraaah.client.fx.executable","l":"Main"}];updateSearchResults();

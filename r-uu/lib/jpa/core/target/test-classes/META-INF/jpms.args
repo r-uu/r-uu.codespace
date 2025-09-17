@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.jpa.core=_
---add-reads
-de.ruu.lib.jpa.core=ALL-UNNAMED

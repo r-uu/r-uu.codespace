@@ -1,0 +1,124 @@
+package de.ruu.app.jeeeraaah.common.api.mapping.bean.dto;
+
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.mapping.Mappings;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTO;
+import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import lombok.NonNull;
+import org.mapstruct.AfterMapping;
+import org.mapstruct.BeforeMapping;
+import org.mapstruct.Context;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
+import org.mapstruct.ObjectFactory;
+import org.mapstruct.factory.Mappers;
+
+import java.util.Set;
+
+import static java.util.Objects.isNull;
+
+/** {@link TaskBean} -> {@link TaskDTO} */
+@Mapper public interface Map_Task_Bean_DTO
+{
+	Map_Task_Bean_DTO INSTANCE = Mappers.getMapper(Map_Task_Bean_DTO.class);
+
+	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
+	@NonNull
+	TaskDTO map(@NonNull TaskBean in, @NonNull @Context ReferenceCycleTracking context);
+
+	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
+	@BeforeMapping default void beforeMapping(
+			@NonNull                TaskBean                in,
+			@NonNull @MappingTarget TaskDTO                out,
+			@NonNull @Context       ReferenceCycleTracking context)
+	{
+		// required arguments id, version and name are already set in constructor
+	}
+
+	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
+	@AfterMapping default void afterMapping(
+			@NonNull                TaskBean                in,
+			@NonNull @MappingTarget TaskDTO                out,
+			@NonNull @Context       ReferenceCycleTracking context)
+	{
+		if (in.superTask().isPresent())
+		{
+			TaskBean relatedTask       = in.superTask().get();
+			// check if related task was already mapped
+			TaskDTO relatedTaskMapped = context.get(relatedTask, TaskDTO.class);
+			if (isNull(relatedTaskMapped))
+					// start new mapping for related task
+					out.superTask(Mappings.toDTO(relatedTask, context));
+			else
+					// use already mapped related task
+					out.superTask(relatedTaskMapped);
+		}
+		if (in.subTasks().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.subTasks().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskDTO relatedTaskMapped = context.get(relatedTask, TaskDTO.class);
+				if (isNull(relatedTaskMapped))
+				{
+						// start new mapping for related task
+						out.addSubTask(Mappings.toDTO(relatedTask, context));
+				}
+				else
+						// use already mapped related task
+						out.addSubTask(relatedTaskMapped);
+			}
+		}
+		if (in.predecessors().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.predecessors().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskDTO relatedTaskMapped = context.get(relatedTask, TaskDTO.class);
+				if (isNull(relatedTaskMapped))
+						// start new mapping for related task
+						out.addPredecessor(Mappings.toDTO(relatedTask, context));
+				else
+						// use already mapped related task
+						out.addPredecessor(relatedTaskMapped);
+			}
+		}
+		if (in.successors().isPresent())
+		{
+			Set<TaskBean> relatedTasks = in.successors().get();
+			for (TaskBean relatedTask : relatedTasks)
+			{
+				// check if related task was already mapped
+				TaskDTO relatedTaskMapped = context.get(relatedTask, TaskDTO.class);
+				if (isNull(relatedTaskMapped))
+						// start new mapping for related task
+						out.addSuccessor(Mappings.toDTO(relatedTask, context));
+				else
+						// use already mapped related task
+						out.addSuccessor(relatedTaskMapped);
+			}
+		}
+	}
+
+	/**
+	 * mapstruct object factory
+	 */
+	@ObjectFactory @NonNull default TaskDTO create(
+			@NonNull          TaskBean                in,
+			@NonNull @Context ReferenceCycleTracking context)
+	{
+		TaskGroupDTO group = context.get(in.taskGroup(), TaskGroupDTO.class);
+
+		if (isNull(group))
+		{
+			group = new TaskGroupDTO(in.taskGroup());
+			context.put(in.taskGroup(), group);
+		}
+
+		return new TaskDTO(group, in);
+	}
+}

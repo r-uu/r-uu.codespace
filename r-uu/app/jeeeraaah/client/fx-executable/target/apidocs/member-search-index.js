@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"de.ruu.app.jeeeraaah.client.fx.executable","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"de.ruu.app.jeeeraaah.client.fx.executable","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

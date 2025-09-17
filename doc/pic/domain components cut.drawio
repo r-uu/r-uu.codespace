@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
   <diagram name="Seite-1" id="vQnO31Ekt6bPOEX6uveC">
-    <mxGraphModel dx="1418" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1152" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,46 +56,52 @@
           <mxGeometry x="540" y="200" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-2" value="backend" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="560" width="80" height="40" as="geometry" />
+          <mxGeometry x="300" y="560" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-3" value="api" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="640" width="80" height="40" as="geometry" />
+          <mxGeometry x="400" y="640" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-4" value="ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="720" width="80" height="40" as="geometry" />
+          <mxGeometry x="400" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-5" value="frontend" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="560" width="80" height="40" as="geometry" />
+          <mxGeometry x="1440" y="560" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-6" value="api.client" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="640" width="80" height="40" as="geometry" />
+          <mxGeometry x="1440" y="640" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-7" value="ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="720" width="80" height="40" as="geometry" />
+          <mxGeometry x="1440" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-8" value="common" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="560" width="80" height="40" as="geometry" />
+          <mxGeometry x="920" y="560" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-9" value="api" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="640" width="80" height="40" as="geometry" />
+          <mxGeometry x="920" y="640" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-10" value="ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="720" width="80" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ctHnA7aCoYOxyrbDKJxm-11" value="de.ruu.app.jeeeraaah.common.api.ws.rs.dto" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="540" y="760" width="280" height="20" as="geometry" />
+          <mxGeometry x="920" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctHnA7aCoYOxyrbDKJxm-12" value="de.ruu.app.jeeeraaah.frontend.api.client.ws.rs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1060" y="760" width="280" height="20" as="geometry" />
+          <mxGeometry x="1340" y="760" width="280" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wta64vAaMNE9IC4yqiWH-1" value="de.ruu.app.jeeeraaah.backend.api.ws.rs&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="760" width="280" height="60" as="geometry" />
+        <mxCell id="wta64vAaMNE9IC4yqiWH-1" value="&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="380" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="wta64vAaMNE9IC4yqiWH-2" value="backend&lt;br&gt;mapping" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="560" width="80" height="40" as="geometry" />
+        <mxCell id="wta64vAaMNE9IC4yqiWH-2" value="backend&lt;br&gt;common mapping" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="560" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="wta64vAaMNE9IC4yqiWH-3" value="frontend&lt;br&gt;mapping" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="900" y="560" width="80" height="40" as="geometry" />
+        <mxCell id="wta64vAaMNE9IC4yqiWH-3" value="frontend common&lt;br&gt;mapping" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="560" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Q3_v68mNfV7SczkIypJa-1" value="persistence" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="640" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Q3_v68mNfV7SczkIypJa-2" value="jpa" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="720" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="U6TImQpCogvQ32sg49VE-1" value="&lt;div&gt;- TaskGroupService&lt;/div&gt;&lt;div&gt;- TaskService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="900" y="760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

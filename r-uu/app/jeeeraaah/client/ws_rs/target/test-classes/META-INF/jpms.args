@@ -1,4 +1,0 @@
---patch-module
-de.ruu.app.jeeeraaah.client.rs=_
---add-reads
-de.ruu.app.jeeeraaah.client.rs=ALL-UNNAMED

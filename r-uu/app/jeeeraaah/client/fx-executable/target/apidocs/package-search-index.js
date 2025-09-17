@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"Alle Packages","u":"allpackages-index.html"},{"m":"de.ruu.app.jeeeraaah.client.fx.executable","l":"de.ruu.app.jeeeraaah.client.fx.executable"}];updateSearchResults();

@@ -17,6 +17,9 @@
 
 	<modules>
 		<module>ws.rs</module>
+		<module>bean</module>
+		<module>mapping</module>
+		<module>domain</module>
 	</modules>
 
 </project>

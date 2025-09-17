@@ -21,7 +21,6 @@
 	<modules>
 		<module>app</module>
 		<module>lib</module>
-		<module>app/jeeeraaah/common/api</module>
 	</modules>
 
 
@@ -356,42 +355,97 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend.api</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend.api.ws.rs</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
 				<artifactId>r-uu.codespace.app.jeeeraaah.common</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.common.jpa</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.common.api</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>ee</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.common.se</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.common.se.jpa</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.common.api.mapping</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.client.fx</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.common.api.ws.rs</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>r-uu.codespace.app.jeeeraaah.client.ws.rs.demo</artifactId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.api.client</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.api.client.ws.rs</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.ui</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.ui.fx</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.ui.fx.model</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>r-uu</groupId>
+				<artifactId>r-uu.codespace.app.jeeeraaah.frontend.common.mapping</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>
@@ -536,7 +590,7 @@
 			</dependency>
 			<dependency>
 				<groupId>r-uu</groupId>
-				<artifactId>lib-jpa</artifactId>
+				<artifactId>jpa</artifactId>
 				<version>0.0.1</version>
 			</dependency>
 			<dependency>

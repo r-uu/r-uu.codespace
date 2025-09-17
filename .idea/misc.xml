@@ -11,6 +11,14 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/fx/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/client/ws_rs/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/ee/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/common/se/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/data/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/frontend/mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/r-uu/app/jeeeraaah/server/pom.xml" />
         <option value="$PROJECT_DIR$/r-uu/mvn-control/pom.xml" />
       </set>
     </option>
