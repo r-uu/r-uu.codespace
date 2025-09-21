@@ -2,7 +2,6 @@ package de.ruu.app.jeeeraaah.common.api.domain;
 
 import lombok.NonNull;
 
-import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Optional;
 import java.util.Set;
@@ -17,20 +16,11 @@ import java.util.Set;
  */
 public interface Task<TG   extends TaskGroup<? extends Task<TG, ?>>,
                       SELF extends Task<TG, SELF>>
+		extends TaskData<SELF>
 {
-	@NonNull TG         taskGroup();
-	@NonNull String     name     ();
-	@NonNull Boolean    closed   ();
+	@NonNull TG taskGroup();
 
-	Optional<String>    description();
-	Optional<LocalDate> start      ();
-	Optional<LocalDate> end        ();
-
-	@NonNull SELF taskGroup  (@NonNull TG        taskGroup      );
-	@NonNull SELF description(         String    description    );
-	@NonNull SELF start      (         LocalDate startEstimated );
-	@NonNull SELF end        (         LocalDate finishEstimated);
-	@NonNull SELF closed     (         Boolean   closed         );
+	@NonNull SELF taskGroup  (@NonNull TG taskGroup);
 
 	/**
 	 * @return superordinate (parent) task, parent task has to be in the same {@link TaskGroup} as this task instance. At

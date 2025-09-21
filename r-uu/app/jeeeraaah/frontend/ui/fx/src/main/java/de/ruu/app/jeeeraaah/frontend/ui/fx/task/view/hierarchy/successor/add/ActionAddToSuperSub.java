@@ -1,11 +1,11 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add;
 
-import de.ruu.app.jeeeraaah.client.fx.task.selector.TaskSelector;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.selector.TaskSelector;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.ws.rs.NonTechnicalException;
 import de.ruu.lib.ws.rs.TechnicalException;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import jakarta.enterprise.inject.spi.CDI;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;

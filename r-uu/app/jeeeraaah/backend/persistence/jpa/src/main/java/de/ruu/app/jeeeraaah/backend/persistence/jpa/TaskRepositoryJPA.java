@@ -26,9 +26,9 @@ public abstract class TaskRepositoryJPA extends AbstractRepository<TaskJPA, Long
 	{
 		EntityGraph<TaskJPA> entityGraph = entityManager().createEntityGraph(TaskJPA.class);
 
-		entityGraph.addSubgraph(TaskEntityJPA_.subTasks    .getName());
-		entityGraph.addSubgraph(TaskEntityJPA_.predecessors.getName());
-		entityGraph.addSubgraph(TaskEntityJPA_.successors  .getName());
+		entityGraph.addSubgraph(TaskJPA_.subTasks    .getName());
+		entityGraph.addSubgraph(TaskJPA_.predecessors.getName());
+		entityGraph.addSubgraph(TaskJPA_.successors  .getName());
 
 		Map<String, Object> hints = new HashMap<>();
 		hints.put(GraphType.FETCH.getName(), entityGraph);
@@ -56,6 +56,23 @@ public abstract class TaskRepositoryJPA extends AbstractRepository<TaskJPA, Long
 						entityManager()
 								.createQuery(criteriaQuery)
 								.setHint(GraphType.FETCH.getName(), entityGraph)
+								.getResultList());
+
+		return taskEntities;
+	}
+
+	public @NonNull Set<TaskJPA> findTasks(@NonNull Set<Long> ids)
+	{
+		CriteriaBuilder        criteriaBuilder = entityManager().getCriteriaBuilder();
+		CriteriaQuery<TaskJPA> criteriaQuery   = criteriaBuilder.createQuery(TaskJPA.class);
+		Root<TaskJPA>          root            = criteriaQuery  .from       (TaskJPA.class);
+
+		criteriaQuery.select(root).where(root.get("id").in(ids));
+
+		Set<TaskJPA> taskEntities =
+				new HashSet<>(
+						entityManager()
+								.createQuery(criteriaQuery)
 								.getResultList());
 
 		return taskEntities;
@@ -198,5 +215,12 @@ public abstract class TaskRepositoryJPA extends AbstractRepository<TaskJPA, Long
 						+ "] from task with id [" + config.idTask() + "]");
 			entityManager().merge(persistedSuccessor);
 		}
+	}
+
+	private TaskJPA findOrThrow(@NonNull Long id)
+	{
+		Optional<TaskJPA> optional = findWithRelated(id);
+		if (not(optional.isPresent())) throw new TaskRelationException("task not found, id: " + id);
+		return optional.get();
 	}
 }

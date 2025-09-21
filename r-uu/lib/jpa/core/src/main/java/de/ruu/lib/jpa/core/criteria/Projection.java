@@ -6,8 +6,8 @@ package de.ruu.lib.jpa.core.criteria;
  * @author Maciej Szczytowski (mszczytowski-genericdao@gmail.com)
  * @since 1.0
  */
-public interface Projection {
-
+public interface Projection<T>
+{
     /**
      * Generate part of EQL select clause with given criteria.
      *
@@ -15,7 +15,7 @@ public interface Projection {
      * @param criteriaQuery current query
      * @return part of select clause
      */
-    public String toSqlString(Criteria criteria, Criteria.CriteriaQuery criteriaQuery);
+    public String toSqlString(Criteria<T> criteria, Criteria<T>.CriteriaQuery criteriaQuery);
 
     /**
      * Generate part of EQL group by clause with given criteria.
@@ -25,7 +25,7 @@ public interface Projection {
      * @return part of group by clause
      * @see #isGrouped()
      */
-    public String toGroupSqlString(Criteria criteria, Criteria.CriteriaQuery criteriaQuery);
+    public String toGroupSqlString(Criteria<T> criteria, Criteria<T>.CriteriaQuery criteriaQuery);
 
     /**
      * Check if projection is grouping one.

@@ -1,14 +1,16 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup;
 
-import de.ruu.app.jeeeraaah.frontend.common.mapping.Map_TaskGroup_Bean_FXBean;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.frontend.ui.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.edit.TaskGroupEditor;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskGroupServiceClient;
 import de.ruu.lib.cdi.common.CDIUtil;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import jakarta.inject.Inject;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -28,6 +30,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Objects;
 import java.util.Optional;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static de.ruu.lib.fx.FXUtil.getStage;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
 import static javafx.scene.control.ButtonType.CANCEL;
@@ -73,7 +77,7 @@ class TaskGroupManagementController
 	@Override
 	@FXML protected void initialize()
 	{
-		eventDispatcherFXCAppStarted.add(e -> onAppStarted((FXCAppStartedEvent) e));
+		eventDispatcherFXCAppStarted.add(e -> onAppStarted(e));
 
 		// force editor to fxml-inject internal fx-controls
 		editorLocalRoot = editor.localRoot();
@@ -82,8 +86,7 @@ class TaskGroupManagementController
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 		try
 		{
-			Map_TaskGroup_Bean_FXBean.map(client.findAll(), tg -> tg.toFXBean(context));
-			client.findAll().forEach(tg -> tv.getItems().add(tg.toFXBean(context)));
+			client.findAll().forEach(tg -> tv.getItems().add(toFXBean(tg, context)));
 		}
 		catch (TechnicalException | NonTechnicalException e)
 		{
@@ -107,7 +110,7 @@ class TaskGroupManagementController
 		}
 		else
 		{
-			lombok.val.description().ifPresentOrElse(d -> txtAreaDescription.setText(d), () -> txtAreaDescription.setText(""));
+			val.description().ifPresentOrElse(d -> txtAreaDescription.setText(d), () -> txtAreaDescription.setText(""));
 			btnEdit.setDisable(false);
 		}
 	}
@@ -117,8 +120,8 @@ class TaskGroupManagementController
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 		// populate editor with new item, call to getService() has to be done after call to getLocalRoot() to make sure
 		// internal java fx bindings can be established (see initialize)
-		TaskGroupBean   taskGroupBean   = new TaskGroupBean("new task group");
-		TaskGroupFXBean taskGroupFXBean = taskGroupBean.toFXBean(context);
+		TaskGroupBean taskGroupBean   = new TaskGroupBean("new task group");
+		TaskGroupFXBean taskGroupFXBean = toFXBean(taskGroupBean, context);
 		editor.service().taskGroup(taskGroupFXBean);
 
 		Dialog<TaskGroupFXBean> dialog = new Dialog<>();
@@ -135,14 +138,14 @@ class TaskGroupManagementController
 		if (optional.isPresent())
 		{
 			taskGroupFXBean = optional.get();
-			taskGroupBean   = taskGroupFXBean.toBean(context);
+			taskGroupBean   = toBean(taskGroupFXBean, context);
 
 			// let client create a new item in backend
 			try
 			{
 				taskGroupBean = client.create(taskGroupBean);
 				// create fx bean from entity dto
-				taskGroupFXBean = taskGroupBean.toFXBean(context);
+				taskGroupFXBean = toFXBean(taskGroupBean, context);
 				// add and select item with retrieved item
 				tv.getItems().add(taskGroupFXBean);
 				tv.getSelectionModel().select(taskGroupFXBean);
@@ -176,14 +179,14 @@ class TaskGroupManagementController
 		if (optional.isPresent())
 		{
 			taskGroupFXBean = optional.get();
-			TaskGroupBean taskGroupBean = optional.get().toBean(context);
+			TaskGroupBean taskGroupBean = toBean(optional.get(), context);
 
 			// let client update the item in background
 			try
 			{
 				taskGroupBean = client.update(taskGroupBean);
 				// create fx bean from entity dto
-				taskGroupFXBean = taskGroupBean.toFXBean(context);
+				taskGroupFXBean = toFXBean(taskGroupBean, context);
 				// add and select item with retrieved item
 				tv.getSelectionModel().select(taskGroupFXBean);
 			}

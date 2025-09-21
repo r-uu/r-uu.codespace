@@ -20,11 +20,16 @@ import java.util.Set;
 import static java.util.Objects.isNull;
 
 /** {@link TaskBean} -> {@link TaskDTO} */
-@Mapper public interface Map_Task_Bean_DTO
+@Mapper
+public interface Map_Task_Bean_DTO
 {
 	Map_Task_Bean_DTO INSTANCE = Mappers.getMapper(Map_Task_Bean_DTO.class);
 
 	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
+    @Mapping(target = "superTask", ignore = true) // ignore superTask as it's not needed in DTO
+    @Mapping(target = "subTasks", ignore = true) // ignore subTasks as it's not needed in DTO
+    @Mapping(target = "predecessors", ignore = true) // ignore predecessors as it's not needed in DTO
+    @Mapping(target = "successors", ignore = true) // ignore successors as it's not needed in DTO
 	@NonNull
 	TaskDTO map(@NonNull TaskBean in, @NonNull @Context ReferenceCycleTracking context);
 

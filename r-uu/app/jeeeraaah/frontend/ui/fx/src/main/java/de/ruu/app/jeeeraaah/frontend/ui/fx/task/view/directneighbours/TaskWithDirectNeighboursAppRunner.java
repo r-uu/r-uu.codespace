@@ -1,9 +1,8 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.directneighbours.TaskWithDirectNeighboursService.TaskViewWithDirectNeighboursServiceReadyEvent;
-import de.ruu.app.jeeeraaah.client.fx.task.view.directneighbours.TaskWithDirectNeighboursService.TaskViewWithDirectNeighboursServiceReadyEvent.TaskViewWithDirectNeighboursServiceReadyEventDispatcher;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours.TaskWithDirectNeighboursService.TaskViewWithDirectNeighboursServiceReadyEvent;
 import de.ruu.lib.fx.FXUtil;
 import de.ruu.lib.fx.comp.FXCAppRunner;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
@@ -17,6 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours.TaskWithDirectNeighboursService.TaskViewWithDirectNeighboursServiceReadyEvent.*;
+
 /**
  * Java FX Component Application Runner {@link TaskWithDirectNeighboursAppRunner}
  * <p>
@@ -28,7 +29,7 @@ class TaskWithDirectNeighboursAppRunner extends FXCAppRunner
 	public static void main(String[] args)
 	{
 		log.debug("starting TaskViewWithDirectNeighboursAppRunner.class.getName()");
-		TaskViewWithDirectNeighboursServiceReadyEvent.addReadsUnnamedModule();
+		addReadsUnnamedModule();
 		FXCAppStartedEvent                           .addReadsUnnamedModule();
 		Runnable runBeforeAppLaunch =
 				() ->
@@ -54,7 +55,7 @@ class TaskWithDirectNeighboursAppRunner extends FXCAppRunner
 			TaskWithDirectNeighboursService service = e.source();
 
 			TaskGroupBean group        = new TaskGroupBean("group");
-			TaskBean      task         = new TaskBean     (group, "task");
+			TaskBean task         = new TaskBean     (group, "task");
 			TaskBean      superTask    = new TaskBean     (group, "super task"   );
 			TaskBean      predecessor1 = new TaskBean     (group, "predecessor 1");
 			TaskBean      predecessor2 = new TaskBean     (group, "predecessor 2");

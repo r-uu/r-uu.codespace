@@ -1,11 +1,13 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.types;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTO;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import org.junit.jupiter.api.Test;
 
+import static de.ruu.app.jeeeraaah.common.api.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.common.api.mapping.Mappings.toDTO;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -13,8 +15,8 @@ class Test_Map_TaskGroup_DTO_Bean
 {
 	@Test void standalone()
 	{
-		String             name  = "name";
-		TaskGroupEntityDTO group = createGroup(name);
+		String       name  = "name";
+		TaskGroupDTO group = createGroup(name);
 
 		assertThat(group.name()             , is(name));
 		assertThat(group.tasks().isPresent(), is(false));
@@ -24,8 +26,8 @@ class Test_Map_TaskGroup_DTO_Bean
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
-		TaskGroupEntityDTO group  = createGroup("name");
-		TaskGroupBean      mapped = group.toBean(context);
+		TaskGroupDTO  group  = createGroup("name");
+		TaskGroupBean mapped = toBean(group,context);
 
 		assertIs(mapped, group);
 	}
@@ -33,9 +35,10 @@ class Test_Map_TaskGroup_DTO_Bean
 	@Test void standaloneReMapped()
 	{
 		ReferenceCycleTracking context  = new ReferenceCycleTracking();
-		TaskGroupEntityDTO     group    = createGroup("name");
-		TaskGroupBean            mapped = group .toBean(context);
-		TaskGroupEntityDTO     reMapped = mapped.toDTO(context);
+
+		TaskGroupDTO     group    = createGroup("name");
+		TaskGroupBean    mapped   = toBean(group , context);
+		TaskGroupDTO     reMapped = toDTO(mapped, context);
 
 		assertIs(mapped, reMapped);
 	}
@@ -45,14 +48,14 @@ class Test_Map_TaskGroup_DTO_Bean
 		String name  = "name";
 		int    count = 3;
 
-		TaskGroupEntityDTO group = createGroup(name);
+		TaskGroupDTO group = createGroup(name);
 		createTasks(group, 3);
 
 		assertThat(group.tasks().isPresent() , is(true));
 		assertThat(group.tasks().get().size(), is(count));
 	}
 
-	void assertIs(TaskGroupBean bean, TaskGroupEntityDTO dto)
+	void assertIs(TaskGroupBean bean, TaskGroupDTO dto)
 	{
 		assertThat(bean.id               (), is(dto.id               ()));
 		assertThat(bean.version          (), is(dto.version          ()));
@@ -63,9 +66,9 @@ class Test_Map_TaskGroup_DTO_Bean
 		bean.tasks().ifPresent(ts -> assertThat(ts.size(), is(dto.tasks().get().size())));
 	}
 
-	private TaskGroupEntityDTO createGroup(                          String name) { return new TaskGroupEntityDTO("name"); }
-	private void               createTask (TaskGroupEntityDTO group, String name) { new TaskEntityDTO(group, name); }
-	private void               createTasks(TaskGroupEntityDTO group, int count)
+	private TaskGroupDTO createGroup(                    String name) { return new TaskGroupDTO(name);   }
+	private void         createTask (TaskGroupDTO group, String name) {        new TaskDTO(group, name); }
+	private void         createTasks(TaskGroupDTO group, int count  )
 	{
 		for (int i = 0; i < count; i++) createTask(group, "task " + i);
 	}

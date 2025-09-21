@@ -2,6 +2,8 @@ package de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
 import de.ruu.app.jeeeraaah.common.api.domain.Task;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskEntity;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskService.TaskRelationException;
 import de.ruu.lib.jpa.core.AbstractEntity;
 import de.ruu.lib.util.Strings;

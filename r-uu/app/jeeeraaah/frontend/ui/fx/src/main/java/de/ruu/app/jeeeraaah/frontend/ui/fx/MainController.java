@@ -53,7 +53,7 @@ class MainController extends DefaultFXCController<Main, MainService> implements 
 		log.debug("eventDispatcherFXCAppStarted == null {}", eventDispatcherFXCAppStarted == null);
 
 		eventDispatcherFXCAppStarted                .add(e -> onAppStarted(e));
-		eventDispatcherTaskGroupManagerExitRequested.add(e -> onTaskGroupManagerExitRequested((TaskGroupManagementDisposeRequestEvent) e));
+		eventDispatcherTaskGroupManagerExitRequested.add(e -> onTaskGroupManagerExitRequested(e));
 
 		btnDash        .setOnAction(e -> onDash(e));
 		btnTaskGroups  .setOnAction(e -> onTaskGroups(e));

@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup;
 
-import de.ruu.app.jeeeraaah.frontend.ui.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

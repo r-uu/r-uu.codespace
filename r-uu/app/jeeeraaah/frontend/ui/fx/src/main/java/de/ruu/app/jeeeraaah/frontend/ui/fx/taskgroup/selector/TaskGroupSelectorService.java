@@ -1,6 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.selector;
 
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOFlat;
 import de.ruu.lib.cdi.se.EventDispatcher;
 import de.ruu.lib.fx.comp.FXCService;
 import de.ruu.lib.util.AbstractEvent;
@@ -17,10 +18,10 @@ import java.util.Set;
  */
 public interface TaskGroupSelectorService extends FXCService
 {
-	/** @return The currently selected task group as {@link TaskGroupFlat} property. */
+	/** @return The currently selected task group as {@link TaskGroupDTOFlat} property. */
 	@NonNull ReadOnlyObjectProperty<TaskGroupFlat> selectedTaskGroupProperty();
 
-	/** Set the available task groups (as {@link TaskGroupFlat} instances) to select from. */
+	/** Set the available task groups (as {@link TaskGroupDTOFlat} instances) to select from. */
 	void items(@NonNull Set<TaskGroupFlat> groups);
 
 	/** Event that is fired to indicate that a {@link TaskGroupSelector} component has become available. */

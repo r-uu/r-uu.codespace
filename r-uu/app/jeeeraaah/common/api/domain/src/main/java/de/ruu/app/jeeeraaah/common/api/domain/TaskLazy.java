@@ -7,7 +7,7 @@ import lombok.NonNull;
 import java.util.HashSet;
 import java.util.Set;
 
-public interface TaskLazy extends Entity<Long>
+public interface TaskLazy extends Entity<Long>, TaskData<TaskLazy>
 {
 	@NonNull String name();
 

@@ -4,6 +4,7 @@ import de.ruu.app.jeeeraaah.common.api.domain.TaskEntity;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.lib.jpa.core.AbstractEntity;
+import de.ruu.lib.jpa.core.Entity;
 import de.ruu.lib.util.Strings;
 import jakarta.annotation.Nullable;
 import lombok.EqualsAndHashCode;
@@ -36,8 +37,6 @@ public class TaskGroupBean implements TaskGroupEntity<TaskBean>
 	 * may be <pre>null</pre> if instance was not (yet) persisted.
 	 * <p>not {@code final} or {@code @NonNull} because otherwise there has to be a constructor with {@code id}-parameter
 	 */
-	@EqualsAndHashCode.Include // documents intent of including id for equals() and hashCode() but both methods are
-	                           // manually created
 	@Nullable @Setter(NONE)
 	private Long  id;
 
@@ -60,7 +59,6 @@ public class TaskGroupBean implements TaskGroupEntity<TaskBean>
 	 * may explicitly be {@code null}, {@code null} indicates that there was no attempt to load related objects from db
 	 * (lazy)
 	 */
-	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@Getter(NONE) // provide handmade getter that returns unmodifiable
 	@Setter(NONE) // no setter at all
@@ -71,7 +69,9 @@ public class TaskGroupBean implements TaskGroupEntity<TaskBean>
 	///////////////
 
 	/**
-	 * hand-made required args constructor to guarantee usage of hand made accessors.
+	 * Hand-made required args constructor to guarantee usage of hand made accessors. Use this constructor if you want to
+	 * create a new task group bean from scratch.
+	 *
 	 * @param name non-empty name
 	 */
 	public TaskGroupBean(@NonNull String name) { name(name); }
@@ -79,14 +79,33 @@ public class TaskGroupBean implements TaskGroupEntity<TaskBean>
 	/**
 	 * create a new task group bean from an existing entity
 	 * <p>
-	 * This constructor is used by mapstruct to create a new task group entity from an existing one.
-	 * @param in   the existing entity, must not be {@code null}
+	 * This constructor is used by mapstruct object factories to create a new task group bean from an existing entity such
+	 * as a lazy entity loaded from a database.
+	 *
+	 * @param entity
+	 * @param name
 	 */
-	public TaskGroupBean(@NonNull Long id, @NonNull Short version, @NonNull String name)
+	public TaskGroupBean(@NonNull Entity<Long> entity, @NonNull String name)
 	{
 		this(name);
-		this.id      = id;
-		this.version = version;
+
+		id      = entity.id();
+		version = entity.version();
+	}
+
+	/**
+	 * create a new task group bean from an existing {@link TaskGroupEntity}
+	 * <p>
+	 * This constructor is used by mapstruct object factories to create a new task group bean from an existing one.
+	 * Mapstruct will also initialize the related tasks automatically, so this is not done here.
+	 *
+	 * @param in the existing entity, must not be {@code null}
+	 */
+	public TaskGroupBean(@NonNull TaskGroupEntity<? extends TaskEntity<?, ?>> in)
+	{
+		this(in.name());
+		id      = in.id();
+		version = in.version();
 	}
 
 	@Override public boolean equals(Object o)

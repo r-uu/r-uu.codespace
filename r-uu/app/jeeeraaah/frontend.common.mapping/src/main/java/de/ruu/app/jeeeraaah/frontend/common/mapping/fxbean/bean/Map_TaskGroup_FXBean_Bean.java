@@ -2,9 +2,9 @@ package de.ruu.app.jeeeraaah.frontend.common.mapping.fxbean.bean;
 
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
 import de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import lombok.NonNull;
 import org.mapstruct.AfterMapping;
@@ -24,11 +24,11 @@ import static java.util.Objects.isNull;
 {
 	Map_TaskGroup_FXBean_Bean INSTANCE = Mappers.getMapper(Map_TaskGroup_FXBean_Bean.class);
 
-	@NonNull TaskGroupBean map(@NonNull TaskGroupFXBean in, @NonNull @Context ReferenceCycleTracking context);
+	@NonNull TaskGroupBean map(de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean in, @NonNull @Context ReferenceCycleTracking context);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
 	@BeforeMapping default void beforeMapping(
-			@NonNull                TaskGroupFXBean        in,
+			@NonNull TaskGroupFXBean in,
 			@NonNull @MappingTarget TaskGroupBean          out,
 			@NonNull @Context       ReferenceCycleTracking context)
 	{
@@ -57,5 +57,5 @@ import static java.util.Objects.isNull;
 	}
 
 	/** mapstruct object factory */
-	@ObjectFactory default @NonNull TaskGroupBean create(@NonNull TaskGroupBean in) { return new TaskGroupBean(in); }
+	@ObjectFactory default @NonNull TaskGroupBean create(@NonNull TaskGroupFXBean in) { return new TaskGroupBean(in); }
 }

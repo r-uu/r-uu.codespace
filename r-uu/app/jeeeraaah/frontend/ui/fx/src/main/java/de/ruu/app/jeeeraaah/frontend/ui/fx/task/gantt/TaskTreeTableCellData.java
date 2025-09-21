@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import lombok.Getter;
@@ -9,6 +9,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDate;
+
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt.TaskTreeTableCellData.PlanningStatus.ACTIVITY_IN_PERIOD_DEFINED;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt.TaskTreeTableCellData.PlanningStatus.ACTIVITY_IN_PERIOD_OPEN_END;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt.TaskTreeTableCellData.PlanningStatus.NO_ACTIVITY;
 
 @Getter
 @Accessors(fluent = true)
@@ -43,7 +47,7 @@ class TaskTreeTableCellData
 	private PlanningStatus calculatePlanningStatus()
 	{
 		PlanningStatus result;
-		TaskBean       task = item.task();
+		TaskBean task = item.task();
 
 		if (task.start().isPresent())
 		{
@@ -76,14 +80,14 @@ class TaskTreeTableCellData
 				// unknown begin and known end means that as long as date is before end it is unknown if date is inside period
 				LocalDate end = task.end().get().plusDays(1);
 				if (date.isBefore(end))
-						result = ACTIVITY_IN_PERIOD_OPEN_START; // date is  inside period, begin is unknown
+						result = PlanningStatus.ACTIVITY_IN_PERIOD_OPEN_START; // date is  inside period, begin is unknown
 				else
 						result = NO_ACTIVITY;                   // date is outside period
 			}
 			else
 			{
 				if (task.superTask().isPresent())
-						result = ACTIVITY_IN_PERIOD_UNDEFINED; // period is unknown
+						result = PlanningStatus.ACTIVITY_IN_PERIOD_UNDEFINED; // period is unknown
 				else
 						result = NO_ACTIVITY;
 			}

@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import lombok.NonNull;
 
 import java.util.Comparator;

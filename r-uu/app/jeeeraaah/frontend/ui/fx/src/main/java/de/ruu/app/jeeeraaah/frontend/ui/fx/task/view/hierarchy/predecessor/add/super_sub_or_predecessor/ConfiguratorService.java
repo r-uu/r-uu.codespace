@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
 import de.ruu.lib.fx.comp.FXCService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

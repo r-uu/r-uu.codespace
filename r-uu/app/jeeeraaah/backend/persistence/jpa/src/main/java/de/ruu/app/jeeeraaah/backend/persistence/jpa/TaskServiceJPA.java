@@ -1,8 +1,10 @@
 package de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
 import de.ruu.app.jeeeraaah.common.api.domain.RemoveNeighboursFromTaskConfig;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskService;
 import jakarta.annotation.PostConstruct;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.ws.rs.NotFoundException;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -23,35 +25,23 @@ public abstract class TaskServiceJPA
 
 	@PostConstruct private void postConstruct() { log.debug("repository available: {}", not(isNull(repository()))); }
 
-	@Override public @NonNull TaskJPA create(@NonNull TaskJPA entity) { return repository().create(entity); }
-
-	@Override public @NonNull Optional<TaskJPA> read  (@NonNull Long          id    ) { return repository().find(id    ); }
-	@Override public @NonNull TaskJPA update(@NonNull TaskJPA entity)
-	{
-		return repository().update(entity.getId(), entity.getVersion(), managed ->
-		{
-			// apply allowed field changes; rely on JPA dirty checking
-			managed.setName(entity.getName());
-			managed.setDescription(entity.getDescription());
-			// extend here if you expose setters for start/end/closed etc.
-		});
-	}
-
-	@Override public          void                    delete(@NonNull Long id             ) throws TaskNotFoundException
-	{
-		repository().delete(id);
-	}
+	@Override public @NonNull TaskJPA           create(@NonNull TaskJPA entity) { return repository().create(entity); }
+	@Override public @NonNull Optional<TaskJPA> read  (@NonNull Long    id    ) { return repository().find  (id    ); }
+	@Override public @NonNull TaskJPA           update(@NonNull TaskJPA entity)
+			throws EntityNotFoundException
+	                                                                            { return repository().update(entity); }
+	@Override public          void              delete(@NonNull Long    id    )
+			throws EntityNotFoundException
+	                                                                            {        repository().delete(id    ); }
 
 	@Override public @NonNull Set<TaskJPA> findAll()
 	{
 		return new HashSet<>(repository().findAll());
 	}
 
-	@Override public Optional<TaskJPA> findWithRelated(@NonNull Long id)
-	{
-		return repository().findWithRelated(id);
-	}
+	@Override public Optional<TaskJPA> findWithRelated(@NonNull Long id) { return repository().findWithRelated(id); }
 
+	@Override public Set<TaskJPA> findTasks(@NonNull Set<Long> ids) { return repository().findTasks(ids); }
 
 	@Override public void addSubTask(@NonNull TaskJPA task, @NonNull TaskJPA subTask) throws NotFoundException
 	{

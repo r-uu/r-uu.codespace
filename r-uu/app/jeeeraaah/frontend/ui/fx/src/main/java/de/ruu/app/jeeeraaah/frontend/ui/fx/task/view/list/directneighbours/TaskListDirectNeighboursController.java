@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.ListViewWithCheckableItemsDecorator;
 import jakarta.enterprise.inject.spi.CDI;
@@ -12,10 +12,10 @@ import lombok.NonNull;
 
 import java.util.List;
 
-import static de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.PREDECESSOR;
-import static de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUB;
-import static de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUCCESSOR;
-import static de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUPER;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.PREDECESSOR;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUB;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUCCESSOR;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.SUPER;
 
 /**
  * Java FX Component View Controller

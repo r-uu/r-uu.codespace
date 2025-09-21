@@ -1,16 +1,15 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy;
 
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
 import de.ruu.app.jeeeraaah.frontend.ui.fx.task.TreeCellFactory;
 import de.ruu.app.jeeeraaah.frontend.ui.fx.task.TreeItemTaskBean;
-import de.ruu.app.jeeeraaah.client.fx.task.edit.TaskEditor;
-import de.ruu.app.jeeeraaah.client.fx.task.view.TaskViewNarrow;
-import de.ruu.app.jeeeraaah.client.fx.task.view.TaskViewNarrowQualifier;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.edit.TaskEditor;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.TaskViewNarrow;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.TaskViewNarrowQualifier;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
@@ -41,6 +40,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 import java.util.Optional;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static de.ruu.lib.util.BooleanFunctions.not;
 import static java.util.Objects.isNull;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
@@ -69,8 +70,8 @@ public abstract class TaskHierarchyControllerAbstract
 	@FXML private Button buttonEdit;
 
 	@Inject private TaskGroupServiceClient taskGroupServiceClient;
-	@Inject private TaskServiceClient      taskServiceClient;
-	@Inject private TaskEditor             taskEditor;
+	@Inject private TaskServiceClient taskServiceClient;
+	@Inject private TaskEditor taskEditor;
 
 	@TaskViewNarrowQualifier
 	@Inject protected TaskViewNarrow taskView;
@@ -131,7 +132,7 @@ public abstract class TaskHierarchyControllerAbstract
 
 		// there is a selected item, so we can edit the task
 		TaskBean   taskBean   = selectedItem.getValue();
-		TaskFXBean taskFXBean = taskBean.toFXBean(new ReferenceCycleTracking());
+		TaskFXBean taskFXBean = toFXBean(taskBean, new ReferenceCycleTracking());
 
 		// force editor to fxml-inject internal fx-controls
 		Parent editorLocalRoot = taskEditor.localRoot();
@@ -151,7 +152,7 @@ public abstract class TaskHierarchyControllerAbstract
 		if (optional.isPresent())
 		{
 			taskFXBean = optional.get();
-			taskBean   = taskFXBean.toBean(new ReferenceCycleTracking());
+			taskBean   = toBean(taskFXBean, new ReferenceCycleTracking());
 
 			try
 			{
@@ -184,7 +185,7 @@ public abstract class TaskHierarchyControllerAbstract
 	protected void onSelectedTaskChanged(TreeItem<TaskBean> act)
 	{
 		if (isNull(act)) return;
-		taskView.service().populateViewFor(act.getValue().toFXBean(new ReferenceCycleTracking()));
+		taskView.service().populateViewFor(toFXBean(act.getValue(), new ReferenceCycleTracking()));
 	}
 
 	private TaskFXBean dialogResultConverterTaskFXBean(ButtonType buttonType)

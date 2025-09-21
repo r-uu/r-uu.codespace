@@ -1,46 +1,34 @@
 package de.ruu.lib.jpa.core;
 
+import lombok.NonNull;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Generic DAO interface for common data access functionality
  *
- * @param <I> primary key's type
- * @param <T> object's type, it must implement at least {@link Entity}
+ * @param <ID> primary key's type
+ * @param <T>  object's type, it must implement at least {@link Entity}
  *
  * @author r-uu
  */
-public interface Repository<T extends Entity<I>, I extends Serializable>
+public interface Repository<T extends Entity<ID>, ID extends Serializable>
 {
 	/** @return {@code Class<T>} of entity */
-	Class<? extends Entity<I>> entityClass();
+	Class<? extends Entity<ID>> entityClass();
 
-	/**
-	 * Retrieve a persisted object using the given id as primary key.
-	 *
-	 * @param id entity's primary key
-	 * @return entity
-	 */
-	Optional<T> find(final I id);
+	/** Retrieve a persisted object using the given id as primary key. */
+	Optional<T> find(final ID id);
 
-	/**
-	 * Retrieve a persisted objects using the given ids as primary keys.
-	 *
-	 * @param ids entity's ids
-	 * @return list of entity
-	 */
-	@SuppressWarnings("unchecked")
-	List<T> find(I... ids);
+	/** Retrieve a persisted objects using the given ids as primary keys. */
+	@NonNull Set<T> find(@NonNull Set<ID> ids);
 
-	/**
-	 * Retrieve all persisted objects.
-	 *
-	 * @return list of entities
-	 */
-	List<T> findAll();
+	/** Retrieve all persisted objects. */
+	@NonNull Set<T> findAll();
 
 	/**
 	 * Find using a named query.
@@ -62,72 +50,40 @@ public interface Repository<T extends Entity<I>, I extends Serializable>
 	 * @param queryName the name of the query
 	 * @param params the query parameters
 	 *
-	 * @return the list of entities
+	 * @return the set of entities
 	 */
-	List<T> findByNamedQuery(final String queryName, Object... params);
+	@NonNull Set<T> findByNamedQuery(final String queryName, Object... params);
 
-	/**
-	 * Count all entities.
-	 *
-	 * @return the number of entities
-	 */
-	Long countAll();
+	/** Count all entities. */
+	long countAll();
 
-	/**
-	 * Find using a named query.
-	 *
-	 * @param queryName the name of the query
-	 * @param params the query parameters
-	 *
-	 * @return the list of entities
-	 */
-	List<T> findByNamedQueryAndNamedParams(final String queryName, final Map<String, ? extends Object> params);
+	/** Find using a named query. */
+	@NonNull Set<T> findByNamedQueryAndNamedParams(final String queryName, final Map<String, ?> params);
 
-	/**
-	 * @param object
-	 * @return {@code true} if {@code object} is not transient {@code and} is not managed and is not
-	 *         removed
-	 */
+	/** @return {@code true} if {@code object} is not transient {@code and} is not managed and is not removed */
 	boolean isDetached(final T object);
 
-	/**
-	 * Save all changes made to an entity.
-	 *
-	 * @param entity
-	 */
-	T save(T entity);
+	/** Store brand-new entity. */
+	@NonNull T create(T entity);
 
-	/**
-	 * Save all changes made to entities.
-	 *
-	 * @param entities
-	 */
-	@SuppressWarnings("unchecked")
-	void save(T... entities);
+	/** Store brand-new entities. */
+	@NonNull Set<T> create(@NonNull Set<T> entities);
 
-	/**
-	 * Remove an entity by given id.
-	 *
-	 * @param id entity's pk
-	 */
-	boolean delete(I id);
+	/** Update all changes made to an entity. */
+	@NonNull T update(@NonNull T entity);
 
-	/**
-	 * Remove an entity.
-	 *
-	 * @param entity
-	 */
-	boolean delete(T entity);
+	/** Update all changes made to entities. */
+	@NonNull Set<T> update(@NonNull Set<T> entities);
 
-	/**
-	 * Refresh an entity that may have changed in another thread/transaction.
-	 *
-	 * @param entity transient entity
-	 */
-	void refresh(T entity);
+	/** Remove an entity by given id. */
+	boolean delete(@NonNull ID id);
 
-	/**
-	 * Write to database anything that is pending operation and clear it.
-	 */
+	/** Remove an entity. */
+	boolean delete(@NonNull T entity);
+
+	/** Refresh an entity that may have changed in another thread/transaction. */
+	void refresh(@NonNull T entity);
+
+	/** Write to database anything that is pending operation and clear it. */
 	void flushAndClear();
 }

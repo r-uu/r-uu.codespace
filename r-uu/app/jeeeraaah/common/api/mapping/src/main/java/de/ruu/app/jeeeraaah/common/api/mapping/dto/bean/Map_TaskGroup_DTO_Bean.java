@@ -25,7 +25,8 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.requireNonNull;
 
 /** {@link TaskGroupDTO} -> {@link TaskGroupBean} */
-@Mapper public interface Map_TaskGroup_DTO_Bean
+@Mapper
+public interface Map_TaskGroup_DTO_Bean
 {
 	Map_TaskGroup_DTO_Bean INSTANCE = Mappers.getMapper(Map_TaskGroup_DTO_Bean.class);
 
@@ -61,8 +62,5 @@ import static java.util.Objects.requireNonNull;
 	}
 
 	/** mapstruct object factory */
-	@ObjectFactory default @NonNull TaskGroupBean create(@NonNull TaskGroupDTO in)
-	{
-		return new TaskGroupBean(requireNonNull(in.id()), requireNonNull(in.version()), in.name());
-	}
+	@ObjectFactory default @NonNull TaskGroupBean create(@NonNull TaskGroupDTO in) { return new TaskGroupBean(in); }
 }

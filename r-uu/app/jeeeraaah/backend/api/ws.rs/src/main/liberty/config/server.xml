@@ -107,8 +107,8 @@
     <variable name="de.ruu.app.jeeeraaah.server.system.SystemResource_inMaintenance" value="false"/>
 
 	<webApplication contextRoot="/"
-	                location="r-uu.app-jeeeraaah-server.war"
-	                name="r-uu.app-jeeeraaah-server">
+	                location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
+	                name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
 <!-- TODO: reactivate for use of hibernate -->
 		<classloader commonLibraryRef="library-hibernate"/>
     </webApplication>

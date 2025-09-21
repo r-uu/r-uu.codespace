@@ -4,6 +4,7 @@ import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupRepositoryJPA;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 @ApplicationScoped
@@ -14,5 +15,5 @@ public class TaskGroupRepositoryJPAEE extends TaskGroupRepositoryJPA
 
 //	@PostConstruct private void postConstruct() { log.debug("entity manager available: {}", nonNull(entityManager)); }
 
-	@Override protected EntityManager entityManager() { return entityManager; }
+	@Override protected @NonNull EntityManager entityManager() { return entityManager; }
 }

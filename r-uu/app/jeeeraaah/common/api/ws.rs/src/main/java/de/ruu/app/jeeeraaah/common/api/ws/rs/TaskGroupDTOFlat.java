@@ -2,8 +2,8 @@ package de.ruu.app.jeeeraaah.common.api.ws.rs;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import jakarta.annotation.Nullable;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.ToString;
@@ -16,15 +16,12 @@ import static java.util.Objects.requireNonNull;
 import static java.util.UUID.randomUUID;
 
 /** Transfer object for task groups without any information about their related tasks. */
-// EqualsAndHashCode is for documenting the intent of manually created equals and hashCode methods
-@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false, doNotUseGetters = true)
 @JsonAutoDetect(fieldVisibility = ANY)
 @ToString
 @Getter
 @Accessors(fluent = true)
-public class TaskGroupDTOFlat
+public class TaskGroupDTOFlat implements TaskGroupFlat
 {
-	@EqualsAndHashCode.Exclude
 	private final UUID jsonId = randomUUID();
 
 	private @NonNull  Long   id;

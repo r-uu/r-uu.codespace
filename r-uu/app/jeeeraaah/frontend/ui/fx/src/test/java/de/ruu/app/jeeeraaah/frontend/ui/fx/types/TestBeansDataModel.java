@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.types;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

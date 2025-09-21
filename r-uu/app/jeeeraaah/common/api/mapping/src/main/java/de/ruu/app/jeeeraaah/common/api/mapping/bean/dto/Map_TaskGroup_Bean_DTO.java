@@ -19,7 +19,8 @@ import java.util.Set;
 import static java.util.Objects.isNull;
 
 /** {@link TaskGroupBean} -> {@link TaskGroupDTO} */
-@Mapper public interface Map_TaskGroup_Bean_DTO
+@Mapper
+public interface Map_TaskGroup_Bean_DTO
 {
 	Map_TaskGroup_Bean_DTO INSTANCE = Mappers.getMapper(Map_TaskGroup_Bean_DTO.class);
 

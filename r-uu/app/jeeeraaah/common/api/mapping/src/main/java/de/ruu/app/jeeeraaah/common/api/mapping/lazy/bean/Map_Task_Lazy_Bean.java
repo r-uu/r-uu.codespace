@@ -2,8 +2,6 @@ package de.ruu.app.jeeeraaah.common.api.mapping.lazy.bean;
 
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
-import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTOLazy;
 import lombok.NonNull;
@@ -27,7 +25,12 @@ import org.mapstruct.factory.Mappers;
 	 * @param in    the lazy task to be mapped
 	 * @return      the mapped task bean
 	 */
-//	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
+	@Mapping(target = "taskGroup", source = "group")
+	@Mapping(target = "superTask", ignore = true)
+	@Mapping(target = "start", ignore = true)
+	@Mapping(target = "end", ignore = true)
+	@Mapping(target = "closed", ignore = true)
+	@Mapping(target = "preconditionCheckRelationalOperations", ignore = true)
 	@NonNull TaskBean map(@NonNull TaskGroupBean group, @NonNull TaskLazy in);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
@@ -49,10 +52,8 @@ import org.mapstruct.factory.Mappers;
 	}
 
 	/** mapstruct object factory */
-	@ObjectFactory default @NonNull TaskBean create(
-			@NonNull TaskGroupBean group,
-			@NonNull TaskLazy      in)
+	@ObjectFactory default @NonNull TaskBean create(@NonNull TaskGroupBean group, @NonNull TaskLazy in)
 	{
-		return new TaskBean(group, in);
+		return new TaskBean(group, in.name(), in);
 	}
 }

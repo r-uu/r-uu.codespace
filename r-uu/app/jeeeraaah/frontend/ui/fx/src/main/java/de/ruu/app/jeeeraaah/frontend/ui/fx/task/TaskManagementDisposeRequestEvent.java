@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task;
 
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.TaskGroupManagementService;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.TaskGroupManagementService;
 import de.ruu.lib.cdi.se.EventDispatcher;
 import de.ruu.lib.util.AbstractEvent;
 import jakarta.enterprise.context.ApplicationScoped;

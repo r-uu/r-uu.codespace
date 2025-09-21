@@ -2,8 +2,8 @@ package de.ruu.app.jeeeraaah.frontend.common.mapping.bean.fxbean;
 
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import lombok.NonNull;
 import org.mapstruct.AfterMapping;
@@ -23,7 +23,7 @@ import static java.util.Objects.isNull;
 {
 	Map_TaskGroup_Bean_FXBean INSTANCE = Mappers.getMapper(Map_TaskGroup_Bean_FXBean.class);
 
-	@NonNull TaskGroupFXBean map(@NonNull TaskGroupBean in, @NonNull @Context ReferenceCycleTracking context);
+	de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean map(@NonNull TaskGroupBean in, @NonNull @Context ReferenceCycleTracking context);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
 	@BeforeMapping default void beforeMapping(

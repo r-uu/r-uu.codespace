@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.StringProperty;
@@ -14,6 +14,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+
 @Slf4j
 @RequiredArgsConstructor
 public class TaskTreeTableCellValueFactory
@@ -24,9 +26,8 @@ public class TaskTreeTableCellValueFactory
 	@Override public StringProperty call(CellDataFeatures<TaskFXBean, String> cdf)
 	{
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
-		TaskFXBean taskBean = cdf.getValue().getValue();
-//		log.debug("cell value factory for {}", taskBean.name());
-		return readOnlyStringWrapperFor(taskBean.toBean(context));
+		TaskFXBean taskFXBean = cdf.getValue().getValue();
+		return readOnlyStringWrapperFor(toBean(taskFXBean, context));
 	}
 
 	private ReadOnlyStringWrapper readOnlyStringWrapperFor(TaskBean taskBean)

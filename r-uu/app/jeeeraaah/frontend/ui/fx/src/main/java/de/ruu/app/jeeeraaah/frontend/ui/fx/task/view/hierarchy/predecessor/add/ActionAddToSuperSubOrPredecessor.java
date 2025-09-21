@@ -1,12 +1,13 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor.Configurator;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor.ConfiguratorService.ActionAddToSuperSubOrPredecessorConfigurationResult;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor.Configurator;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor.ConfiguratorService;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.super_sub_or_predecessor.ConfiguratorService.ActionAddToSuperSubOrPredecessorConfigurationResult;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.ws.rs.NonTechnicalException;
 import de.ruu.lib.ws.rs.TechnicalException;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import jakarta.enterprise.inject.spi.CDI;
 import javafx.scene.Parent;
 import javafx.scene.control.ButtonType;
@@ -61,7 +62,7 @@ class ActionAddToSuperSubOrPredecessor
 			// fetch the configuration result from dialog
 			ActionAddToSuperSubOrPredecessorConfigurationResult configurationResult = optional.get();
 
-			TaskBean targetTask    = configurationResult.targetTask();
+			TaskBean targetTask      = configurationResult.targetTask();
 			TaskBean predecessorTask = configurationResult.chosenPredecessorTaskBean();
 
 			try

@@ -1,10 +1,10 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.ActionAdd;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.ws.rs.NonTechnicalException;

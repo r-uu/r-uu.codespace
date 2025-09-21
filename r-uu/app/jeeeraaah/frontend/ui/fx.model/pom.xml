@@ -32,6 +32,10 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

@@ -1,6 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.executable;
 
-import de.ruu.app.jeeeraaah.client.fx.MainAppRunner;
+
+import de.ruu.app.jeeeraaah.frontend.ui.fx.MainAppRunner;
 
 /**
  * Another Main class as workaround when the JavaFX Application ist started without
@@ -8,9 +9,10 @@ import de.ruu.app.jeeeraaah.client.fx.MainAppRunner;
  */
 public class Main
 {
-    /**
-     * Additional main methode to start Application.
-     * @param args Commandline Arguments.
-     */
-    public static void main(String[] args) throws ClassNotFoundException { MainAppRunner.main(args); }
+	/**
+	 * Additional main methode to start Application.
+	 *
+	 * @param args Commandline Arguments.
+	 */
+	public static void main(String[] args) throws ClassNotFoundException {MainAppRunner.main(args);}
 }

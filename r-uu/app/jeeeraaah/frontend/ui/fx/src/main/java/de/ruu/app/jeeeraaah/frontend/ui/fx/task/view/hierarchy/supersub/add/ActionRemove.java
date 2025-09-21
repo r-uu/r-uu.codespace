@@ -1,9 +1,9 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add;
 
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import de.ruu.lib.ws.rs.NonTechnicalException;
 import de.ruu.lib.ws.rs.TechnicalException;

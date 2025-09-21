@@ -1,6 +1,8 @@
 package de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOFlat;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOLazy;
 import de.ruu.lib.jpa.core.AbstractRepository;
 import de.ruu.lib.jpa.core.GraphType;
@@ -11,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -53,7 +54,7 @@ public abstract class TaskGroupRepositoryJPA extends AbstractRepository<TaskGrou
 
 	public Set<TaskGroupLazy> findAllLazy()
 	{
-		List<TaskGroupJPA> entities = findAll();
+		Set<TaskGroupJPA>  entities = findAll();
 		Set<TaskGroupLazy> result   = new HashSet<>();
 		for (TaskGroupJPA tgJPA : entities)
 		{
@@ -64,6 +65,26 @@ public abstract class TaskGroupRepositoryJPA extends AbstractRepository<TaskGrou
 			}
 			result.add(tgLazy);
 		}
+		return result;
+	}
+
+	public Optional<TaskGroupFlat> findFlat(@NonNull Long id)
+	{
+		Optional<TaskGroupJPA> optional = findWithTasks(id);
+
+		if (optional.isPresent())
+		{
+			TaskGroupJPA taskGroup = optional.get();
+			TaskGroupFlat result = new TaskGroupDTOFlat(taskGroup);
+			return Optional.of(result);
+		}
+		else return Optional.empty();
+	}
+
+	public Set<TaskGroupFlat> findAllFlat()
+	{
+		Set<TaskGroupFlat> result = new HashSet<>();
+		findAll().forEach(taskGroup -> result.add(new TaskGroupDTOFlat(taskGroup)));
 		return result;
 	}
 

@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.edit;
 
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.fx.comp.FXCService;
 import lombok.NonNull;
 

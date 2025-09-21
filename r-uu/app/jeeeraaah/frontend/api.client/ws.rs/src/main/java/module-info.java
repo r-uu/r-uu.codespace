@@ -1,15 +1,18 @@
-module de.ruu.app.jeeeraaah.client.rs
+module de.ruu.app.jeeeraaah.frontend.api.client.ws.rs
 {
-	exports de.ruu.app.jeeeraaah.client.ws.rs;
-	exports de.ruu.app.jeeeraaah.client.ws.rs.dto;
+	exports de.ruu.app.jeeeraaah.frontend.ws.rs;
+	exports de.ruu.app.jeeeraaah.frontend.ws.rs.dto;
 
-	opens de.ruu.app.jeeeraaah.client.ws.rs;
-	opens de.ruu.app.jeeeraaah.client.ws.rs.dto;
+	opens de.ruu.app.jeeeraaah.frontend.ws.rs;
+	opens de.ruu.app.jeeeraaah.frontend.ws.rs.dto;
 
+	// Jackson
 	requires com.fasterxml.jackson.annotation;
 	requires com.fasterxml.jackson.core;
 	requires com.fasterxml.jackson.databind;
 	requires com.fasterxml.jackson.jakarta.rs.json;
+
+	// Jakarta EE
 	requires jakarta.activation;
 	requires jakarta.annotation;
 	requires jakarta.cdi;
@@ -18,17 +21,25 @@ module de.ruu.app.jeeeraaah.client.rs
 	requires jakarta.json;
 	requires jakarta.ws.rs;
 	requires jakarta.xml.bind;
+
+	// MicroProfile
 	requires microprofile.config.api;
 
-	requires de.ruu.app.jeeeraaah.common;
-	requires de.ruu.lib.util;
+	// Internal libraries
+	requires de.ruu.lib.cdi.common;
+	requires de.ruu.lib.cdi.se;
 	requires de.ruu.lib.jackson;
+	requires de.ruu.lib.mapstruct;
+	requires de.ruu.lib.util;
+	requires de.ruu.lib.ws.rs;
 
+	// Application modules
+	requires de.ruu.app.jeeeraaah.common.api.bean;
+	requires de.ruu.app.jeeeraaah.common.api.domain;
+	requires de.ruu.app.jeeeraaah.common.api.ws.rs;
+
+	// Development tools
 	requires static lombok;
 	requires org.slf4j;
-	requires de.ruu.lib.ws.rs;
-	requires de.ruu.lib.mapstruct;
-	requires de.ruu.lib.cdi.common;
-	requires javafx.base;
-	requires de.ruu.lib.cdi.se;
+	requires de.ruu.app.jeeeraaah.common.api.mapping;
 }

@@ -1,9 +1,10 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.TaskView;
-import de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighbours;
-import de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.TaskView;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighbours;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType;
 import de.ruu.lib.fx.FXUtil;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
@@ -15,6 +16,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import lombok.NonNull;
+
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 
 /**
  * Java FX Component View Controller
@@ -91,8 +94,8 @@ class TaskWithDirectNeighboursController
 
 	@Override public void populateViewFor(@NonNull TaskBean taskBean)
 	{
+		taskView                .service().populateViewFor(toFXBean(taskBean, new ReferenceCycleTracking()));;
 		taskViewSuper           .service().populateViewFor(taskBean);
-		taskView                .service().populateViewFor(taskBean.toFXBean(new ReferenceCycleTracking()));;
 		taskViewPredecessors    .service().populateViewFor(taskBean, NeighbourType.PREDECESSOR);
 		taskViewSubTasks        .service().populateViewFor(taskBean, NeighbourType.SUB);
 		taskViewSuccessors      .service().populateViewFor(taskBean, NeighbourType.SUCCESSOR);

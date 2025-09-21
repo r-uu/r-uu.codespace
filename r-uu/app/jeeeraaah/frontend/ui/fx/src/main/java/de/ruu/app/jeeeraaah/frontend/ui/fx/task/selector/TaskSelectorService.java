@@ -1,6 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.selector;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
 import de.ruu.lib.fx.comp.FXCService;
 import javafx.beans.property.ReadOnlyObjectProperty;
 import lombok.NonNull;
@@ -12,7 +13,7 @@ import lombok.NonNull;
  */
 public interface TaskSelectorService extends FXCService
 {
-	ReadOnlyObjectProperty<de.ruu.app.jeeeraaah.common.bean.TaskBean> selectionChangedProperty();
+	ReadOnlyObjectProperty<TaskBean> selectionChangedProperty();
 
 	void populateFor(@NonNull TaskGroupBean taskGroup);
 }

@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.gantt;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.util.Time;
 import javafx.beans.property.SimpleStringProperty;
@@ -82,7 +82,7 @@ class TaskTreeTableController
 				{
 					TreeItem<TaskTreeTableDataItem> treeItem      = cdfs.getValue();
 					TaskTreeTableDataItem           tableDataItem = treeItem.getValue();
-					TaskBean                        task          = tableDataItem.task();
+					TaskBean task          = tableDataItem.task();
 					return new SimpleStringProperty(task.name());
 				}
 		);

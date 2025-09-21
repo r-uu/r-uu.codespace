@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
-import de.ruu.app.jeeeraaah.common.api.domain.Task;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.lib.jpa.core.AbstractEntity;
 import de.ruu.lib.util.Strings;
 import jakarta.annotation.Nullable;
@@ -21,7 +21,6 @@ import lombok.NonNull;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serial;
 import java.util.Collections;
@@ -105,6 +104,13 @@ public class TaskGroupJPA implements TaskGroupEntity<TaskJPA>
 	 * @param in the existing entity, must not be {@code null}
 	 */
 	public TaskGroupJPA(@NonNull TaskGroupEntity<?> in)
+	{
+		this(in.name());
+		id      = in.id();
+		version = in.version();
+	}
+
+	public TaskGroupJPA(@NonNull TaskGroupLazy in)
 	{
 		this(in.name());
 		id      = in.id();

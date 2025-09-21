@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighbours;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighbours;
 import de.ruu.lib.cdi.se.EventDispatcher;
 import de.ruu.lib.fx.comp.FXCService;
 import de.ruu.lib.util.AbstractEvent;

@@ -1,8 +1,9 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.super_sub_or_successor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.selector.TaskSelector;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.selector.TaskSelector;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import de.ruu.lib.fx.control.treeview.TreeViewUtil;

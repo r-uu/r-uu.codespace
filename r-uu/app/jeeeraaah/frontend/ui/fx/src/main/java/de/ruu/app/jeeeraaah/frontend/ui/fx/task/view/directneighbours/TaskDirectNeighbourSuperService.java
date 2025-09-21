@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.directneighbours;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.lib.fx.comp.FXCService;
 import javafx.scene.layout.HBox;
 import lombok.NonNull;

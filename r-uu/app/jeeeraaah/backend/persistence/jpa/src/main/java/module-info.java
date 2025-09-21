@@ -1,23 +1,22 @@
 module de.ruu.app.jeeeraaah.backend.persistence.jpa
 {
-	exports de.ruu.app.jeeeraaah.backend.persistence.jpa to
-			de.ruu.app.jeeeraaah.backend.common.mapping,
-			de.ruu.app.jeeeraaah.backend.api.ws.rs;
+    // Export the package to any module that needs it
+    exports de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
-	requires jakarta.annotation;
-	requires jakarta.persistence;
-	requires jakarta.inject;
-	requires jakarta.transaction;
-	requires jakarta.cdi;
+    requires jakarta.annotation;
+    requires jakarta.persistence;
+    requires jakarta.inject;
+    requires jakarta.transaction;
+    requires jakarta.cdi;
 
-	requires de.ruu.lib.jpa.core;
-	requires de.ruu.lib.mapstruct;
-	requires de.ruu.lib.util;
-	requires de.ruu.app.jeeeraaah.common.api.domain;
+    requires de.ruu.lib.jpa.core;
+    requires de.ruu.lib.mapstruct;
+    requires de.ruu.lib.util;
+    requires de.ruu.app.jeeeraaah.common.api.domain;
 
-	requires static lombok;
-	requires org.slf4j;
-	requires jakarta.ws.rs;
-	requires org.mapstruct;
-	requires de.ruu.app.jeeeraaah.common.api.ws.rs;
+    requires static lombok;
+    requires org.slf4j;
+    requires jakarta.ws.rs;
+    requires org.mapstruct;
+    requires de.ruu.app.jeeeraaah.common.api.ws.rs;
 }

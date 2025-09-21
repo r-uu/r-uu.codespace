@@ -1,6 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.selector;
 
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOFlat;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.autocomplete.textfield.AutoCompleteTextField;
 import de.ruu.lib.fx.control.autocomplete.textfield.AutoCompleteTextFieldBuilder;
@@ -91,7 +92,7 @@ class TaskGroupSelectorController
 					|| group.name().toLowerCase().contains(text.toLowerCase());
 			}
 
-	private static boolean doesTextIdentifyGroup(TaskGroupFlat group, String text)
+	private static boolean doesTextIdentifyGroup(TaskGroupDTOFlat group, String text)
 			{ return nonNull(group) && group.name().equals(text); }
 
 	private static Node getTaskGroupGraphics (TaskGroupFlat group)

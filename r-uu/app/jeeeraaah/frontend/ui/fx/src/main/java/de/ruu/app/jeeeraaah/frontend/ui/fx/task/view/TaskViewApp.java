@@ -4,6 +4,7 @@ import de.ruu.lib.fx.FXUtil;
 import de.ruu.lib.fx.comp.DefaultFXCView;
 import de.ruu.lib.fx.comp.FXCApp;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
+import de.ruu.lib.fx.comp.FXCService;
 import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
 import javafx.scene.Parent;
@@ -24,15 +25,15 @@ public class TaskViewApp extends FXCApp
 
 	@PostConstruct private void postConstruct()
 	{
-		eventDispatcherFXCAppStarted.add(e -> onAppStarted((FXCAppStartedEvent) e));
+		eventDispatcherFXCAppStarted.add(e -> onAppStarted(e));
 	}
 
 	private void onAppStarted(FXCAppStartedEvent e)
 	{
 		if (optionalPrimaryView().isPresent())
 		{
-			DefaultFXCView view = optionalPrimaryView().get();
-			Parent         root = view.localRoot();
+			DefaultFXCView<?, ?, ?> view = optionalPrimaryView().get();
+			Parent                  root = view.localRoot();
 
 			Optional<Stage> optionalStage = FXUtil.getStage(root);
 			if (optionalStage.isPresent())

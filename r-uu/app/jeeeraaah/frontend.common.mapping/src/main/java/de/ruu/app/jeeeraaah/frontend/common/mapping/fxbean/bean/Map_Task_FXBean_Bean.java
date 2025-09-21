@@ -2,10 +2,7 @@ package de.ruu.app.jeeeraaah.frontend.common.mapping.fxbean.bean;
 
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.api.mapping.Mappings;
-import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
-import de.ruu.lib.jpa.core.Entity;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import lombok.NonNull;
 import org.mapstruct.AfterMapping;
@@ -19,6 +16,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.Set;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
 import static java.util.Objects.isNull;
 
 /** {@link TaskBean} -> {@link TaskBean} */
@@ -27,12 +25,12 @@ import static java.util.Objects.isNull;
 	Map_Task_FXBean_Bean INSTANCE = Mappers.getMapper(Map_Task_FXBean_Bean.class);
 
 	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
-	@NonNull TaskBean map(@NonNull TaskFXBean in, @NonNull @Context ReferenceCycleTracking context);
+	@NonNull TaskBean map(de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean in, @NonNull @Context ReferenceCycleTracking context);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
 	@BeforeMapping default void beforeMapping(
-			@NonNull                TaskBean in,
-			@NonNull @MappingTarget TaskBean out,
+			@NonNull                TaskFXBean in,
+			@NonNull @MappingTarget TaskBean   out,
 			@NonNull @Context       ReferenceCycleTracking context)
 	{
 		// required arguments id, version and name are already set in constructor
@@ -40,32 +38,32 @@ import static java.util.Objects.isNull;
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
 	@AfterMapping default void afterMapping(
-			@NonNull                TaskBean     in,
+			@NonNull                TaskFXBean   in,
 			@NonNull @MappingTarget TaskBean     out,
 			@NonNull @Context       ReferenceCycleTracking context)
 	{
 		if (in.superTask().isPresent())
 		{
-			TaskBean relatedTask       = in.superTask().get();
+			TaskFXBean relatedTask       = in.superTask().get();
 			// check if related task was already mapped
 			TaskBean relatedTaskMapped = context.get(relatedTask, TaskBean.class);
 			if (isNull(relatedTaskMapped))
 					// start new mapping for related task
-					out.superTask(Mappings.toBean(relatedTask, context));
+					out.superTask(toBean(relatedTask, context));
 			else
 					// use already mapped related task
 					out.superTask(relatedTaskMapped);
 		}
 		if (in.subTasks().isPresent())
 		{
-			Set<TaskBean> relatedTasks = in.subTasks().get();
-			for (TaskBean relatedTask : relatedTasks)
+			Set<TaskFXBean> relatedTasks = in.subTasks().get();
+			for (TaskFXBean relatedTask : relatedTasks)
 			{
 				// check if related task was already mapped
 				TaskBean relatedTaskMapped = context.get(relatedTask, TaskBean.class);
 				if (isNull(relatedTaskMapped))
 						// start new mapping for related task
-						out.addSubTask(Mappings.toBean(relatedTask, context));
+						out.addSubTask(toBean(relatedTask, context));
 				else
 						// use already mapped related task
 						out.addSubTask(relatedTaskMapped);
@@ -73,14 +71,14 @@ import static java.util.Objects.isNull;
 		}
 		if (in.predecessors().isPresent())
 		{
-			Set<TaskBean> relatedTasks = in.predecessors().get();
-			for (TaskBean relatedTask : relatedTasks)
+			Set<TaskFXBean> relatedTasks = in.predecessors().get();
+			for (TaskFXBean relatedTask : relatedTasks)
 			{
 				// check if related task was already mapped
 				TaskBean relatedTaskMapped = context.get(relatedTask, TaskBean.class);
 				if (isNull(relatedTaskMapped))
 						// start new mapping for related task
-						out.addPredecessor(Mappings.toBean(relatedTask, context));
+						out.addPredecessor(toBean(relatedTask, context));
 				else
 						// use already mapped related task
 						out.addPredecessor(relatedTaskMapped);
@@ -88,14 +86,14 @@ import static java.util.Objects.isNull;
 		}
 		if (in.successors().isPresent())
 		{
-			Set<TaskBean> relatedTasks = in.successors().get();
-			for (TaskBean relatedTask : relatedTasks)
+			Set<TaskFXBean> relatedTasks = in.successors().get();
+			for (TaskFXBean relatedTask : relatedTasks)
 			{
 				// check if related task was already mapped
 				TaskBean relatedTaskMapped = context.get(relatedTask, TaskBean.class);
 				if (isNull(relatedTaskMapped))
 						// start new mapping for related task
-						out.addSuccessor(Mappings.toBean(relatedTask, context));
+						out.addSuccessor(toBean(relatedTask, context));
 				else
 						// use already mapped related task
 						out.addSuccessor(relatedTaskMapped);
@@ -103,14 +101,8 @@ import static java.util.Objects.isNull;
 		}
 	}
 
-	/**
-	 * mapstruct object factory
-	 * <p>
-	 * if {@code in} is already persisted, {@link Entity#entityInfo()} will be propagated to new {@link TaskBean}
-	 */
-	@ObjectFactory default @NonNull TaskBean create(
-			@NonNull          TaskBean                in,
-			@NonNull @Context ReferenceCycleTracking context)
+	/** mapstruct object factory */
+	@ObjectFactory default @NonNull TaskBean create(@NonNull TaskFXBean in, @NonNull @Context ReferenceCycleTracking context)
 	{
 		TaskGroupBean group = context.get(in.taskGroup(), TaskGroupBean.class);
 
@@ -120,6 +112,6 @@ import static java.util.Objects.isNull;
 			context.put(in.taskGroup(), group);
 		}
 
-		return new TaskBean(group, in.name());
+		return new TaskBean(group, in);
 	}
 }

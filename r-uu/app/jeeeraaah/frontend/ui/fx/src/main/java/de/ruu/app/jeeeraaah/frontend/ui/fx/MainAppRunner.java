@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx;
 
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.TaskGroupManagementDisposeRequestEvent;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.TaskGroupManagementDisposeRequestEvent;
 import de.ruu.lib.fx.comp.FXCAppRunner;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
 import lombok.extern.slf4j.Slf4j;

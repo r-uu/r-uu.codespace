@@ -1,13 +1,13 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.supersub.add.ActionAdd.Context;
-import de.ruu.lib.ws.rs.NonTechnicalException;
-import de.ruu.lib.ws.rs.TechnicalException;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add.ActionAdd.Context;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
+import de.ruu.lib.ws.rs.NonTechnicalException;
+import de.ruu.lib.ws.rs.TechnicalException;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.DialogPane;
@@ -16,6 +16,8 @@ import lombok.NonNull;
 
 import java.util.Optional;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static de.ruu.lib.util.BooleanFunctions.not;
 import static javafx.scene.control.Alert.AlertType.ERROR;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
@@ -42,7 +44,7 @@ class ActionAddMainTask
 		// create a transient task and put it into the editor
 		// NOTE: taskBeanTransient will be assigned to the context.taskgroup tasks temporarily, it has to be removed later
 		TaskBean   taskBeanTransient = new TaskBean(context.taskGroup(), "new main task");
-		TaskFXBean taskFXBean        = taskBeanTransient.toFXBean(new ReferenceCycleTracking());
+		TaskFXBean taskFXBean        = toFXBean(taskBeanTransient, new ReferenceCycleTracking());
 		context.taskEditor().service().task(taskFXBean);
 
 		Optional<TaskFXBean> optional = dialog.showAndWait();
@@ -50,7 +52,7 @@ class ActionAddMainTask
 		if (optional.isPresent())
 		{
 			// fetch new task bean from editor
-			TaskBean taskBeanFromEditor = optional.get().toBean(new ReferenceCycleTracking());
+			TaskBean taskBeanFromEditor = toBean(optional.get(), new ReferenceCycleTracking());
 
 			try
 			{

@@ -1,12 +1,13 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.super_sub_or_successor.Configurator;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.super_sub_or_successor.ConfiguratorService.ActionAddToSuperSubOrSuccessorConfigurationResult;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.super_sub_or_successor.Configurator;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.super_sub_or_successor.ConfiguratorService;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.super_sub_or_successor.ConfiguratorService.ActionAddToSuperSubOrSuccessorConfigurationResult;
+import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import de.ruu.lib.ws.rs.NonTechnicalException;
 import de.ruu.lib.ws.rs.TechnicalException;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.lib.fx.control.dialog.ExceptionDialog;
 import jakarta.enterprise.inject.spi.CDI;
 import javafx.scene.Parent;
 import javafx.scene.control.ButtonType;

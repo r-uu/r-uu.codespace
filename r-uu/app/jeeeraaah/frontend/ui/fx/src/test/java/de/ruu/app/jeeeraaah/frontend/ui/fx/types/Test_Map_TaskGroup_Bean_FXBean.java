@@ -1,11 +1,13 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.types;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import org.junit.jupiter.api.Test;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -25,7 +27,7 @@ class Test_Map_TaskGroup_Bean_FXBean
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
 		TaskGroupBean   group  = createBean("name");
-		TaskGroupFXBean mapped = group.toFXBean(context);
+		TaskGroupFXBean mapped = toFXBean(group, context);
 
 		assertIs(group, mapped);
 	}
@@ -35,8 +37,8 @@ class Test_Map_TaskGroup_Bean_FXBean
 		ReferenceCycleTracking context = new ReferenceCycleTracking();
 
 		TaskGroupBean   group    = createBean("name");
-		TaskGroupFXBean   mapped = group .toFXBean(context);
-		TaskGroupBean   reMapped = mapped.toBean(context);
+		TaskGroupFXBean   mapped = toFXBean(group , context);
+		TaskGroupBean   reMapped = toBean  (mapped, context);
 
 		assertIs(reMapped, mapped);
 	}

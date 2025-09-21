@@ -1,21 +1,21 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.dash;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.predecessor.TaskHierarchyPredecessors;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.TaskHierarchySuccessors;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.supersub.TaskHierarchySuperSubTasks;
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.edit.TaskGroupEditor;
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelector;
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent;
-import de.ruu.app.jeeeraaah.client.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent.TaskGroupSelectorComponentReadyEventDispatcher;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupEntityDTO;
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupFlat;
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupLazy;
-import de.ruu.app.jeeeraaah.common.dto.TaskLazy;
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
+import de.ruu.app.jeeeraaah.common.api.mapping.Mappings;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor.TaskHierarchyPredecessors;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.TaskHierarchySuccessors;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.TaskHierarchySuperSubTasks;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.edit.TaskGroupEditor;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.selector.TaskGroupSelector;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.selector.TaskGroupSelectorService.TaskGroupSelectorComponentReadyEvent.TaskGroupSelectorComponentReadyEventDispatcher;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.FXUtil;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent;
 import de.ruu.lib.fx.comp.FXCAppStartedEvent.FXCAppStartedEventDispatcher;
@@ -43,12 +43,13 @@ import javafx.scene.paint.Color;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static de.ruu.app.jeeeraaah.common.Task.COMPARATOR;
+import static de.ruu.app.jeeeraaah.common.api.domain.Task.COMPARATOR;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toBean;
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static de.ruu.lib.fx.FXUtil.getStage;
 import static java.util.Objects.isNull;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
@@ -87,9 +88,9 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 	// inject components that are used in the user interface
 	@Inject private TaskGroupSelector taskGroupSelector;
 
-	@Inject private TaskHierarchyPredecessors  taskHierarchyPredecessors;
+	@Inject private TaskHierarchyPredecessors taskHierarchyPredecessors;
 	@Inject private TaskHierarchySuperSubTasks taskHierarchySuperSubTasks;
-	@Inject private TaskHierarchySuccessors    taskHierarchySuccessors;
+	@Inject private TaskHierarchySuccessors taskHierarchySuccessors;
 
 	// inject service clients that are used to fetch data from the server
 	@Inject private TaskGroupServiceClient taskGroupServiceClient;
@@ -104,7 +105,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 
 	@Override @FXML protected void initialize()
 	{
-		eventDispatcherFXCAppStarted         .add(e -> onAppStarted((FXCAppStartedEvent) e));
+		eventDispatcherFXCAppStarted         .add(e -> onAppStarted(e));
 		eventDispatcherTaskGroupSelectorReady.add(e -> onTaskGroupSelectorComponentReady((TaskGroupSelectorComponentReadyEvent) e));
 
 		buttonExit  .setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -138,7 +139,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		// create and populate groups
 		try
 		{
-			Set<TaskGroupFlat> groups = new HashSet<>(taskGroupServiceClient.findAllFlat());
+			Set<TaskGroupFlat> groups = taskGroupServiceClient.findAllFlat();
 
 			// now we are ready to hand over the groups to groupSelector
 			taskGroupSelector.service().items(groups);
@@ -161,14 +162,14 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		taskGroupSelector.service().selectedTaskGroupProperty().addListener((obs, old, val) -> onSelectedGroupChanged(val));
 	}
 
-	private void onSelectedGroupChanged(TaskGroupFlat selectedTaskGroupFlat)
+	private void onSelectedGroupChanged(TaskGroupFlat selectedTaskGroupDTOFlat)
 	{
-		if (isNull(selectedTaskGroupFlat)) return;
+		if (isNull(selectedTaskGroupDTOFlat)) return;
 
 		// fetch the task group with the ids of all it's tasks from the server
 		try
 		{
-			Optional<TaskGroupLazy> optionalGroupLazy = taskGroupServiceClient.findGroupLazy(selectedTaskGroupFlat.id());
+			Optional<TaskGroupLazy> optionalGroupLazy = taskGroupServiceClient.findGroupLazy(selectedTaskGroupDTOFlat.id());
 			if (optionalGroupLazy.isPresent())
 			{
 				TaskGroupLazy groupLazy = optionalGroupLazy.get();
@@ -186,7 +187,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 					taskHierarchySuperSubTasks.service().populate(mainTasks);
 					taskHierarchySuperSubTasks.service().focusRootItem();
 
-					TaskGroupBean taskGroupBean = groupLazy.toBeanWithoutRelated();
+					TaskGroupBean taskGroupBean = Mappings.toBean(groupLazy, new ReferenceCycleTracking());
 
 					taskHierarchyPredecessors .service().activeTaskGroupProperty().setValue(taskGroupBean);
 					taskHierarchySuperSubTasks.service().activeTaskGroupProperty().setValue(taskGroupBean);
@@ -224,7 +225,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		// populate editor with new item, call to service() has to be done after call to localRoot() to make sure internal
 		// java fx bindings can be established (see initialize)
 		TaskGroupBean   taskGroupBean   = new TaskGroupBean("new task group");
-		TaskGroupFXBean taskGroupFXBean = taskGroupBean.toFXBean(new ReferenceCycleTracking());
+		TaskGroupFXBean taskGroupFXBean = toFXBean(taskGroupBean, new ReferenceCycleTracking());
 
 		taskGroupEditor.service().taskGroup(taskGroupFXBean);
 
@@ -233,7 +234,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		if (optional.isPresent())
 		{
 			taskGroupFXBean = optional.get();
-			taskGroupBean   = taskGroupFXBean.toBean(new ReferenceCycleTracking());
+			taskGroupBean   = toBean(taskGroupFXBean,new ReferenceCycleTracking());
 
 			// let client create a new item in db
 			try

@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.super_sub_or_successor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd;
 import de.ruu.lib.fx.comp.FXCService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +25,6 @@ public interface ConfiguratorService extends FXCService
 		private final TaskBean targetTask;
 	}
 
-	void context(Context context);
+	void context(ActionAdd.Context context);
 	Optional<ActionAddToSuperSubOrSuccessorConfigurationResult> result();
 }

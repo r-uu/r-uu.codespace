@@ -1,7 +1,7 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyService;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.TaskHierarchyService;
 import javafx.scene.control.TreeItem;
 
 /**

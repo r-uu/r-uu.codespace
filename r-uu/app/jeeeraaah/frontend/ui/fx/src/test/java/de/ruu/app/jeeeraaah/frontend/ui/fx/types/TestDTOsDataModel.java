@@ -1,8 +1,8 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.types;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.dto.TaskEntityDTO;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Optional;
 import java.util.Set;
 
+import static de.ruu.app.jeeeraaah.common.api.mapping.Mappings.toDTO;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -62,7 +63,7 @@ class TestDTOsDataModel
 
 				for (TaskBean subTask : optionalSubTasks.get())
 				{
-					TaskEntityDTO taskDTO = subTask.toDTO(context);
+					TaskDTO taskDTO = toDTO(subTask, context);
 					assertThat("missing super task in mapped dto", taskDTO.superTask().isPresent(), is(true));
 				}
 			}

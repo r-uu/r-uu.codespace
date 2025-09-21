@@ -7,6 +7,7 @@ import java.util.Set;
 
 public interface TaskGroupLazy extends Entity<Long>
 {
-	@NonNull String    name();
+	@NonNull Long      id     ();
 	@NonNull Set<Long> taskIds();
+	@NonNull String    name   ();
 }

@@ -12,62 +12,76 @@ import java.util.List;
 import java.util.Set;
 
 /** Criteria used to build EQL queries. */
-public class Criteria
+public class Criteria<T>
 {
-	/** Join types which can be used to <code>addAlias</code> and <code>createCriteria</code> methods. */
+	// Helper method to get the actual type parameter at runtime
+	@SuppressWarnings("unchecked")
+	protected Class<T> getType()
+	{
+		if (this instanceof Subcriteria)
+		{
+			return ((Subcriteria<T>) this).getParentCriteria().getType();
+		}
+		return (Class<T>) Object.class;
+	}
+
+	/**
+	 * Join types which can be used to <code>addAlias</code> and <code>createCriteria</code> methods.
+	 */
 	public enum JoinType
 	{
 		/** Inner join. Default one. */
 		INNER_JOIN("inner join"),
-
 		/** Left outer join. */
 		LEFT_JOIN("left outer join");
 
-		private String sql;
-
-		private JoinType(String sql)
-		{
-			this.sql = sql;
-		}
-
-		/** Generate EQL version of given join. */
-		public String toSqlString()
-		{
-			return sql;
-		}
+		private final String sql;
+		JoinType(String sql) { this.sql = sql;}
+		public String toSqlString() { return sql; }
 	}
 
 	private int aliasNumber;
+	private final String name;
+	private final String alias;
+	private final Criteria<T> parent;
+	private final JoinType joinType;
+	private Projection<T> projection;
+	private Criteria<T> projectionCriteria;
+	private final List<CriterionEntry<T>> criterionList = new ArrayList<>();
+  private final List<OrderEntry<T>> orderList = new ArrayList<>();
+  private final List<Subcriteria<T>> subcriteriaList = new ArrayList<>();
 
-	private String name;
+	// Getter methods for lists to ensure type safety
+	protected List<CriterionEntry<T>> getCriterionList()
+	{
+		return criterionList;
+	}
 
-	private String alias;
+	protected List<OrderEntry<T>> getOrderList()
+	{
+		return orderList;
+	}
 
-	private Criteria parent;
-
-	private JoinType joinType;
-
-	private Projection projection;
-
-	private Criteria projectionCriteria;
-
-	private List<CriterionEntry> criterionList = new ArrayList<CriterionEntry>();
-
-	private List<OrderEntry> orderList = new ArrayList<OrderEntry>();
-
-	private List<Subcriteria> subcriteriaList = new ArrayList<Subcriteria>();
-
+	protected List<Subcriteria<T>> getSubcriteriaList()
+	{
+		return subcriteriaList;
+	}
 	private Integer maxResults;
-
 	private Integer firstResult;
 
 	/** Create new criteria for specified <code>IEntity</code> implementation. */
-	public final static Criteria forClass(Class<?> entity)
-	{
-		return new Criteria(getEntityName(entity), "this", null, null);
-	}
+	@SuppressWarnings("unchecked")
+    public static <T> Criteria<T> forClass(Class<T> entity) {
+        return new Criteria<T>(getEntityName(entity), "this", null, null) {
+            @Override
+            @SuppressWarnings("unchecked")
+            protected Class<T> getType() {
+                return entity;
+            }
+        };
+    }
 
-	private Criteria(String name, String alias, JoinType joinType, Criteria parent)
+	private Criteria(String name, String alias, JoinType joinType, Criteria<T> parent)
 	{
 		this.name = name;
 		this.alias = alias;
@@ -75,30 +89,9 @@ public class Criteria
 		this.joinType = joinType;
 	}
 
-	protected String getName()
-	{
-		return name;
-	}
-
-	/**
-	 * Get parent criteria. If this is not an instance of <code>Subcriteria</code> method will return null.
-	 *
-	 * @return parent name
-	 */
-	protected Criteria getParent()
-	{
-		return parent;
-	}
-
-	/**
-	 * Get criteria alias.
-	 *
-	 * @return alias
-	 */
-	protected String getAlias()
-	{
-		return alias;
-	}
+	protected String getName() { return name; }
+	protected Criteria<T> getParent() { return parent; }
+	protected String getAlias() { return alias; }
 
 	/**
 	 * Get join type.
@@ -118,7 +111,7 @@ public class Criteria
 	 * @return criteria object
 	 * @see Projection
 	 */
-	public Criteria setProjection(Projection projection)
+	public Criteria<T> setProjection(Projection<T> projection)
 	{
 		this.projection = projection;
 		this.projectionCriteria = this;
@@ -131,9 +124,9 @@ public class Criteria
 	 * @param criterion new restriction
 	 * @return criteria object
 	 */
-	public Criteria add(Criterion criterion)
+	public Criteria<T> add(Criterion<T> criterion)
 	{
-		criterionList.add(new CriterionEntry(criterion, this));
+		criterionList.add(new CriterionEntry<T>(criterion, this));
 		return this;
 	}
 
@@ -143,9 +136,9 @@ public class Criteria
 	 * @param order new ordering
 	 * @return criteria object
 	 */
-	public Criteria addOrder(Order order)
+	public Criteria<T> addOrder(Order<T> order)
 	{
-		orderList.add(new OrderEntry(order, this));
+		orderList.add(new OrderEntry<T>(order, this));
 		return this;
 	}
 
@@ -155,47 +148,47 @@ public class Criteria
 	 * @param name criteria entity name
 	 * @return subcriteria
 	 */
-	public Criteria createCriteria(String name)
+	public Criteria<T> createCriteria(String name)
 	{
-		return new Subcriteria(name, createAlias(name), JoinType.INNER_JOIN, this);
+		return new Subcriteria<T>(name, createAlias(name), JoinType.INNER_JOIN, this);
 	}
 
 	/**
 	 * Create a new <code>Criteria</code>.
 	 *
-	 * @param name criteria entity name
+	 * @param name     criteria entity name
 	 * @param joinType join type
 	 * @return subcriteria
 	 */
-	public Criteria createCriteria(String name, JoinType joinType)
+	public Criteria<T> createCriteria(String name, JoinType joinType)
 	{
-		return new Subcriteria(name, createAlias(name), joinType, this);
+		return new Subcriteria<T>(name, createAlias(name), joinType, this);
 	}
 
 	/**
 	 * Create a new alias joined using "inner join".
 	 *
-	 * @param name criteria entity name
+	 * @param name  criteria entity name
 	 * @param alias alias
 	 * @return criteria
 	 */
-	public Criteria createAlias(String name, String alias)
+	public Criteria<T> createAlias(String name, String alias)
 	{
-		new Subcriteria(name, alias, JoinType.INNER_JOIN, this);
+		new Subcriteria<T>(name, alias, JoinType.INNER_JOIN, this);
 		return this;
 	}
 
 	/**
 	 * Create a new alias.
 	 *
-	 * @param name criteria entity name
-	 * @param alias alias
+	 * @param name     criteria entity name
+	 * @param alias    alias
 	 * @param joinType join type
 	 * @return criteria
 	 */
-	public Criteria createAlias(String name, String alias, JoinType joinType)
+	public Criteria<T> createAlias(String name, String alias, JoinType joinType)
 	{
-		new Subcriteria(name, alias, joinType, this);
+		new Subcriteria<T>(name, alias, joinType, this);
 		return this;
 	}
 
@@ -205,7 +198,7 @@ public class Criteria
 	 * @param maxResults number of objects to be retrieved
 	 * @return criteria object
 	 */
-	public Criteria setMaxResults(int maxResults)
+	public Criteria<T> setMaxResults(int maxResults)
 	{
 		this.maxResults = Integer.valueOf(maxResults);
 		return this;
@@ -217,7 +210,7 @@ public class Criteria
 	 * @param firstResult first result to be retrieved
 	 * @return criteria object
 	 */
-	public Criteria setFirstResult(int firstResult)
+	public Criteria<T> setFirstResult(int firstResult)
 	{
 		this.firstResult = Integer.valueOf(firstResult);
 		return this;
@@ -229,7 +222,7 @@ public class Criteria
 	 * @param entityManager entity manager
 	 * @return list of retrieved objects
 	 */
-	public List<?> list(EntityManager entityManager)
+	public List<T> list(EntityManager entityManager)
 	{
 		return prepareQuery(entityManager).getResultList();
 	}
@@ -239,13 +232,20 @@ public class Criteria
 	 *
 	 * @param entityManager entity manager
 	 * @return retrieved object
-	 * @throws NoResultException - if there is no result
+	 * @throws NoResultException        - if there is no result
 	 * @throws NonUniqueResultException - if more than one result
 	 */
-	public Object uniqueResult(EntityManager entityManager) throws NonUniqueResultException, NoResultException
-	{
-		return prepareQuery(entityManager).getSingleResult();
-	}
+	@SuppressWarnings("unchecked")
+    public T uniqueResult(EntityManager entityManager) throws NonUniqueResultException, NoResultException {
+        List<T> results = list(entityManager);
+        if (results.isEmpty()) {
+            throw new NoResultException("No results found");
+        }
+        if (results.size() > 1) {
+            throw new NonUniqueResultException("More than one result found: " + results.size());
+        }
+        return results.get(0);
+    }
 
 	@Override
 	public String toString()
@@ -267,12 +267,13 @@ public class Criteria
 		return name.replaceAll(".", "_") + "_" + aliasNumber++;
 	}
 
-	private final String prepateEql(CriteriaQuery criteriaQuery)
+	@SuppressWarnings("unchecked")
+	private String prepateEql(CriteriaQuery criteriaQuery)
 	{
 		String sql = "from " + name + " as " + alias + " ";
 		criteriaQuery.registerAlias(alias);
 
-		for (Criteria subcriteria : subcriteriaList)
+		for (Criteria<T> subcriteria : subcriteriaList)
 		{
 			sql += subcriteria.getJoinType().toSqlString() + " ";
 			sql += criteriaQuery.getPropertyName(subcriteria.getName(), subcriteria.getParent());
@@ -282,6 +283,7 @@ public class Criteria
 
 		if (projection != null)
 		{
+			@SuppressWarnings("unchecked")
 			String projectionSql = projection.toSqlString(projectionCriteria, criteriaQuery);
 			if (projectionSql.length() > 0)
 			{
@@ -299,13 +301,13 @@ public class Criteria
 
 		String criterionSql = "";
 
-		for (CriterionEntry criterion : criterionList)
+		for (CriterionEntry<T> criterionEntry : criterionList)
 		{
 			if (criterionSql.length() > 0)
 			{
 				criterionSql += " and ";
 			}
-			criterionSql += criterion.getCriterion().toSqlString(criterion.getCriteria(), criteriaQuery);
+			criterionSql += criterionEntry.getCriterion().toSqlString(criterionEntry.getCriteria(), criteriaQuery);
 		}
 
 		if (criterionSql.length() > 0)
@@ -317,6 +319,7 @@ public class Criteria
 		{
 			if (projection.isGrouped())
 			{
+				@SuppressWarnings("unchecked")
 				String groupBySql = projection.toGroupSqlString(projectionCriteria, criteriaQuery);
 				if (groupBySql.length() > 0)
 				{
@@ -327,13 +330,13 @@ public class Criteria
 
 		String orderSql = "";
 
-		for (OrderEntry order : orderList)
+		for (OrderEntry<T> orderEntry : orderList)
 		{
 			if (orderSql.length() > 0)
 			{
 				orderSql += ",";
 			}
-			orderSql += order.getOrder().toSqlString(order.getCriteria(), criteriaQuery);
+			orderSql += orderEntry.getOrder().toSqlString(orderEntry.getCriteria(), criteriaQuery);
 		}
 
 		if (orderSql.length() > 1)
@@ -344,6 +347,7 @@ public class Criteria
 		return sql.trim();
 	}
 
+	@SuppressWarnings("unchecked")
 	private final Query prepareQuery(EntityManager entityManager)
 	{
 		CriteriaQuery criteriaQuery = new CriteriaQuery();
@@ -372,18 +376,11 @@ public class Criteria
 		return query;
 	}
 
-	private final static String getEntityName(Class<?> type)
+	@SuppressWarnings("unchecked")
+  private static <T> String getEntityName(Class<T> entity)
 	{
-		Entity entity = type.getAnnotation(Entity.class);
-
-		if (entity == null || entity.name() == null || entity.name().length() == 0)
-		{
-			return type.getSimpleName();
-		}
-		else
-		{
-			return entity.name();
-		}
+    Entity entityAnnotation = entity.getAnnotation(Entity.class);
+    return entityAnnotation == null ? entity.getSimpleName() : entityAnnotation.name();
 	}
 
 	/**
@@ -392,22 +389,22 @@ public class Criteria
 	public final class CriteriaQuery
 	{
 
-		private List<Object> params = new ArrayList<Object>();
+		private final List<Object> params = new ArrayList<Object>();
 
-		private Set<String> aliases = new HashSet<String>();
+		private final Set<String> aliases = new HashSet<String>();
 
-		private CriteriaQuery()
+		CriteriaQuery()
 		{
 		}
 
 		/**
 		 * Get name of property in given criteria context.
 		 *
-		 * @param name property's name
+		 * @param name     property's name
 		 * @param criteria criteria
 		 * @return proper name which can be used in EQL
 		 */
-		public String getPropertyName(String name, Criteria criteria)
+		public String getPropertyName(String name, Criteria<T> criteria)
 		{
 			int pos = name.indexOf(".");
 
@@ -443,7 +440,7 @@ public class Criteria
 		 *
 		 * @param alias alias
 		 */
-		private void registerAlias(String alias)
+		void registerAlias(String alias)
 		{
 			this.aliases.add(alias);
 		}
@@ -453,7 +450,7 @@ public class Criteria
 		 *
 		 * @return list of query's params
 		 */
-		private List<Object> getParams()
+		List<Object> getParams()
 		{
 			return params;
 		}
@@ -462,141 +459,121 @@ public class Criteria
 	/**
 	 * Subcritera associated with root criteria.
 	 */
-	public final class Subcriteria
-	    extends
-	    Criteria
-	{
+	public static final class Subcriteria<T> extends Criteria<T> {
+    private final Criteria<T> parentCriteria;
 
-		private Subcriteria(String name, String alias, JoinType joinType, Criteria parent)
-		{
-			super(name, alias, joinType, parent);
-			Criteria.this.subcriteriaList.add(this);
-		}
+    Subcriteria(String name, String alias, JoinType joinType, Criteria<T> parent) {
+        super(name, alias, joinType, parent);
+        this.parentCriteria = parent;
+        parent.getSubcriteriaList().add(this);
+    }
+    
+    protected Criteria<T> getParentCriteria() {
+        return parentCriteria;
+    }
 
-		@Override
-		public Criteria add(Criterion criterion)
-		{
-			Criteria.this.criterionList.add(new CriterionEntry(criterion, this));
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> add(Criterion<T> criterion) {
+        getCriterionList().add(new CriterionEntry<>(criterion, this));
+        return this;
+    }
 
-		@Override
-		public Criteria addOrder(Order order)
-		{
-			Criteria.this.orderList.add(new OrderEntry(order, this));
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> addOrder(Order<T> order) {
+        getOrderList().add(new OrderEntry<>(order, this));
+        return this;
+    }
 
-		@Override
-		public Criteria createCriteria(String name)
-		{
-			return new Subcriteria(name, Subcriteria.this.createAlias(name), JoinType.INNER_JOIN, Subcriteria.this);
-		}
+    @Override
+    public Criteria<T> createCriteria(String name) {
+        return new Subcriteria<>(name, createAlias(name), JoinType.INNER_JOIN, this);
+    }
 
-		@Override
-		public Criteria createCriteria(String name, JoinType joinType)
-		{
-			return new Subcriteria(name, Subcriteria.this.createAlias(name), joinType, Subcriteria.this);
-		}
+    @Override
+    public Criteria<T> createCriteria(String name, JoinType joinType) {
+        return new Subcriteria<>(name, createAlias(name), joinType, this);
+    }
 
-		@Override
-		public Criteria createAlias(String name, String alias)
-		{
-			new Subcriteria(name, alias, JoinType.INNER_JOIN, Subcriteria.this);
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> createAlias(String name, String alias) {
+        new Subcriteria<>(name, alias, JoinType.INNER_JOIN, this);
+        return this;
+    }
 
-		@Override
-		public Criteria createAlias(String name, String alias, JoinType joinType)
-		{
-			new Subcriteria(name, alias, joinType, Subcriteria.this);
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> createAlias(String name, String alias, JoinType joinType) {
+        new Subcriteria<>(name, alias, joinType, this);
+        return this;
+    }
 
-		@Override
-		public List<?> list(EntityManager entityManager)
-		{
-			return Criteria.this.list(entityManager);
-		}
+    @Override
+    public List<T> list(EntityManager entityManager) {
+        return parentCriteria.list(entityManager);
+    }
 
-		@Override
-		public Object uniqueResult(EntityManager entityManager) throws NonUniqueResultException, NoResultException
-		{
-			return Criteria.this.uniqueResult(entityManager);
-		}
+    @Override
+    public T uniqueResult(EntityManager entityManager) throws NonUniqueResultException, NoResultException {
+        return parentCriteria.uniqueResult(entityManager);
+    }
 
-		@Override
-		public Criteria setFirstResult(int firstResult)
-		{
-			Criteria.this.setFirstResult(firstResult);
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> setFirstResult(int firstResult) {
+        parentCriteria.setFirstResult(firstResult);
+        return this;
+    }
 
-		@Override
-		public Criteria setMaxResults(int maxResults)
-		{
-			Criteria.this.setMaxResults(maxResults);
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> setMaxResults(int maxResults) {
+        parentCriteria.setMaxResults(maxResults);
+        return this;
+    }
 
-		@Override
-		public Criteria setProjection(Projection projection)
-		{
-			Criteria.this.projection = projection;
-			Criteria.this.projectionCriteria = this;
-			return Subcriteria.this;
-		}
+    @Override
+    public Criteria<T> setProjection(Projection<T> projection) {
+        parentCriteria.setProjection(projection);
+        return this;
+    }
 	}
 
-	/**
-	 * Criteria entry.
-	 */
-	private final class CriterionEntry
+	private static final class CriterionEntry<T>
 	{
+		private final Criterion<T> criterion;
+		private final Criteria<T> criteria;
 
-		private final Criterion criterion;
-
-		private final Criteria criteria;
-
-		private CriterionEntry(Criterion criterion, Criteria criteria)
+		CriterionEntry(Criterion<T> criterion, Criteria<T> criteria)
 		{
 			this.criteria = criteria;
 			this.criterion = criterion;
 		}
 
-		protected Criterion getCriterion()
+		protected Criterion<T> getCriterion()
 		{
 			return criterion;
 		}
 
-		protected Criteria getCriteria()
+		protected Criteria<T> getCriteria()
 		{
 			return criteria;
 		}
 	}
 
-	/**
-	 * Order entry
-	 */
-	private final class OrderEntry
+	private static final class OrderEntry<T>
 	{
+		private final Order<T> order;
+		private final Criteria<T> criteria;
 
-		private final Order order;
-
-		private final Criteria criteria;
-
-		private OrderEntry(Order order, Criteria criteria)
+		OrderEntry(Order<T> order, Criteria<T> criteria)
 		{
 			this.criteria = criteria;
 			this.order = order;
 		}
 
-		protected Order getOrder()
+		protected Order<T> getOrder()
 		{
 			return order;
 		}
 
-		protected Criteria getCriteria()
+		protected Criteria<T> getCriteria()
 		{
 			return criteria;
 		}

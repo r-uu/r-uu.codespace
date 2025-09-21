@@ -16,28 +16,28 @@ import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 
 public interface Mappings
 {
-	static TaskGroupDTO toDTO(TaskGroupJPA in, ReferenceCycleTracking context)
+	static TaskGroupDTO  toDTO(TaskGroupJPA  in, ReferenceCycleTracking context)
 	{
-		return Map_TaskGroup_JPA_DTO.INSTANCE.map(in, context);
+		return Map_TaskGroup_JPA_DTO .INSTANCE.map(in, context);
 	}
-	static TaskDTO      toDTO(TaskJPA      in, ReferenceCycleTracking context)
+	static TaskDTO       toDTO(TaskJPA       in, ReferenceCycleTracking context)
 	{
-		return Map_Task_JPA_DTO     .INSTANCE.map(in, context);
+		return Map_Task_JPA_DTO      .INSTANCE.map(in, context);
 	}
-	static TaskGroupJPA toJPA(TaskGroupDTO in, ReferenceCycleTracking context)
+	static TaskGroupJPA  toJPA(TaskGroupDTO  in, ReferenceCycleTracking context)
 	{
-		return Map_TaskGroup_DTO_JPA.INSTANCE.map(in, context);
+		return Map_TaskGroup_DTO_JPA .INSTANCE.map(in, context);
 	}
-	static TaskJPA      toJPA(TaskDTO      in, ReferenceCycleTracking context)
+	static TaskJPA       toJPA(TaskDTO       in, ReferenceCycleTracking context)
 	{
-		return Map_Task_DTO_JPA     .INSTANCE.map(in, context);
+		return Map_Task_DTO_JPA      .INSTANCE.map(in, context);
 	}
 	static TaskGroupLazy toLazy(TaskGroupJPA in, ReferenceCycleTracking context)
 	{
 		return Map_TaskGroup_JPA_Lazy.INSTANCE.map(in, context);
 	}
-	static TaskLazy toLazy(TaskJPA in, ReferenceCycleTracking context)
+	static TaskLazy      toLazy(TaskJPA      in, ReferenceCycleTracking context)
 	{
-		return Map_Task_JPA_Lazy.INSTANCE.map(in, context);
+		return Map_Task_JPA_Lazy     .INSTANCE.map(in, context);
 	}
 }

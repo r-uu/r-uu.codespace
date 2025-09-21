@@ -4,7 +4,6 @@ import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.common.api.mapping.Mappings;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
-import de.ruu.lib.jpa.core.Entity;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import lombok.NonNull;
 import org.mapstruct.AfterMapping;
@@ -16,18 +15,18 @@ import org.mapstruct.MappingTarget;
 import org.mapstruct.ObjectFactory;
 import org.mapstruct.factory.Mappers;
 
-import java.util.Objects;
 import java.util.Set;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.requireNonNull;
 
 /** {@link TaskDTO} -> {@link TaskBean} */
-@Mapper public interface Map_Task_DTO_Bean
+@Mapper
+public interface Map_Task_DTO_Bean
 {
 	Map_Task_DTO_Bean INSTANCE = Mappers.getMapper(Map_Task_DTO_Bean.class);
 
 	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
+	@Mapping(target = "preconditionCheckRelationalOperations", ignore = true) // ignore as it's not needed in DTO
 	@NonNull TaskBean map(@NonNull TaskDTO in, @NonNull @Context ReferenceCycleTracking context);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
@@ -113,12 +112,10 @@ import static java.util.Objects.requireNonNull;
 
 		if (isNull(group))
 		{
-			group =
-					new TaskGroupBean(
-							requireNonNull(in.taskGroup().id()), requireNonNull(in.taskGroup().version()), in.taskGroup().name());
+			group = new TaskGroupBean(in.taskGroup());
 			context.put(in.taskGroup(), group);
 		}
 
-		return new TaskBean(group, in.name());
+		return new TaskBean(group, in);
 	}
 }

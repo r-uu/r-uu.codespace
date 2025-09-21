@@ -1,9 +1,9 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add;
 
-import de.ruu.app.jeeeraaah.client.fx.task.edit.TaskEditor;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.edit.TaskEditor;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import lombok.Getter;
@@ -18,9 +18,9 @@ public class ActionAdd
 	public static class Context
 	{
 		private TreeView<TaskBean> treeView;
-		private TaskGroupBean      taskGroup;
-		private TaskEditor         taskEditor;
-		private TaskServiceClient  taskServiceClient;
+		private TaskGroupBean taskGroup;
+		private TaskEditor taskEditor;
+		private TaskServiceClient taskServiceClient;
 
 		public Context
 				(

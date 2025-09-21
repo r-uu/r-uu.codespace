@@ -3,7 +3,7 @@ package de.ruu.lib.jpa.core.criteria;
 import de.ruu.lib.jpa.core.criteria.Criteria.CriteriaQuery;
 
 /** Criterion used for configurating where clauses */
-public interface Criterion
+public interface Criterion<T>
 {
     /**
      * Generate part of SQL where clause with given criteria.
@@ -12,5 +12,5 @@ public interface Criterion
      * @param criteriaQuery current query
      * @return part of select clause
      */
-    public String toSqlString(Criteria criteria, CriteriaQuery criteriaQuery) ;
+    public String toSqlString(Criteria<T> criteria, CriteriaQuery criteriaQuery) ;
 }

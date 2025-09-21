@@ -6,6 +6,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import jakarta.persistence.EntityManager;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 @Singleton
@@ -17,5 +18,5 @@ class SimpleTypeRepository extends AbstractRepository<SimpleTypeEntity, Long>
 
 	@PostConstruct private void postConstruct() { log.debug("injected entity manager successfully: {}", entityManager != null); }
 
-	@Override protected EntityManager entityManager() { return entityManager; }
+	@Override protected @NonNull EntityManager entityManager() { return entityManager; }
 }

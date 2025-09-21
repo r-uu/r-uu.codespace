@@ -1,14 +1,14 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub;
 
-import de.ruu.app.jeeeraaah.client.fx.task.edit.TaskEditor;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.supersub.add.ActionAdd;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.supersub.add.ActionAdd.Context;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.supersub.add.ActionRemove;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskGroupServiceClient;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.edit.TaskEditor;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add.ActionAdd;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.supersub.add.ActionRemove;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskGroupServiceClient;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import jakarta.inject.Inject;
 import javafx.beans.property.ReadOnlyObjectProperty;
@@ -32,8 +32,8 @@ import static javafx.scene.control.Alert.AlertType.ERROR;
 class TaskHierarchySuperSubTasksController
 		extends TaskHierarchyControllerAbstract implements TaskHierarchySuperSubTasksService
 {
-	@Inject private TaskEditor             taskEditor;
-	@Inject private TaskServiceClient      taskServiceClient;
+	@Inject private TaskEditor taskEditor;
+	@Inject private TaskServiceClient taskServiceClient;
 	@Inject private TaskGroupServiceClient taskGroupServiceClient;
 
 	@Override @FXML protected void initialize()

@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.predecessor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyAbstract;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.TaskHierarchyAbstract;
 import jakarta.enterprise.context.Dependent;
 import lombok.NonNull;
 

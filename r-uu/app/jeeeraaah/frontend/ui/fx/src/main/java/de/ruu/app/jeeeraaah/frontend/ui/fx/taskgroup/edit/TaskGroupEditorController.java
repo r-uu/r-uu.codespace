@@ -1,6 +1,6 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.taskgroup.edit;
 
-import de.ruu.app.jeeeraaah.common.fx.TaskGroupFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

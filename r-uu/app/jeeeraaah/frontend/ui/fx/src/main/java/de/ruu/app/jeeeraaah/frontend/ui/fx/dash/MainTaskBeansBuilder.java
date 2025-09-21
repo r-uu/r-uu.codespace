@@ -1,14 +1,18 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.dash;
 
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.dto.TaskGroupLazy;
-import de.ruu.app.jeeeraaah.common.dto.TaskLazy;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
+import de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings;
+import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import jakarta.enterprise.context.ApplicationScoped;
 import lombok.NonNull;
 
 import java.util.Collections;
 import java.util.Set;
+
+import static de.ruu.app.jeeeraaah.common.api.mapping.Mappings.*;
 
 @ApplicationScoped
 class MainTaskBeansBuilder
@@ -23,7 +27,7 @@ class MainTaskBeansBuilder
 	 */
 	Set<TaskBean> build(@NonNull TaskGroupLazy groupLazy, @NonNull Set<TaskLazy> tasksLazy)
 	{
-		TaskGroupBean groupBean = groupLazy.toBean(tasksLazy);
+		TaskGroupBean groupBean = toBean(groupLazy, new ReferenceCycleTracking());
 		if (groupBean.mainTasks().isPresent()) return groupBean.mainTasks().get();
 		return Collections.emptySet();
 	}

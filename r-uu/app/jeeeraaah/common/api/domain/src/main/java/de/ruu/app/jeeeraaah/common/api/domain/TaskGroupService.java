@@ -26,6 +26,7 @@ public interface TaskGroupService<TG extends TaskGroup<?>>
 	void removeFromGroup(@NonNull Long idGroup, @NonNull Long idTask) throws Exception;
 
 	Optional<TaskGroupLazy> findGroupLazy(@NonNull Long id) throws Exception;
+	Optional<TaskGroupFlat> findGroupFlat(@NonNull Long id) throws Exception;
 
 	class TaskGroupNotFoundException extends RuntimeException
 	{

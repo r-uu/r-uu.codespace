@@ -6,7 +6,12 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
-	<name>${project.artifactId}</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<lombok.version>1.18.38</lombok.version>
+		<org.mapstruct.version>1.6.3</org.mapstruct.version>
+		<hibernate.version>6.6.4.Final</hibernate.version>
+	</properties>
 
 	<parent>
 		<groupId>r-uu</groupId>
@@ -61,27 +66,57 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
 				<configuration>
+					<source>24</source>
+					<target>24</target>
+					<generatedSourcesDirectory>${project.build.directory}/generated-sources/annotations</generatedSourcesDirectory>
 					<annotationProcessorPaths>
-						<!-- Lombok -->
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
 						</path>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
+							<version>0.2.0</version>
 						</path>
-						<!-- JPA Metamodel Generator -->
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
 						<path>
 							<groupId>org.hibernate.orm</groupId>
 							<artifactId>hibernate-jpamodelgen</artifactId>
+							<version>${hibernate.version}</version>
 						</path>
 					</annotationProcessorPaths>
 					<compilerArgs>
 						<arg>-Amapstruct.defaultComponentModel=cdi</arg>
+						<arg>-Aorg.hibernate.jpamodelgen.addGeneratedAnnotation=false</arg>
 					</compilerArgs>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources/annotations</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

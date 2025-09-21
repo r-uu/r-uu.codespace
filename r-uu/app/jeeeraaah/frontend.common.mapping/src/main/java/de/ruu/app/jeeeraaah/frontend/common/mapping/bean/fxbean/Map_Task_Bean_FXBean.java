@@ -1,9 +1,8 @@
 package de.ruu.app.jeeeraaah.frontend.common.mapping.bean.fxbean;
 
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
-import de.ruu.app.jeeeraaah.common.fx.TaskFXBean;
-import de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskGroupFXBean;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import lombok.NonNull;
 import org.mapstruct.AfterMapping;
@@ -17,6 +16,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.Set;
 
+import static de.ruu.app.jeeeraaah.frontend.common.mapping.Mappings.toFXBean;
 import static java.util.Objects.isNull;
 
 /** {@link TaskBean} -> {@link TaskBean} */
@@ -25,13 +25,13 @@ import static java.util.Objects.isNull;
 	Map_Task_Bean_FXBean INSTANCE = Mappers.getMapper(Map_Task_Bean_FXBean.class);
 
 	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
-	@NonNull
-	TaskFXBean map(@NonNull TaskBean in, @NonNull @Context ReferenceCycleTracking context);
+
+	de.ruu.app.jeeeraaah.frontend.ui.fx.model.TaskFXBean map(@NonNull TaskBean in, @NonNull @Context ReferenceCycleTracking context);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */
 	@BeforeMapping default void beforeMapping(
 			@NonNull                TaskBean               in,
-			@NonNull @MappingTarget TaskFXBean             out,
+			@NonNull @MappingTarget TaskFXBean out,
 			@NonNull @Context       ReferenceCycleTracking context)
 	{
 		// required arguments id, version and name are already set in constructor
@@ -50,7 +50,7 @@ import static java.util.Objects.isNull;
 			TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
 			if (isNull(relatedTaskMapped))
 					// start new mapping for related task
-					out.superTask(Mappings.toFXBean(relatedTask, context));
+					out.superTask(toFXBean(relatedTask, context));
 			else
 					// use already mapped related task
 					out.superTask(relatedTaskMapped);
@@ -65,7 +65,7 @@ import static java.util.Objects.isNull;
 				if (isNull(relatedTaskMapped))
 				{
 						// start new mapping for related task
-						out.addSubTask(Mappings.toFXBean(relatedTask, context));
+						out.addSubTask(toFXBean(relatedTask, context));
 				}
 				else
 						// use already mapped related task
@@ -81,7 +81,7 @@ import static java.util.Objects.isNull;
 				TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
 				if (isNull(relatedTaskMapped))
 						// start new mapping for related task
-						out.addPredecessor(Mappings.toFXBean(relatedTask, context));
+						out.addPredecessor(toFXBean(relatedTask, context));
 				else
 						// use already mapped related task
 						out.addPredecessor(relatedTaskMapped);
@@ -96,7 +96,7 @@ import static java.util.Objects.isNull;
 				TaskFXBean relatedTaskMapped = context.get(relatedTask, TaskFXBean.class);
 				if (isNull(relatedTaskMapped))
 						// start new mapping for related task
-						out.addSuccessor(Mappings.toFXBean(relatedTask, context));
+						out.addSuccessor(toFXBean(relatedTask, context));
 				else
 						// use already mapped related task
 						out.addSuccessor(relatedTaskMapped);
@@ -104,18 +104,14 @@ import static java.util.Objects.isNull;
 		}
 	}
 
-	/**
-	 * mapstruct object factory
-	 */
-	@ObjectFactory @NonNull default TaskFXBean create(
-			@NonNull          TaskBean                in,
-			@NonNull @Context ReferenceCycleTracking context)
+	/** mapstruct object factory */
+	@ObjectFactory @NonNull default TaskFXBean create(@NonNull TaskBean in, @NonNull @Context ReferenceCycleTracking context)
 	{
-		TaskGroupBean group = context.get(in.taskGroup(), TaskGroupBean.class);
+		TaskGroupFXBean group = context.get(in.taskGroup(), TaskGroupFXBean.class);
 
 		if (isNull(group))
 		{
-			group = new TaskGroupBean(in.taskGroup());
+			group = new TaskGroupFXBean(in.taskGroup());
 			context.put(in.taskGroup(), group);
 		}
 

@@ -1,9 +1,10 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
-import de.ruu.app.jeeeraaah.client.fx.task.view.hierarchy.successor.add.ActionAdd;
-import de.ruu.app.jeeeraaah.client.ws.rs.TaskServiceClient;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.TaskHierarchyControllerAbstract;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.hierarchy.successor.add.ActionAdd.Context;
+import de.ruu.app.jeeeraaah.frontend.ws.rs.TaskServiceClient;
 import de.ruu.lib.fx.control.dialog.AlertDialog;
 import jakarta.inject.Inject;
 import javafx.fxml.FXML;
@@ -71,7 +72,7 @@ class TaskHierarchySuccessorsController
 		}
 
 		new ActionAdd(
-				new ActionAdd.Context(
+				new Context(
 						selectedSuperSubTaskTreeItem,
 						selectedSuccessorTreeItem == null ? treeView().getRoot() : selectedSuccessorTreeItem,
 						taskServiceClient))

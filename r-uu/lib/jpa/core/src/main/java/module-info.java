@@ -9,4 +9,5 @@ module de.ruu.lib.jpa.core
 	requires jakarta.persistence;
 	requires java.sql;
 	requires static lombok;
+	requires java.desktop;
 }

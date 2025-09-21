@@ -12,11 +12,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
-import static java.util.Objects.nonNull;
 import static java.util.Objects.requireNonNull;
 
 /** Transfer object for task groups with the ids of their related tasks. */

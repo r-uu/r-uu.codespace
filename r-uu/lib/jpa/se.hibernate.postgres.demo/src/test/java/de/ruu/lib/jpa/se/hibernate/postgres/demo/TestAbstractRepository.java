@@ -46,7 +46,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 				{
 						String name = "schmottekk";
 						SimpleTypeEntity entity = new SimpleTypeEntity(name);
-						entity = repository.save(entity);
+						entity = repository.update(entity);
 						repository.entityManager().flush();
 				});
 	}
@@ -59,14 +59,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 		String name = "schmottekk";
 		SimpleTypeEntity entity = new SimpleTypeEntity(name);
-		entity = repository.save(entity);
+		entity = repository.update(entity);
 		assertThat(entity       , is(not(nullValue())));
 		assertThat(entity.id()  , is(not(nullValue())));
 		assertThat(entity.name(), is(name));
 
 		name = "äffchen";
 		entity.name(name);
-		entity = repository.save(entity);
+		entity = repository.update(entity);
 		assertThat(entity       , is(not(nullValue())));
 		assertThat(entity.id()  , is(not(nullValue())));
 		assertThat(entity.name(), is(name));

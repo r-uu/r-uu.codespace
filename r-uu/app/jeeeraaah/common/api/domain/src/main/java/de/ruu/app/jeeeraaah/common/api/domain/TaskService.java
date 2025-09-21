@@ -17,10 +17,11 @@ public interface TaskService<T extends Task<? extends TaskGroup<?>, ? extends Ta
 	// @NonNull T createAsPredecessorFor(@NonNull T task, @NonNull T prededessor) throws Exception
 	// @NonNull T createAsSuccessorFor  (@NonNull T task, @NonNull T successor  ) throws Exception
 
-	Set     <? extends T> findAll()                         throws Exception;
-	Optional<? extends T> findWithRelated(@NonNull Long id) throws Exception;
-
 	default Optional<? extends T> find(@NonNull Long id) throws Exception { return read(id); }
+
+	Set     <? extends T> findAll        (                      ) throws Exception;
+	Optional<? extends T> findWithRelated(@NonNull Long      id ) throws Exception;
+	Set     <? extends T> findTasks      (@NonNull Set<Long> ids) throws Exception;
 
 	void addSubTask    (@NonNull T task, @NonNull T subTask    ) throws Exception;
 	void addPredecessor(@NonNull T task, @NonNull T predecessor) throws Exception;

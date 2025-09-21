@@ -7,6 +7,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>r-uu.codespace.app.jeeeraaah.backend.api.ws.rs</artifactId>
 	<name>${project.artifactId}</name>
+	<packaging>war</packaging>
+
+<!--	<properties>-->
+<!--		<lombok.version>1.18.30</lombok.version>-->
+<!--		<mapstruct.version>1.5.5.Final</mapstruct.version>-->
+<!--		<maven.compiler.source>17</maven.compiler.source>-->
+<!--		<maven.compiler.target>17</maven.compiler.target>-->
+<!--		<maven.compiler.release>17</maven.compiler.release>-->
+<!--	</properties>-->
 
 	<parent>
 		<groupId>r-uu</groupId>
@@ -15,13 +24,40 @@
 	</parent>
 
 	<dependencies>
+		<!-- Jakarta EE Dependencies -->
+		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.json.bind</groupId>
+			<artifactId>jakarta.json.bind-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>jakarta.inject</groupId>
 			<artifactId>jakarta.inject-api</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>jakarta.json</groupId>
+			<artifactId>jakarta.json-api</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.ws.rs</groupId>
+			<artifactId>jakarta.ws.rs-api</artifactId>
+		</dependency>
+
+		<!-- MicroProfile Dependencies -->
+		<dependency>
+			<groupId>org.eclipse.microprofile.health</groupId>
+			<artifactId>microprofile-health-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.microprofile.metrics</groupId>
@@ -31,7 +67,36 @@
 			<groupId>org.eclipse.microprofile.openapi</groupId>
 			<artifactId>microprofile-openapi-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.microprofile.config</groupId>
+			<artifactId>microprofile-config-api</artifactId>
+		</dependency>
 
+		<!-- Internal Dependencies -->
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.ws.rs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.mapping</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.util</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
@@ -42,12 +107,125 @@
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
+			<artifactId>r-uu.codespace.lib.jpa.core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.frontend.api.client.ws.rs</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>ch.qos.logback</groupId>-->
+<!--			<artifactId>logback-classic</artifactId>-->
+<!--			<version>1.4.14</version>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.jboss.logmanager</groupId>-->
+<!--			<artifactId>jboss-logmanager</artifactId>-->
+<!--			<version>2.1.18.Final</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
+		</dependency>
+
+		<!-- Test Dependencies -->
+		<!-- https://mvnrepository.com/artifact/org.jboss.weld/weld-junit5 -->
+		<dependency>
+			<groupId>org.jboss.weld</groupId>
+			<artifactId>weld-junit5</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se-core</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<compilerArgs>
+						<arg>-parameters</arg>
+						<arg>-Xlint:all</arg>
+						<arg>-Amapstruct.defaultComponentModel=default</arg>
+						<!-- Add these JVM arguments for Java 24 compatibility -->
+						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+					</compilerArgs>
+					<useIncrementalCompilation>false</useIncrementalCompilation>
+					<!-- forceJavacCompilerUse is deprecated, using fork and compiler args instead -->
+					<fork>true</fork>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>io.openliberty.tools</groupId>-->
+<!--				<artifactId>liberty-maven-plugin</artifactId>-->
+<!--				<version>3.10.2</version>-->
+<!--				<configuration>-->
+<!--					<serverName>defaultServer</serverName>-->
+<!--					<looseApplication>true</looseApplication>-->
+<!--					<bootstrapProperties>-->
+<!--						<http.port>9080</http.port>-->
+<!--						<https.port>9443</https.port>-->
+<!--					</bootstrapProperties>-->
+<!--					<jvmOptions>-->
+<!--						<param>&#45;&#45;add-opens=java.base/java.lang=ALL-UNNAMED</param>-->
+<!--						<param>&#45;&#45;add-opens=java.base/java.util=ALL-UNNAMED</param>-->
+<!--						<param>&#45;&#45;add-opens=java.base/sun.misc=ALL-UNNAMED</param>-->
+<!--						<param>-Dorg.jboss.logging.provider=slf4j</param>-->
+<!--						<param>-Djava.util.logging.manager=org.jboss.logmanager.LogManager</param>-->
+<!--					</jvmOptions>-->
+<!--					<copyLibsDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources</copyLibsDirectory>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+		</plugins>
+	</build>
 
 </project>

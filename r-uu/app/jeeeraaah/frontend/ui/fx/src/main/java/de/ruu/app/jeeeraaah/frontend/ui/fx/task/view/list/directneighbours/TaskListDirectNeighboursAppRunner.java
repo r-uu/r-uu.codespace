@@ -1,16 +1,16 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours;
 
-import de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.TaskViewListDirectNeighboursServiceReadyEvent;
-import de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.TaskViewListDirectNeighboursServiceReadyEvent.TaskViewListDirectNeighboursServiceReadyEventDispatcher;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.TaskViewListDirectNeighboursServiceReadyEvent;
+import de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.TaskViewListDirectNeighboursServiceReadyEvent.TaskViewListDirectNeighboursServiceReadyEventDispatcher;
 import de.ruu.lib.fx.comp.FXCAppRunner;
 import jakarta.enterprise.inject.spi.CDI;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.function.Consumer;
 
-import static de.ruu.app.jeeeraaah.client.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.PREDECESSOR;
+import static de.ruu.app.jeeeraaah.frontend.ui.fx.task.view.list.directneighbours.TaskListDirectNeighboursService.NeighbourType.PREDECESSOR;
 
 /**
  * Java FX Component Application Runner {@link TaskListDirectNeighboursAppRunner}
@@ -45,7 +45,7 @@ class TaskListDirectNeighboursAppRunner extends FXCAppRunner
 			TaskListDirectNeighboursService service = e.source();
 
 			TaskGroupBean group        = new TaskGroupBean("group");
-			TaskBean      task         = new TaskBean     (group, "task");
+			TaskBean task         = new TaskBean     (group, "task");
 			TaskBean      predecessor1 = new TaskBean     (group, "predecessor 1");
 			TaskBean      predecessor2 = new TaskBean     (group, "predecessor 2");
 			TaskBean      predecessor3 = new TaskBean     (group, "predecessor 3");

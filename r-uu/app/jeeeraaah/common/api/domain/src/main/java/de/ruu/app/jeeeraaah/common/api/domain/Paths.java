@@ -20,6 +20,7 @@ public interface Paths
 	String BY_ID_WITH_TASKS                   = BY_ID + "/withTasks";
 	String BY_ID_LAZY                         = BY_ID + "/lazy";
 	String ALL_FLAT                           = "/allFlat";
+	String ALL_LAZY                           = "/allLazy";
 	String ADD_SUB                            = "/addSubTask";
 	String ADD_PREDECESSOR                    = "/addPredecessor";
 	String ADD_SUCCESSOR                      = "/addSuccessor";

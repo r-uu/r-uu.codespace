@@ -1,9 +1,9 @@
 package de.ruu.app.jeeeraaah.frontend.ui.fx.task.selector;
 
+import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
+import de.ruu.app.jeeeraaah.common.api.bean.TaskGroupBean;
 import de.ruu.app.jeeeraaah.frontend.ui.fx.task.TreeCellFactory;
 import de.ruu.app.jeeeraaah.frontend.ui.fx.task.TreeItemTaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskBean;
-import de.ruu.app.jeeeraaah.common.bean.TaskGroupBean;
 import de.ruu.lib.fx.comp.FXCController.DefaultFXCController;
 import de.ruu.lib.fx.control.autocomplete.textfield.AutoCompleteTextField;
 import de.ruu.lib.fx.control.autocomplete.textfield.AutoCompleteTextFieldBuilder;

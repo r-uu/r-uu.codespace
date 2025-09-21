@@ -4,37 +4,39 @@ import de.ruu.lib.jpa.core.criteria.Criteria;
 import de.ruu.lib.jpa.core.criteria.restriction.Restrictions;
 import de.ruu.lib.util.Reflection;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.NonUniqueResultException;
 import jakarta.persistence.Query;
-import jakarta.persistence.LockModeType;
-import jakarta.persistence.OptimisticLockException;
 import lombok.NonNull;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.Set;
+
+import static java.util.Objects.isNull;
 
 /**
  * Abstract implementation of generic DAO.
  * <p>
  * Note: It is intentional that there is no automatic transaction handling here.
  *
- * @param <I> entity's primary key, it has to be {@link Serializable}
- * @param <T> entity type, it implements at least {@code Entity2<I>}
+ * @param <ID> entity's primary key, it has to be {@link Serializable}
+ * @param <T>  entity type, it implements at least {@code Entity<ID>}
  * @see Entity
  *
  * @author r-uu
  */
-public abstract class AbstractRepository<T extends Entity<I>, I extends Serializable>
-		implements Repository<T, I>, AutoCloseable
+public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serializable>
+		implements Repository<T, ID>, AutoCloseable
 {
-	private final Class<Entity<I>> clazz;
+	private final Class<T> clazz;
 
 	/**
 	 * Determines value for {@link #clazz} from type arguments of implementing class by reflection. Also works for proxied
@@ -53,7 +55,7 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 
 			try
 			{
-				clazz = (Class<Entity<I>>) Class.forName(type.getTypeName());
+				clazz = (Class<T>) Class.forName(type.getTypeName());
 			}
 			catch (ClassNotFoundException e)
 			{
@@ -66,64 +68,45 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 		}
 	}
 
-	protected abstract EntityManager entityManager();
+	protected abstract @NonNull EntityManager entityManager();
 
-	@Override public Class<Entity<I>> entityClass() { return clazz; }
+	private @NonNull EntityManager entityManager = entityManager();
 
-	@SuppressWarnings(value = "unchecked")
-	@Override
-	public Optional<T> find(@NonNull I id) { return Optional.ofNullable((T) entityManager().find(clazz, id)); }
+	@Override public Class<T> entityClass() { return clazz; }
 
-	@SuppressWarnings(value = "unchecked")
-	@Override
-	public List<T> find(I... ids)
+	@Override public Optional<T>     find   (@NonNull     ID  id ) { return Optional.ofNullable(entityManager.find(clazz, id)); }
+	@Override public @NonNull Set<T> findAll(                    ) { return findByCriteria(Criteria.forClass(clazz)); }
+	@Override public @NonNull Set<T> find   (@NonNull Set<ID> ids) { return findByCriteria(Criteria.forClass(clazz).add(Restrictions.in(Entity.P_ID, ids))); }
+
+	@Override public @NonNull Set<T> findByNamedQuery(final String name, Object... params)
 	{
-		return findByCriteria(Criteria.forClass(clazz).add(Restrictions.in(Entity.P_ID, ids)));
+		Query query = entityManager.createNamedQuery(name);
+		for (int i = 0; i < params.length; i++) { query.setParameter(i + 1, params[i]); }
+		return new HashSet<T>(query.getResultList());
 	}
 
-	@SuppressWarnings(value = "unchecked")
-	@Override
-	public List<T> findAll() { return findByCriteria(Criteria.forClass(clazz)); }
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<T> findByNamedQuery(final String name, Object... params) {
-
-		Query query = entityManager().createNamedQuery(name);
-
-		for (int i = 0; i < params.length; i++)
-		{
-			query.setParameter(i + 1, params[i]);
-		}
-
-		return query.getResultList();
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override public List<T> findByNamedQueryAndNamedParams(final String name, final Map<String, ?> params)
+	@Override public @NonNull Set<T> findByNamedQueryAndNamedParams(final String name, final Map<String, ?> params)
 	{
-		Query query = entityManager().createNamedQuery(name);
-
+		Query query = entityManager.createNamedQuery(name);
 		params.forEach((key, value) -> query.setParameter(key, value));
-
-		return query.getResultList();
+		return new HashSet<T>(query.getResultList());
 	}
 
-	@Override public Long countAll()
+	@Override public long countAll()
 	{
 		return
-				entityManager()
+				entityManager
 						.createQuery("select count(*) from " + clazz.getSimpleName(), Long.class)
 						.getSingleResult();
 	}
 
 	@Override public boolean isDetached(final T object)
 	{
-		if (object.optionalId().isPresent())             // must not be transient
+		if (object.optionalId().isPresent())           // must not be transient
 		{
-			if (entityManager().contains(object) == false) // must not be managed now
+			if (entityManager.contains(object) == false) // must not be managed now
 			{
-				if (find(object.getId()) != null)            // must not be removed
+				if (find(object.getId()) != null)          // must not be removed
 				{
 					return true;
 				}
@@ -132,43 +115,61 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 		return false;
 	}
 
+	/** Inserts a new entity into the database. This method should only be used for brand-new entities. */
+	@Override public @NonNull T create(@NonNull T entity)
+	{
+		entityManager.persist(entity);
+		return entity;
+	}
+
+	@Override public @NonNull Set<T> create(@NonNull Set<T> entities)
+	{
+		entities.forEach(e -> entityManager.persist(e));
+		return entities;
+	}
+
+	/** Inserts multiple new entities into the database. All entities must be brand-new. */
+	public Set<T> createAll(@NonNull Set<T> entities)
+	{
+		entities.forEach(e -> entityManager.persist(e));
+		return entities;
+	}
+
 	/**
-	 * Saves the given object to the database. If the object has an ID, it will be merged; otherwise, it will be persisted.
-	 *
-	 * Deprecated: Prefer load-then-apply APIs: {@link #create(Entity)} for new entities and
-	 * {@link #update(Serializable, Short, Consumer)} for updates.
-	 *
-	 * @param object
-	 * @return the saved object, which may be a different instance than the one passed in
-	 * @throws IllegalArgumentException if the object is null or does not have a valid ID
-	 * @throws IllegalStateException if the entity manager is not open or the transaction is not active
-	 * @see EntityManager#persist(Object)
-	 * @see EntityManager#merge(Object)
+	 * Updates an existing entity.
+	 * - Throws EntityNotFoundException if the entity does not exist in the database.
+	 * - If the entity is already attached to the persistence context, no merge is needed.
+	 * - Otherwise, merge() is used to reattach and update the entity.
 	 */
-	@Deprecated
-	@Override public @NonNull T save(@NonNull T object)
+	@Override public @NonNull T update(@NonNull T entity) throws EntityNotFoundException
 	{
-		EntityManager entityManager = entityManager();
+		if (isNull(entityManager.find(clazz, entity.id())))
+				throw
+						new EntityNotFoundException(
+								"entity of type " + clazz.getSimpleName() + " with id " + entity.id() + " not found");
 
-		if (object.getId() != null) object = entityManager.merge(object);
-		else                                 entityManager.persist(object);
-
-		// no entityManager.flush() here, because it is not necessary
-		// and it may cause problems with optimistic locking in some cases
-
-		return object;
+		if (entityManager.contains(entity))
+				// Entity is already managed → changes will be tracked automatically
+				return entity;
+		else
+				// Detached entity → merge is required to reattach and update
+				return entityManager.merge(entity);
 	}
 
-	//	@SafeVarargs
-	@Override public void save(final T... entities)
+	/**
+	 * Updates multiple entities.
+	 * - For each entity, checks if it exists in the database.
+	 * - If not found, throws EntityNotFoundException.
+	 * - Uses merge() only when necessary (for detached entities).
+	 */
+	@Override public @NonNull Set<T> update(@NonNull Set<T> entities)
 	{
-		for (T entity : entities)
-		{
-			save(entity);
-		}
+		Set<T> result = new HashSet<>();
+		entities.forEach(e -> result.add(update(e)));
+		return result;
 	}
 
-	@Override public boolean delete(final I id)
+	@Override public boolean delete(final @NonNull ID id)
 	{
 		Optional<T> optional = find(id);
 
@@ -181,103 +182,21 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 		return false;
 	}
 
-	@Override public boolean delete(T entity)
+	@Override public boolean delete(@NonNull T entity)
 	{
-		entityManager().remove(entity);
+		entityManager.remove(entity);
 		return true;
 	}
 
-	@Override public void refresh(final T entity)
+	@Override public void refresh(final @NonNull T entity)
 	{
-		entityManager().refresh(entity);
+		entityManager.refresh(entity);
 	}
 
 	@Override public void flushAndClear()
 	{
-		entityManager().flush();
-		entityManager().clear();
-	}
-
-	//////////////////////////////
-	// Load-then-apply operations
-	//////////////////////////////
-
-	/**
-	 * Persist a brand-new entity. The entity MUST NOT have an id set.
-	 */
-	public @NonNull T create(@NonNull T transientEntity)
-	{
-		if (transientEntity.getId() != null)
-			throw new IllegalArgumentException("create() requires entity with id == null");
-		entityManager().persist(transientEntity);
-		return transientEntity;
-	}
-
-	/**
-	 * Load-then-apply update with optional optimistic-lock check.
-	 * Loads the managed entity by id, verifies expectedVersion if provided, applies mutator, and relies on JPA dirty checking.
-	 */
-	public @NonNull T update(@NonNull I id, Short expectedVersion, @NonNull Consumer<T> mutator)
-	{
-		final T managed = findOrThrow(id);
-
-		// Optionally use DB-level optimistic locking
-		// entityManager().lock(managed, LockModeType.OPTIMISTIC);
-
-		if (expectedVersion != null)
-		{
-			final Short current = managed.getVersion();
-			if (current == null || !current.equals(expectedVersion))
-				throw new OptimisticLockException(
-						String.format("Version mismatch for %s id=%s: expected=%s, actual=%s",
-								entityClass().getSimpleName(), id, expectedVersion, current));
-		}
-
-		mutator.accept(managed);
-		return managed;
-	}
-
-	/**
-	 * Same as {@link #update(Serializable, Short, Consumer)} but returns a mapped value.
-	 */
-	public <R> R updateAndMap(@NonNull I id, Short expectedVersion, @NonNull Function<T, R> work)
-	{
-		final T managed = update(id, expectedVersion, t -> {});
-		return work.apply(managed);
-	}
-
-	/**
-	 * Delete entity after optional version check using load-then-delete semantics.
-	 */
-	public boolean deleteIfVersionMatches(@NonNull I id, Short expectedVersion)
-	{
-		final T managed = findOrThrow(id);
-		if (expectedVersion != null)
-		{
-			final Short current = managed.getVersion();
-			if (current == null || !current.equals(expectedVersion))
-				throw new OptimisticLockException(
-						String.format("Version mismatch for delete of %s id=%s: expected=%s, actual=%s",
-								entityClass().getSimpleName(), id, expectedVersion, current));
-		}
-		entityManager().remove(managed);
-		return true;
-	}
-
-	/** Find by id or throw an IllegalArgumentException if not found. */
-	public @NonNull T findOrThrow(@NonNull I id)
-	{
-		return find(id).orElseThrow(() ->
-				new IllegalArgumentException(
-						String.format("%s id=%s not found", entityClass().getSimpleName(), id)));
-	}
-
-	/** Optionally force DB-level optimistic lock on an already-loaded entity. */
-	public @NonNull T loadForUpdate(@NonNull I id)
-	{
-		final T managed = findOrThrow(id);
-		entityManager().lock(managed, LockModeType.OPTIMISTIC);
-		return managed;
+		entityManager.flush();
+		entityManager.clear();
 	}
 
 	/**
@@ -287,9 +206,10 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	 * @return list of founded objects
 	 * @see Query#getResultList()
 	 */
-	protected List findByCriteria(Criteria criteria)
+	protected Set<T> findByCriteria(Criteria<T> criteria)
 	{
-		return criteria.list(entityManager());
+		List<T> list = criteria.list(entityManager);
+		return new HashSet<>(list);
 	}
 
 	/**
@@ -302,10 +222,8 @@ public abstract class AbstractRepository<T extends Entity<I>, I extends Serializ
 	 * @throws NonUniqueResultException - if more than one result
 	 * @see Query#getSingleResult()
 	 */
-	protected Object findUniqueByCriteria(Criteria criteria) throws NonUniqueResultException, NoResultException
-	{
-		return criteria.uniqueResult(entityManager());
-	}
+	protected Object findUniqueByCriteria(Criteria<T> criteria)
+			throws NonUniqueResultException, NoResultException { return criteria.uniqueResult(entityManager()); }
 
 	@Override public void close() throws Exception
 	{
