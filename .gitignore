@@ -97,3 +97,44 @@ $RECYCLE.BIN/
 # Ignore build outputs
 /target/
 *.class
+
+# Liberty server files
+**/liberty/
+**/wlp/
+**/defaultServer/
+**/servers/*/logs/
+**/servers/*/workarea/
+**/servers/*/apps/
+**/servers/*/dropins/
+**/servers/*/logs/
+**/servers/*/resources/
+**/servers/*/workarea/
+
+# IDE specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Log files
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temp files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
