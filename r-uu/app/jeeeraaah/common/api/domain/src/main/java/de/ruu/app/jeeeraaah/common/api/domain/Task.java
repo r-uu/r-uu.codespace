@@ -18,8 +18,7 @@ public interface Task<TG   extends TaskGroup<? extends Task<TG, ?>>,
                       SELF extends Task<TG, SELF>>
 		extends TaskData<SELF>
 {
-	@NonNull TG taskGroup();
-
+	@NonNull TG   taskGroup();
 	@NonNull SELF taskGroup  (@NonNull TG taskGroup);
 
 	/**

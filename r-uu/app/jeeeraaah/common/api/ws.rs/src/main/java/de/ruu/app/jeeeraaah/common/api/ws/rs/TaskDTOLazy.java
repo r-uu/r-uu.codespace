@@ -55,6 +55,12 @@ public class TaskDTOLazy implements TaskLazy
 		this.name        = name;
 	}
 
+	@Override public @NonNull TaskLazy name(@NonNull String name)
+	{
+		this.name = name;
+		return this;
+	}
+
 	@Override public @NonNull TaskLazy description(@Nullable String description)
 	{
 		this.description = Optional.ofNullable(description);
@@ -67,13 +73,13 @@ public class TaskDTOLazy implements TaskLazy
 		return this;
 	}
 
-	@Override	public @NonNull TaskLazy end(@Nullable LocalDate finishEstimated)
+	@Override public @NonNull TaskLazy end(@Nullable LocalDate finishEstimated)
 	{
 		this.end = Optional.ofNullable(finishEstimated);
 		return this;
 	}
 
-	@Override	public @NonNull TaskLazy closed(@NonNull Boolean closed)
+	@Override public @NonNull TaskLazy closed(@NonNull Boolean closed)
 	{
 		this.closed = closed;
 		return this;
@@ -97,6 +103,56 @@ public class TaskDTOLazy implements TaskLazy
 	public           void      setStart      (@Nullable LocalDate start)    {   this.start       = Optional.ofNullable(start);       }
 	public Optional<LocalDate> getEnd()                                     { return end;                                            }
 	public           void      setEnd        (@Nullable LocalDate end)      {   this.end         = Optional.ofNullable(end);         }
+
+	/**
+	 * @return primary key, may be {@code null}, {@code null} indicates that entity was not (yet) persisted.
+	 */
+	@Nullable
+	@Override
+	public Long getId()
+	{
+		return TaskLazy.super.getId();
+	}
+
+	/**
+	 * @return version    , may be {@code null}, {@code null} indicates that entity was not (yet) persisted.
+	 */
+	@Nullable
+	@Override
+	public Short getVersion()
+	{
+		return TaskLazy.super.getVersion();
+	}
+
+	/**
+	 * @return optional primary key, {@link Optional#empty()} indicates that entity was not (yet) persisted.
+	 */
+	@Override
+	public @NonNull Optional<Long> optionalId()
+	{
+		return TaskLazy.super.optionalId();
+	}
+
+	/**
+	 * @return optional version,     {@link Optional#empty()} indicates that entity was not (yet) persisted.
+	 */
+	@Override
+	public @NonNull Optional<Short> optionalVersion()
+	{
+		return TaskLazy.super.optionalVersion();
+	}
+
+	@Override
+	public EntityInfo entityInfo()
+	{
+		return TaskLazy.super.entityInfo();
+	}
+
+	@Override
+	public boolean isPersisted()
+	{
+		return TaskLazy.super.isPersisted();
+	}
 
 	//////////////////////
 	// mapstruct callbacks

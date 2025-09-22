@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.app.jeeeraaah.common.api.domain=_
+--add-reads
+de.ruu.app.jeeeraaah.common.api.domain=ALL-UNNAMED

@@ -3,12 +3,14 @@ package de.ruu.app.jeeeraaah.common.api.ws.rs;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
+import de.ruu.lib.util.Strings;
 import jakarta.annotation.Nullable;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
@@ -36,8 +38,8 @@ public class TaskGroupDTOFlat implements TaskGroupFlat
 		this();
 		id          = requireNonNull(entity.id());
 		version     = requireNonNull(entity.version());
-		name        = entity.name();
 		description = entity.description().orElse("");
+		name(entity.name());
 	}
 
 	@Override public boolean equals(Object o)
@@ -51,4 +53,19 @@ public class TaskGroupDTOFlat implements TaskGroupFlat
 	}
 
 	@Override public int hashCode() { return id != null ? id.hashCode() : jsonId.hashCode(); }
+
+	@Override public @NonNull TaskGroupFlat name(@NonNull String name)
+	{
+		if (Strings.isEmptyOrBlank(name)) throw new IllegalArgumentException("name must not be empty nor blank");
+		this.name = name;
+		return this;
+	}
+
+	@Override public Optional<String> description() { return Optional.ofNullable(description); }
+
+	@Override public @NonNull TaskGroupFlat description(String description)
+	{
+		this.description = description;
+		return this;
+	}
 }

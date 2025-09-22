@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.jpa.se.hibernate=_
+--add-reads
+de.ruu.lib.jpa.se.hibernate=ALL-UNNAMED

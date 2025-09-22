@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.gen.java.fx.comp=_
+--add-reads
+de.ruu.lib.gen.java.fx.comp=ALL-UNNAMED
