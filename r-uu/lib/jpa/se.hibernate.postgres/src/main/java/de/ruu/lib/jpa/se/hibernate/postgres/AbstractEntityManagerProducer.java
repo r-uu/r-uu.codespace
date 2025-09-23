@@ -69,11 +69,11 @@ public abstract class AbstractEntityManagerProducer
 				PersistenceUnitProperties
 						.builder()
 //								.dialect(PostgreSQLDialect.class)
-								.formatSQL(true)
-								.hbm2ddlAuto(CREATE)
-								.jdbcDriver(org.postgresql.Driver.class)
-								.jdbcURL(jdbcURL.asString())
-								.showSQL(true)
+						.formatSQL(true)
+						.hbm2ddlAuto(CREATE)
+						.jdbcDriver(org.postgresql.Driver.class)
+						.jdbcURL(jdbcURL.asString())
+						.showSQL(true)
 						.build();
 
 		EntityManagerFactoryProducer factoryProducer = new EntityManagerFactoryProducer(persistenceUnitInfo, hibernateProperties);

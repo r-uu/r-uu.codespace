@@ -13,7 +13,6 @@ import lombok.NonNull;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -70,24 +69,22 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 
 	protected abstract @NonNull EntityManager entityManager();
 
-	private @NonNull EntityManager entityManager = entityManager();
-
 	@Override public Class<T> entityClass() { return clazz; }
 
-	@Override public Optional<T>     find   (@NonNull     ID  id ) { return Optional.ofNullable(entityManager.find(clazz, id)); }
+	@Override public Optional<T>     find   (@NonNull     ID  id ) { return Optional.ofNullable(entityManager().find(clazz, id)); }
 	@Override public @NonNull Set<T> findAll(                    ) { return findByCriteria(Criteria.forClass(clazz)); }
 	@Override public @NonNull Set<T> find   (@NonNull Set<ID> ids) { return findByCriteria(Criteria.forClass(clazz).add(Restrictions.in(Entity.P_ID, ids))); }
 
 	@Override public @NonNull Set<T> findByNamedQuery(final String name, Object... params)
 	{
-		Query query = entityManager.createNamedQuery(name);
+		Query query = entityManager().createNamedQuery(name);
 		for (int i = 0; i < params.length; i++) { query.setParameter(i + 1, params[i]); }
 		return new HashSet<T>(query.getResultList());
 	}
 
 	@Override public @NonNull Set<T> findByNamedQueryAndNamedParams(final String name, final Map<String, ?> params)
 	{
-		Query query = entityManager.createNamedQuery(name);
+		Query query = entityManager().createNamedQuery(name);
 		params.forEach((key, value) -> query.setParameter(key, value));
 		return new HashSet<T>(query.getResultList());
 	}
@@ -95,16 +92,16 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 	@Override public long countAll()
 	{
 		return
-				entityManager
-						.createQuery("select count(*) from " + clazz.getSimpleName(), Long.class)
-						.getSingleResult();
+				entityManager()
+					.createQuery("select count(*) from " + clazz.getSimpleName(), Long.class)
+					.getSingleResult();
 	}
 
 	@Override public boolean isDetached(final T object)
 	{
 		if (object.optionalId().isPresent())           // must not be transient
 		{
-			if (entityManager.contains(object) == false) // must not be managed now
+			if (entityManager().contains(object) == false) // must not be managed now
 			{
 				if (find(object.getId()) != null)          // must not be removed
 				{
@@ -118,20 +115,20 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 	/** Inserts a new entity into the database. This method should only be used for brand-new entities. */
 	@Override public @NonNull T create(@NonNull T entity)
 	{
-		entityManager.persist(entity);
+		entityManager().persist(entity);
 		return entity;
 	}
 
 	@Override public @NonNull Set<T> create(@NonNull Set<T> entities)
 	{
-		entities.forEach(e -> entityManager.persist(e));
+		entities.forEach(e -> entityManager().persist(e));
 		return entities;
 	}
 
 	/** Inserts multiple new entities into the database. All entities must be brand-new. */
 	public Set<T> createAll(@NonNull Set<T> entities)
 	{
-		entities.forEach(e -> entityManager.persist(e));
+		entities.forEach(e -> entityManager().persist(e));
 		return entities;
 	}
 
@@ -143,17 +140,17 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 	 */
 	@Override public @NonNull T update(@NonNull T entity) throws EntityNotFoundException
 	{
-		if (isNull(entityManager.find(clazz, entity.id())))
+		if (isNull(entityManager().find(clazz, entity.id())))
 				throw
 						new EntityNotFoundException(
 								"entity of type " + clazz.getSimpleName() + " with id " + entity.id() + " not found");
 
-		if (entityManager.contains(entity))
+		if (entityManager().contains(entity))
 				// Entity is already managed → changes will be tracked automatically
 				return entity;
 		else
 				// Detached entity → merge is required to reattach and update
-				return entityManager.merge(entity);
+				return entityManager().merge(entity);
 	}
 
 	/**
@@ -184,19 +181,19 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 
 	@Override public boolean delete(@NonNull T entity)
 	{
-		entityManager.remove(entity);
+		entityManager().remove(entity);
 		return true;
 	}
 
 	@Override public void refresh(final @NonNull T entity)
 	{
-		entityManager.refresh(entity);
+		entityManager().refresh(entity);
 	}
 
 	@Override public void flushAndClear()
 	{
-		entityManager.flush();
-		entityManager.clear();
+		entityManager().flush();
+		entityManager().clear();
 	}
 
 	/**
@@ -208,7 +205,7 @@ public abstract class AbstractRepository<T extends Entity<ID>, ID extends Serial
 	 */
 	protected Set<T> findByCriteria(Criteria<T> criteria)
 	{
-		List<T> list = criteria.list(entityManager);
+		List<T> list = criteria.list(entityManager());
 		return new HashSet<>(list);
 	}
 

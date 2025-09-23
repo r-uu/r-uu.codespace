@@ -21,13 +21,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @DisabledOnServerNotListening(propertyNameHost = "database.host", propertyNamePort = "database.port")
 @Slf4j class TestAbstractRepository
 {
-	/** bootstrap CDI in Java SE with {@link TransactionalInterceptorCDI} */
+	/** bootstrap CDI in Java SE with {@code TransactionalInterceptorCDI} */
 	@BeforeAll static void beforeAll()
 	{
 		CDIContainer.bootstrap(
 				TestAbstractRepository.class.getClassLoader(),
-//				List.of(TransactionalInterceptorCDI.class),
-				List.of(CDIExtension.class));
+				List.of(CDIExtension.class, EntityManagerProducer.class)); // explicitly register EntityManagerProducer
 		log.debug("cdi bootstrapped successfully");
 	}
 
@@ -44,10 +43,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 		Exception exception =
 				assertThrows(TransactionRequiredException.class, () ->
 				{
-						String name = "schmottekk";
-						SimpleTypeEntity entity = new SimpleTypeEntity(name);
-						entity = repository.update(entity);
-						repository.entityManager().flush();
+					String name = "schmottekk";
+					SimpleTypeEntity entity = new SimpleTypeEntity(name);
+					entity = repository.create(entity);
+					repository.entityManager().flush();
 				});
 	}
 
@@ -59,14 +58,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 		String name = "schmottekk";
 		SimpleTypeEntity entity = new SimpleTypeEntity(name);
-		entity = repository.update(entity);
+		entity = repository.create(entity);
 		assertThat(entity       , is(not(nullValue())));
 		assertThat(entity.id()  , is(not(nullValue())));
 		assertThat(entity.name(), is(name));
 
 		name = "äffchen";
 		entity.name(name);
-		entity = repository.update(entity);
+		entity = repository.create(entity);
 		assertThat(entity       , is(not(nullValue())));
 		assertThat(entity.id()  , is(not(nullValue())));
 		assertThat(entity.name(), is(name));

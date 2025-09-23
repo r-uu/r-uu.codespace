@@ -16,8 +16,8 @@ class SimpleTypeServiceJPA implements SimpleTypeService
 
 	@PostConstruct private void postConstruct() { log.debug("injected repository: {}", repository); }
 
-	@Override public SimpleTypeEntity           save  (SimpleTypeEntity entity) { return repository.update(entity); }
-	@Override public SimpleTypeEntity           update(SimpleTypeEntity entity) { return repository.update(entity); }
+	@Override public SimpleTypeEntity           save  (SimpleTypeEntity entity) { return repository.create(entity); }
+	@Override public SimpleTypeEntity           update(SimpleTypeEntity entity) { return repository.create(entity); }
 	@Override public Optional<SimpleTypeEntity> find  (Long             id)     { return repository.find  (id);     }
 	@Override public void                       delete(Long             id)     {        repository.delete(id);     }
 }

@@ -12,7 +12,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Table(schema = "lib_test", name = "simple_type")
 @Getter
 @Accessors(fluent = true) // generate fluent style getters but also implement java bean style getters
-                          // to comply to java bean conventions
+// to comply to java bean conventions
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor(access = PROTECTED) // required by jpa
 class SimpleTypeEntity extends AbstractEntity<SimpleTypeDTO> implements SimpleType

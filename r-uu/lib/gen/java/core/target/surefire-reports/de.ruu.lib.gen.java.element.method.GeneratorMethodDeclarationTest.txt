@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.ruu.lib.gen.java.element.method.GeneratorMethodDeclarationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in de.ruu.lib.gen.java.element.method.GeneratorMethodDeclarationTest

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.gen.java.fx.bean.demo.FXBeanGeneratorTest" time="1.054" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\target\classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit\target\r-uu.codespace.lib.archunit-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\util\target\r-uu.codespace.lib.util-0.0.1.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\4.0.0\jakarta.ws.rs-api-4.0.0.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\com\tngtech\archunit\archunit\1.4.1\archunit-1.4.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\core\target\r-uu.codespace.lib.gen.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\eclipse\microprofile\config\microprofile-config-api\3.0.2\microprofile-config-api-3.0.2.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\core\target\r-uu.codespace.lib.gen.java.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-controls\24.0.2\javafx-controls-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-controls\24.0.2\javafx-controls-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-graphics\24.0.2\javafx-graphics-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-graphics\24.0.2\javafx-graphics-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-base\24.0.2\javafx-base-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-base\24.0.2\javafx-base-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-fxml\24.0.2\javafx-fxml-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-fxml\24.0.2\javafx-fxml-24.0.2-win.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire7172669680217832527\surefirebooter-20250923191952077_54.jar C:\Users\r-uu\AppData\Local\Temp\surefire7172669680217832527 2025-09-23T19-18-50_638-jvmRun1 surefire-20250923191952077_52tmp surefire_9-20250923191952077_53tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\target\classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit\target\r-uu.codespace.lib.archunit-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\util\target\r-uu.codespace.lib.util-0.0.1.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\4.0.0\jakarta.ws.rs-api-4.0.0.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\com\tngtech\archunit\archunit\1.4.1\archunit-1.4.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\core\target\r-uu.codespace.lib.gen.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\eclipse\microprofile\config\microprofile-config-api\3.0.2\microprofile-config-api-3.0.2.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\core\target\r-uu.codespace.lib.gen.java.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-controls\24.0.2\javafx-controls-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-controls\24.0.2\javafx-controls-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-graphics\24.0.2\javafx-graphics-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-graphics\24.0.2\javafx-graphics-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-base\24.0.2\javafx-base-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-base\24.0.2\javafx-base-24.0.2-win.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-fxml\24.0.2\javafx-fxml-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-fxml\24.0.2\javafx-fxml-24.0.2-win.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\r-uu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="c:\software\develop\java\jdk"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="jdk.internal.vm.ci.enabled" value="true"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire7172669680217832527\surefirebooter-20250923191952077_54.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24.0.2+11-jvmci-b01"/>
+    <property name="user.name" value="r-uu"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Oracle GraalVM 24.0.2+11.1"/>
+    <property name="localRepository" value="C:\Users\r-uu\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\r-uu\AppData\Local\Temp\"/>
+    <property name="java.version" value="24.0.2"/>
+    <property name="user.dir" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24.0.2+11-jvmci-b01"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="test" classname="de.ruu.lib.gen.java.fx.bean.demo.FXBeanGeneratorTest" time="1.037">
+    <system-out><![CDATA[19:19:52.947 INFO  com.tngtech.archunit.core.PluginLoader.get(68) - Detected Java version 24.0.2
+19:19:52.952 DEBUG com.tngtech.archunit.core.PluginLoader.get(73) - Current Java version is compatible to JAVA_9 => Loading Plugin com.tngtech.archunit.core.importer.ModuleImportPlugin
+19:19:52.965 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on sun.boot.class.path: []
+19:19:52.971 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on java.class.path: [file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/fx/bean/target/test-classes/, file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/fx/bean/target/classes/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/r-uu.codespace.lib.archunit-0.0.1.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/4.0.0/jakarta.ws.rs-api-4.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/com/tngtech/archunit/archunit/1.4.1/archunit-1.4.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.24.1/log4j-slf4j2-impl-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/core/target/r-uu.codespace.lib.gen.core-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.0.2/microprofile-config-api-3.0.2.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/core/target/r-uu.codespace.lib.gen.java.core-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-controls/24.0.2/javafx-controls-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-controls/24.0.2/javafx-controls-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-graphics/24.0.2/javafx-graphics-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-graphics/24.0.2/javafx-graphics-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-base/24.0.2/javafx-base-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-base/24.0.2/javafx-base-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-fxml/24.0.2/javafx-fxml-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-fxml/24.0.2/javafx-fxml-24.0.2-win.jar!/]
+19:19:53.208 DEBUG com.tngtech.archunit.ArchConfiguration.readProperties(89) - No configuration found in classpath at archunit.properties => Using default configuration
+19:19:53.233 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/java/fx/bean/demo/FXBeanGeneratorTest$FXModelDemo'
+19:19:53.299 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/BigDecimal'
+19:19:53.334 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/java/fx/bean/FXProperty'
+19:19:53.337 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/List'
+19:19:53.344 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/String'
+19:19:53.356 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/java/fx/bean/demo/FXBeanGeneratorTest'
+19:19:53.357 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/SafeVarargs'
+19:19:53.358 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/IntrinsicCandidate'
+19:19:53.359 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/ForceInline'
+19:19:53.359 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CharSequence'
+19:19:53.359 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/Stable'
+19:19:53.361 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Deprecated'
+19:19:53.361 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Target'
+19:19:53.361 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/ElementType'
+19:19:53.362 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/Serializable'
+19:19:53.364 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/Test'
+19:19:53.364 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/Constable'
+19:19:53.365 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ConstantDesc'
+19:19:53.365 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Annotation'
+19:19:53.366 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Comparable'
+19:19:53.367 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Object'
+19:19:53.367 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Number'
+19:19:53.368 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/SequencedCollection'
+19:19:53.369 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Collection'
+19:19:53.370 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API'
+19:19:53.373 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Retention'
+19:19:53.373 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API$Status'
+19:19:53.375 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum'
+19:19:53.376 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Documented'
+19:19:53.377 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/platform/commons/annotation/Testable'
+19:19:53.378 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/RetentionPolicy'
+19:19:53.378 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Inherited'
+19:19:53.378 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Iterable'
+19:19:53.379 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum$EnumDesc'
+19:19:53.379 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DynamicConstantDesc'
+19:19:53.395 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/GeneratorException'
+19:19:53.396 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/IOException'
+19:19:53.400 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/IntStream'
+19:19:53.406 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamException'
+19:19:53.407 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectInputStream'
+19:19:53.409 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ClassNotFoundException'
+19:19:53.410 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Class'
+19:19:53.417 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Optional'
+19:19:53.419 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CloneNotSupportedException'
+19:19:53.421 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/invoke/MethodHandles$Lookup'
+19:19:53.423 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ReflectiveOperationException'
+19:19:53.424 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ClassDesc'
+19:19:53.425 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Spliterator'
+19:19:53.426 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Iterator'
+19:19:53.426 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Consumer'
+19:19:53.430 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/InterruptedException'
+19:19:53.431 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Throwable'
+19:19:53.436 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamField'
+19:19:53.439 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Comparator'
+19:19:53.442 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/UnsupportedEncodingException'
+19:19:53.444 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/Charset'
+19:19:53.445 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/Stream'
+19:19:53.449 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Locale'
+19:19:53.454 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharsetDecoder'
+19:19:53.456 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharacterCodingException'
+19:19:53.457 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Void'
+19:19:53.458 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/AbstractStringBuilder'
+19:19:53.459 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuffer'
+19:19:53.463 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Function'
+19:19:53.464 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/foreign/MemorySegment'
+19:19:53.468 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuilder'
+19:19:53.474 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DirectMethodHandleDesc'
+19:19:53.476 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/BigInteger'
+19:19:53.486 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/MathContext'
+19:19:53.489 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/MutableBigInteger'
+19:19:53.505 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/RoundingMode'
+19:19:53.508 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectOutputStream'
+19:19:53.512 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Predicate'
+19:19:53.513 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/IntFunction'
+19:19:53.514 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/ListIterator'
+19:19:53.515 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/UnaryOperator'
+19:19:53.533 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on sun.boot.class.path: []
+19:19:53.534 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on java.class.path: [file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/fx/bean/target/test-classes/, file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/fx/bean/target/classes/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/r-uu.codespace.lib.archunit-0.0.1.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/4.0.0/jakarta.ws.rs-api-4.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/com/tngtech/archunit/archunit/1.4.1/archunit-1.4.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.24.1/log4j-slf4j2-impl-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/core/target/r-uu.codespace.lib.gen.core-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.0.2/microprofile-config-api-3.0.2.jar!/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/gen/java/core/target/r-uu.codespace.lib.gen.java.core-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-controls/24.0.2/javafx-controls-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-controls/24.0.2/javafx-controls-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-graphics/24.0.2/javafx-graphics-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-graphics/24.0.2/javafx-graphics-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-base/24.0.2/javafx-base-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-base/24.0.2/javafx-base-24.0.2-win.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-fxml/24.0.2/javafx-fxml-24.0.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/openjfx/javafx-fxml/24.0.2/javafx-fxml-24.0.2-win.jar!/]
+19:19:53.547 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/java/fx/bean/demo/FXBeanGeneratorTest$FXModelDemoDTO'
+19:19:53.550 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/BigDecimal'
+19:19:53.554 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/List'
+19:19:53.556 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'lombok/Generated'
+19:19:53.557 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Object'
+19:19:53.558 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/String'
+19:19:53.560 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/java/fx/bean/demo/FXBeanGeneratorTest'
+19:19:53.560 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/SafeVarargs'
+19:19:53.560 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/IntrinsicCandidate'
+19:19:53.560 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/ForceInline'
+19:19:53.561 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CharSequence'
+19:19:53.561 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/Stable'
+19:19:53.562 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Deprecated'
+19:19:53.562 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Target'
+19:19:53.562 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/ElementType'
+19:19:53.562 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Retention'
+19:19:53.563 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/Serializable'
+19:19:53.565 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/Test'
+19:19:53.565 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/Constable'
+19:19:53.565 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ConstantDesc'
+19:19:53.566 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Annotation'
+19:19:53.566 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Comparable'
+19:19:53.567 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Number'
+19:19:53.567 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/SequencedCollection'
+19:19:53.567 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/RetentionPolicy'
+19:19:53.568 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Collection'
+19:19:53.570 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API'
+19:19:53.571 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API$Status'
+19:19:53.571 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum'
+19:19:53.572 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Documented'
+19:19:53.572 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/platform/commons/annotation/Testable'
+19:19:53.572 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Inherited'
+19:19:53.573 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Iterable'
+19:19:53.573 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum$EnumDesc'
+19:19:53.573 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DynamicConstantDesc'
+19:19:53.575 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/gen/GeneratorException'
+19:19:53.575 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/IOException'
+19:19:53.575 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/IntStream'
+19:19:53.576 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Class'
+19:19:53.578 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Optional'
+19:19:53.580 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamException'
+19:19:53.580 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectInputStream'
+19:19:53.580 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ClassNotFoundException'
+19:19:53.582 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CloneNotSupportedException'
+19:19:53.583 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/invoke/MethodHandles$Lookup'
+19:19:53.587 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ReflectiveOperationException'
+19:19:53.587 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ClassDesc'
+19:19:53.590 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Iterator'
+19:19:53.590 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Consumer'
+19:19:53.591 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Spliterator'
+19:19:53.592 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/InterruptedException'
+19:19:53.592 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Throwable'
+19:19:53.593 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamField'
+19:19:53.594 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Comparator'
+19:19:53.595 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/Charset'
+19:19:53.595 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharacterCodingException'
+19:19:53.595 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/foreign/MemorySegment'
+19:19:53.596 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/AbstractStringBuilder'
+19:19:53.597 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuffer'
+19:19:53.597 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/Stream'
+19:19:53.599 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharsetDecoder'
+19:19:53.599 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Locale'
+19:19:53.601 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/UnsupportedEncodingException'
+19:19:53.601 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Function'
+19:19:53.601 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Void'
+19:19:53.602 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuilder'
+19:19:53.604 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DirectMethodHandleDesc'
+19:19:53.605 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/BigInteger'
+19:19:53.609 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/MathContext'
+19:19:53.610 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/RoundingMode'
+19:19:53.611 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/math/MutableBigInteger'
+19:19:53.612 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectOutputStream'
+19:19:53.614 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/IntFunction'
+19:19:53.614 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Predicate'
+19:19:53.615 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/ListIterator'
+19:19:53.615 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/UnaryOperator'
+19:19:53.664 DEBUG de.ruu.lib.gen.java.CompilationUnitFileWriter$CompilationUnitFileWriterAbstract.write(75) - wrote C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\.\src\gen\java\de\ruu\lib\gen\java\fx\bean\demo\FXBean.java
+]]></system-out>
+  </testcase>
+</testsuite>

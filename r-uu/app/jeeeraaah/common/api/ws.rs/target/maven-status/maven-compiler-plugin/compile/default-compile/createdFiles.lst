@@ -1,4 +1,7 @@
+de\ruu\app\jeeeraaah\common\api\ws\rs\TaskGroupDTO.class
 de\ruu\app\jeeeraaah\common\api\ws\rs\TaskDTO.class
+module-info.class
+de\ruu\app\jeeeraaah\common\api\ws\rs\TaskGroupDTOLazy.class
 de\ruu\app\jeeeraaah\common\api\ws\rs\TaskDTOLazy.class
 de\ruu\app\jeeeraaah\common\api\ws\rs\TaskGroupDTOFlat.class
 de\ruu\app\jeeeraaah\common\api\ws\rs\DTOFactory.class

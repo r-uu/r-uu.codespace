@@ -12,8 +12,19 @@ import lombok.extern.slf4j.Slf4j;
  *
  * IMPORTANT
  * <br>
- * DO NOT FORGET TO MENTION THIS <code>@Interceptor</code> TYPE IN <code>beans.xml</code>!!!
- * <br>
+ * DO NOT FORGET TO MENTION THIS <code>@Interceptor</code> TYPE IN <code>beans.xml</code>, e. g.:
+ * <pre>
+ * <beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
+ *        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ *        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd"
+ *        bean-discovery-mode="all">
+ *
+ * 	<interceptors>
+ * 		<class>de.ruu.lib.jpa.se.hibernate.postgres.demo.EntityManagerProducer.TransactionalInterceptorCDI</class>
+ * 	</interceptors>
+ *
+ * </beans>
+ * </pre>
  * OR TO INITIALISE SeContainer LIKE THIS:
  * <pre>
  * {@code
