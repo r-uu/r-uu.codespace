@@ -27,7 +27,7 @@ public abstract class TaskGroupServiceJPA
 
 	@Override public @NonNull Set<TaskGroupJPA>       findAll      (                ) { return repository.findAll      (  ); }
 	@Override public          Optional<TaskGroupJPA>  findWithTasks(@NonNull Long id) { return repository.findWithTasks(id); }
-	@Override public @NonNull Set<TaskGroupLazy>      findAllLazy  (                )	{	return repository.findAllLazy  (  ); }
+	@Override public @NonNull Set<TaskGroupLazy>      findAllLazy  (                ) {	return repository.findAllLazy  (  ); }
 	@Override public          Optional<TaskGroupLazy> findGroupLazy(@NonNull Long id) { return repository.findLazy     (id); }
 	@Override public          Optional<TaskGroupFlat> findGroupFlat(@NonNull Long id) { return repository.findFlat     (id); }
 

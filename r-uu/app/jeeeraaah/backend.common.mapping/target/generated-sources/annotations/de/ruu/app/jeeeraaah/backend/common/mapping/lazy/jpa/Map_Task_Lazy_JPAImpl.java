@@ -7,7 +7,7 @@ import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-25T08:06:43+0200",
+    date = "2025-09-25T17:02:08+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 */

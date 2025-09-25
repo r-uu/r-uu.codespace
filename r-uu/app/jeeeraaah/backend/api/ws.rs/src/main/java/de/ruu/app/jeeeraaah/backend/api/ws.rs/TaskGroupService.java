@@ -2,22 +2,17 @@ package de.ruu.app.jeeeraaah.backend.api.ws.rs;
 
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupJPA;
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupServiceJPA;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupService.TaskGroupNotFoundException;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskService.TaskNotFoundException;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTO;
+import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOFlat;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import de.ruu.lib.ws.rs.ErrorResponse;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -34,20 +29,10 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import static de.ruu.app.jeeeraaah.backend.common.mapping.Mappings.toDTO;
-import static de.ruu.app.jeeeraaah.backend.common.mapping.Mappings.toJPA;
-import static de.ruu.app.jeeeraaah.backend.common.mapping.Mappings.toLazy;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.ALL_FLAT;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.BY_ID;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.BY_ID_LAZY;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.BY_ID_WITH_TASKS;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.PATH_APPENDER_TO_DOMAIN_TASK_GROUP;
-import static de.ruu.app.jeeeraaah.common.api.domain.Paths.REMOVE_TASK_FROM_GROUP;
+import static de.ruu.app.jeeeraaah.backend.common.mapping.Mappings.*;
+import static de.ruu.app.jeeeraaah.common.api.domain.Paths.*;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
-import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
-import static jakarta.ws.rs.core.Response.Status.CREATED;
-import static jakarta.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
-import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
+import static jakarta.ws.rs.core.Response.Status.*;
 
 /**
  * REST controller providing REST endpoints.
@@ -90,9 +75,9 @@ public class TaskGroupService
 	{
 		try
 		{
-			Set<TaskGroupDTO> result  = new HashSet<>();
+			Set<TaskGroupDTO>       result  = new HashSet<>();
 			ReferenceCycleTracking  context = new ReferenceCycleTracking();
-			Set<TaskGroupJPA> all     = service.findAll();
+			Set<TaskGroupJPA>       all     = service.findAll();
 
 			all.forEach(taskGroup -> result.add(toDTO(taskGroup, context)));
 
@@ -298,6 +283,9 @@ public class TaskGroupService
 	{
 		try
 		{
+			Set<TaskGroupFlat> result = new HashSet<>();
+			ReferenceCycleTracking context = new ReferenceCycleTracking();
+			service.findAllLazy().forEach(tgl -> result.add(new TaskGroupDTOFlat(tgl)));
 			return Response.ok(service.findAllLazy()).build();
 		}
 		catch (Exception e)
