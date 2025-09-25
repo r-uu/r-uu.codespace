@@ -1,4 +1,4 @@
 --patch-module
-de.ruu.app.jeeeraaah.frontend.api.client.ui.fx=_
+de.ruu.app.jeeeraaah.frontend.ui.fx=_
 --add-reads
-de.ruu.app.jeeeraaah.frontend.api.client.ui.fx=ALL-UNNAMED
+de.ruu.app.jeeeraaah.frontend.ui.fx=ALL-UNNAMED

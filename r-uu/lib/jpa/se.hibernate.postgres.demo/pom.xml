@@ -73,7 +73,6 @@
 					</additionalClasspathElements>
 				</configuration>
 			</plugin>
-			<!-- No resource copy needed for interceptor class, it is now a top-level class -->
 		</plugins>
 	</build>
 

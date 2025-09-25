@@ -1,7 +1,6 @@
 package de.ruu.app.jeeeraaah.backend.persistence.jpa;
 
 import de.ruu.app.jeeeraaah.common.api.domain.RemoveNeighboursFromTaskConfig;
-import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskService;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityNotFoundException;

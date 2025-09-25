@@ -1,0 +1,8 @@
+@startuml
+class Categories {
+    prefix: TEXT
+    path: TEXT
+}
+
+Categories::prefix --> Categories::path
+@enduml

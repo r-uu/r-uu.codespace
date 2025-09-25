@@ -20,12 +20,32 @@
 			<artifactId>javafx-base</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.microprofile.config</groupId>
+			<artifactId>microprofile-config-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.smallrye.config</groupId>
+			<artifactId>smallrye-config</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.fx.comp</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.fx.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -38,11 +58,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest</artifactId>
 		</dependency>
@@ -50,6 +65,10 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se-shaded</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -73,10 +92,6 @@
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.gen.java.fx.tableview</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -6,5 +6,6 @@ de\ruu\lib\jpa\se\hibernate\postgres\demo\TransactionalInterceptorCDI.class
 de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleType.class
 de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeRepository.class
 module-info.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\EntityManagerProducer$TransactionalInterceptorCDI.class
 de\ruu\lib\jpa\se\hibernate\postgres\demo\HibernatePostgresDemoQualifier.class
 de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeEntity.class

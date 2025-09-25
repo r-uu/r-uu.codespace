@@ -1,6 +1,5 @@
 package de.ruu.app.jeeeraaah.common.api.domain;
 
-import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +14,6 @@ import lombok.experimental.Accessors;
 @ToString
 public class TaskCreationData
 {
-	@NonNull private Long          taskGroupId;
-	@NonNull private TaskLazy      task;
+	@NonNull private Long     taskGroupId;
+	@NonNull private TaskLazy task;
 }

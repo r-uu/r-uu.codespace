@@ -3,7 +3,7 @@ module de.ruu.app.jeeeraaah.common.api.mapping
 	exports de.ruu.app.jeeeraaah.common.api.mapping to
 			de.ruu.app.jeeeraaah.common.api.domain,
 			de.ruu.app.jeeeraaah.common.api.bean,
-			de.ruu.app.jeeeraaah.common.api.ws.rs, de.ruu.app.jeeeraaah.frontend.api.client.ws.rs, de.ruu.app.jeeeraaah.frontend.api.client.ui.fx;
+			de.ruu.app.jeeeraaah.common.api.ws.rs, de.ruu.app.jeeeraaah.frontend.api.client.ws.rs, de.ruu.app.jeeeraaah.frontend.api.client.ui.fx, de.ruu.app.jeeeraaah.frontend.ui.fx;
 
 	requires de.ruu.app.jeeeraaah.common.api.domain;
 	requires de.ruu.app.jeeeraaah.common.api.bean;

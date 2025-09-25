@@ -6,6 +6,8 @@ import de.ruu.app.jeeeraaah.backend.common.mapping.jpa.dto.Map_TaskGroup_JPA_DTO
 import de.ruu.app.jeeeraaah.backend.common.mapping.jpa.dto.Map_Task_JPA_DTO;
 import de.ruu.app.jeeeraaah.backend.common.mapping.jpa.lazy.Map_TaskGroup_JPA_Lazy;
 import de.ruu.app.jeeeraaah.backend.common.mapping.jpa.lazy.Map_Task_JPA_Lazy;
+import de.ruu.app.jeeeraaah.backend.common.mapping.lazy.jpa.Map_TaskGroup_Lazy_JPA;
+import de.ruu.app.jeeeraaah.backend.common.mapping.lazy.jpa.Map_Task_Lazy_JPA;
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupJPA;
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskJPA;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
@@ -39,5 +41,13 @@ public interface Mappings
 	static TaskLazy      toLazy(TaskJPA      in, ReferenceCycleTracking context)
 	{
 		return Map_Task_JPA_Lazy     .INSTANCE.map(in, context);
+	}
+	static TaskGroupJPA toJPA(TaskGroupLazy in)
+	{
+		return Map_TaskGroup_Lazy_JPA.INSTANCE.map(in);
+	}
+	static TaskJPA      toJPA(TaskGroupJPA taskGroup, TaskLazy in)
+	{
+		return Map_Task_Lazy_JPA     .INSTANCE.map(taskGroup, in);
 	}
 }
