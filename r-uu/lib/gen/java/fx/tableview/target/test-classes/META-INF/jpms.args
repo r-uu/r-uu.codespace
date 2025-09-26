@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.lib.gen.java.fx.tableview=_
+--add-reads
+de.ruu.lib.gen.java.fx.tableview=ALL-UNNAMED

@@ -83,6 +83,7 @@
         <module name="r-uu.codespace.lib.jpa.core.mapstruct.demo.bidirectional" />
         <module name="r-uu.codespace.lib.gen.core" />
         <module name="fx.executable" />
+        <module name="r-uu.codespace.app.jeeeraaah.backend.common.mapping" />
         <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx" />
         <module name="r-uu.codespace.lib.jpa.se" />
         <module name="r-uu.codespace.app.jeeeraaah.frontend.common.mapping" />
@@ -92,6 +93,7 @@
         <module name="r-uu.codespace.lib.jsonb" />
         <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres.demo" />
         <module name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs" />
+        <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.executable" />
         <module name="r-uu.codespace.lib.fx.comp.demo" />
         <module name="r-uu.codespace.lib.jackson" />
         <module name="r-uu.codespace.lib.junit" />
@@ -209,6 +211,7 @@
       <module name="r-uu.codespace.app.jeeeraaah" options="" />
       <module name="r-uu.codespace.app.jeeeraaah.backend" options="" />
       <module name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs" options="-parameters -Xlint:all -Amapstruct.defaultComponentModel=default -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED -J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
+      <module name="r-uu.codespace.app.jeeeraaah.backend.common.mapping" options="-parameters -Amapstruct.defaultComponentModel=default -Xlint:all -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
       <module name="r-uu.codespace.app.jeeeraaah.backend.persistence" options="" />
       <module name="r-uu.codespace.app.jeeeraaah.backend.persistence.jpa" options="-Amapstruct.defaultComponentModel=cdi -Aorg.hibernate.jpamodelgen.addGeneratedAnnotation=false -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
       <module name="r-uu.codespace.app.jeeeraaah.backendapi" options="" />
@@ -223,6 +226,7 @@
       <module name="r-uu.codespace.app.jeeeraaah.frontend.common.mapping" options="-parameters -Amapstruct.defaultComponentModel=default -Xlint:all -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
       <module name="r-uu.codespace.app.jeeeraaah.frontend.ui" options="" />
       <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx" options="-parameters -Amapstruct.defaultComponentModel=default -Xlint:all -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
+      <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.executable" options="-parameters -Amapstruct.defaultComponentModel=default -Xlint:all -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
       <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.model" options="-parameters -Amapstruct.defaultComponentModel=default -Xlint:all -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED" />
       <module name="r-uu.codespace.lib" options="" />
       <module name="r-uu.codespace.lib-gen-java" options="" />

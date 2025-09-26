@@ -9,5 +9,6 @@ module de.ruu.lib.util
     exports de.ruu.lib.util.bimapped;
     exports de.ruu.lib.util.json;
     exports de.ruu.lib.util.lang.model;
+    exports de.ruu.lib.util.classpath;
     // weitere exports nach Bedarf
 }
