@@ -7,7 +7,7 @@ import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-26T18:09:31+0200",
+    date = "2025-09-26T18:57:22+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 */
