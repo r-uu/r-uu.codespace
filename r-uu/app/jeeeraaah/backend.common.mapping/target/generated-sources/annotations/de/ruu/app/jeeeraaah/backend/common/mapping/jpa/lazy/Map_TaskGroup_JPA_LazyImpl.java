@@ -7,7 +7,7 @@ import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-25T17:02:08+0200",
+    date = "2025-09-26T17:15:53+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 */
@@ -28,6 +28,9 @@ public class Map_TaskGroup_JPA_LazyImpl implements Map_TaskGroup_JPA_Lazy {
 
         context.put( in, taskGroupLazy );
         beforeMapping( in, taskGroupLazy, context );
+
+        taskGroupLazy.name( in.getName() );
+        taskGroupLazy.description( in.getDescription() );
 
         afterMapping( in, taskGroupLazy, context );
 

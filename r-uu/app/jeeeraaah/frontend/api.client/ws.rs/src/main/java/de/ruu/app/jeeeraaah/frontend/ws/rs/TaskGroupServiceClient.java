@@ -388,11 +388,8 @@ public class TaskGroupServiceClient
 			}
 			catch (ProcessingException e)
 			{
-				// Fallback if we can't parse the error response
-				throw new NonTechnicalException(
-					new ErrorResponse("Operation failed", 
-							   response.getStatusInfo().getReasonPhrase(), 
-							   response.getStatus()));
+				// fallback if we can't parse the error response
+				throw new NonTechnicalException(new ErrorResponse("operation failed", response.getStatusInfo().getReasonPhrase()));
 			}
 		}
 		else

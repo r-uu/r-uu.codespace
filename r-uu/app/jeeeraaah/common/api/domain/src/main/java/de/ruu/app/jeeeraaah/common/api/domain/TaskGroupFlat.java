@@ -14,7 +14,7 @@ public interface TaskGroupFlat extends Entity<Long>, Comparable<TaskGroupFlat>
 	@NonNull String  name();
 	Optional<String> description();
 
-	@NonNull TaskGroupFlat name        (@NonNull String name);
+	@NonNull TaskGroupFlat name        (@NonNull String name       );
 	@NonNull TaskGroupFlat description(          String description);
 
 	@Override default int compareTo(@NonNull TaskGroupFlat other) { return this.name().compareTo(other.name()); }

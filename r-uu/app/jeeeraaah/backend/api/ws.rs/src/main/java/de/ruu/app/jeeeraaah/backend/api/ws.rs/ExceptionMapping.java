@@ -36,8 +36,7 @@ public class ExceptionMapping
 			return
 					Response
 							.status(INTERNAL_SERVER_ERROR)
-							.entity(
-									new ErrorResponse("INTERNAL_ERROR", t.getMessage(), INTERNAL_SERVER_ERROR.getStatusCode()))
+							.entity(new ErrorResponse("INTERNAL_ERROR", t.getMessage(), INTERNAL_SERVER_ERROR))
 							.type(APPLICATION_JSON)
 							.build();
 		}

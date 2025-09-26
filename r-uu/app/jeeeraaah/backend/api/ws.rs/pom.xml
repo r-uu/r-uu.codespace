@@ -152,7 +152,21 @@
 		</dependency>
 
 		<!-- Test Dependencies -->
-		<!-- https://mvnrepository.com/artifact/org.jboss.weld/weld-junit5 -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.junit.jupiter</groupId>-->
+<!--			<artifactId>junit-jupiter-engine</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.junit.platform</groupId>-->
+<!--			<artifactId>junit-platform-suite-engine</artifactId>-->
+<!--		  <scope>test</scope>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.jboss.weld</groupId>
 			<artifactId>weld-junit5</artifactId>
@@ -199,32 +213,27 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+<!--				<version>3.2.5</version>-->
+				<configuration>
+					<argLine>
+						--add-opens=java.base/java.lang=ALL-UNNAMED
+						--add-opens=java.base/java.util=ALL-UNNAMED
+					</argLine>
+					<properties>
+						<configurationParameters>
+							junit.jupiter.testinstance.lifecycle.default = per_class
+						</configurationParameters>
+					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>io.openliberty.tools</groupId>-->
-<!--				<artifactId>liberty-maven-plugin</artifactId>-->
-<!--				<version>3.10.2</version>-->
-<!--				<configuration>-->
-<!--					<serverName>defaultServer</serverName>-->
-<!--					<looseApplication>true</looseApplication>-->
-<!--					<bootstrapProperties>-->
-<!--						<http.port>9080</http.port>-->
-<!--						<https.port>9443</https.port>-->
-<!--					</bootstrapProperties>-->
-<!--					<jvmOptions>-->
-<!--						<param>&#45;&#45;add-opens=java.base/java.lang=ALL-UNNAMED</param>-->
-<!--						<param>&#45;&#45;add-opens=java.base/java.util=ALL-UNNAMED</param>-->
-<!--						<param>&#45;&#45;add-opens=java.base/sun.misc=ALL-UNNAMED</param>-->
-<!--						<param>-Dorg.jboss.logging.provider=slf4j</param>-->
-<!--						<param>-Djava.util.logging.manager=org.jboss.logmanager.LogManager</param>-->
-<!--					</jvmOptions>-->
-<!--					<copyLibsDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources</copyLibsDirectory>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 		</plugins>
 	</build>
 

@@ -460,7 +460,8 @@ public class TaskServiceClient implements TaskService<TaskBean>, TaskServiceLazy
 		}
 	}
 
-	private void throwExceptionForNoSuccessInRelationalOperationResponse(Response response) throws TechnicalException, NonTechnicalException
+	private void throwExceptionForNoSuccessInRelationalOperationResponse(Response response)
+			throws TechnicalException, NonTechnicalException
 	{
 		if (response.getStatusInfo().getFamily() == SUCCESSFUL) return;
 
@@ -473,8 +474,7 @@ public class TaskServiceClient implements TaskService<TaskBean>, TaskServiceLazy
 			{
 				error = response.readEntity(NonTechnicalException.class);
 				if (isNull(error.getMessage()))
-						throw new NonTechnicalException(
-								new ErrorResponse("invalid task relation", "unknown cause", response.getStatus()));
+						throw new NonTechnicalException(new ErrorResponse("invalid task relation", "unknown cause"));
 				else
 						throw error;
 			}

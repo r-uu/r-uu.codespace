@@ -27,6 +27,7 @@ de\ruu\lib\util\BooleanFunctionsTest.class
 de\ruu\lib\util\jira\csv\report\ReportByTypes.class
 de\ruu\lib\util\jira\csv\merge\CSVFilesMerger$CSVFilesMergerSimple$CSVFileProcessorLocal.class
 de\ruu\lib\util\jira\csv\raw\CSVRecordFactoryTest.class
+de\ruu\lib\util\ExampleTest.class
 de\ruu\lib\util\jira\csv\issue\IssueTypes$Epic.class
 de\ruu\lib\util\jira\csv\issue\hierarchy\query\HierarchyQueryConfigTest.class
 de\ruu\lib\util\jira\csv\raw\CSVRecordGroup.class

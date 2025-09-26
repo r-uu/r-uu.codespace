@@ -8,7 +8,6 @@ module de.ruu.lib.junit
 	requires microprofile.config.api;
 	requires de.ruu.lib.util;
 
-	requires transitive org.junit.jupiter.api;
-
 	requires static lombok;
+	requires org.junit.jupiter.api;
 }

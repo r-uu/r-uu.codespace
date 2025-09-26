@@ -2,6 +2,7 @@ package de.ruu.app.jeeeraaah.backend.api.ws.rs;
 
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupJPA;
 import de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupServiceJPA;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupService.TaskGroupNotFoundException;
@@ -285,7 +286,7 @@ public class TaskGroupService
 		{
 			Set<TaskGroupFlat> result = new HashSet<>();
 			ReferenceCycleTracking context = new ReferenceCycleTracking();
-			service.findAllLazy().forEach(tgl -> result.add(new TaskGroupDTOFlat(tgl)));
+			service.findAllLazy().forEach(tgl -> result.add(new TaskGroupDTOFlat((TaskGroupEntity<?>) tgl)));
 			return Response.ok(service.findAllLazy()).build();
 		}
 		catch (Exception e)

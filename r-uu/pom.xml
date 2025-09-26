@@ -32,15 +32,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>24</java.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<!-- Build performance optimizations -->
-		<maven.compiler.parallel>true</maven.compiler.parallel>
-		<maven.resolver.transport>wagon</maven.resolver.transport>
+		<!-- Build performance optimizations entfernt: maven.compiler.parallel und maven.resolver.transport -->
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- External dependencies sorted alphabetically by groupId and artifactId -->
+			<!-- External dependencies sorted alphabetically by artifactId -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
@@ -204,7 +201,7 @@
 			<dependency>
 				<groupId>org.eclipse.microprofile.config</groupId>
 				<artifactId>microprofile-config-api</artifactId>
-				<version>3.0.2</version>
+				<version>3.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.microprofile.openapi</groupId>
@@ -234,7 +231,7 @@
 			<dependency>
 				<groupId>org.hamcrest</groupId>
 				<artifactId>hamcrest</artifactId>
-				<version>3.0</version>
+				<version>2.2</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -254,31 +251,37 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
+				<groupId>org.jboss.weld.se</groupId>
+				<artifactId>weld-se-shaded</artifactId>
+				<version>5.1.2.Final</version>
+			</dependency>
+			<dependency>
 				<groupId>org.jboss.weld</groupId>
 				<artifactId>weld-junit5</artifactId>
 				<version>5.0.2.Final</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.weld.se</groupId>
-				<artifactId>weld-se-shaded</artifactId>
-				<version>5.1.2.Final</version>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter</artifactId>
+				<version>5.7.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
-				<artifactId>junit-jupiter</artifactId>
-				<version>5.11.4</version>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>5.7.0</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
-				<version>5.11.4</version>
+				<version>5.7.0</version>
+				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.junit.platform</groupId>
 				<artifactId>junit-platform-commons</artifactId>
-				<version>1.11.4</version>
+				<version>1.7.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.mapstruct</groupId>
@@ -782,7 +785,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.5.2</version>
+					<version>3.2.5</version>
 					<configuration>
 						<argLine>-Duser.language=en</argLine>
 						<parallel>methods</parallel>

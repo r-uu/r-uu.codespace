@@ -1,27 +1,33 @@
 package de.ruu.lib.ws.rs;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.experimental.Accessors;
+import jakarta.ws.rs.core.Response.Status;
 
-import static lombok.AccessLevel.PRIVATE;
+import static jakarta.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
 
 @Getter @Accessors(fluent = true)
 public class ErrorResponse
 {
-	private String message;
-	private String cause;
-	private int    httpStatus;
+	private final @NonNull String message;
+	private final @NonNull String cause;
+	private final @NonNull Status httpStatus;
 
-	public ErrorResponse(@NonNull String message)                        { this(message, ""   , 500); }
-	public ErrorResponse(@NonNull String message, @NonNull String cause) { this(message, cause, 500); }
-	public ErrorResponse(@NonNull String message, @NonNull String cause, int httpStatus)
+	// no-arg constructor for deserialization
+	protected ErrorResponse()                                            { this(""     , ""   , INTERNAL_SERVER_ERROR); }
+
+	public ErrorResponse(@NonNull String message)                        { this(message, ""   , INTERNAL_SERVER_ERROR); }
+	public ErrorResponse(@NonNull String message, @NonNull String cause) { this(message, cause, INTERNAL_SERVER_ERROR); }
+	public ErrorResponse(@NonNull String message, @NonNull String cause, Status httpStatus)
 	{
 		this.message    = message;
 		this.cause      = cause;
 		this.httpStatus = httpStatus;
 	}
+
+	// java bean style getters for deserialisation
+	public @NonNull String getMessage   () { return message;    }
+	public @NonNull String getCause     () { return cause;      }
+	public @NonNull Status getHttpStatus() { return httpStatus; }
 }

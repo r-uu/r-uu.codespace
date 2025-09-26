@@ -146,6 +146,7 @@ class DashController extends DefaultFXCController<Dash, DashService> implements 
 		}
 		catch (TechnicalException | NonTechnicalException e)
 		{
+			log.error("failure fetching task groups from backend", e);
 			ExceptionDialog.showAndWait("failure fetching task groups from backend", e);
 		}
 	}

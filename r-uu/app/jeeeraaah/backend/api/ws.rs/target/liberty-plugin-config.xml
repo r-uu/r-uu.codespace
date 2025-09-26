@@ -32,7 +32,7 @@
     <projectCompileDependency>org.eclipse.microprofile.health:microprofile-health-api:4.0.1</projectCompileDependency>
     <projectCompileDependency>org.eclipse.microprofile.metrics:microprofile-metrics-api:5.0.1</projectCompileDependency>
     <projectCompileDependency>org.eclipse.microprofile.openapi:microprofile-openapi-api:3.1.1</projectCompileDependency>
-    <projectCompileDependency>org.eclipse.microprofile.config:microprofile-config-api:3.0.2</projectCompileDependency>
+    <projectCompileDependency>org.eclipse.microprofile.config:microprofile-config-api:3.0</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.app.jeeeraaah.backend.persistence.jpa:0.0.1</projectCompileDependency>
     <projectCompileDependency>jakarta.persistence:jakarta.persistence-api:3.2.0</projectCompileDependency>
     <projectCompileDependency>jakarta.transaction:jakarta.transaction-api:2.0.1</projectCompileDependency>

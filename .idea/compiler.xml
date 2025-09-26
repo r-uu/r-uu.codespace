@@ -86,7 +86,6 @@
         <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx" />
         <module name="r-uu.codespace.lib.jpa.se" />
         <module name="r-uu.codespace.app.jeeeraaah.frontend.common.mapping" />
-        <module name="r-uu.codespace.app.demo" />
         <module name="r-uu.codespace.lib.jpa.core.mapstruct" />
         <module name="r-uu.codespace.lib.gen.java.fx.bean" />
         <module name="r-uu.codespace.lib.gen.java.fx.bean.editor" />
@@ -121,6 +120,7 @@
       <module name="r-uu.codespace.app-jeeeraaah-client-rs" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-client-rs-demo" target="24" />
       <module name="r-uu.codespace.app-jeeeraaah-common-se" target="24" />
+      <module name="r-uu.codespace.app.demo" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.fx" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.rs" target="24" />
       <module name="r-uu.codespace.app.jeeeraaah.client.rs.demo" target="24" />

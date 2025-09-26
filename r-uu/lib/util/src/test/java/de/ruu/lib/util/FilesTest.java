@@ -29,8 +29,8 @@ import de.ruu.lib.util.Files.DeleteMode;
 
 class FilesTest
 {
-	@TempDir private Path tempDir;
-	
+	@TempDir Path tempDir;
+
 	private Path testFile;
 	private Path testDir;
 	private Path nestedDir;

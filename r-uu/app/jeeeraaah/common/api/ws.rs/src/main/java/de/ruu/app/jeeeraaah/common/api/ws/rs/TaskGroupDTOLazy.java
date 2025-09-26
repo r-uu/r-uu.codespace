@@ -2,6 +2,7 @@ package de.ruu.app.jeeeraaah.common.api.ws.rs;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupEntity;
+import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.lib.util.Strings;
 import jakarta.annotation.Nullable;
@@ -12,6 +13,7 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
@@ -28,6 +30,7 @@ public class TaskGroupDTOLazy implements TaskGroupLazy
 	private @NonNull  Long   id;
 	private @NonNull  Short  version;
 	private @NonNull  String name;
+	private @Nullable String description;
 
 	private final @NonNull  Set<Long> taskIds = new HashSet<>();
 
@@ -73,6 +76,14 @@ public class TaskGroupDTOLazy implements TaskGroupLazy
 		this.name = name;
 		return this;
 	}
+
+	@Override public @NonNull TaskGroupFlat description(String description)
+	{
+		this.description = description;
+		return this;
+	}
+
+	@Override public Optional<String> description() { return Optional.ofNullable(description); }
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
 	// java bean style accessors for those who do not work with fluent style accessors (mapstruct)
