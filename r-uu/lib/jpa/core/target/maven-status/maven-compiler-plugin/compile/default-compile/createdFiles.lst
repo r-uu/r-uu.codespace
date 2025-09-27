@@ -19,6 +19,7 @@ de\ruu\lib\jpa\core\GraphType.class
 de\ruu\lib\jpa\core\criteria\Criteria$OrderEntry.class
 de\ruu\lib\jpa\core\DTO.class
 de\ruu\lib\jpa\core\criteria\restriction\IdentifierEqExpression.class
+de\ruu\lib\jpa\core\AbstractEntity_.class
 de\ruu\lib\jpa\core\criteria\Criteria$CriteriaQuery.class
 de\ruu\lib\jpa\core\criteria\restriction\Restrictions.class
 de\ruu\lib\jpa\core\criteria\Criteria$JoinType.class

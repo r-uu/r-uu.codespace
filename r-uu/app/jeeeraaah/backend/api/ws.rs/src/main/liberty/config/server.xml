@@ -1,119 +1,119 @@
 <server description="jeee-raaah liberty server">
-    <featureManager>
-<!--		<platform>jakartaee-10</platform>-->
+	<featureManager>
+		<!--		<platform>jakartaee-10</platform>-->
 		<feature>adminCenter-1.0</feature>
-        <!-- give openliberty access to shared library -->
-        <feature>bells-1.0</feature>
-        <!-- allow other jpa implementations than eclipselink -->
-        <feature>persistenceContainer-3.1</feature>
+		<!-- give openliberty access to shared library -->
+		<feature>bells-1.0</feature>
+		<!-- allow other jpa implementations than eclipselink -->
+		<feature>persistenceContainer-3.1</feature>
 		<!-- allow other jsonb implementations than yasson -->
-<!--		<feature>jsonbContainer-3.0</feature>-->
-        <!-- make micro profile set of features available at once -->
-        <feature>microProfile-6.1</feature>
-    </featureManager>
+		<!--		<feature>jsonbContainer-3.0</feature>-->
+		<!-- make micro profile set of features available at once -->
+		<feature>microProfile-6.1</feature>
+	</featureManager>
 
-    <!--For a user registry configuration, configure your user registry. For example, configure a basic user registry using the
-        basicRegistry element. Specify your own user name below in the name attribute of the user element. For the password,
-        generate an encoded password using bin/securityUtility encode and add it in the password attribute of the user element.
-        Then uncomment the user element. -->
+	<!--For a user registry configuration, configure your user registry. For example, configure a basic user registry using the
+			basicRegistry element. Specify your own user name below in the name attribute of the user element. For the password,
+			generate an encoded password using bin/securityUtility encode and add it in the password attribute of the user element.
+			Then uncomment the user element. -->
 	<!--
     <basicRegistry id   ="basic"
-	               realm="BasicRealm">
+	                 realm="BasicRealm">
 		<user name    ="${security_username}"
 		      password="${security_password}"/>
 	</basicRegistry>
     -->
-    <basicRegistry id="basic">
-        <user name="${security_username}"
-              password="${security_password}"/>
-    </basicRegistry>
+	<basicRegistry id="basic">
+		<user name="${security_username}"
+		      password="${security_password}"/>
+	</basicRegistry>
 
 	<administrator-role>
 		<user>${security_username}</user>
 	</administrator-role>
 
-    <!-- This template enables security. To lookup the full use of all the capabilities, a keystore and user registry are required. -->
+	<!-- This template enables security. To lookup the full use of all the capabilities, a keystore and user registry are required. -->
 
-    <!-- For the keystore, default keys are generated and stored in a keystore. To provide the keystore password, generate an
-        encoded password using bin/securityUtility encode and add it below in the password attribute of the keyStore element.
-        Then uncomment the keyStore element. -->
-    <!--
-    <keyStore password=""/>
-    <keyStore password="Liberty"/>
-    <keyStore id="DefaultKeyStore"
-			  password="${security_password}"/>
-    -->
-    <keyStore password="${security_password}"/>
+	<!-- For the keystore, default keys are generated and stored in a keystore. To provide the keystore password, generate an
+			encoded password using bin/securityUtility encode and add it below in the password attribute of the keyStore element.
+			Then uncomment the keyStore element. -->
+	<!--
+	<keyStore password=""/>
+	<keyStore password="Liberty"/>
+	<keyStore id="DefaultKeyStore"
+			password="${security_password}"/>
+	-->
+	<keyStore password="${security_password}"/>
 
 	<remoteFileAccess>
 		<writeDir>${server.config.dir}</writeDir>
 	</remoteFileAccess>
 
-    <mpMetrics authentication="false"/>
+	<mpMetrics authentication="false"/>
 
-    <httpEndpoint id       ="defaultHttpEndpoint"
-                  httpPort ="${default_http_port}"
-                  httpsPort="${default_https_port}"
-                  host     ="${default_host_name}"/>
+	<httpEndpoint id="defaultHttpEndpoint"
+	              httpPort="${default_http_port}"
+	              httpsPort="${default_https_port}"
+	              host="${default_host_name}"/>
 
 	<library id="library-jdbc-driver-postgresql">
-		<fileset id      ="PostgreSQLFileset"
-				 dir     ="${shared_resource_dir_postgresql}/"
-				 includes="${shared_resource_file_postgresql}"/>
+		<fileset id="PostgreSQLFileset"
+		         dir="${shared_resource_dir_postgresql}/"
+		         includes="${shared_resource_file_postgresql}"/>
 	</library>
 
-	<jdbcDriver id                                  ="jdbc-driver-postgresql"
-				jakarta.sql.XADataSource            ="org.postgresql.xa.PGXADataSource"
-				jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"
-				libraryRef                          ="library-jdbc-driver-postgresql"/>
+	<jdbcDriver id="jdbc-driver-postgresql"
+	            jakarta.sql.XADataSource="org.postgresql.xa.PGXADataSource"
+	            jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"
+	            libraryRef="library-jdbc-driver-postgresql"/>
 
-	<dataSource id           ="datasource_postgresql"
-	            jndiName     ="jdbc/datasource_postgresql"
+	<dataSource id="datasource_postgresql"
+	            jndiName="jdbc/datasource_postgresql"
 	            jdbcDriverRef="jdbc-driver-postgresql"
-	            type         ="javax.sql.ConnectionPoolDataSource"
+	            type="javax.sql.ConnectionPoolDataSource"
 	            transactional="true">
-		<properties serverName  ="${datasource_server_host}"
-		            portNumber  ="${datasource_server_port}"
+		<properties serverName="${datasource_server_host}"
+		            portNumber="${datasource_server_port}"
 		            databaseName="${datasource_database}"
-		            user        ="${datasource_database_username}"
-		            password    ="${datasource_database_password}"/>
+		            user="${datasource_database_username}"
+		            password="${datasource_database_password}"/>
 	</dataSource>
 
-<!-- TODO: reactivate for use of hibernate -->
+	<!-- TODO: reactivate for use of hibernate -->
 	<library id="library-hibernate">
-		<fileset dir     ="${shared_resource_dir_hibernate}/"
+		<fileset dir="${shared_resource_dir_hibernate}/"
 		         includes="${shared_resource_file_hibernate}"/>
-<!--	    <fileset dir     ="${shared_resource_dir_jandex}/"-->
-<!--                 includes="${shared_resource_file_jandex}"/>-->
+		<!--	    <fileset dir     ="${shared_resource_dir_jandex}/"-->
+		<!--                 includes="${shared_resource_file_jandex}"/>-->
 	</library>
 
-<!-- TODO: reactivate for use of hibernate -->
+	<!-- TODO: reactivate for use of hibernate -->
 	<bell libraryRef="library-hibernate"/>
 
-<!--	<library id="library-jackson">-->
-<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
-<!--		         includes="${shared_resource_file_jackson}"/>-->
-<!--	</library>-->
+	<!--	<library id="library-jackson">-->
+	<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
+	<!--		         includes="${shared_resource_file_jackson}"/>-->
+	<!--	</library>-->
 
-<!--	<bell libraryRef="library-jackson"/>-->
+	<!--	<bell libraryRef="library-jackson"/>-->
 
-<!--	<jsonbContainer id="jsonbContainer-jackson"-->
-<!--					jsonbProvider="com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider">-->
-<!--	</jsonbContainer>-->
+	<!--	<jsonbContainer id="jsonbContainer-jackson"-->
+	<!--					jsonbProvider="com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider">-->
+	<!--	</jsonbContainer>-->
 
-    <!-- Automatically expand WAR files and EAR files -->
-    <applicationManager autoExpand="true"/>
+	<!-- Automatically expand WAR files and EAR files -->
+	<applicationManager autoExpand="true"/>
 
-    <variable name="de.ruu.app.jeeeraaah.server.system.SystemResource_inMaintenance" value="false"/>
+	<variable name="de.ruu.app.jeeeraaah.server.system.SystemResource_inMaintenance" value="false"/>
 
 	<webApplication contextRoot="/"
 	                location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
 	                name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
-<!-- TODO: reactivate for use of hibernate -->
+		<!-- TODO: reactivate for use of hibernate -->
 		<classloader commonLibraryRef="library-hibernate"/>
-    </webApplication>
+	</webApplication>
 
-    <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
-    <ssl id="defaultSSLConfig" trustDefaultCerts="true"/>
+	<!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+	<ssl id="defaultSSLConfig" trustDefaultCerts="true"/>
 
 </server>

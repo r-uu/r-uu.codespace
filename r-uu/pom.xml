@@ -724,39 +724,63 @@
 							<path>
 								<groupId>org.projectlombok</groupId>
 								<artifactId>lombok</artifactId>
-								<version>1.18.38</version>
+<!--								<version>1.18.38</version>-->
+							</path>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok-mapstruct-binding</artifactId>
+<!--								<version>0.2.0</version>-->
 							</path>
 							<path>
 								<groupId>org.mapstruct</groupId>
 								<artifactId>mapstruct-processor</artifactId>
-								<version>1.6.3</version>
+<!--								<version>1.6.3</version>-->
+							</path>
+							<path>
+								<groupId>org.hibernate.orm</groupId>
+								<artifactId>hibernate-jpamodelgen</artifactId>
+<!--								<version>6.6.4.Final</version>-->
 							</path>
 						</annotationProcessorPaths>
-						<compilerArgs>
-							<arg>-parameters</arg>
-							<arg>-Amapstruct.defaultComponentModel=default</arg>
-							<arg>-Xlint:all</arg>
-							<!-- Disable module path and use classpath instead -->
-							<compilerArg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</compilerArg>
-						</compilerArgs>
+<!--						<compilerArgs>-->
+<!--							<arg>-parameters</arg>-->
+<!--							<arg>-Amapstruct.defaultComponentModel=default</arg>-->
+<!--							<arg>-Xlint:all</arg>-->
+<!--							&lt;!&ndash; Disable module path and use classpath instead &ndash;&gt;-->
+<!--							<compilerArg>-J&#45;&#45;add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</compilerArg>-->
+<!--						</compilerArgs>-->
 					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-							<version>1.18.38</version>
-						</dependency>
-						<dependency>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>1.6.3</version>
-						</dependency>
-					</dependencies>
+<!--					<dependencies>-->
+<!--						<dependency>-->
+<!--							<groupId>org.projectlombok</groupId>-->
+<!--							<artifactId>lombok</artifactId>-->
+<!--&lt;!&ndash;							<version>1.18.38</version>&ndash;&gt;-->
+<!--						</dependency>-->
+<!--						<dependency>-->
+<!--							<groupId>org.mapstruct</groupId>-->
+<!--							<artifactId>mapstruct-processor</artifactId>-->
+<!--&lt;!&ndash;							<version>1.6.3</version>&ndash;&gt;-->
+<!--						</dependency>-->
+<!--					</dependencies>-->
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>3.4.0</version>
+					<executions>
+						<execution>
+							<id>add-source</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>add-source</goal>
+							</goals>
+							<configuration>
+								<sources>
+									<source>${project.build.directory}/generated-sources/annotations</source>
+								</sources>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

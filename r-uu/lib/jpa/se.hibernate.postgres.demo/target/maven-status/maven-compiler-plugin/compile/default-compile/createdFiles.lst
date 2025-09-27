@@ -1,0 +1,12 @@
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeServiceJPA.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeDTO.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeEntity_.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeService.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeRepository.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleTypeEntity.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\EntityManagerProducer.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\TransactionalInterceptorCDI.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\SimpleType.class
+module-info.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\EntityManagerProducer$TransactionalInterceptorCDI.class
+de\ruu\lib\jpa\se\hibernate\postgres\demo\HibernatePostgresDemoQualifier.class
