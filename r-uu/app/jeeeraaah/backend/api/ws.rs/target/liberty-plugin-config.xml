@@ -9,7 +9,7 @@
     </assemblyArtifact>
     <assemblyArchive>C:\Users\r-uu\.m2\repository\io\openliberty\openliberty-kernel\25.0.0.9\openliberty-kernel-25.0.0.9.zip</assemblyArchive>
     <assemblyInstallDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty</assemblyInstallDirectory>
-    <refresh>true</refresh>
+    <refresh>false</refresh>
     <serverDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
     <userDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr</userDirectory>
     <serverOutputDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>
@@ -58,7 +58,11 @@
     <configFile>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\src\main\liberty\config\server.xml</configFile>
     <bootstrapProperties>
         <https.port>9443</https.port>
+        <default.https.port>9443</default.https.port>
+        <server.config.dir>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs/src/main/resources</server.config.dir>
         <http.port>9080</http.port>
+        <app.install.root>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target/liberty/wlp/usr/servers/defaultServer/apps</app.install.root>
+        <default.http.port>9080</default.http.port>
     </bootstrapProperties>
     <jvmOptions>
         <param>--add-opens=java.base/java.lang=ALL-UNNAMED</param>

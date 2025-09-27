@@ -6,7 +6,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-27T08:14:57+0200",
+    date = "2025-09-27T09:49:19+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
 public class Map_TaskGroup_Lazy_BeanImpl implements Map_TaskGroup_Lazy_Bean {
