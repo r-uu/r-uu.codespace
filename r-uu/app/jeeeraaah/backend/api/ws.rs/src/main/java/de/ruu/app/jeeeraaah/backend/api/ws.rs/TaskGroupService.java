@@ -287,7 +287,7 @@ public class TaskGroupService
 			Set<TaskGroupFlat> result = new HashSet<>();
 			ReferenceCycleTracking context = new ReferenceCycleTracking();
 			service.findAllLazy().forEach(tgl -> result.add(new TaskGroupDTOFlat((TaskGroupEntity<?>) tgl)));
-			return Response.ok(service.findAllLazy()).build();
+			return Response.ok(result).build();
 		}
 		catch (Exception e)
 		{

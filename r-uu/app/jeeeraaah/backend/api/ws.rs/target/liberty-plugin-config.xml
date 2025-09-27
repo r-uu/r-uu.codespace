@@ -9,7 +9,7 @@
     </assemblyArtifact>
     <assemblyArchive>C:\Users\r-uu\.m2\repository\io\openliberty\openliberty-kernel\25.0.0.9\openliberty-kernel-25.0.0.9.zip</assemblyArchive>
     <assemblyInstallDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty</assemblyInstallDirectory>
-    <refresh>false</refresh>
+    <refresh>true</refresh>
     <serverDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr\servers\defaultServer</serverDirectory>
     <userDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr</userDirectory>
     <serverOutputDirectory>C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp\usr\servers\defaultServer</serverOutputDirectory>

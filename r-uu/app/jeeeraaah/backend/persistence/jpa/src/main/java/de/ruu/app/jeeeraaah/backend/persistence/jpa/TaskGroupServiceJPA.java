@@ -4,11 +4,15 @@ import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupFlat;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupService;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskGroupServiceLazy;
+import jakarta.annotation.PostConstruct;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Optional;
 import java.util.Set;
+
+import static de.ruu.lib.util.BooleanFunctions.not;
+import static java.util.Objects.isNull;
 
 /** TODO: rename and move this type (no JPA suffix) */
 @Slf4j
@@ -16,9 +20,13 @@ public abstract class TaskGroupServiceJPA
 		implements TaskGroupService<TaskGroupJPA>, TaskGroupServiceLazy
 {
 	protected abstract TaskGroupRepositoryJPA repository();
-	private final      TaskGroupRepositoryJPA repository = repository();
+	private   @NonNull TaskGroupRepositoryJPA repository = null;
 
-//	@PostConstruct private void postConstruct() { log.debug("repository available: {}", not(isNull(repository()))); }
+	@PostConstruct private void postConstruct()
+	{
+		repository = repository();
+		log.debug("repository available: {}", not(isNull(repository)));
+	}
 
 	@Override public @NonNull TaskGroupJPA  create(@NonNull TaskGroupJPA entity) { return repository.create(entity); }
 	@Override public Optional<TaskGroupJPA> read  (@NonNull Long        id     ) { return repository.find  (id    ); }

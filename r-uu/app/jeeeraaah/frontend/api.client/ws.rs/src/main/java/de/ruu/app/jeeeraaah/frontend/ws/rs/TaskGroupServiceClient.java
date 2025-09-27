@@ -355,7 +355,7 @@ public class TaskGroupServiceClient
 	{
 		try
 		{
-			WebTarget target   = client.target(webTarget.getUri() + Paths.ALL_LAZY);
+			WebTarget target   = client.target(webTarget.getUri() + Paths.ALL_FLAT);
 			Response  response = target.request(APPLICATION_JSON).get();
 
 			if (response.getStatusInfo().getFamily() == SUCCESSFUL)
