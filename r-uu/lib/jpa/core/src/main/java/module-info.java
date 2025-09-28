@@ -10,4 +10,6 @@ module de.ruu.lib.jpa.core
 	requires java.sql;
 	requires static lombok;
 	requires java.desktop;
+
+	opens de.ruu.lib.jpa.core to org.hibernate.orm.core;
 }

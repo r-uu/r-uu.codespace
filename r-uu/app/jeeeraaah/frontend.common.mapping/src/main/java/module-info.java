@@ -1,6 +1,8 @@
 module de.ruu.app.jeeeraaah.frontend.common.mapping
 {
 	exports de.ruu.app.jeeeraaah.frontend.common.mapping;
+	exports de.ruu.app.jeeeraaah.frontend.common.mapping.bean.fxbean to org.mapstruct;
+	exports de.ruu.app.jeeeraaah.frontend.common.mapping.fxbean.bean to org.mapstruct;
 
 	// MapStruct context helper used in mappers
 	requires de.ruu.lib.mapstruct;

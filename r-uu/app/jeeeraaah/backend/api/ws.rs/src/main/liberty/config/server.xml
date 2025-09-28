@@ -1,9 +1,13 @@
 <server description="jeee-raaah liberty server">
+
+	<logging traceSpecification="com.ibm.ws.jdbc.*=all:com.ibm.ws.resource.*=all:com.ibm.ws.jca.*=all" />
+
 	<featureManager>
 		<!--		<platform>jakartaee-10</platform>-->
 		<feature>adminCenter-1.0</feature>
 		<!-- give openliberty access to shared library -->
 		<feature>bells-1.0</feature>
+		<feature>jdbc-4.3</feature>
 		<!-- allow other jpa implementations than eclipselink -->
 		<feature>persistenceContainer-3.1</feature>
 		<!-- allow other jsonb implementations than yasson -->
@@ -58,37 +62,56 @@
 
 	<library id="library-jdbc-driver-postgresql">
 		<fileset id="PostgreSQLFileset"
-		         dir="${shared_resource_dir_postgresql}/"
-		         includes="${shared_resource_file_postgresql}"/>
+		         dir="${shared.resource.dir}/"
+		         includes="postgresql-42.7.5.jar"/>
 	</library>
 
+<!--	<jdbcDriver id="jdbc-driver-postgresql"-->
+<!--	            jakarta.sql.XADataSource="org.postgresql.xa.PGXADataSource"-->
+<!--	            jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"-->
+<!--	            libraryRef="library-jdbc-driver-postgresql"/>-->
+
 	<jdbcDriver id="jdbc-driver-postgresql"
-	            jakarta.sql.XADataSource="org.postgresql.xa.PGXADataSource"
-	            jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"
-	            libraryRef="library-jdbc-driver-postgresql"/>
+	            libraryRef="library-jdbc-driver-postgresql">
+		<api.connector>javax.sql.XADataSource</api.connector>
+		<api.connector>javax.sql.ConnectionPoolDataSource</api.connector>
+		<api.connector>javax.sql.Driver</api.connector>
+	</jdbcDriver>
+
+<!--	<dataSource id="datasource_postgresql"-->
+<!--	            jndiName="jdbc/datasource_postgresql"-->
+<!--	            jdbcDriverRef="jdbc-driver-postgresql"-->
+<!--	            type="javax.sql.ConnectionPoolDataSource"-->
+<!--	            transactional="true">-->
+<!--		<properties.postgresql serverName="${datasource_server_host}"-->
+<!--		                       portNumber="${datasource_server_port}"-->
+<!--		                       databaseName="${datasource_database}"-->
+<!--		                       user="${datasource_database_username}"-->
+<!--		                       password="${datasource_database_password}"/>-->
+<!--	</dataSource>-->
 
 	<dataSource id="datasource_postgresql"
 	            jndiName="jdbc/datasource_postgresql"
 	            jdbcDriverRef="jdbc-driver-postgresql"
-	            type="javax.sql.ConnectionPoolDataSource"
+	            type="javax.sql.XADataSource"
 	            transactional="true">
-		<properties serverName="${datasource_server_host}"
-		            portNumber="${datasource_server_port}"
-		            databaseName="${datasource_database}"
-		            user="${datasource_database_username}"
-		            password="${datasource_database_password}"/>
+		<properties
+				serverName="${datasource_server_host}"
+				portNumber="${datasource_server_port}"
+				databaseName="${datasource_database}"
+				user="${datasource_database_username}"
+				password="${datasource_database_password}"/>
 	</dataSource>
 
-	<!-- TODO: reactivate for use of hibernate -->
-	<library id="library-hibernate">
-		<fileset dir="${shared_resource_dir_hibernate}/"
-		         includes="${shared_resource_file_hibernate}"/>
-		<!--	    <fileset dir     ="${shared_resource_dir_jandex}/"-->
-		<!--                 includes="${shared_resource_file_jandex}"/>-->
-	</library>
+<!--	<library id="library-hibernate">-->
+<!--		<fileset dir="${shared_resource_dir_hibernate}/"-->
+<!--		         includes="${shared_resource_file_hibernate}"/>-->
+<!--		&lt;!&ndash;	    <fileset dir     ="${shared_resource_dir_jandex}/"&ndash;&gt;-->
+<!--		&lt;!&ndash;                 includes="${shared_resource_file_jandex}"/>&ndash;&gt;-->
+<!--	</library>-->
 
-	<!-- TODO: reactivate for use of hibernate -->
-	<bell libraryRef="library-hibernate"/>
+<!--	&lt;!&ndash; TODO: reactivate for use of hibernate &ndash;&gt;-->
+<!--	<bell libraryRef="library-hibernate"/>-->
 
 	<!--	<library id="library-jackson">-->
 	<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
@@ -110,7 +133,7 @@
 	                location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
 	                name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
 		<!-- TODO: reactivate for use of hibernate -->
-		<classloader commonLibraryRef="library-hibernate"/>
+<!--		<classloader commonLibraryRef="library-hibernate"/>-->
 	</webApplication>
 
 	<!-- Default SSL configuration enables trust for default certificates from the Java runtime -->

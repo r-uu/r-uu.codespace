@@ -9,4 +9,6 @@ module de.ruu.lib.jsonb
 
 	requires static lombok;
 	requires org.slf4j;
+
+	opens de.ruu.lib.jsonb.recursion;
 }

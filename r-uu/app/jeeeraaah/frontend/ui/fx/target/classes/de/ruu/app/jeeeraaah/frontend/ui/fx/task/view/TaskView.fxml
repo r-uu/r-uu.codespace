@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="grdPn" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="5.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <Label fx:id="lblId" text="id" GridPane.columnSpan="2" />
+        <Label fx:id="lblName" text="name" GridPane.rowIndex="1" />
+        <Label fx:id="lblDescription" text="description" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+        <Label fx:id="lblStart" text="start" GridPane.columnIndex="2" />
+        <Label fx:id="lblEnd" text="end" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label fx:id="lblClosed" text="closed" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <TextField fx:id="tfId" disable="true" GridPane.columnIndex="1" />
+        <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextArea fx:id="taDescription" wrapText="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+        <DatePicker fx:id="dtPckrStart" GridPane.columnIndex="3" />
+        <DatePicker fx:id="dtPckrEnd" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <CheckBox fx:id="chkBxClosed" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    </children>
+</GridPane>

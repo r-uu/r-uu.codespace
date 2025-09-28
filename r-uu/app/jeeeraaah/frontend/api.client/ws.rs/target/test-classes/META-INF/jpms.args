@@ -1,0 +1,4 @@
+--patch-module
+de.ruu.app.jeeeraaah.frontend.api.client.ws.rs=_
+--add-reads
+de.ruu.app.jeeeraaah.frontend.api.client.ws.rs=ALL-UNNAMED

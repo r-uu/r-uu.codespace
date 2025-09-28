@@ -31,6 +31,8 @@ module de.ruu.app.jeeeraaah.backend.api.ws.rs
 	requires de.ruu.app.jeeeraaah.backend.common.mapping;
 	requires de.ruu.lib.util;
 	requires jdk.management;
+	requires de.ruu.app.jeeeraaah.common.api.bean;
+	requires de.ruu.lib.cdi.se;
 
 	// Internal modules - these should be automatic modules or named modules
 

@@ -1,0 +1,8 @@
+de\ruu\lib\mapstruct\MappableCyclic.class
+module-info.class
+de\ruu\lib\mapstruct\Mappable.class
+de\ruu\lib\mapstruct\MappableCyclicMapper.class
+de\ruu\lib\mapstruct\BiMappedSource.class
+de\ruu\lib\mapstruct\ReferenceCycleTracking.class
+de\ruu\lib\mapstruct\MappableMapper.class
+de\ruu\lib\mapstruct\BiMappedTarget.class

@@ -103,11 +103,27 @@
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.frontend.api.client.ws.rs</artifactId>
+			<artifactId>r-uu.codespace.lib.junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
+		</dependency>
 
-		<!-- Logging -->
+		<!-- database (oracle jdbc driver) -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<!-- jpa (hibernate) -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+
+		<!-- logging (lombok, slf4j, log4j) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -120,15 +136,6 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j2-impl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib.junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
 		</dependency>
 
 		<!-- Test Dependencies -->
@@ -147,74 +154,54 @@
 			<artifactId>weld-se-core</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.smallrye.config</groupId>
+			<artifactId>smallrye-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.cdi.se</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-compiler-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<compilerArgs>-->
-<!--						<arg>-parameters</arg>-->
-<!--						<arg>-Xlint:all</arg>-->
-<!--						<arg>-Amapstruct.defaultComponentModel=default</arg>-->
-<!--						&lt;!&ndash; Add these JVM arguments for Java 24 compatibility &ndash;&gt;-->
-<!--						<arg>-J&#45;&#45;add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>-->
-<!--						<arg>-J&#45;&#45;add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>-->
-<!--					</compilerArgs>-->
-<!--					<useIncrementalCompilation>false</useIncrementalCompilation>-->
-<!--					&lt;!&ndash; forceJavacCompilerUse is deprecated, using fork and compiler args instead &ndash;&gt;-->
-<!--					<fork>true</fork>-->
-<!--					<showWarnings>true</showWarnings>-->
-<!--					<showDeprecation>true</showDeprecation>-->
-<!--					<annotationProcessorPaths>-->
-<!--						<path>-->
-<!--							<groupId>org.projectlombok</groupId>-->
-<!--							<artifactId>lombok</artifactId>-->
-<!--						</path>-->
-<!--						<path>-->
-<!--							<groupId>org.mapstruct</groupId>-->
-<!--							<artifactId>mapstruct-processor</artifactId>-->
-<!--						</path>-->
-<!--					</annotationProcessorPaths>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-surefire-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<argLine>-->
-<!--						&#45;&#45;add-opens=java.base/java.lang=ALL-UNNAMED-->
-<!--						&#45;&#45;add-opens=java.base/java.util=ALL-UNNAMED-->
-<!--					</argLine>-->
-<!--					<properties>-->
-<!--						<configurationParameters>-->
-<!--							junit.jupiter.testinstance.lifecycle.default = per_class-->
-<!--						</configurationParameters>-->
-<!--					</properties>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-war-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<failOnMissingWebXml>false</failOnMissingWebXml>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<useSystemClassLoader>false</useSystemClassLoader>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>io.openliberty.tools</groupId>
 				<artifactId>liberty-maven-plugin</artifactId>
 				<configuration>
+					<jvmOptions>
+						<param>-DWLP_LOGGING_CONSOLE_FORMAT=TB</param>
+						<param>-DWLP_LOGGING_CONSOLE_LOGLEVEL=INFO</param>
+						<param>-DWLP_LOGGING_CONSOLE_SOURCE=message,trace,accessLog,ffdc,audit</param>
+					</jvmOptions>
 					<bootstrapProperties>
 						<default.http.port>9080</default.http.port>
 						<default.https.port>9443</default.https.port>
 						<app.install.root>${project.build.directory}/liberty/wlp/usr/servers/defaultServer/apps</app.install.root>
 						<server.config.dir>${project.basedir}/src/main/resources</server.config.dir>
 					</bootstrapProperties>
+					<copyDependencies>
+						<location>${project.build.directory}/liberty/wlp/usr/shared/resources</location>
+						<dependency>
+							<groupId>org.postgresql</groupId>
+							<artifactId>postgresql</artifactId>
+						</dependency>
+					</copyDependencies>
 				</configuration>
-<!--				<copyFile>${project.basedir}/src/main/resources/server.xml</copyFile>-->
 			</plugin>
 		</plugins>
 	</build>
