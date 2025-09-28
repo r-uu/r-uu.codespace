@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.jpa.core.mapstruct.demo.bidirectional=_
---add-reads
-de.ruu.lib.jpa.core.mapstruct.demo.bidirectional=ALL-UNNAMED

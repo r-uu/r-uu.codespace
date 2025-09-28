@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.gen.java=_
---add-reads
-de.ruu.lib.gen.java=ALL-UNNAMED

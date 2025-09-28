@@ -1,4 +1,0 @@
---patch-module
-de.ruu.lib.junit=_
---add-reads
-de.ruu.lib.junit=ALL-UNNAMED
