@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.007 s -- in de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.022 s -- in de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands

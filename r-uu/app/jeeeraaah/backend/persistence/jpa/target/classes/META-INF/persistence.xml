@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              version="3.0"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
                                  https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
-
 	<persistence-unit name="jeeeraaah_test"
 	                  transaction-type="JTA">
-
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>jdbc/datasource_postgresql</jta-data-source>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<validation-mode>AUTO</validation-mode>
-
 		<properties>
 			<!-- properties as defined in specification -->
 			<property name="jakarta.persistence.schema-generation.database.action"
@@ -22,24 +18,17 @@
 			          value="create"/>
 			<property name="jakarta.persistence.schema-generation.scripts.create-target"
 			          value="create.ddl"/>
-
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-			<!--			<property name="hibernate.show_sql"                          value="true"/>-->
 			<property name="hibernate.show_sql" value="false"/>
 			<property name="hibernate.format_sql" value="true"/>
 			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="true"/>
-			<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
 			<property name="hibernate.jdbc.batch_size" value="10000"/>
 			<property name="hibernate.order_inserts" value="true"/>
 			<property name="hibernate.order_updates" value="true"/>
-			<!--			<property name="hibernate.transaction.jta.platform"          value="org.hibernate.engine.transaction.jta.platform.internal.WebSphereLibertyJtaPlatform"/>-->
-			<property name="hibernate.bytecode.use_reflection_optimizer" value="false"/>
-
-			<!-- TODO the following two lines produce warnings when starting openliberty but without them openliberty ends with stackoverflow ... !? -->
-<!--      <property name="hibernate.enhancer.enableDirtyTracking" value="false"/>-->
-<!--      <property name="hibernate.enhancer.enableLazyInitialization" value="false"/>-->
+			<property name="hibernate.bytecode.enhancement.enabled" value="true"/>
+<!--			<property name="hibernate.enhance.enableLazyInitialization" value="true"/>-->
+<!--			<property name="hibernate.enhance.enableDirtyTracking" value="true"/>-->
 			<property name="hibernate.boot.allow_jdbc_metadata_access" value="true"/>
 		</properties>
-
 	</persistence-unit>
 </persistence>

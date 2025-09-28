@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.app.jeeeraaah.frontend.ui.fx.types.TestBeansDataModel" time="0.363" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.app.jeeeraaah.frontend.ui.fx.types.TestBeansDataModel" time="0.437" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire14199809573201743991 2025-09-28T22-43-54_285-jvmRun1 surefire-20250928224535426_56tmp surefire_10-20250928224535426_57tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire11920316210653413020 2025-09-28T23-05-19_783-jvmRun1 surefire-20250928230719905_56tmp surefire_10-20250928230719905_57tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\frontend\ui\fx\target\test-classes;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-base\24.0.2\javafx-base-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jersey\core\jersey-client\3.1.6\jersey-client-3.1.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jersey\core\jersey-common\3.1.6\jersey-common-3.1.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\r-uu\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.1.6\jersey-hk2-3.1.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.6\hk2-locator-3.0.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.6\aopalliance-repackaged-3.0.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\hk2\hk2-api\3.0.6\hk2-api-3.0.6.jar;C:\Users\r-uu\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.6\hk2-utils-3.0.6.jar;C:\Users\r-uu\.m2\repository\org\javassist\javassist\3.30.2-GA\javassist-3.30.2-GA.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config\3.11.0\smallrye-config-3.11.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config-core\3.11.0\smallrye-config-core-3.11.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-annotation\2.9.0\smallrye-common-annotation-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-expression\2.9.0\smallrye-common-expression-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-function\2.9.0\smallrye-common-function-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-constraint\2.9.0\smallrye-common-constraint-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-classloader\2.9.0\smallrye-common-classloader-2.9.0.jar;C:\Users\r-uu\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config-common\3.11.0\smallrye-config-common-3.11.0.jar;C:\Users\r-uu\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-fxml\24.0.2\javafx-fxml-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-controls\24.0.2\javafx-controls-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-graphics\24.0.2\javafx-graphics-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-swing\24.0.2\javafx-swing-24.0.2.jar;C:\Users\r-uu\.m2\repository\org\openjfx\javafx-swing\24.0.2\javafx-swing-24.0.2-win.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\core\target\r-uu.codespace.lib.gen.core-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\comp\target\r-uu.codespace.lib.gen.java.fx.comp-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\jboss\weld\se\weld-se-shaded\5.1.2.Final\weld-se-shaded-5.1.2.Final.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean\target\r-uu.codespace.lib.gen.java.fx.bean-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit\target\r-uu.codespace.lib.archunit-0.0.1.jar;C:\Users\r-uu\.m2\repository\com\tngtech\archunit\archunit\1.4.1\archunit-1.4.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\core\target\r-uu.codespace.lib.gen.java.core-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\bean.editor\target\r-uu.codespace.lib.gen.java.fx.bean.editor-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\gen\java\fx\tableview\target\r-uu.codespace.lib.gen.java.fx.tableview-0.0.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,52 +61,52 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testGroupBeanCount" classname="testGroupBeanCount()" time="0.337">
-    <system-out><![CDATA[22:45:36.608 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
-22:45:36.612 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
-22:45:36.614 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
-22:45:36.614 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
-22:45:36.614 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
-22:45:36.614 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
-22:45:36.614 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
-22:45:36.615 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
-22:45:36.615 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
-22:45:36.615 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
-22:45:36.616 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
-22:45:36.616 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
-22:45:36.617 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
+  <testcase name="testGroupBeanCount" classname="testGroupBeanCount()" time="0.411">
+    <system-out><![CDATA[23:07:21.213 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
+23:07:21.216 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
+23:07:21.216 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
+23:07:21.217 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
+23:07:21.217 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
+23:07:21.217 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
+23:07:21.217 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
+23:07:21.218 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
 ]]></system-out>
   </testcase>
-  <testcase name="testSubTaskBeansPerMainTaskBeans" classname="testSubTaskBeansPerMainTaskBeans()" time="0.006">
-    <system-out><![CDATA[22:45:36.626 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
-22:45:36.626 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
-22:45:36.627 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
-22:45:36.627 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
-22:45:36.627 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
-22:45:36.627 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
-22:45:36.627 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
-22:45:36.628 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
-22:45:36.628 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
-22:45:36.629 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
-22:45:36.629 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
-22:45:36.630 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
-22:45:36.630 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
+  <testcase name="testSubTaskBeansPerMainTaskBeans" classname="testSubTaskBeansPerMainTaskBeans()" time="0.007">
+    <system-out><![CDATA[23:07:21.230 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
+23:07:21.231 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
+23:07:21.231 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
+23:07:21.232 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
+23:07:21.232 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
+23:07:21.232 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
+23:07:21.232 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
+23:07:21.233 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
+23:07:21.234 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
+23:07:21.234 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
+23:07:21.234 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
+23:07:21.235 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
+23:07:21.235 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
 ]]></system-out>
   </testcase>
-  <testcase name="testTaskBeansPerGroupCount" classname="testTaskBeansPerGroupCount()" time="0.004">
-    <system-out><![CDATA[22:45:36.632 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
-22:45:36.632 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
-22:45:36.632 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
-22:45:36.633 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
-22:45:36.633 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
-22:45:36.633 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
-22:45:36.634 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
+  <testcase name="testTaskBeansPerGroupCount" classname="testTaskBeansPerGroupCount()" time="0.003">
+    <system-out><![CDATA[23:07:21.237 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 0, mainTask.subTasks.size 3
+23:07:21.237 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 1, mainTask.subTasks.size 3
+23:07:21.238 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 0, mainTask 2, mainTask.subTasks.size 3
+23:07:21.238 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 0, mainTasks.size: 12
+23:07:21.238 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 0, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 1, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 1, mainTask 2, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 1, mainTasks.size: 12
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 0, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 1, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createMainTaskBean(52) - group 2, mainTask 2, mainTask.subTasks.size 3
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.createTaskGroupBean(37) - group 2, mainTasks.size: 12
+23:07:21.239 DEBUG de.ruu.app.jeeeraaah.frontend.ui.fx.types.DataFactory.data(26) - groups.size: 3
 ]]></system-out>
   </testcase>
 </testsuite>

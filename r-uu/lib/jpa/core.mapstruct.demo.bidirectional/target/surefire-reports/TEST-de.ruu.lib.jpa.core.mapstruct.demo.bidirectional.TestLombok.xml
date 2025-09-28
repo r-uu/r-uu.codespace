@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestLombok" time="0.33" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestLombok" time="0.342" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire8108316731885520458 2025-09-28T22-43-54_285-jvmRun1 surefire-20250928224605287_73tmp surefire_13-20250928224605287_74tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire10879517464283449252 2025-09-28T23-05-19_783-jvmRun1 surefire-20250928230743025_73tmp surefire_13-20250928230743025_74tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\core.mapstruct.demo.bidirectional\target\test-classes;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,17 +61,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="invalidNameEmployeeDTO" classname="invalidNameEmployeeDTO()" time="0.293"/>
+  <testcase name="invalidNameEmployeeDTO" classname="invalidNameEmployeeDTO()" time="0.302"/>
   <testcase name="validEmployeeInDepartmentDTO" classname="validEmployeeInDepartmentDTO()" time="0.003"/>
   <testcase name="invalidNullDepartmentNameSetting" classname="invalidNullDepartmentNameSetting()" time="0.002"/>
-  <testcase name="invalidNameDepartmentDTO" classname="invalidNameDepartmentDTO()" time="0.002"/>
+  <testcase name="invalidNameDepartmentDTO" classname="invalidNameDepartmentDTO()" time="0.001"/>
   <testcase name="emptyEmployeeEntity" classname="emptyEmployeeEntity()" time="0.003"/>
   <testcase name="emptyDepartmentEntity" classname="emptyDepartmentEntity()" time="0.001"/>
   <testcase name="validDepartmentDTO" classname="validDepartmentDTO()" time="0.001"/>
-  <testcase name="invalidDepartmentEmployeeDTO" classname="invalidDepartmentEmployeeDTO()" time="0.002"/>
+  <testcase name="invalidDepartmentEmployeeDTO" classname="invalidDepartmentEmployeeDTO()" time="0.001"/>
   <testcase name="invalidNameDepartmentEntity" classname="invalidNameDepartmentEntity()" time="0.001"/>
-  <testcase name="invalidNameEmployeeEntity" classname="invalidNameEmployeeEntity()" time="0.001"/>
-  <testcase name="emptyEmployeeDTO" classname="emptyEmployeeDTO()" time="0.001"/>
+  <testcase name="invalidNameEmployeeEntity" classname="invalidNameEmployeeEntity()" time="0.002"/>
+  <testcase name="emptyEmployeeDTO" classname="emptyEmployeeDTO()" time="0.0"/>
   <testcase name="invalidEmptyDepartmentNameSetting" classname="invalidEmptyDepartmentNameSetting()" time="0.0"/>
   <testcase name="emptyDepartmentDTO" classname="emptyDepartmentDTO()" time="0.0"/>
 </testsuite>
