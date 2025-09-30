@@ -15,11 +15,8 @@
 		<version>0.0.1</version>
 	</parent>
 
-	<properties>
-		<lombok.version>1.18.38</lombok.version>
-		<!-- Java version and compiler settings are inherited from parent POM -->
-	</properties>
-	
+	<!-- java-version, compiler and annotation processor are being inherited from root-pom -->
+
 	<dependencies>
 		<!-- External dependencies -->
 		<dependency>

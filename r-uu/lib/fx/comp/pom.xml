@@ -30,7 +30,6 @@
 		</dependency>
 
 		<!-- Internal dependencies -->
-
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.cdi.common</artifactId>
@@ -44,5 +43,7 @@
 			<artifactId>r-uu.codespace.lib.util</artifactId>
 		</dependency>
 	</dependencies>
+
+	<!-- Build-Konfiguration und Plugins werden zentral vom Root-POM geerbt -->
 
 </project>

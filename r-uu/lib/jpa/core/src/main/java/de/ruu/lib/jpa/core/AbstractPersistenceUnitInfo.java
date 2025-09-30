@@ -25,9 +25,10 @@ import static java.lang.Thread.currentThread;
 /** {@link #transactionType} is #RESOURCE_LOCAL by default */
 @RequiredArgsConstructor
 @Data
+@SuppressWarnings({"removal"})
 public abstract class AbstractPersistenceUnitInfo implements PersistenceUnitInfo
 {
-	public static final String JPA_VERSION = "3.0";
+	public static final String JPA_VERSION = "3.2";
 
 	public static final String PROPERTY_KEY_PERSISTENCE_UNIT_PERSISTENCE_UNIT_NAME =
 			"persistence.unit.persistence.unit.name";
@@ -113,29 +114,30 @@ public abstract class AbstractPersistenceUnitInfo implements PersistenceUnitInfo
 		result.put(PROPERTY_KEY_PERSISTENCE_UNIT_CLASS_LOADER,                    classLoader);
 
 		if (persistenceProvider    != null)
-				result.put(
-						PROPERTY_KEY_PERSISTENCE_UNIT_PERSISTENCE_PROVIDER_CLASS_NAME,
-						persistenceProvider.getName());
+			result.put(
+					PROPERTY_KEY_PERSISTENCE_UNIT_PERSISTENCE_PROVIDER_CLASS_NAME,
+					persistenceProvider.getName());
 		if (dataSource             != null)
-				result.put(PROPERTY_KEY_PERSISTENCE_UNIT_JTA_DATA_SOURCE,           dataSource);
+			result.put(PROPERTY_KEY_PERSISTENCE_UNIT_JTA_DATA_SOURCE,           dataSource);
 		if (persistenceUnitRootUrl != null)
-				result.put(PROPERTY_KEY_PERSISTENCE_UNIT_PERSISTENCE_UNIT_ROOT_URL, persistenceUnitRootUrl);
+			result.put(PROPERTY_KEY_PERSISTENCE_UNIT_PERSISTENCE_UNIT_ROOT_URL, persistenceUnitRootUrl);
 		if (newTempClassLoader     != null)
-				result.put(PROPERTY_KEY_PERSISTENCE_UNIT_NEW_TEMP_CLASS_LOADER,     newTempClassLoader);
+			result.put(PROPERTY_KEY_PERSISTENCE_UNIT_NEW_TEMP_CLASS_LOADER,     newTempClassLoader);
 
 		return result;
 	}
 
-	/** remove this method after upgrade to new jpa version */
+	/** Compatibility with current SPI: convert API enum to SPI enum on return */
 	@Override
-	@Deprecated
+	@SuppressWarnings({"removal"})
 	public jakarta.persistence.spi.PersistenceUnitTransactionType getTransactionType()
 	{
-		return jakarta.persistence.spi.PersistenceUnitTransactionType.RESOURCE_LOCAL;
+		return jakarta.persistence.spi.PersistenceUnitTransactionType.valueOf(transactionType.name());
 	}
 
 	public Properties properties() { return getProperties(); }
 
+	@SuppressWarnings("unused")
 	public static List<String> toClassNameList(Set<Class<?>> managedClasses)
 	{
 		List<String> result = new ArrayList<>();

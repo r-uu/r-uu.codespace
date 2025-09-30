@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jackson.TestBidirectional" time="0.675" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jackson.TestBidirectional" time="1.162" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -14,17 +14,17 @@
     <property name="java.vm.specification.version" value="24"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
-    <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire5447871812744255833 2025-09-30T14-07-40_885-jvmRun1 surefire-20250930140752841_7tmp surefire_2-20250930140752841_8tmp"/>
+    <property name="sun.boot.library.path" value="C:\software\develop\java\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707\surefirebooter-20250930222432341_13.jar C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707 2025-09-30T22-23-22_052-jvmRun1 surefire-20250930222432341_11tmp surefire_3-20250930222432341_12tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\r-uu"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="jdk.module.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\classes;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\4.0.0\jakarta.ws.rs-api-4.0.0.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar"/>
+    <property name="surefire.useFile" value="false"/>
     <property name="java.version.date" value="2025-07-15"/>
-    <property name="java.home" value="c:\software\develop\java\jdk"/>
+    <property name="java.home" value="C:\software\develop\java\jdk"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -32,7 +32,8 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-booter\3.5.4\surefire-booter-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-api\3.5.4\surefire-api-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.5.4\surefire-extensions-spi-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.5.4\surefire-shared-utils-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.5.4\surefire-logger-api-3.5.4.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.5.4\surefire-junit-platform-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\apache\maven\surefire\common-java5\3.5.4\common-java5-3.5.4.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-launcher\1.7.0\junit-platform-launcher-1.7.0.jar"/>
+    <property name="failsafe.useFile" value="false"/>
+    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707\surefirebooter-20250930222432341_13.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.2+11-jvmci-b01"/>
@@ -53,21 +54,22 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python313\Scripts\;C:\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;C:\Users\r-uu\AppData\Roaming\npm;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
-    <property name="java.vm.info" value="mixed mode"/>
+    <property name="trimStackTrace" value="false"/>
+    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="24.0.2+11-jvmci-b01"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="taskGroupSingleWithTaskSingle" classname="taskGroupSingleWithTaskSingle()" time="0.126">
-    <system-out><![CDATA[14:07:54.112 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(43) - jsonIn
+  <testcase name="taskGroupSingleWithTaskSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.246">
+    <system-out><![CDATA[22:24:34.400 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(43) - jsonIn
 {
-  "jsonId" : -632236476423309855,
+  "jsonId" : 284011656906433295,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : -3919251667665869651,
+    "jsonId" : -3732918330991487780,
     "id" : null,
     "version" : null,
     "name" : "task",
@@ -81,12 +83,12 @@
     "successors" : null
   } ]
 }
-14:07:54.150 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(47) - jsonOut
+22:24:34.476 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(47) - jsonOut
 {
-  "jsonId" : -632236476423309855,
+  "jsonId" : 284011656906433295,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : -3919251667665869651,
+    "jsonId" : -3732918330991487780,
     "id" : null,
     "version" : null,
     "name" : "task",
@@ -102,13 +104,13 @@
 }
 ]]></system-out>
   </testcase>
-  <testcase name="taskWithAllRelationsSingle" classname="taskWithAllRelationsSingle()" time="0.007">
-    <system-out><![CDATA[14:07:54.162 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(75) - jsonIn
+  <testcase name="taskWithAllRelationsSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.01">
+    <system-out><![CDATA[22:24:34.502 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(75) - jsonIn
 {
-  "jsonId" : -347367670460254953,
+  "jsonId" : 3269558006637747641,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : 2131615375013501416,
+    "jsonId" : 2636942153747982270,
     "id" : null,
     "version" : null,
     "name" : "predecessor task",
@@ -120,7 +122,7 @@
     "subTasks" : null,
     "predecessors" : null,
     "successors" : [ {
-      "jsonId" : -5688959704426822938,
+      "jsonId" : 3222621184239717185,
       "id" : null,
       "version" : null,
       "name" : "task",
@@ -129,7 +131,7 @@
       "end" : null,
       "closed" : null,
       "superTask" : {
-        "jsonId" : 5836266402044314652,
+        "jsonId" : 2433611089387012416,
         "id" : null,
         "version" : null,
         "name" : "super task",
@@ -138,12 +140,12 @@
         "end" : null,
         "closed" : null,
         "superTask" : null,
-        "subTasks" : [ -5688959704426822938 ],
+        "subTasks" : [ 3222621184239717185 ],
         "predecessors" : null,
         "successors" : null
       },
       "subTasks" : [ {
-        "jsonId" : -6128041567132054960,
+        "jsonId" : -6918715743164619013,
         "id" : null,
         "version" : null,
         "name" : "sub task",
@@ -151,14 +153,14 @@
         "start" : null,
         "end" : null,
         "closed" : null,
-        "superTask" : -5688959704426822938,
+        "superTask" : 3222621184239717185,
         "subTasks" : null,
         "predecessors" : null,
         "successors" : null
       } ],
-      "predecessors" : [ 2131615375013501416 ],
+      "predecessors" : [ 2636942153747982270 ],
       "successors" : [ {
-        "jsonId" : -6154670602984376673,
+        "jsonId" : -8417354225301916594,
         "id" : null,
         "version" : null,
         "name" : "successor task",
@@ -168,18 +170,18 @@
         "closed" : null,
         "superTask" : null,
         "subTasks" : null,
-        "predecessors" : [ -5688959704426822938 ],
+        "predecessors" : [ 3222621184239717185 ],
         "successors" : null
       } ]
     } ]
-  }, 5836266402044314652, -5688959704426822938, -6128041567132054960, -6154670602984376673 ]
+  }, 2433611089387012416, 3222621184239717185, -6918715743164619013, -8417354225301916594 ]
 }
-14:07:54.165 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(79) - jsonOut
+22:24:34.506 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(79) - jsonOut
 {
-  "jsonId" : -347367670460254953,
+  "jsonId" : 3269558006637747641,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : 2131615375013501416,
+    "jsonId" : 2636942153747982270,
     "id" : null,
     "version" : null,
     "name" : "predecessor task",
@@ -191,7 +193,7 @@
     "subTasks" : null,
     "predecessors" : null,
     "successors" : [ {
-      "jsonId" : -5688959704426822938,
+      "jsonId" : 3222621184239717185,
       "id" : null,
       "version" : null,
       "name" : "task",
@@ -200,7 +202,7 @@
       "end" : null,
       "closed" : null,
       "superTask" : {
-        "jsonId" : 5836266402044314652,
+        "jsonId" : 2433611089387012416,
         "id" : null,
         "version" : null,
         "name" : "super task",
@@ -209,12 +211,12 @@
         "end" : null,
         "closed" : null,
         "superTask" : null,
-        "subTasks" : [ -5688959704426822938 ],
+        "subTasks" : [ 3222621184239717185 ],
         "predecessors" : null,
         "successors" : null
       },
       "subTasks" : [ {
-        "jsonId" : -6128041567132054960,
+        "jsonId" : -6918715743164619013,
         "id" : null,
         "version" : null,
         "name" : "sub task",
@@ -222,14 +224,14 @@
         "start" : null,
         "end" : null,
         "closed" : null,
-        "superTask" : -5688959704426822938,
+        "superTask" : 3222621184239717185,
         "subTasks" : null,
         "predecessors" : null,
         "successors" : null
       } ],
-      "predecessors" : [ 2131615375013501416 ],
+      "predecessors" : [ 2636942153747982270 ],
       "successors" : [ {
-        "jsonId" : -6154670602984376673,
+        "jsonId" : -8417354225301916594,
         "id" : null,
         "version" : null,
         "name" : "successor task",
@@ -239,24 +241,24 @@
         "closed" : null,
         "superTask" : null,
         "subTasks" : null,
-        "predecessors" : [ -5688959704426822938 ],
+        "predecessors" : [ 3222621184239717185 ],
         "successors" : null
       } ]
     } ]
-  }, 5836266402044314652, -5688959704426822938, -6128041567132054960, -6154670602984376673 ]
+  }, 2433611089387012416, 3222621184239717185, -6918715743164619013, -8417354225301916594 ]
 }
 ]]></system-out>
   </testcase>
-  <testcase name="taskGroupSingle" classname="taskGroupSingle()" time="0.003">
-    <system-out><![CDATA[14:07:54.169 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(28) - jsonIn
+  <testcase name="taskGroupSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.005">
+    <system-out><![CDATA[22:24:34.513 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(28) - jsonIn
 {
-  "jsonId" : 6528617420132842822,
+  "jsonId" : -3399925768889464981,
   "name" : "group",
   "tasks" : null
 }
-14:07:54.169 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(32) - jsonOut
+22:24:34.514 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(32) - jsonOut
 {
-  "jsonId" : 6528617420132842822,
+  "jsonId" : -3399925768889464981,
   "name" : "group",
   "tasks" : null
 }

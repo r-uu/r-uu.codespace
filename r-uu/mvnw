@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+WRAPPER_DIR=".mvn/wrapper"
+WRAPPER_JAR="$WRAPPER_DIR/maven-wrapper.jar"
+WRAPPER_PROPERTIES="$WRAPPER_DIR/maven-wrapper.properties"
+WRAPPER_URL="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.3.2/maven-wrapper-3.3.2.jar"
+
+mkdir -p "$WRAPPER_DIR" 2>/dev/null
+
+if [ ! -f "$WRAPPER_JAR" ]; then
+  echo "Downloading Maven Wrapper JAR from $WRAPPER_URL"
+  if command -v curl >/dev/null 2>&1; then
+    curl -fsSL "$WRAPPER_URL" -o "$WRAPPER_JAR" || { echo "Failed to download Maven Wrapper JAR"; exit 1; }
+  elif command -v wget >/dev/null 2>&1; then
+    wget -q "$WRAPPER_URL" -O "$WRAPPER_JAR" || { echo "Failed to download Maven Wrapper JAR"; exit 1; }
+  else
+    echo "Please install curl or wget to download the Maven Wrapper JAR"
+    exit 1
+  fi
+fi
+
+JAVA_EXE="java"
+exec "$JAVA_EXE" -classpath "$WRAPPER_JAR" -Dmaven.multiModuleProjectDirectory="$PWD" org.apache.maven.wrapper.MavenWrapperMain "$@"
+

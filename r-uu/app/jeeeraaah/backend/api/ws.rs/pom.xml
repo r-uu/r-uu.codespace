@@ -16,18 +16,14 @@
 	</parent>
 
 	<dependencies>
-		<!-- Interne Dependencies -->
+		<!-- alphabetisch nach artifactId -->
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.ws.rs</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -35,19 +31,19 @@
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.domain</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.mapping</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib.util</artifactId>
+			<artifactId>r-uu.codespace.app.jeeeraaah.common.api.ws.rs</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib.ws.rs</artifactId>
+			<artifactId>r-uu.codespace.lib.cdi.se</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
@@ -60,17 +56,28 @@
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
-		</dependency>
-		<!-- Datenbank und JPA (Hibernate) -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<artifactId>r-uu.codespace.lib.mapstruct</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-core</artifactId>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>r-uu</groupId>
+			<artifactId>r-uu.codespace.lib.ws.rs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.smallrye.config</groupId>
+			<artifactId>smallrye-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate.common</groupId>
@@ -78,28 +85,13 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jboss.logging</groupId>
-			<artifactId>jboss-logging</artifactId>
-		</dependency>
-		<!-- Logging (lombok, slf4j, log4j) -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j2-impl</artifactId>
-		</dependency>
-		<!-- Test Dependencies -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.weld</groupId>
@@ -112,19 +104,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.smallrye.config</groupId>
-			<artifactId>smallrye-config</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>r-uu</groupId>
-			<artifactId>r-uu.codespace.lib.cdi.se</artifactId>
-		</dependency>
-		<!-- MicroProfile und Jakarta Validation APIs für Compile-Zeit -->
-		<dependency>
-			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
+		<!-- MicroProfile APIs: für Compilezeit (JPMS), Laufzeit wird vom Server bereitgestellt -->
 		<dependency>
 			<groupId>org.eclipse.microprofile.health</groupId>
 			<artifactId>microprofile-health-api</artifactId>
@@ -145,14 +128,7 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-					<useSystemClassLoader>false</useSystemClassLoader>
-				</configuration>
-			</plugin>
+			<!-- Surefire zentral vom Root-POM -->
 			<plugin>
 				<groupId>io.openliberty.tools</groupId>
 				<artifactId>liberty-maven-plugin</artifactId>
@@ -169,11 +145,25 @@
 						<server.config.dir>${project.basedir}/src/main/resources</server.config.dir>
 					</bootstrapProperties>
 				</configuration>
+				<executions>
+					<execution>
+						<id>stop-liberty-before-clean</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<failOnError>false</failOnError>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.6.0</version>
 				<executions>
 					<execution>
 						<id>copy-jboss-logging</id>

@@ -55,4 +55,6 @@
 		</dependency>
 	</dependencies>
 
+	<!-- Build-Konfiguration und Plugins werden zentral vom Root-POM geerbt -->
+
 </project>
