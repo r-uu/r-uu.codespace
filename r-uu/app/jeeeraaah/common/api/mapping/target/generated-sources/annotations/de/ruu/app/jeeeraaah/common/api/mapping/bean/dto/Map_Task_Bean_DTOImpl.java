@@ -3,13 +3,14 @@ package de.ruu.app.jeeeraaah.common.api.mapping.bean.dto;
 import de.ruu.app.jeeeraaah.common.api.bean.TaskBean;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
-import javax.annotation.processing.Generated;
 
+/*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-09-30T22:23:48+0200",
+    date = "2025-09-30T22:35:17+0200",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.2 (Oracle Corporation)"
 )
+*/
 public class Map_Task_Bean_DTOImpl implements Map_Task_Bean_DTO {
 
     @Override
