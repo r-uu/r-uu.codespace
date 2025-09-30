@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.se.hibernate.EntityManagerFactoryProducerTest" time="1.159" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.se.hibernate.EntityManagerFactoryProducerTest" time="2.448" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire18346805207825338782 2025-09-28T23-05-19_783-jvmRun1 surefire-20250928230756445_85tmp surefire_15-20250928230756445_86tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\r-uu\AppData\Local\Temp\surefire10647037614183300244 2025-09-30T09-05-45_750-jvmRun1 surefire-20250930090852834_85tmp surefire_15-20250930090852834_86tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\se.hibernate\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jdbc\postgres\target\r-uu.codespace.lib.jdbc.postgres-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jdbc\core\target\r-uu.codespace.lib.jdbc.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\r-uu\.m2\repository\org\postgresql\postgresql\42.7.5\postgresql-42.7.5.jar;C:\Users\r-uu\.m2\repository\org\checkerframework\checker-qual\3.48.3\checker-qual-3.48.3.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\junit\target\r-uu.codespace.lib.junit-0.0.1.jar;C:\Users\r-uu\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\org\eclipse\microprofile\config\microprofile-config-api\3.0\microprofile-config-api-3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\jandex\3.2.2\jandex-3.2.2.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config\3.11.0\smallrye-config-3.11.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config-core\3.11.0\smallrye-config-core-3.11.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-annotation\2.9.0\smallrye-common-annotation-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-expression\2.9.0\smallrye-common-expression-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-function\2.9.0\smallrye-common-function-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-constraint\2.9.0\smallrye-common-constraint-2.9.0.jar;C:\Users\r-uu\.m2\repository\io\smallrye\common\smallrye-common-classloader\2.9.0\smallrye-common-classloader-2.9.0.jar;C:\Users\r-uu\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\r-uu\.m2\repository\io\smallrye\config\smallrye-config-common\3.11.0\smallrye-config-common-3.11.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\r-uu\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\r-uu\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\r-uu\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\r-uu\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,19 +61,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="entityManagerFactoryProducer" classname="entityManagerFactoryProducer()" time="1.044">
+  <testcase name="entityManagerFactoryProducer" classname="entityManagerFactoryProducer()" time="1.094">
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Sept 28, 2025 11:07:57 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+Sept 30, 2025 9:08:55 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
 INFO: HHH000204: Processing PersistenceUnitInfo [name: lib_test]
-Sept 28, 2025 11:07:57 PM org.hibernate.Version logVersion
+Sept 30, 2025 9:08:55 AM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version [WORKING]
-Sept 28, 2025 11:07:57 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+Sept 30, 2025 9:08:55 AM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
 INFO: HHH000026: Second-level cache disabled
-Sept 28, 2025 11:07:57 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+Sept 30, 2025 9:08:55 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using built-in connection pool (not intended for production use)
-Sept 28, 2025 11:07:58 PM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator initiateService
+Sept 30, 2025 9:08:55 AM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator initiateService
 INFO: HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://localhost:5432/lib]
 	Database driver: org.postgresql.Driver
@@ -82,7 +82,7 @@ INFO: HHH10001005: Database info:
 	Isolation level: undefined/unknown
 	Minimum pool size: 1
 	Maximum pool size: 20
-Sept 28, 2025 11:07:58 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+Sept 30, 2025 9:08:56 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
 INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 ]]></system-err>
   </testcase>

@@ -14,16 +14,12 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.jboss.logging</groupId>
-                <artifactId>jboss-logging</artifactId>
-                <version>3.5.3.Final</version>
-            </dependency>
+            <!-- Entfernt, da jetzt zentral in Root-POM -->
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <!-- Internal dependencies -->
+        <!-- Internal dependencies alphabetisch nach artifactId -->
         <dependency>
             <groupId>r-uu</groupId>
             <artifactId>r-uu.codespace.lib.jdbc.core</artifactId>
@@ -34,11 +30,15 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- External dependencies -->
+        <!-- External dependencies alphabetisch nach artifactId -->
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>io.smallrye.config</groupId>
             <artifactId>smallrye-config</artifactId>
-            <version>3.11.1</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -48,18 +48,13 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.jboss.logging</groupId>
-            <artifactId>jboss-logging</artifactId>
-            <version>3.6.1.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.annotation</groupId>
-            <artifactId>jakarta.annotation-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>

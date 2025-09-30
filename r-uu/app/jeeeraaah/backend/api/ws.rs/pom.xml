@@ -16,55 +16,7 @@
 	</parent>
 
 	<dependencies>
-		<!-- Jakarta EE Dependencies -->
-		<dependency>
-			<groupId>jakarta.enterprise</groupId>
-			<artifactId>jakarta.enterprise.cdi-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.json.bind</groupId>
-			<artifactId>jakarta.json.bind-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.xml.bind</groupId>
-			<artifactId>jakarta.xml.bind-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.inject</groupId>
-			<artifactId>jakarta.inject-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.json</groupId>
-			<artifactId>jakarta.json-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.ws.rs</groupId>
-			<artifactId>jakarta.ws.rs-api</artifactId>
-		</dependency>
-
-		<!-- MicroProfile Dependencies -->
-		<dependency>
-			<groupId>org.eclipse.microprofile.health</groupId>
-			<artifactId>microprofile-health-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.microprofile.metrics</groupId>
-			<artifactId>microprofile-metrics-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.microprofile.openapi</groupId>
-			<artifactId>microprofile-openapi-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.microprofile.config</groupId>
-			<artifactId>microprofile-config-api</artifactId>
-		</dependency>
-
-		<!-- Internal Dependencies -->
+		<!-- Interne Dependencies -->
 		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.backend.persistence.jpa</artifactId>
@@ -110,20 +62,26 @@
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.app.jeeeraaah.backend.common.mapping</artifactId>
 		</dependency>
-
-		<!-- database (oracle jdbc driver) -->
+		<!-- Datenbank und JPA (Hibernate) -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
-
-		<!-- jpa (hibernate) -->
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
+			<scope>provided</scope>
 		</dependency>
-
-		<!-- logging (lombok, slf4j, log4j) -->
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+		</dependency>
+		<!-- Logging (lombok, slf4j, log4j) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -137,7 +95,6 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j2-impl</artifactId>
 		</dependency>
-
 		<!-- Test Dependencies -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -159,12 +116,29 @@
 			<artifactId>smallrye-config</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jboss.logging</groupId>
-			<artifactId>jboss-logging</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.cdi.se</artifactId>
+		</dependency>
+		<!-- MicroProfile und Jakarta Validation APIs für Compile-Zeit -->
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.microprofile.health</groupId>
+			<artifactId>microprofile-health-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.microprofile.metrics</groupId>
+			<artifactId>microprofile-metrics-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.microprofile.openapi</groupId>
+			<artifactId>microprofile-openapi-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -194,14 +168,35 @@
 						<app.install.root>${project.build.directory}/liberty/wlp/usr/servers/defaultServer/apps</app.install.root>
 						<server.config.dir>${project.basedir}/src/main/resources</server.config.dir>
 					</bootstrapProperties>
-					<copyDependencies>
-						<location>${project.build.directory}/liberty/wlp/usr/shared/resources</location>
-						<dependency>
-							<groupId>org.postgresql</groupId>
-							<artifactId>postgresql</artifactId>
-						</dependency>
-					</copyDependencies>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.6.0</version>
+				<executions>
+					<execution>
+						<id>copy-jboss-logging</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.jboss.logging</groupId>
+									<artifactId>jboss-logging</artifactId>
+									<outputDirectory>${project.basedir}/target/liberty/wlp/usr/shared/resources</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.postgresql</groupId>
+									<artifactId>postgresql</artifactId>
+									<outputDirectory>${project.basedir}/target/liberty/wlp/usr/shared/resources</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

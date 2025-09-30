@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: de.ruu.lib.util.jira.csv.issue.hierarchy.query.HierarchyQueryConfigTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.002 s -- in de.ruu.lib.util.jira.csv.issue.hierarchy.query.HierarchyQueryConfigTest

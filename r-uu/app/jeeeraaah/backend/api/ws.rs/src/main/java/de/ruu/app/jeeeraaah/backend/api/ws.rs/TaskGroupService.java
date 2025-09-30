@@ -292,7 +292,7 @@ public class TaskGroupService
 		catch (Exception e)
 		{
 			// TODO: use internalServerError
-			log.error("Failed to retrieve flat list of task groups: {}", e.getMessage(), e);
+			log.error("failed to retrieve list of flat task groups: {}", e.getMessage(), e);
 			return
 					Response.status(INTERNAL_SERVER_ERROR)
 					.entity("Failed to retrieve task groups list: " + e.getMessage())

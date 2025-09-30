@@ -2,18 +2,19 @@ module de.ruu.app.jeeeraaah.backend.api.ws.rs
 {
 	// Jakarta EE modules
 	requires transitive jakarta.cdi;
-	requires jakarta.validation;
 	requires jakarta.json;
 	requires jakarta.persistence;
 	requires jakarta.ws.rs;
 	requires jakarta.inject;
 	requires jakarta.xml.bind;
 
-	// MicroProfile modules
-	requires microprofile.health.api;
-	requires microprofile.metrics.api;
-	requires microprofile.openapi.api;
-	requires microprofile.config.api;
+
+	// MicroProfile und Jakarta Validation Automodules für Compile-Zeit
+	requires static jakarta.validation;
+	requires static microprofile.health.api;
+	requires static microprofile.metrics.api;
+	requires static microprofile.openapi.api;
+
 
 	// Logging
 	requires org.slf4j;

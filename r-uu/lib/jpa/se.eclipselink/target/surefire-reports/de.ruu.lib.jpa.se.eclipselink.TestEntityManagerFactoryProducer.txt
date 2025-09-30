@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.ruu.lib.jpa.se.eclipselink.TestEntityManagerFactoryProducer
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.004 s -- in de.ruu.lib.jpa.se.eclipselink.TestEntityManagerFactoryProducer
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.006 s -- in de.ruu.lib.jpa.se.eclipselink.TestEntityManagerFactoryProducer

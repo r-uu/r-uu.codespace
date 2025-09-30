@@ -103,15 +103,13 @@
 				password="${datasource_database_password}"/>
 	</dataSource>
 
-<!--	<library id="library-hibernate">-->
-<!--		<fileset dir="${shared_resource_dir_hibernate}/"-->
-<!--		         includes="${shared_resource_file_hibernate}"/>-->
-<!--		&lt;!&ndash;	    <fileset dir     ="${shared_resource_dir_jandex}/"&ndash;&gt;-->
-<!--		&lt;!&ndash;                 includes="${shared_resource_file_jandex}"/>&ndash;&gt;-->
-<!--	</library>-->
+	<library id="library-hibernate">
+		<fileset dir="${shared.resource.dir}/" includes="hibernate-core-6.6.4.Final.jar,jboss-logging-3.6.1.Final.jar"/>
+		<apiTypeVisibility>spec,ibm-api,third-party</apiTypeVisibility>
+		<classLoader>common</classLoader>
+	</library>
 
-<!--	&lt;!&ndash; TODO: reactivate for use of hibernate &ndash;&gt;-->
-<!--	<bell libraryRef="library-hibernate"/>-->
+	<bell libraryRef="library-hibernate"/>
 
 	<!--	<library id="library-jackson">-->
 	<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
@@ -129,11 +127,15 @@
 
 	<variable name="de.ruu.app.jeeeraaah.server.system.SystemResource_inMaintenance" value="false"/>
 
-	<webApplication contextRoot="/"
-	                location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
-	                name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
-		<!-- TODO: reactivate for use of hibernate -->
-<!--		<classloader commonLibraryRef="library-hibernate"/>-->
+	<webApplication
+			contextRoot="/"
+			location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
+			name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
+		<classloader commonLibraryRef="library-hibernate"
+		             apiTypeVisibility="spec, ibm-api, third-party"
+		             delegation="parentLast">
+			<fileset dir="${server.config.dir}/lib/global" includes="*.jar" scanInterval="5s"/>
+		</classloader>
 	</webApplication>
 
 	<!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
