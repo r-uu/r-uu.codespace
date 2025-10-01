@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <!-- Minimal benötigte Features (Liberty ergänzt weitere im Dev-Modus falls nötig) -->
+    <featureManager>
+        <feature>servlet-6.0</feature>
+        <feature>cdi-4.0</feature>
+        <feature>jsonp-2.1</feature>
+        <feature>jsonb-3.0</feature>
+        <feature>restfulWS-3.1</feature>
+        <feature>jdbc-4.3</feature>
+        <feature>jndi-1.0</feature>
+        <feature>mpConfig-3.1</feature>
+    </featureManager>
+
+    <!-- Library für den PostgreSQL-Treiber: greift auf die vom Build kopierten JARs zu -->
+    <!-- wlp.user.dir zeigt auf .../target/liberty/wlp/usr -->
+    <library id="library-jdbc-driver-postgresql">
+        <fileset dir="${wlp.user.dir}/shared/resources" includes="postgresql-*.jar"/>
+    </library>
+
+    <!-- Nicht-XA DataSource (PGSimpleDataSource) für Dev: vermeidet fehlende XADataSource-Implementierung -->
+    <dataSource id="datasource_postgresql" jndiName="jdbc/datasource_postgresql" type="javax.sql.DataSource">
+        <jdbcDriver libraryRef="library-jdbc-driver-postgresql" dataSourceClassName="org.postgresql.ds.PGSimpleDataSource"/>
+        <properties
+                serverName="${env.POSTGRES_HOST:-localhost}"
+                portNumber="${env.POSTGRES_PORT:-5432}"
+                databaseName="${env.POSTGRES_DB:-postgres}"
+                user="${env.POSTGRES_USER:-postgres}"
+                password="${env.POSTGRES_PASSWORD:-postgres}"/>
+    </dataSource>
+</server>

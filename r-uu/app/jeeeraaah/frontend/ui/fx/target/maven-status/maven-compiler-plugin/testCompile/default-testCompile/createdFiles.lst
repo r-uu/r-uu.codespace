@@ -1,0 +1,11 @@
+de\ruu\app\jeeeraaah\frontend\ui\fx\generate\TypeGenerator.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\task\FXComponentBundleGenerator.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\TestBeansDataModel.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\Test_Map_TaskGroup_DTO_Bean.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\DataFactory.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\DataAsStringTransformer.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\Test_Map_TaskGroup_Bean_FXBean.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\Test_Map_Task_DTO_Bean.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\TestDTOsDataModel.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\task\gantt\FXComponentBundleGenerator.class
+de\ruu\app\jeeeraaah\frontend\ui\fx\types\Test_Map_Task_Bean_FXBean.class

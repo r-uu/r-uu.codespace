@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands" time="0.016" tests="2" errors="0" skipped="2" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands" time="0.006" tests="2" errors="0" skipped="2" failures="0">
   <properties/>
   <testcase name="testCleanThenPopulate" classname="de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands" time="0.0">
     <skipped message="server at &quot;localhost:9080&quot; is not listening -&gt; execution disabled"/>
-    <system-out><![CDATA[06:07:55.938 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(26) - annotated Element: class de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands
-06:07:55.944 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(37) - 
+    <system-out><![CDATA[15:22:04.647 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(26) - annotated Element: class de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands
+15:22:04.650 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(37) - 
 property name host: jeeeraaah.rest-api.host
 property name port: jeeeraaah.rest-api.port
-06:07:56.043 DEBUG org.jboss.logging.logProvider(162) - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-06:07:56.113 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource SysPropConfigSource with ordinal 400
-06:07:56.114 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource EnvConfigSource with ordinal 300
-06:07:56.115 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource PropertiesConfigSource[source=file:/C:/Users/r-uu/develop/github/codespace/r-uu/app/jeeeraaah/frontend/api.client/ws.rs/target/test-classes/META-INF/microprofile-config.properties] with ordinal 100
-06:07:56.116 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource DefaultValuesConfigSource with ordinal -2147483648
-06:07:56.154 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(74) - server at "localhost:9080" is not listening -> execution disabled
+15:22:04.679 DEBUG org.jboss.logging.logProvider(162) - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+15:22:04.704 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource SysPropConfigSource with ordinal 400
+15:22:04.704 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource EnvConfigSource with ordinal 300
+15:22:04.705 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource PropertiesConfigSource[source=file:/C:/Users/r-uu/develop/github/codespace/r-uu/app/jeeeraaah/frontend/api.client/ws.rs/target/test-classes/META-INF/microprofile-config.properties] with ordinal 100
+15:22:04.705 DEBUG io.smallrye.config.getSources(1077) - SRCFG01006: Loaded ConfigSource DefaultValuesConfigSource with ordinal -2147483648
+15:22:04.720 DEBUG de.ruu.lib.junit.DisableOnServerNotListening.evaluateExecutionCondition(74) - server at "localhost:9080" is not listening -> execution disabled
 ]]></system-out>
   </testcase>
   <testcase name="debugJbossLoggingJar" classname="de.ruu.app.jeeeraaah.frontend.ws.rs.TestDBCommands" time="0.0">
