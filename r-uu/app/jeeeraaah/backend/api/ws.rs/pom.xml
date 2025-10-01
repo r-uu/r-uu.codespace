@@ -69,6 +69,7 @@
 		<dependency>
 			<groupId>io.smallrye.config</groupId>
 			<artifactId>smallrye-config</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>jakarta.validation</groupId>
@@ -123,6 +124,21 @@
 			<artifactId>microprofile-openapi-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.inject</groupId>
+			<artifactId>jakarta.inject-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -167,7 +183,7 @@
 				<executions>
 					<execution>
 						<id>copy-jboss-logging</id>
-						<phase>package</phase>
+						<phase>process-resources</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>

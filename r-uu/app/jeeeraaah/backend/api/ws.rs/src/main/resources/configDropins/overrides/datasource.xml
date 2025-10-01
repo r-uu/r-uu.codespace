@@ -1,0 +1,23 @@
+<server>
+    <!-- Make driver lookup resilient to version changes -->
+    <library id="library-jdbc-driver-postgresql">
+        <fileset dir="${wlp.user.dir}/shared/resources" includes="postgresql-*.jar"/>
+    </library>
+
+    <!-- Use non-XA DS in dev to avoid DSRA4000E while keeping JTA one-phase commit support -->
+    <dataSource id="datasource_postgresql"
+                jndiName="jdbc/datasource_postgresql"
+                jdbcDriverRef="jdbc-driver-postgresql"
+                type="javax.sql.DataSource"
+                transactional="true">
+        <properties.postgresql
+                serverName="${datasource_server_host:-localhost}"
+                portNumber="${datasource_server_port:-5432}"
+                databaseName="${datasource_database:-postgres}"
+                user="${datasource_database_username:-postgres}"
+                password="${datasource_database_password:-postgres}"/>
+        <!-- Hint the concrete DataSource class for clarity -->
+        <apiProperties dataSourceClassName="org.postgresql.ds.PGSimpleDataSource"/>
+    </dataSource>
+</server>
+

@@ -25,6 +25,10 @@ import static java.util.Objects.isNull;
 	Map_Task_JPA_DTO INSTANCE = Mappers.getMapper(Map_Task_JPA_DTO.class);
 
 	@Mapping(target = "taskGroup", ignore = true) // ignore task group, because it is mapped in object factory
+	@Mapping(target = "superTask", ignore = true)
+	@Mapping(target = "subTasks", ignore = true)
+	@Mapping(target = "predecessors", ignore = true)
+	@Mapping(target = "successors", ignore = true)
 	@NonNull
 	TaskDTO map(@NonNull TaskJPA in, @NonNull @Context ReferenceCycleTracking context);
 

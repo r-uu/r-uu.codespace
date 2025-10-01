@@ -792,7 +792,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.7.0</version>
+					<version>3.8.0</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-deploy-plugin</artifactId>
@@ -854,7 +854,6 @@
 						<param>-Dorg.jboss.logging.provider=slf4j</param>
 <!--						<param>-Djava.util.logging.manager=org.jboss.logmanager.LogManager</param>-->
 					</jvmOptions>
-					<copyLibsDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources</copyLibsDirectory>
 				</configuration>
 			</plugin>
 			<!-- Ensure compiler and surefire plugins are inherited and use pluginManagement versions/config -->

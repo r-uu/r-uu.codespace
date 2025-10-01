@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jackson.TestBidirectional" time="1.162" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jackson.TestBidirectional" time="1.319" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707\surefirebooter-20250930222432341_13.jar C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707 2025-09-30T22-23-22_052-jvmRun1 surefire-20250930222432341_11tmp surefire_3-20250930222432341_12tmp"/>
+    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire3082413296396855215\surefirebooter-20251001060738207_13.jar C:\Users\r-uu\AppData\Local\Temp\surefire3082413296396855215 2025-10-01T06-06-10_748-jvmRun1 surefire-20251001060738207_11tmp surefire_3-20251001060738207_12tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jackson\target\classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.3\jackson-databind-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.3\jackson-core-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.3\jackson-datatype-jsr310-2.18.3.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="failsafe.useFile" value="false"/>
-    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire13980319561540414707\surefirebooter-20250930222432341_13.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire3082413296396855215\surefirebooter-20251001060738207_13.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.2+11-jvmci-b01"/>
@@ -55,7 +55,7 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="trimStackTrace" value="false"/>
-    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -63,13 +63,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="taskGroupSingleWithTaskSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.246">
-    <system-out><![CDATA[22:24:34.400 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(43) - jsonIn
+  <testcase name="taskGroupSingleWithTaskSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.241">
+    <system-out><![CDATA[06:07:40.815 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(43) - jsonIn
 {
-  "jsonId" : 284011656906433295,
+  "jsonId" : 7877129134157199984,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : -3732918330991487780,
+    "jsonId" : -5138707533250307811,
     "id" : null,
     "version" : null,
     "name" : "task",
@@ -83,12 +83,12 @@
     "successors" : null
   } ]
 }
-22:24:34.476 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(47) - jsonOut
+06:07:40.896 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingleWithTaskSingle(47) - jsonOut
 {
-  "jsonId" : 284011656906433295,
+  "jsonId" : 7877129134157199984,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : -3732918330991487780,
+    "jsonId" : -5138707533250307811,
     "id" : null,
     "version" : null,
     "name" : "task",
@@ -104,13 +104,13 @@
 }
 ]]></system-out>
   </testcase>
-  <testcase name="taskWithAllRelationsSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.01">
-    <system-out><![CDATA[22:24:34.502 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(75) - jsonIn
+  <testcase name="taskWithAllRelationsSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.013">
+    <system-out><![CDATA[06:07:40.930 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(75) - jsonIn
 {
-  "jsonId" : 3269558006637747641,
+  "jsonId" : -6668636269096085818,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : 2636942153747982270,
+    "jsonId" : -2438469337620467938,
     "id" : null,
     "version" : null,
     "name" : "predecessor task",
@@ -122,7 +122,7 @@
     "subTasks" : null,
     "predecessors" : null,
     "successors" : [ {
-      "jsonId" : 3222621184239717185,
+      "jsonId" : 3523669041768012254,
       "id" : null,
       "version" : null,
       "name" : "task",
@@ -131,7 +131,7 @@
       "end" : null,
       "closed" : null,
       "superTask" : {
-        "jsonId" : 2433611089387012416,
+        "jsonId" : -7177576077303627527,
         "id" : null,
         "version" : null,
         "name" : "super task",
@@ -140,12 +140,12 @@
         "end" : null,
         "closed" : null,
         "superTask" : null,
-        "subTasks" : [ 3222621184239717185 ],
+        "subTasks" : [ 3523669041768012254 ],
         "predecessors" : null,
         "successors" : null
       },
       "subTasks" : [ {
-        "jsonId" : -6918715743164619013,
+        "jsonId" : 7302487985267022468,
         "id" : null,
         "version" : null,
         "name" : "sub task",
@@ -153,14 +153,14 @@
         "start" : null,
         "end" : null,
         "closed" : null,
-        "superTask" : 3222621184239717185,
+        "superTask" : 3523669041768012254,
         "subTasks" : null,
         "predecessors" : null,
         "successors" : null
       } ],
-      "predecessors" : [ 2636942153747982270 ],
+      "predecessors" : [ -2438469337620467938 ],
       "successors" : [ {
-        "jsonId" : -8417354225301916594,
+        "jsonId" : 6869479044324978914,
         "id" : null,
         "version" : null,
         "name" : "successor task",
@@ -170,18 +170,18 @@
         "closed" : null,
         "superTask" : null,
         "subTasks" : null,
-        "predecessors" : [ 3222621184239717185 ],
+        "predecessors" : [ 3523669041768012254 ],
         "successors" : null
       } ]
     } ]
-  }, 2433611089387012416, 3222621184239717185, -6918715743164619013, -8417354225301916594 ]
+  }, -7177576077303627527, 3523669041768012254, 7302487985267022468, 6869479044324978914 ]
 }
-22:24:34.506 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(79) - jsonOut
+06:07:40.935 DEBUG de.ruu.lib.jackson.TestBidirectional.taskWithAllRelationsSingle(79) - jsonOut
 {
-  "jsonId" : 3269558006637747641,
+  "jsonId" : -6668636269096085818,
   "name" : "group",
   "tasks" : [ {
-    "jsonId" : 2636942153747982270,
+    "jsonId" : -2438469337620467938,
     "id" : null,
     "version" : null,
     "name" : "predecessor task",
@@ -193,7 +193,7 @@
     "subTasks" : null,
     "predecessors" : null,
     "successors" : [ {
-      "jsonId" : 3222621184239717185,
+      "jsonId" : 3523669041768012254,
       "id" : null,
       "version" : null,
       "name" : "task",
@@ -202,7 +202,7 @@
       "end" : null,
       "closed" : null,
       "superTask" : {
-        "jsonId" : 2433611089387012416,
+        "jsonId" : -7177576077303627527,
         "id" : null,
         "version" : null,
         "name" : "super task",
@@ -211,12 +211,12 @@
         "end" : null,
         "closed" : null,
         "superTask" : null,
-        "subTasks" : [ 3222621184239717185 ],
+        "subTasks" : [ 3523669041768012254 ],
         "predecessors" : null,
         "successors" : null
       },
       "subTasks" : [ {
-        "jsonId" : -6918715743164619013,
+        "jsonId" : 7302487985267022468,
         "id" : null,
         "version" : null,
         "name" : "sub task",
@@ -224,14 +224,14 @@
         "start" : null,
         "end" : null,
         "closed" : null,
-        "superTask" : 3222621184239717185,
+        "superTask" : 3523669041768012254,
         "subTasks" : null,
         "predecessors" : null,
         "successors" : null
       } ],
-      "predecessors" : [ 2636942153747982270 ],
+      "predecessors" : [ -2438469337620467938 ],
       "successors" : [ {
-        "jsonId" : -8417354225301916594,
+        "jsonId" : 6869479044324978914,
         "id" : null,
         "version" : null,
         "name" : "successor task",
@@ -241,24 +241,24 @@
         "closed" : null,
         "superTask" : null,
         "subTasks" : null,
-        "predecessors" : [ 3222621184239717185 ],
+        "predecessors" : [ 3523669041768012254 ],
         "successors" : null
       } ]
     } ]
-  }, 2433611089387012416, 3222621184239717185, -6918715743164619013, -8417354225301916594 ]
+  }, -7177576077303627527, 3523669041768012254, 7302487985267022468, 6869479044324978914 ]
 }
 ]]></system-out>
   </testcase>
   <testcase name="taskGroupSingle" classname="de.ruu.lib.jackson.TestBidirectional" time="0.005">
-    <system-out><![CDATA[22:24:34.513 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(28) - jsonIn
+    <system-out><![CDATA[06:07:40.945 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(28) - jsonIn
 {
-  "jsonId" : -3399925768889464981,
+  "jsonId" : 5291673856243167754,
   "name" : "group",
   "tasks" : null
 }
-22:24:34.514 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(32) - jsonOut
+06:07:40.946 DEBUG de.ruu.lib.jackson.TestBidirectional.taskGroupSingle(32) - jsonOut
 {
-  "jsonId" : -3399925768889464981,
+  "jsonId" : 5291673856243167754,
   "name" : "group",
   "tasks" : null
 }

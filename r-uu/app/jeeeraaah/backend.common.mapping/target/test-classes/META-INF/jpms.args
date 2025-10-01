@@ -1,4 +1,0 @@
---patch-module
-de.ruu.app.jeeeraaah.backend.common.mapping=_
---add-reads
-de.ruu.app.jeeeraaah.backend.common.mapping=ALL-UNNAMED

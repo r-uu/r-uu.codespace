@@ -13,6 +13,7 @@ import org.mapstruct.AfterMapping;
 import org.mapstruct.BeforeMapping;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.ObjectFactory;
 import org.mapstruct.factory.Mappers;
@@ -26,6 +27,9 @@ import static java.util.Objects.isNull;
 {
 	Map_TaskGroup_Lazy_JPA INSTANCE = Mappers.getMapper(Map_TaskGroup_Lazy_JPA.class);
 
+	@Mapping(target = "name", ignore = true)
+	@Mapping(target = "description", ignore = true)
+	@Mapping(target = "tasks", ignore = true)
 	@NonNull TaskGroupJPA map(@NonNull TaskGroupLazy in);
 
 	/** annotating parameter {@code out} with {@link MappingTarget} is essential for this method being called */

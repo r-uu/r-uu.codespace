@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<featureInfo name="core" location="C:\Users\r-uu\develop\github\codespace\r-uu\app\jeeeraaah\backend\api\ws.rs\target\liberty\wlp"> 
+    <feature name="adminCenter-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.adminCenter-1.0</symbolicName> 
+        <displayName>Admin Center</displayName> 
+        <description>The adminCenter-1.0 feature enables the Liberty Admin Center, a web-based graphical interface for deploying, monitoring and managing Liberty servers in standalone and collective environments.</description> 
+        <enables>distributedMap-1.0</enables> 
+        <enables>json-1.0</enables> 
+        <enables>ssl-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.security_1.3.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.security_1.3.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.restHandler_2.0.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.wab.configure_1.0.105.jar</spiJar> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>httpOptions</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>authorization-roles</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.restHandler-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.adminCenter.tool.explore-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.adminCenter.tool.serverConfig-1.0"></include> 
+        <include symbolicName="io.openliberty.adminCenter1.0.internal.ee-6.0" tolerates="9.0,10.0,11.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.adminCenter.tool.explore-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.adminCenter.tool.serverConfig-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.adminSecurity-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-5.0" tolerates="6.0,6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.distributedMap-1.0" shortName="distributedMap-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.security-2.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.anno-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.0" tolerates="2.1,3.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.artifact-1.0"></include> 
+    </privateFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.appLifecycle-1.0</symbolicName> 
+        <description>%description</description> 
+    </protectedFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.appmanager-1.0</symbolicName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.application</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.filemonitor</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.kernel.server</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.runtime.update</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security.auth</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security.cred</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.registry</apiPackage> 
+        <spiPackage>com.ibm.wsspi.application.handler</spiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.appLifecycle-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+    </protectedFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.artifact-1.0</symbolicName> 
+    </privateFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.authFilter-1.0</symbolicName> 
+        <description>%description</description> 
+        <include symbolicName="io.openliberty.authFilter1.0.internal.ee-6.0" tolerates="9.0"></include> 
+        <include symbolicName="io.openliberty.servlet.api-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+    </protectedFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.basicRegistry-1.0</symbolicName> 
+    </privateFeature> 
+    <feature name="bells-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.bells-1.0</symbolicName> 
+        <displayName>Basic Extensions using Liberty Libraries 1.0</displayName> 
+        <description>This feature enables the configuration of Basic Extensions using Liberty Libraries (BELL).</description> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <configElement>library</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>bell</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+    </feature> 
+    <kernelFeature> 
+        <symbolicName>com.ibm.websphere.appserver.binary.logging-1.0</symbolicName> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.hpel_2.0.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.logging.hpel.reader</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.logging.hpel.reader.filters</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.logging.hpel.writer</apiPackage> 
+        <spiPackage>com.ibm.websphere.ras</spiPackage> 
+        <spiPackage>com.ibm.websphere.ras.annotation</spiPackage> 
+        <spiPackage>com.ibm.wsspi.logging</spiPackage> 
+        <spiPackage>com.ibm.ws.ffdc</spiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.logging-1.0"></include> 
+    </kernelFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.builtinAuthentication-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.api-5.0" tolerates="6.0,6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.ltpa-1.0"></include> 
+        <include symbolicName="io.openliberty.jcache.internal-1.1"></include> 
+        <include symbolicName="io.openliberty.jcache.internal1.1.ee-9.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.builtinAuthorization-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.securityInfrastructure-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.certificateCreator-1.0</symbolicName> 
+        <singleton>true</singleton> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.channelfw-1.0</symbolicName> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.classloaderContext-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.contextService-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.classloading-1.0))</autoProvision> 
+    </autoFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.classloading-1.0</symbolicName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <apiPackage type="spec" require-java="9">javax.activity</apiPackage> 
+        <spiPackage>com.ibm.wsspi.classloading</spiPackage> 
+        <spiPackage>com.ibm.wsspi.library</spiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.containerServices-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.dynamicBundle-1.0"></include> 
+    </protectedFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.configValidationJDBC-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.restConnector-2.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.jdbc-4.1)(osgi.identity=com.ibm.websphere.appserver.jdbc-4.2)(osgi.identity=com.ibm.websphere.appserver.jdbc-4.3)))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.connectionManagement-1.0</symbolicName> 
+        <include symbolicName="io.openliberty.connectionManager1.0.internal.ee-6.0" tolerates="9.0,10.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-1.1" tolerates="1.2,2.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jcaSecurity-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-6.0" tolerates="7.0,8.0,9.0,10.0,11.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.connectionpoolmonitor-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.monitor-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.connectionManagement-1.0))</autoProvision> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.connectionpool_1.2.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.connectionpool.monitor</apiPackage> 
+    </autoFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.containerServices-1.0</symbolicName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiPackage>com.ibm.ws.container.service.annotations</spiPackage> 
+        <spiPackage>com.ibm.ws.container.service.app.deploy</spiPackage> 
+        <spiPackage>com.ibm.ws.container.service.config</spiPackage> 
+        <spiPackage>com.ibm.ws.container.service.naming</spiPackage> 
+        <spiPackage>com.ibm.ws.container.service.security</spiPackage> 
+        <spiPackage>com.ibm.ws.container.service.state</spiPackage> 
+        <spiPackage>com.ibm.ws.serialization</spiPackage> 
+        <spiPackage>com.ibm.wsspi.resource</spiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.javaeedd-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.anno-1.0" tolerates="2.0"></include> 
+    </protectedFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.contextService-1.0</symbolicName> 
+        <description>%description</description> 
+        <include symbolicName="com.ibm.websphere.appserver.appLifecycle-1.0"></include> 
+    </protectedFeature> 
+    <feature name="distributedMap-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.distributedMap-1.0</symbolicName> 
+        <displayName>Distributed Map interface for Dynamic Caching 1.0</displayName> 
+        <description>This feature provides a local cache service which can be accessed through the DistributedMap API. A default cache is bound in JNDI at "services/cache/distributedmap". Caches can be distributed through addition of a network cache provider such as WebSphere eXtreme Scale.</description> 
+        <enables>jndi-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.distributedMap_2.0.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.cache</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.cache.exception</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.exception</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.ws.cache.spi</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.cache</apiPackage> 
+        <include symbolicName="io.openliberty.servlet.api-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jndi-1.0" shortName="jndi-1.0"></include> 
+        <include symbolicName="io.openliberty.distributedMapInternal-1.0" tolerates="2.0"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.distributedMapPMI-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.monitor-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.distributedMap-1.0))</autoProvision> 
+        <include symbolicName="com.ibm.websphere.appserver.distributedMap-1.0" shortName="distributedMap-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.monitor-1.0" shortName="monitor-1.0"></include> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.dynamicBundle-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.eeCompatible-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <platform>jakartaee-10.0</platform> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.httpcommons-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.httptransport-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.channelfw-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.injection-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.containerServices-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.anno-2.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.internal.slf4j-1.7</symbolicName> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.jakarta-transactionContext-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.contextService-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.transaction-2.0)))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeePlatform-6.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.appmanager-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeePlatform-7.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.javaeePlatform-6.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeePlatform-8.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.javaeePlatform-7.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeePlatform7.0-jndi1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.javaeePlatform-7.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.jndi-1.0))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeedd-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.artifact-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.javaeeddSchema-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.jcaSecurity-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.containerServices-1.0"></include> 
+        <include symbolicName="io.openliberty.jcaSecurity.internal.ee-6.0" tolerates="9.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-1.1" tolerates="1.2,2.0"></include> 
+    </privateFeature> 
+    <feature name="jdbc-4.3"> 
+        <symbolicName>com.ibm.websphere.appserver.jdbc-4.3</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Java Database Connectivity 4.3</displayName> 
+        <description>This feature enables the configuration of DataSources to access Databases from applications. Any JDBC driver that complies with the JDBC 4.3, 4.2, 4.1, 4.0, 3.0, or 2.x specification can be used; customized configuration of many specific providers is included. High performance connection pooling is also provided.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.connectionmanager_1.3.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="ibm-api">com.ibm.ws.jca.cm.mbean</apiPackage> 
+        <configElement>jdbcDriver</configElement> 
+        <configElement>library</configElement> 
+        <configElement>authData</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>kerberos</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>dataSource</configElement> 
+        <platform>jakartaee-11.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.appLifecycle-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-1.2" tolerates="1.1,2.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.connectionManagement-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.requestProbes-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+        <include symbolicName="io.openliberty.jdbc4.3.internal.ee-6.0" tolerates="9.0"></include> 
+    </feature> 
+    <feature name="jndi-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.jndi-1.0</symbolicName> 
+        <displayName>Java Naming and Directory Interface 1.0</displayName> 
+        <description>This feature enables the use of Java Naming and Directory Interface (JNDI) to access server configured resources such as DataSources or JMS Connection Factories. It also allows access to Java primitives configured in the server as a jndiEntry.</description> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <spiPackage>com.ibm.wsspi.anno.info</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.util</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.targets</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.classsource</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.service</spiPackage> 
+        <spiPackage>com.ibm.ws.anno.classsource.specification</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module.adapters</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.equinox.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory.contributor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.overlay</spiPackage> 
+        <spiPackage>com.ibm.ws.adaptable.module.structure</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory</spiPackage> 
+        <configElement>library</configElement> 
+        <configElement>jndiReferenceEntry</configElement> 
+        <configElement>jndiURLEntry</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>jndiEntry</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>jndiObjectFactory</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.internal.slf4j-1.7"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.anno-1.0" tolerates="2.0"></include> 
+    </feature> 
+    <feature name="json-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.json-1.0</symbolicName> 
+        <displayName>JavaScript Object Notation for Java 1.0</displayName> 
+        <description>This feature provides access to the JavaScript Object Notation (JSON4J) library. The JSON4J library provides a simple Java model for constructing and manipulating data to be rendered as JSON data.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.json_1.0.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.json.java</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.json.xml</apiPackage> 
+    </feature> 
+    <feature name="jwt-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.jwt-1.0</symbolicName> 
+        <displayName>JSON Web Token 1.0</displayName> 
+        <description>This feature allows the runtime to create JSON Web Tokens(JWT).</description> 
+        <enables>distributedMap-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.jwt_1.1.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.jwt_1.1.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security.jwt</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.tai</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.token</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.auth.callback</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.common.auth.module</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security.auth.callback</apiPackage> 
+        <configElement>authorization-roles</configElement> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.webBundleSecurity.internal-1.0"></include> 
+        <include symbolicName="io.openliberty.jwt1.0.internal.ee-6.0" tolerates="9.0"></include> 
+    </feature> 
+    <kernelFeature> 
+        <symbolicName>com.ibm.websphere.appserver.kernel-1.0</symbolicName> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.config_1.2.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.kernel.service_1.1.105.jar</apiJar> 
+        <apiJar>dev/api/spec/com.ibm.websphere.javaee.jsonp.1.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.kernel.embeddable_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.kernel.filemonitor_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.kernel.metatype_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.kernel.service_1.9.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.threading_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.core_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.namespace.service_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.cm_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.component.annotations_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.component_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.coordinator_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.event_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.log_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.metatype.annotations_1.0.105.jar</spiJar> 
+        <spiJar>dev/spi/spec/com.ibm.wsspi.org.osgi.service.metatype_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/third-party/com.ibm.wsspi.thirdparty.equinox_1.4.105.jar</spiJar> 
+    </kernelFeature> 
+    <kernelFeature> 
+        <symbolicName>com.ibm.websphere.appserver.kernelCore-1.0</symbolicName> 
+        <displayName>Liberty Kernel</displayName> 
+        <description>This feature provides the Liberty kernel, which makes up the core of the Open Liberty runtime.</description> 
+        <apiPackage type="ibm-api">com.ibm.websphere.config.mbeans</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.logging</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.logging.hpel</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.kernel.server</apiPackage> 
+        <spiPackage>com.ibm.websphere.crypto</spiPackage> 
+        <spiPackage>com.ibm.wsspi.config</spiPackage> 
+        <spiPackage>com.ibm.wsspi.kernel.filemonitor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.kernel.service.location</spiPackage> 
+        <spiPackage>com.ibm.wsspi.kernel.service.utils</spiPackage> 
+        <spiPackage>com.ibm.wsspi.security.crypto</spiPackage> 
+        <spiPackage>com.ibm.wsspi.threading</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.cm</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.component</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.coordinator</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.event</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.log</spiPackage> 
+        <spiPackage type="spec">org.osgi.service.metatype</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.framework.console</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.framework.eventmgr</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.framework.log</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.datalocation</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.debug</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.environment</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.localization</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.resolver</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.runnable</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.security</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.service.urlconversion</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.signedcontent</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.storagemanager</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.osgi.util</spiPackage> 
+        <spiPackage type="third-party">org.eclipse.equinox.log</spiPackage> 
+        <configElement>include</configElement> 
+        <configElement>featureManager</configElement> 
+        <configElement>executor</configElement> 
+        <configElement>variable</configElement> 
+        <configElement>fileset</configElement> 
+        <configElement>config</configElement> 
+    </kernelFeature> 
+    <kernelFeature> 
+        <symbolicName>com.ibm.websphere.appserver.logging-1.0</symbolicName> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.logging_1.1.105.jar</spiJar> 
+        <spiPackage>com.ibm.websphere.ras</spiPackage> 
+        <spiPackage>com.ibm.websphere.ras.annotation</spiPackage> 
+        <spiPackage>com.ibm.wsspi.logging</spiPackage> 
+        <spiPackage>com.ibm.ws.ffdc</spiPackage> 
+        <spiPackage>com.ibm.ws.ffdc.annotation</spiPackage> 
+        <configElement>logging</configElement> 
+    </kernelFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.ltpa-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.containerServices-1.0"></include> 
+    </privateFeature> 
+    <feature name="monitor-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.monitor-1.0</symbolicName> 
+        <displayName>Performance Monitoring 1.0</displayName> 
+        <description>This feature enables the Performance Monitoring Infrastructure (PMI) for other features the server is running. Monitoring data is accessible through standard MXBeans; access through the traditional WebSphere Perf MBean can be enabled.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.monitor_1.1.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.monitor.jmx</apiPackage> 
+        <configElement>monitor</configElement> 
+        <configElement>classloading</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.containerServices-1.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.org.reactivestreams.reactive-streams-1.0</symbolicName> 
+        <singleton>true</singleton> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.requestProbes-1.0</symbolicName> 
+    </privateFeature> 
+    <feature name="restConnector-2.0"> 
+        <symbolicName>com.ibm.websphere.appserver.restConnector-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Admin REST Connector 2.0</displayName> 
+        <description>A secure, REST administrative connector that can be used locally or remotely using any Java developer kit. This connector enables remote access from a Java client or directly through an HTTPS call. The administrator and reader roles protect the connector. The connector requires TLS to keep the communication confidential. The HTTPS port used by the connector is defined through the default HTTP endpoint. This feature supersedes the restConnector-1.0 feature. It enables the REST handler configuration APIs. When this feature is combined with features supporting configuration validation, the corresponding REST handler validation APIs are enabled.</description> 
+        <enables>distributedMap-1.0</enables> 
+        <enables>json-1.0</enables> 
+        <enables>ssl-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.restConnector_1.3.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.security_1.3.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.security_1.3.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.restHandler_2.0.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.wab.configure_1.0.105.jar</spiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.jmx.connector.rest</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.ws.jmx.connector.client.rest</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.filetransfer</apiPackage> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>httpOptions</configElement> 
+        <configElement>remoteFileAccess</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>authorization-roles</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.restHandler-1.0"></include> 
+        <include symbolicName="io.openliberty.restConnector2.0.internal.ee-6.0" tolerates="9.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+    </feature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.restHandler-1.0</symbolicName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.restHandler_2.0.105.jar</spiJar> 
+        <spiPackage type="ibm-spi">com.ibm.wsspi.rest.handler</spiPackage> 
+        <spiPackage type="ibm-spi">com.ibm.wsspi.rest.handler.helper</spiPackage> 
+        <include symbolicName="io.openliberty.restHandler.internal-1.0"></include> 
+        <include symbolicName="com.ibm.wsspi.appserver.webBundleSecurity-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.securityAPI.javaee-1.0"></include> 
+        <include symbolicName="io.openliberty.securityAPI.jakarta-1.0"></include> 
+    </protectedFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.security-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.api-5.0" tolerates="6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.security.internal.common-1.0"></include> 
+        <include symbolicName="io.openliberty.security.internal.ee-9.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.securityContext-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.contextService-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.securityInfrastructure-1.0))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>com.ibm.websphere.appserver.securityInfrastructure-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+    </privateFeature> 
+    <feature name="servlet-6.0"> 
+        <symbolicName>com.ibm.websphere.appserver.servlet-6.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Servlet 6.0</displayName> 
+        <description>This feature enables support for HTTP Servlets written to the Jakarta Servlet 6.0 specification. You can package servlets in Jakarta EE specified WAR or EAR files.  If servlet security is required, you should also configure an appSecurity feature. Without a security feature, any security constraints for the application are ignored.</description> 
+        <category>JakartaEE10Application</category> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.servlet_1.1.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.servlet.6.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/io.openliberty.servlet.spi_2.16.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.servlet.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.descriptor</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.resources</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.http</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.servlet.session</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.servlet.session</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.servlet.error</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.servlet.container</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.servlet.context</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.servlet.event</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.webcontainer</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.endpoint</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.security</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.sql</apiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.collaborator</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.extension</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.filter</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.metadata</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.osgi.extension</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.servlet</spiPackage> 
+        <spiPackage>com.ibm.wsspi.webcontainer.webapp</spiPackage> 
+        <spiPackage>com.ibm.websphere.servlet.filter</spiPackage> 
+        <spiPackage>com.ibm.websphere.servlet.response</spiPackage> 
+        <spiPackage>com.ibm.ws.webcontainer.extension</spiPackage> 
+        <spiPackage>com.ibm.websphere.servlet.request</spiPackage> 
+        <spiPackage>com.ibm.ws.webcontainer.spiadapter.collaborator</spiPackage> 
+        <spiPackage>com.ibm.websphere.webcontainer.async</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module</spiPackage> 
+        <spiPackage>com.ibm.ws.adaptable.module.structure</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module.adapters</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory.contributor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.overlay</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.equinox.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http.ee8</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.classsource</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.info</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.service</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.targets</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.util</spiPackage> 
+        <spiPackage>com.ibm.ws.anno.classsource.specification</spiPackage> 
+        <configElement>httpOptions</configElement> 
+        <configElement>cors</configElement> 
+        <configElement>webApplication</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>pluginConfiguration</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>httpSession</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>webContainer</configElement> 
+        <configElement>library</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <configElement>applicationManager</configElement> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>enterpriseApplication</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>javaPermission</configElement> 
+        <configElement>application</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0"></include> 
+        <include symbolicName="io.openliberty.servlet-servletSpi2.0"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>com.ibm.websphere.appserver.sessionMonitor-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.monitor-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.servlet-3.0)(osgi.identity=com.ibm.websphere.appserver.servlet-3.1)(osgi.identity=com.ibm.websphere.appserver.servlet-4.0)(osgi.identity=com.ibm.websphere.appserver.servlet-5.0)(osgi.identity=io.openliberty.servlet.internal-6.0)(osgi.identity=io.openliberty.servlet.internal-6.1)))</autoProvision> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.sessionstats_1.0.105.jar</apiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.session.monitor</apiPackage> 
+    </autoFeature> 
+    <feature name="ssl-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.ssl-1.0</symbolicName> 
+        <displayName>Secure Socket Layer 1.0</displayName> 
+        <superseded>true</superseded> 
+        <supersededBy>transportSecurity-1.0</supersededBy> 
+        <description>This feature enables support for Secure Sockets Layer (SSL) connections. The secure HTTPS listener is not started unless the ssl-1.0 feature is enabled and a keystore is configured.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.ssl_1.8.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.ssl_1.6.105.jar</spiJar> 
+        <apiPackage type="ibm-api">com.ibm.websphere.ssl</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.endpoint</apiPackage> 
+        <spiPackage>com.ibm.wsspi.ssl</spiPackage> 
+        <configElement>sslDefault</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>keyStore</configElement> 
+        <configElement>sslOptions</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <configElement>ssl</configElement> 
+        <include symbolicName="com.ibm.websphere.appserver.channelfw-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.certificateCreator-1.0" tolerates="2.0"></include> 
+    </feature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.websphere.appserver.transaction-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Transactions 2.0</displayName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.transaction_1.1.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.transaction</apiPackage> 
+        <apiPackage type="spec">javax.transaction.xa</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.uow</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.jtaextensions</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.uow</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.tx.jta</apiPackage> 
+        <spiPackage>com.ibm.wsspi.tx</spiPackage> 
+        <include symbolicName="io.openliberty.servlet.api-5.0" tolerates="6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.0" tolerates="2.1,3.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+        <include symbolicName="io.openliberty.jta-2.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.injection-2.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-3.0" tolerates="4.0,4.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.connectors-2.0" tolerates="2.1"></include> 
+    </protectedFeature> 
+    <feature name="transportSecurity-1.0"> 
+        <symbolicName>com.ibm.websphere.appserver.transportSecurity-1.0</symbolicName> 
+        <displayName>Transport Security 1.0</displayName> 
+        <description>This feature enables support for Secure Sockets Layer (SSL) connections. The secure HTTPS listener is not started unless the transportSecurity-1.0 feature is enabled and a keystore is configured.</description> 
+        <enables>ssl-1.0</enables> 
+        <include symbolicName="com.ibm.websphere.appserver.ssl-1.0" shortName="ssl-1.0"></include> 
+    </feature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.wsspi.appserver.webBundle-1.0</symbolicName> 
+        <displayName>OSGi Application</displayName> 
+        <description>%description</description> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.wab.configure_1.0.105.jar</spiJar> 
+        <spiPackage>com.ibm.wsspi.wab.configure</spiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.webBundle.internal-1.0"></include> 
+    </protectedFeature> 
+    <protectedFeature> 
+        <symbolicName>com.ibm.wsspi.appserver.webBundleSecurity-1.0</symbolicName> 
+        <description>%description</description> 
+        <include symbolicName="io.openliberty.webBundleSecurity.internal-1.0"></include> 
+        <include symbolicName="com.ibm.wsspi.appserver.webBundle-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+    </protectedFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.activation.internal-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.activation-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.adminCenter1.0.internal.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-6.0" shortName="servlet-6.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.restConnector-2.0" shortName="restConnector-2.0"></include> 
+        <include symbolicName="io.openliberty.jta-2.0"></include> 
+        <include symbolicName="io.openliberty.pages-3.1" shortName="pages-3.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.authFilter1.0.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.api-5.0" tolerates="6.0,6.1"></include> 
+    </privateFeature> 
+    <feature name="cdi-4.0"> 
+        <symbolicName>io.openliberty.cdi-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Contexts and Dependency Injection 4.0</displayName> 
+        <description>The Jakarta Contexts and Dependency Injection 4.0 specification makes it easier to integrate Jakarta EE components of different types. It provides a common mechanism to inject components such as enterprise beans or managed beans into other components such as JSPs or other enterprise beans.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.transaction_1.1.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.activation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.cdi.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.enterpriseBeans.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.interceptor.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.jsonp.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.pages.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.persistence.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.servlet.6.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.soap.3.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.transaction.2.0_2.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.xmlBinding.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.xmlWS.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/third-party/io.openliberty.cdi.4.0.thirdparty_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.transaction_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/io.openliberty.cdi.spi_1.1.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.decorator</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.context</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.context.control</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.context.spi</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.event</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject.literal</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject.spi</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject.spi.configurator</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject.se</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.util</apiPackage> 
+        <apiPackage type="spec">jakarta.inject</apiPackage> 
+        <apiPackage type="spec">jakarta.interceptor</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.inject.build.compatible.spi</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.lang.model</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.lang.model.declarations</apiPackage> 
+        <apiPackage type="spec">jakarta.enterprise.lang.model.types</apiPackage> 
+        <apiPackage type="third-party">org.jboss.weld.context</apiPackage> 
+        <apiPackage type="third-party">org.jboss.weld.context.api</apiPackage> 
+        <apiPackage type="third-party">org.jboss.weld.context.bound</apiPackage> 
+        <spiPackage type="ibm-spi">io.openliberty.cdi.spi</spiPackage> 
+        <configElement>applicationManager</configElement> 
+        <configElement>library</configElement> 
+        <configElement>application</configElement> 
+        <configElement>authData</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>cdi</configElement> 
+        <configElement>cdi12</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>javaPermission</configElement> 
+        <configElement>transaction</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="io.openliberty.jakartaeePlatform-10.0"></include> 
+        <include symbolicName="io.openliberty.servlet.api-6.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.contextService-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.enterpriseBeans-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.persistence-3.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.xmlWS-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.xmlBinding-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.internal.slf4j-1.7"></include> 
+        <include symbolicName="io.openliberty.jakarta.pages-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-2.0"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.cdi3.0-appSecurity</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.cdi-3.0)(osgi.identity=io.openliberty.cdi-4.0)(osgi.identity=io.openliberty.cdi-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.appSecurity-4.0)(osgi.identity=io.openliberty.appSecurity-5.0)(osgi.identity=io.openliberty.appSecurity-6.0)(osgi.identity=io.openliberty.mpJwt-2.1)))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.cdi3.0-jndi1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.cdi-3.0)(osgi.identity=io.openliberty.cdi-4.0)(osgi.identity=io.openliberty.cdi-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.jndi-1.0))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.cdi3.0-transaction2.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.cdi-3.0)(osgi.identity=io.openliberty.cdi-4.0)(osgi.identity=io.openliberty.cdi-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.transaction-2.0))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.cdi4.0-servlet6.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=io.openliberty.cdi-4.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=io.openliberty.servlet.internal-6.0))</autoProvision> 
+        <include symbolicName="io.openliberty.jakarta.pages-3.1"></include> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.configValidationConfigSchema-3.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.restConnector-2.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpOpenAPI-3.0)(osgi.identity=io.openliberty.mpOpenAPI-3.1)(osgi.identity=io.openliberty.mpOpenAPI-4.0)(osgi.identity=io.openliberty.mpOpenAPI-4.1)))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.configValidationValidatorSchema-3.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpOpenAPI-3.0)(osgi.identity=io.openliberty.mpOpenAPI-3.1)(osgi.identity=io.openliberty.mpOpenAPI-4.0)(osgi.identity=io.openliberty.mpOpenAPI-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.configValidationJDBC-1.0)(osgi.identity=com.ibm.websphere.appserver.configValidationJCA-1.0)(osgi.identity=com.ibm.websphere.appserver.configValidationCloudant-1.0)))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.connectionManager1.0.internal.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-2.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.connectors-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.distributedMapInternal-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.api-5.0" tolerates="6.0,6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.emptyHandleListContext-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.contextService-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.connectionManagement-1.0))</autoProvision> 
+    </autoFeature> 
+    <feature name="expressionLanguage-5.0"> 
+        <symbolicName>io.openliberty.expressionLanguage-5.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Expression Language 5.0</displayName> 
+        <description>This feature enables support for the Jakarta Expression Language 5.0.</description> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.expressionLanguage.5.0_1.0.105.jar</apiJar> 
+        <apiPackage type="spec">jakarta.el</apiPackage> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="io.openliberty.jakarta.expressionLanguage-5.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.activation-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.annotation-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.cdi-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.expressionLanguage-5.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.interceptor-2.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.connectors-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.enterpriseBeans-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.expressionLanguage-5.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.interceptor-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.mail-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.activation-2.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.pages-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.api-6.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.expressionLanguage-5.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.persistence-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.persistence.base-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.persistence.base-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.jsonpInternal-2.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.restfulWS-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.xmlBinding-4.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.validation-3.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.xmlBinding-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.activation-2.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakarta.xmlWS-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.xmlBinding-4.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakartaeePlatform-10.0</symbolicName> 
+        <include symbolicName="io.openliberty.jakartaeePlatform-9.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jakartaeePlatform-9.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.javaeePlatform-8.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jandex.internal-3.0</symbolicName> 
+        <singleton>true</singleton> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jcaSecurity.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-2.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jcache.internal-1.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jcache.internal1.1.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jdbc4.3.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-2.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.jpaContainer-cdi</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.cdi-3.0)(osgi.identity=io.openliberty.cdi-4.0)(osgi.identity=io.openliberty.cdi-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.persistenceContainer-3.0)(osgi.identity=io.openliberty.persistenceContainer-3.1)(osgi.identity=io.openliberty.persistenceContainer-3.2)))</autoProvision> 
+    </autoFeature> 
+    <feature name="jsonb-3.0"> 
+        <symbolicName>io.openliberty.jsonb-3.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta JSON Binding 3.0</displayName> 
+        <description>The Jakarta API for JSON Binding (JSON-B) feature provides a standard for converting between Java objects and JavaScript Object Notation (JSON).</description> 
+        <enables>jsonp-2.1</enables> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.cdi.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.interceptor.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.jsonb.3.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.json.bind</apiPackage> 
+        <apiPackage type="spec">jakarta.json.bind.adapter</apiPackage> 
+        <apiPackage type="spec">jakarta.json.bind.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.json.bind.config</apiPackage> 
+        <apiPackage type="spec">jakarta.json.bind.serializer</apiPackage> 
+        <apiPackage type="spec">jakarta.json.bind.spi</apiPackage> 
+        <configElement>library</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>classloading</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <platform>jakartaee-11.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="io.openliberty.jsonbInternal-3.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jsonbImpl-3.0.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.classloading-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-4.0" tolerates="4.1"></include> 
+        <include symbolicName="io.openliberty.jsonp-2.1" shortName="jsonp-2.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jsonbInternal-3.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jsonbImpl-3.0.1" tolerates="3.0.0"></include> 
+    </privateFeature> 
+    <feature name="jsonp-2.1"> 
+        <symbolicName>io.openliberty.jsonp-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta JSON Processing 2.1</displayName> 
+        <description>The Jakarta API for JSON Processing (JSON-P) feature provides a standardized method for constructing and manipulating data to be rendered in JavaScript Object Notation (JSON).</description> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.jsonp.2.1_1.0.105.jar</apiJar> 
+        <apiPackage type="spec">jakarta.json</apiPackage> 
+        <apiPackage type="spec">jakarta.json.stream</apiPackage> 
+        <apiPackage type="spec">jakarta.json.spi</apiPackage> 
+        <platform>jakartaee-10.0</platform> 
+        <platform>jakartaee-11.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+        <include symbolicName="io.openliberty.jsonpInternal-2.1"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jsonpImpl-2.1.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jsonpInternal-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jsonpImpl-2.1.1" tolerates="2.1.0"></include> 
+    </privateFeature> 
+    <protectedFeature> 
+        <symbolicName>io.openliberty.jta-2.0</symbolicName> 
+        <singleton>true</singleton> 
+        <description>%description</description> 
+        <apiPackage type="spec">jakarta.transaction</apiPackage> 
+        <apiPackage type="spec">javax.transaction.xa</apiPackage> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-9.0" tolerates="10.0,11.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-3.0" tolerates="4.0,4.1"></include> 
+    </protectedFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.jwt1.0.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-5.0" tolerates="6.0,6.1"></include> 
+    </privateFeature> 
+    <feature name="microProfile-6.1"> 
+        <symbolicName>io.openliberty.microProfile-6.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile 6.1</displayName> 
+        <description>This feature combines the Liberty features that support MicroProfile 6.1 for Cloud Native Java.</description> 
+        <enables>cdi-4.0</enables> 
+        <enables>jsonb-3.0</enables> 
+        <enables>jsonp-2.1</enables> 
+        <enables>mpConfig-3.1</enables> 
+        <enables>mpFaultTolerance-4.0</enables> 
+        <enables>mpHealth-4.0</enables> 
+        <enables>mpJwt-2.1</enables> 
+        <enables>mpMetrics-5.1</enables> 
+        <enables>mpOpenAPI-3.1</enables> 
+        <enables>mpRestClient-3.0</enables> 
+        <enables>mpTelemetry-1.1</enables> 
+        <enables>restfulWS-3.1</enables> 
+        <enables>restfulWSClient-3.1</enables> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0"></include> 
+        <include symbolicName="io.openliberty.jsonb-3.0" shortName="jsonb-3.0"></include> 
+        <include symbolicName="io.openliberty.jsonp-2.1" shortName="jsonp-2.1"></include> 
+        <include symbolicName="io.openliberty.restfulWS-3.1" shortName="restfulWS-3.1"></include> 
+        <include symbolicName="io.openliberty.restfulWSClient-3.1" shortName="restfulWSClient-3.1"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1"></include> 
+        <include symbolicName="io.openliberty.mpConfig-3.1" shortName="mpConfig-3.1"></include> 
+        <include symbolicName="io.openliberty.mpHealth-4.0" shortName="mpHealth-4.0"></include> 
+        <include symbolicName="io.openliberty.mpOpenAPI-3.1" shortName="mpOpenAPI-3.1"></include> 
+        <include symbolicName="io.openliberty.mpFaultTolerance-4.0" shortName="mpFaultTolerance-4.0"></include> 
+        <include symbolicName="io.openliberty.mpJwt-2.1" shortName="mpJwt-2.1"></include> 
+        <include symbolicName="io.openliberty.mpMetrics-5.1" shortName="mpMetrics-5.1"></include> 
+        <include symbolicName="io.openliberty.mpRestClient-3.0" shortName="mpRestClient-3.0"></include> 
+        <include symbolicName="io.openliberty.mpTelemetry-1.1" shortName="mpTelemetry-1.1" tolerates="2.0"></include> 
+        <include symbolicName="io.openliberty.mpHealth.4.0.ee.10.0.mp-6.1"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.microprofile.cdi.api-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1,7.0,7.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-4.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpCompatible-6.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <feature name="mpConfig-3.1"> 
+        <symbolicName>io.openliberty.mpConfig-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Config 3.1</displayName> 
+        <description>The Eclipse MicroProfile Config specification provides a unified mechanism to access configuration, providing a single view of multiple sources.</description> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.cdi.4.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.interceptor.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.config.3.1_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.config</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.config.spi</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.config.inject</apiPackage> 
+        <configElement>applicationManager</configElement> 
+        <configElement>library</configElement> 
+        <configElement>application</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>classloading</configElement> 
+        <platform>microProfile-6.1</platform> 
+        <platform>microProfile-7.0</platform> 
+        <platform>microProfile-7.1</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.appmanager-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.1" tolerates="3.0"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.config-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.internal.slf4j-1.7"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1" tolerates="7.0,7.1"></include> 
+    </feature> 
+    <feature name="mpFaultTolerance-4.0"> 
+        <symbolicName>io.openliberty.mpFaultTolerance-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Fault Tolerance 4.0</displayName> 
+        <description>This feature supports the MicroProfile Fault Tolerance 4.0 API.</description> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.faulttolerance.4.0_1.0.105.jar</apiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.faulttolerance.exceptions</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.faulttolerance</apiPackage> 
+        <platform>microProfile-5.0</platform> 
+        <platform>microProfile-6.0</platform> 
+        <platform>microProfile-6.1</platform> 
+        <include symbolicName="io.openliberty.mpConfig-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.faulttolerance-4.0"></include> 
+        <include symbolicName="io.openliberty.cdi-3.0" tolerates="4.0"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.mpFaultTolerance4.0-mpMetrics5.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpFaultTolerance-4.0)(osgi.identity=io.openliberty.mpFaultTolerance-4.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpMetrics-5.0)(osgi.identity=io.openliberty.mpMetrics-5.1)))</autoProvision> 
+    </autoFeature> 
+    <feature name="mpHealth-4.0"> 
+        <symbolicName>io.openliberty.mpHealth-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Health 4.0</displayName> 
+        <description>This feature provides support for the MicroProfile Health specification.</description> 
+        <enables>jndi-1.0</enables> 
+        <enables>json-1.0</enables> 
+        <apiPackage type="stable">org.eclipse.microprofile.health</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.health.spi</apiPackage> 
+        <configElement>mpHealth</configElement> 
+        <platform>microProfile-5.0</platform> 
+        <platform>microProfile-6.0</platform> 
+        <platform>microProfile-6.1</platform> 
+        <platform>microProfile-7.0</platform> 
+        <platform>microProfile-7.1</platform> 
+        <include symbolicName="io.openliberty.mpHealth.4.0.ee-9.0" tolerates="10.0,11.0,8.0,7.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jndi-1.0" shortName="jndi-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.json-1.0" shortName="json-1.0"></include> 
+        <include symbolicName="io.openliberty.webBundle.internal-1.0"></include> 
+        <include symbolicName="io.openliberty.mpHealthCompatible-4.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpHealth.4.0.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.health-4.0"></include> 
+        <include symbolicName="io.openliberty.mpHealth.4.0.ee.10.0.mp-6.0" tolerates="6.1"></include> 
+        <include symbolicName="io.openliberty.jsonp-2.1" shortName="jsonp-2.1"></include> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1,7.0,7.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpHealth.4.0.ee.10.0.mp-6.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpConfig-3.1" shortName="mpConfig-3.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpHealthCompatible-4.0</symbolicName> 
+        <singleton>true</singleton> 
+    </privateFeature> 
+    <feature name="mpJwt-2.1"> 
+        <symbolicName>io.openliberty.mpJwt-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile JSON Web Token 2.1</displayName> 
+        <description>This feature enables web applications or microservices to use the Eclipse MicroProfile JSON Web Token 2.1 specification to authenticate users instead of, or in addition to, the configured user registry.</description> 
+        <enables>cdi-4.0</enables> 
+        <enables>jsonp-2.1</enables> 
+        <enables>jwt-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.servlet.6.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.jwt.2.1_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.jwt</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.auth</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.endpoint</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.security</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.sql</apiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module</spiPackage> 
+        <spiPackage>com.ibm.ws.adaptable.module.structure</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module.adapters</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory.contributor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.overlay</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.equinox.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http.ee8</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.classsource</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.info</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.service</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.targets</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.util</spiPackage> 
+        <spiPackage>com.ibm.ws.anno.classsource.specification</spiPackage> 
+        <configElement>httpOptions</configElement> 
+        <configElement>cors</configElement> 
+        <configElement>webApplication</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>pluginConfiguration</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>httpSession</configElement> 
+        <configElement>mpJwt</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>webContainer</configElement> 
+        <configElement>library</configElement> 
+        <configElement>webAppSecurity</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <configElement>applicationManager</configElement> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>enterpriseApplication</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>javaPermission</configElement> 
+        <configElement>application</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <platform>microProfile-6.0</platform> 
+        <platform>microProfile-6.1</platform> 
+        <platform>microProfile-7.0</platform> 
+        <platform>microProfile-7.1</platform> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0" tolerates="6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jwt-1.0" shortName="jwt-1.0"></include> 
+        <include symbolicName="io.openliberty.jsonp-2.1" shortName="jsonp-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.httpcommons-1.0"></include> 
+        <include symbolicName="io.openliberty.mpConfig-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.jwt-2.1"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1,7.0,7.1"></include> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0" tolerates="4.1"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.mpJwtPropagation-2.1</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWSClient-3.1)(osgi.identity=io.openliberty.restfulWSClient-4.0)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=io.openliberty.mpJwt-2.1))</autoProvision> 
+    </autoFeature> 
+    <feature name="mpMetrics-5.1"> 
+        <symbolicName>io.openliberty.mpMetrics-5.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Metrics 5.1</displayName> 
+        <description>This feature provides support for the Eclipse MicroProfile Metrics 5.1 specification for enterprise Java.</description> 
+        <enables>cdi-4.0</enables> 
+        <enables>distributedMap-1.0</enables> 
+        <enables>json-1.0</enables> 
+        <enables>monitor-1.0</enables> 
+        <enables>mpConfig-3.1</enables> 
+        <enables>ssl-1.0</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.servlet.6.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.metrics.5.1_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.metrics.annotation</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.metrics</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.endpoint</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.tai</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.token</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.auth.callback</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.wsspi.security.common.auth.module</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.security.auth.callback</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.security</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.sql</apiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module</spiPackage> 
+        <spiPackage>com.ibm.ws.adaptable.module.structure</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module.adapters</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory.contributor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.overlay</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.equinox.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http.ee8</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.classsource</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.info</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.service</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.targets</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.util</spiPackage> 
+        <spiPackage>com.ibm.ws.anno.classsource.specification</spiPackage> 
+        <configElement>httpOptions</configElement> 
+        <configElement>cors</configElement> 
+        <configElement>webApplication</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>pluginConfiguration</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>httpSession</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>webContainer</configElement> 
+        <configElement>library</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <configElement>applicationManager</configElement> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>enterpriseApplication</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>javaPermission</configElement> 
+        <configElement>authorization-roles</configElement> 
+        <configElement>application</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>mpMetrics</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <platform>microProfile-6.1</platform> 
+        <platform>microProfile-7.0</platform> 
+        <platform>microProfile-7.1</platform> 
+        <include symbolicName="io.openliberty.restHandler.internal-1.0"></include> 
+        <include symbolicName="io.openliberty.mpConfig-3.1" shortName="mpConfig-3.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.1" tolerates="3.0"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0" tolerates="6.1"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1" tolerates="7.0,7.1"></include> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0" tolerates="4.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.metrics-5.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.monitor-1.0" shortName="monitor-1.0"></include> 
+    </feature> 
+    <feature name="mpOpenAPI-3.1"> 
+        <symbolicName>io.openliberty.mpOpenAPI-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile OpenAPI 3.1</displayName> 
+        <description>This feature provides support for the Eclipse MicroProfile OpenAPI specification for enterprise Java.</description> 
+        <enables>restfulWS-3.1</enables> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.openapi.3.1_1.0.105.jar</apiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.callbacks</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.enums</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.extensions</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.headers</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.info</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.links</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.media</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.parameters</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.responses</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.security</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.servers</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.annotations.tags</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.callbacks</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.examples</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.headers</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.info</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.links</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.media</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.parameters</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.responses</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.security</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.servers</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.models.tags</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.openapi.spi</apiPackage> 
+        <configElement>mpOpenAPI</configElement> 
+        <platform>microProfile-6.0</platform> 
+        <platform>microProfile-6.1</platform> 
+        <include symbolicName="io.openliberty.mpConfig-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.webBundle.internal-1.0"></include> 
+        <include symbolicName="io.openliberty.restfulWS-3.1" shortName="restfulWS-3.1"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.openapi-3.1"></include> 
+        <include symbolicName="io.openliberty.jandex.internal-3.0"></include> 
+    </feature> 
+    <feature name="mpRestClient-3.0"> 
+        <symbolicName>io.openliberty.mpRestClient-3.0</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Rest Client 3.0</displayName> 
+        <description>The MicroProfile Rest Client specification provides a type-safe mechanism for invoking RESTful services.</description> 
+        <apiJar>dev/api/stable/com.ibm.websphere.org.reactivestreams.reactive-streams.1.0_1.1.105.jar</apiJar> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.rest.client.3.0_1.0.105.jar</apiJar> 
+        <apiPackage type="stable">org.eclipse.microprofile.rest.client</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.rest.client.annotation</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.rest.client.ext</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.rest.client.inject</apiPackage> 
+        <apiPackage type="stable">org.eclipse.microprofile.rest.client.spi</apiPackage> 
+        <apiPackage type="stable">org.reactivestreams</apiPackage> 
+        <platform>microProfile-5.0</platform> 
+        <platform>microProfile-6.0</platform> 
+        <platform>microProfile-6.1</platform> 
+        <include symbolicName="io.openliberty.jsonp-2.0" tolerates="2.1"></include> 
+        <include symbolicName="io.openliberty.restfulWSClient-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.mpConfig-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.mpRestClient.internal.cdi-3.0" tolerates="4.0"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.rest.client-3.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.org.reactivestreams.reactive-streams-1.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpRestClient.internal.cdi-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.restfulWSClient-3.1" shortName="restfulWSClient-3.1"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.mpRestClient3.0-mpFaultTolerance4.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpRestClient-3.0)(osgi.identity=io.openliberty.mpRestClient-4.0)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpFaultTolerance-4.0)(osgi.identity=io.openliberty.mpFaultTolerance-4.1)))</autoProvision> 
+    </autoFeature> 
+    <feature name="mpTelemetry-1.1"> 
+        <symbolicName>io.openliberty.mpTelemetry-1.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>MicroProfile Telemetry 1.1</displayName> 
+        <description>This feature provides support for the Eclipse MicroProfile Telemetry specification for enterprise Java.</description> 
+        <enables>cdi-4.0</enables> 
+        <enables>mpConfig-3.1</enables> 
+        <enables>restfulWS-3.1</enables> 
+        <apiJar>dev/api/stable/io.openliberty.org.eclipse.microprofile.rest.client.3.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/third-party/io.openliberty.mpTelemetry.1.1.thirdparty_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/io.openliberty.microprofile.telemetry.spi_1.0.105.jar</spiJar> 
+        <apiPackage type="third-party">io.opentelemetry.api.baggage</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.api.baggage.propagation</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.api</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.api.trace</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.api.trace.propagation</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.api.common</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.context</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.context.propagation</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.trace</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.trace.export</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.trace.data</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.trace.samplers</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.common</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.autoconfigure.spi.traces</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.autoconfigure.spi</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.semconv.trace.attributes</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.semconv.resource.attributes</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.sdk.resources</apiPackage> 
+        <apiPackage type="third-party">io.opentelemetry.instrumentation.annotations</apiPackage> 
+        <spiPackage>io.openliberty.microprofile.telemetry.spi</spiPackage> 
+        <platform>microProfile-6.1</platform> 
+        <include symbolicName="io.openliberty.mpTelemetry1.1.ee-10.0" tolerates="9.0,8.0,7.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.mpTelemetry1.1.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.restfulWS-3.1" shortName="restfulWS-3.1"></include> 
+        <include symbolicName="io.openliberty.mpConfig-3.1" shortName="mpConfig-3.1"></include> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0"></include> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.rest.client-3.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.config-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.config.3.1.ee-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.config.3.1.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1" tolerates="7.0,7.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.cdi-4.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.faulttolerance-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.microprofile.cdi.api-3.0" tolerates="4.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.health-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.microprofile.cdi.api-3.0" tolerates="4.0,4.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.jwt-2.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1,7.0,7.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.metrics-5.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpCompatible-6.1" tolerates="7.0,7.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.openapi-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.mpCompatible-6.0" tolerates="6.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.org.eclipse.microprofile.rest.client-3.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.0" tolerates="2.1"></include> 
+        <include symbolicName="io.openliberty.microprofile.cdi.api-3.0" tolerates="4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.restfulWS-3.0" tolerates="3.1"></include> 
+        <include symbolicName="io.openliberty.org.eclipse.microprofile.config-3.0" tolerates="3.1"></include> 
+    </privateFeature> 
+    <feature name="pages-3.1"> 
+        <symbolicName>io.openliberty.pages-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Server Pages 3.1</displayName> 
+        <description>This feature enables support for Jakarta Server Pages that are written to the Jakarta Server Pages 3.1 specification. This framework simplifies the construction of user interfaces. Enabling this feature also enables the Jakarta Expression Language version 5.0 feature.</description> 
+        <enables>expressionLanguage-5.0</enables> 
+        <enables>servlet-6.0</enables> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.pages.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.pages.tld.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.tags.3.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.jsp_1.1.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.servlet.jsp</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.el</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.tagext</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.jstl.sql</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.jstl.tlv</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.jstl.core</apiPackage> 
+        <apiPackage type="spec">jakarta.servlet.jsp.jstl.fmt</apiPackage> 
+        <apiPackage type="spec">jakarta.el</apiPackage> 
+        <spiPackage>com.ibm.wsspi.jsp.taglib.config</spiPackage> 
+        <configElement>jspEngine</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-6.0" shortName="servlet-6.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.pages-3.1"></include> 
+        <include symbolicName="io.openliberty.expressionLanguage-5.0" shortName="expressionLanguage-5.0"></include> 
+    </feature> 
+    <feature name="persistenceContainer-3.1"> 
+        <symbolicName>io.openliberty.persistenceContainer-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta Persistence 3.1 Container</displayName> 
+        <description>This feature enables support for applications that use application-managed and container-managed persistence. This feature only includes Jakarta Persistence 3.1 specification interfaces and container-managed persistence integration. This feature does not include a Jakarta Persistence provider implementation.</description> 
+        <enables>jndi-1.0</enables> 
+        <apiJar>dev/api/ibm/io.openliberty.transaction_1.1.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.activation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.jsonp.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.persistence.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.transaction.2.0_2.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.xmlBinding.4.0_1.0.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.transaction_1.1.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.persistence</apiPackage> 
+        <apiPackage type="spec">jakarta.persistence.spi</apiPackage> 
+        <apiPackage type="spec">jakarta.persistence.criteria</apiPackage> 
+        <apiPackage type="spec">jakarta.persistence.metamodel</apiPackage> 
+        <configElement>library</configElement> 
+        <configElement>authData</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>jpa</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>transaction</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="com.ibm.websphere.appserver.jdbc-4.2" tolerates="4.3"></include> 
+        <include symbolicName="io.openliberty.xmlBinding.internal-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jndi-1.0" shortName="jndi-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.persistence-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.transaction-2.0"></include> 
+    </feature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.restConnector2.0.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.servlet-5.0" tolerates="6.0,6.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.restHandler.internal-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.json-1.0" shortName="json-1.0"></include> 
+        <include symbolicName="io.openliberty.webBundleSecurity.internal-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.ssl-1.0" shortName="ssl-1.0"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.restHandler1.0.internal.ee-6.0" tolerates="9.0,10.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.httptransport-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.restHandler1.0.internal.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0" tolerates="6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.adminSecurity-2.0"></include> 
+    </privateFeature> 
+    <feature name="restfulWS-3.1"> 
+        <symbolicName>io.openliberty.restfulWS-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta RESTful Web Services 3.1</displayName> 
+        <description>This feature enables support for Jakarta RESTful Web Services 3.1.  These annotations can be used to define web service clients and endpoints that comply with the REST architectural style. Endpoints are accessed through a common interface that is based on the HTTP standard methods.</description> 
+        <enables>restfulWSClient-3.1</enables> 
+        <apiPackage type="ibm-api">com.ibm.websphere.jaxrs.server</apiPackage> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="io.openliberty.restfulWSClient-3.1" shortName="restfulWSClient-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWS3.0-appSecurity4.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWS-3.0)(osgi.identity=io.openliberty.restfulWS-3.1)(osgi.identity=io.openliberty.restfulWS-4.0)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.appSecurity-4.0)(osgi.identity=io.openliberty.appSecurity-5.0)(osgi.identity=io.openliberty.appSecurity-6.0)(osgi.identity=io.openliberty.mpJwt-2.1)))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWS3.0-jsonb2.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWSClient-3.0)(osgi.identity=io.openliberty.restfulWSClient-3.1)(osgi.identity=io.openliberty.restfulWSClient-4.0)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.jsonb-2.0)(osgi.identity=io.openliberty.jsonb-3.0)))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWS3.0-monitor1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.monitor-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWS-3.0)(osgi.identity=io.openliberty.restfulWS-3.1)(osgi.identity=io.openliberty.restfulWS-4.0)))</autoProvision> 
+        <apiPackage type="ibm-api">com.ibm.websphere.jaxrs.monitor</apiPackage> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWS3.1-mpMetrics-monitor1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpMetrics-5.0)(osgi.identity=io.openliberty.mpMetrics-5.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWS-3.1)(osgi.identity=io.openliberty.restfulWS-4.0)))</autoProvision> 
+    </autoFeature> 
+    <feature name="restfulWSClient-3.1"> 
+        <symbolicName>io.openliberty.restfulWSClient-3.1</symbolicName> 
+        <singleton>true</singleton> 
+        <displayName>Jakarta RESTful Web Services 3.1 Client</displayName> 
+        <description>This feature enables support for the Jakarta RESTful Web Services 3.1 Client API.</description> 
+        <enables>cdi-4.0</enables> 
+        <enables>jndi-1.0</enables> 
+        <enables>jsonp-2.1</enables> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.basics_1.4.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/com.ibm.websphere.appserver.api.endpoint_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/ibm/io.openliberty.jaxrs30_1.0.105.jar</apiJar> 
+        <apiJar require-java="9.0.0">dev/api/spec/com.ibm.websphere.javaee.activity.1.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.activation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.annotation.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.mail.2.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.restfulWS.3.1_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.servlet.6.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/spec/io.openliberty.jakarta.validation.3.0_1.0.105.jar</apiJar> 
+        <apiJar>dev/api/stable/com.ibm.websphere.org.reactivestreams.reactive-streams.1.0_1.1.105.jar</apiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.application_1.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.artifact_1.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.classloading_1.4.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.containerServices_4.1.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.2.105.jar</spiJar> 
+        <spiJar>dev/spi/ibm/com.ibm.websphere.appserver.spi.javaeedd_1.8.105.jar</spiJar> 
+        <apiPackage type="spec">jakarta.ws.rs</apiPackage> 
+        <apiPackage type="spec">jakarta.ws.rs.container</apiPackage> 
+        <apiPackage type="spec">jakarta.ws.rs.core</apiPackage> 
+        <apiPackage type="spec">jakarta.ws.rs.client</apiPackage> 
+        <apiPackage type="spec">jakarta.ws.rs.ext</apiPackage> 
+        <apiPackage type="spec">jakarta.ws.rs.sse</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.jaxrs20.multipart</apiPackage> 
+        <apiPackage type="ibm-api">com.ibm.websphere.endpoint</apiPackage> 
+        <apiPackage type="spec">jakarta.activation</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.security</apiPackage> 
+        <apiPackage type="spec">jakarta.annotation.sql</apiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module</spiPackage> 
+        <spiPackage>com.ibm.ws.adaptable.module.structure</spiPackage> 
+        <spiPackage>com.ibm.wsspi.adaptable.module.adapters</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.factory.contributor</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.overlay</spiPackage> 
+        <spiPackage>com.ibm.wsspi.artifact.equinox.module</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http</spiPackage> 
+        <spiPackage>com.ibm.wsspi.http.ee8</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.classsource</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.info</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.service</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.targets</spiPackage> 
+        <spiPackage>com.ibm.wsspi.anno.util</spiPackage> 
+        <spiPackage>com.ibm.ws.anno.classsource.specification</spiPackage> 
+        <configElement>httpOptions</configElement> 
+        <configElement>cors</configElement> 
+        <configElement>webApplication</configElement> 
+        <configElement>samesite</configElement> 
+        <configElement>pluginConfiguration</configElement> 
+        <configElement>httpAccessLogging</configElement> 
+        <configElement>classloader</configElement> 
+        <configElement>virtualHost</configElement> 
+        <configElement>httpSession</configElement> 
+        <configElement>mimeTypes</configElement> 
+        <configElement>webContainer</configElement> 
+        <configElement>library</configElement> 
+        <configElement>httpEndpoint</configElement> 
+        <configElement>httpDispatcher</configElement> 
+        <configElement>applicationManager</configElement> 
+        <configElement>headers</configElement> 
+        <configElement>httpProxyRedirect</configElement> 
+        <configElement>remoteIp</configElement> 
+        <configElement>httpEncoding</configElement> 
+        <configElement>enterpriseApplication</configElement> 
+        <configElement>applicationMonitor</configElement> 
+        <configElement>webTarget</configElement> 
+        <configElement>javaPermission</configElement> 
+        <configElement>application</configElement> 
+        <configElement>channelfw</configElement> 
+        <configElement>classloading</configElement> 
+        <configElement>compression</configElement> 
+        <configElement>tcpOptions</configElement> 
+        <platform>jakartaee-10.0</platform> 
+        <include symbolicName="io.openliberty.cdi-4.0" shortName="cdi-4.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.mail-2.1"></include> 
+        <include symbolicName="io.openliberty.jakarta.validation-3.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.restfulWS-3.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.org.reactivestreams.reactive-streams-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.jndi-1.0" shortName="jndi-1.0"></include> 
+        <include symbolicName="io.openliberty.activation.internal-2.1"></include> 
+        <include symbolicName="io.openliberty.jsonp-2.1" shortName="jsonp-2.1"></include> 
+    </feature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWSClient3.0-ssl1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWSClient-3.0)(osgi.identity=io.openliberty.restfulWSClient-3.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.ssl-1.0))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.restfulWSDefaultExceptionMapper-1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.mpMetrics-4.0)(osgi.identity=io.openliberty.mpMetrics-5.0)(osgi.identity=io.openliberty.mpMetrics-5.1)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.monitor-1.0)))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=io.openliberty.restfulWS-3.0)(osgi.identity=io.openliberty.restfulWS-3.1)(osgi.identity=io.openliberty.restfulWS-4.0)))</autoProvision> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.security.internal.common-1.0</symbolicName> 
+        <include symbolicName="com.ibm.websphere.appserver.basicRegistry-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.builtinAuthorization-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.ssl-1.0" shortName="ssl-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.ltpa-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.security.internal.ee-9.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.builtinAuthentication-2.0"></include> 
+        <include symbolicName="io.openliberty.securityAPI.jakarta-1.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.securityAPI.jakarta-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.securityAPI.javaee-1.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.servlet-servletSpi2.0</symbolicName> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.servlet.api-6.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.servlet.internal-6.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakartaeePlatform-10.0"></include> 
+        <include symbolicName="io.openliberty.servlet.api-6.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.javaeeddSchema-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.injection-2.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.httptransport-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.requestProbes-1.0"></include> 
+        <include symbolicName="io.openliberty.jakarta.annotation-2.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0"></include> 
+    </privateFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.servlet5.0-monitor1.0</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.monitor-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.servlet-5.0)(osgi.identity=io.openliberty.servlet.internal-6.0)(osgi.identity=io.openliberty.servlet.internal-6.1)))</autoProvision> 
+    </autoFeature> 
+    <autoFeature> 
+        <symbolicName>io.openliberty.transportSecurity1.0.jakarta</symbolicName> 
+        <description>%description</description> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.ssl-1.0))</autoProvision> 
+        <autoProvision>(&amp;(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.eeCompatible-9.0)(osgi.identity=com.ibm.websphere.appserver.eeCompatible-10.0)(osgi.identity=com.ibm.websphere.appserver.eeCompatible-11.0)))</autoProvision> 
+        <include symbolicName="com.ibm.websphere.appserver.transportSecurity-1.0" shortName="transportSecurity-1.0"></include> 
+    </autoFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.webBundle.internal-1.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.webBundle.internal.ee-6.0" tolerates="9.0,10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.webBundle.internal.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0" tolerates="6.1"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.webBundleSecurity.internal-1.0</symbolicName> 
+        <include symbolicName="io.openliberty.servlet.internal-3.0" tolerates="3.1,4.0,5.0,6.0,6.1"></include> 
+        <include symbolicName="io.openliberty.webBundle.internal-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.distributedMap-1.0" shortName="distributedMap-1.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.authFilter-1.0"></include> 
+        <include symbolicName="io.openliberty.webBundleSecurity1.0.internal.ee-6.0" tolerates="9.0,10.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.webBundleSecurity1.0.internal.ee-10.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.servlet.internal-6.0" tolerates="6.1"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.security-2.0"></include> 
+    </privateFeature> 
+    <privateFeature> 
+        <symbolicName>io.openliberty.xmlBinding.internal-4.0</symbolicName> 
+        <singleton>true</singleton> 
+        <include symbolicName="io.openliberty.jakarta.xmlBinding-4.0"></include> 
+        <include symbolicName="com.ibm.websphere.appserver.eeCompatible-10.0" tolerates="11.0"></include> 
+    </privateFeature> 
+<defaultConfiguration> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.channelfw-1.0"> 
+        <variable defaultValue="localhost" name="defaultHostName"> 
+        </variable> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.channelfw-1.0"> 
+        <tcpOptions id="defaultTCPOptions" service.ranking="-1"> 
+        </tcpOptions> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.channelfw-1.0"> 
+        <udpOptions id="defaultUDPOptions" service.ranking="-1"> 
+        </udpOptions> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ltpa-1.0"> 
+        <ltpa id="defaultLtpa"> 
+        </ltpa> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <httpOptions id="defaultHttpOptions" service.ranking="-1"> 
+        </httpOptions> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <remoteIp id="defaultRemoteIp" service.ranking="-1"> 
+        </remoteIp> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <compression id="defaultCompression" service.ranking="-1"> 
+        </compression> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <samesite id="defaultSameSite" service.ranking="-1"> 
+        </samesite> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <headers id="defaultHeaders" service.ranking="-1"> 
+        </headers> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <httpEndpoint httpPort="9080" id="defaultHttpEndpoint" httpsPort="9443"> 
+        </httpEndpoint> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <virtualHost id="default_host"> 
+        </virtualHost> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.httptransport-1.0"> 
+        <variable name="defaultHTTPVar" value="defaultHttpOptions"> 
+        </variable> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ssl-1.0"> 
+        <nettyTlsProvider> 
+        </nettyTlsProvider> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.mpOpenAPI-3.1"> 
+        <variable defaultValue="false" name="mp.openapi.extensions.smallrye.private-properties.enable"> 
+        </variable> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.servlet.internal-6.0"> 
+        <webContainer> 
+        </webContainer> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.servlet.internal-6.0"> 
+        <javaPermission name="org.glassfish.web.rfc2109_cookie_names_enforced" className="java.util.PropertyPermission" id="org.glassfish.web.rfc2109_cookie_names_enforced" actions="read"> 
+        </javaPermission> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.classloading-1.0"> 
+        <library apiTypeVisibility="spec, ibm-api, api, stable" id="global"> 
+            <fileset includes="*" dir="${shared.config.dir}/lib/global/"> 
+            </fileset> 
+            <fileset includes="*" dir="${server.config.dir}/lib/global/"> 
+            </fileset> 
+            <folder dir="${server.config.dir}/lib/global/"> 
+            </folder> 
+            <folder dir="${shared.config.dir}/lib/global/"> 
+            </folder>
+     
+        </library> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.jdbc4.3.internal.ee-9.0"> 
+        <dataSource javaCompDefaultName="DefaultDataSource" id="DefaultDataSource" service.ranking="100">
+     
+        </dataSource> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.pages-3.1"> 
+        <com.ibm.wsspi.webcontainer.extension.ExtensionFactory type="Jsp"> 
+        </com.ibm.wsspi.webcontainer.extension.ExtensionFactory> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.securityContext-1.0"> 
+        <contextService id="DefaultContextService"> 
+            <securityContext> 
+            </securityContext>
+     
+        </contextService> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ssl-1.0"> 
+        <ssl id="defaultSSLConfig" keyStoreRef="defaultKeyStore"> 
+        </ssl> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ssl-1.0"> 
+        <keyStore id="defaultKeyStore"> 
+        </keyStore> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.mpJwt-2.1"> 
+        <mpJwt id="defaultMpJwt"> 
+        </mpJwt> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.ws.security.authentication.jaas.modules.HashtableLoginModule" id="hashtable"> 
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.ws.security.authentication.jaas.modules.UsernameAndPasswordLoginModule" id="userNameAndPassword"> 
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.ws.security.authentication.jaas.modules.CertificateLoginModule" id="certificate"> 
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.ws.security.authentication.jaas.modules.TokenLoginModule" id="token"> 
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.ws.security.jaas.common.modules.WSLoginModuleProxy" id="proxy"> 
+            <options delegate="com.ibm.ws.security.authentication.jaas.modules.WSLoginModuleImpl"> 
+            </options>
+         
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginModule libraryRef="jaasSharedLib" controlFlag="REQUIRED" className="com.ibm.wsspi.security.common.auth.module.IdentityAssertionLoginModule" id="identityAssertion"> 
+        </jaasLoginModule> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="system.UNAUTHENTICATED" id="system.UNAUTHENTICATED" loginModuleRef="hashtable,userNameAndPassword,certificate,token"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="system.WEB_INBOUND" id="system.WEB_INBOUND" loginModuleRef="hashtable,userNameAndPassword,certificate,token"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="system.DEFAULT" id="system.DEFAULT" loginModuleRef="hashtable,userNameAndPassword,certificate,token"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="system.DESERIALIZE_CONTEXT" id="system.DESERIALIZE_CONTEXT" loginModuleRef="hashtable,userNameAndPassword,certificate,token"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="system.RMI_INBOUND" id="system.RMI_INBOUND" loginModuleRef="hashtable,userNameAndPassword,certificate,token"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <jaasLoginContextEntry name="WSLogin" id="WSLogin" loginModuleRef="proxy"> 
+        </jaasLoginContextEntry> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <library apiTypeVisibility="spec, ibm-api, api" id="jaasSharedLib"> 
+            <fileset includes="*" dir="${server.config.dir}/lib/global/"> 
+            </fileset>
+         
+        </library> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <library apiTypeVisibility="spec, ibm-api, api" id="jaasDefaultSharedLib"> 
+            <fileset includes="*" dir="${server.config.dir}/resources/security/jaas/"> 
+            </fileset> 
+            <fileset includes="*" dir="${shared.config.dir}/resources/security/jaas/"> 
+            </fileset> 
+            <fileset dir="${server.config.dir}/resources/security/jaas/"> 
+            </fileset> 
+            <fileset dir="${shared.config.dir}/resources/security/jaas/"> 
+            </fileset>
+         
+        </library> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0"> 
+        <variable name="wlp.collective.auth.plugin" value="NullCollectiveAuthenticationPlugin"> 
+        </variable> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.distributedMapInternal-2.0"> 
+        <distributedMap cacheProviderName="default" id="baseCache" memorySizeInEntries="2000" createCacheAtServerStartup="true" jndiName="services/cache/basecache"> 
+        </distributedMap> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.distributedMapInternal-2.0"> 
+        <distributedMap cacheProviderName="default" id="defaultCache" memorySizeInEntries="2000" jndiName="services/cache/distributedmap"> 
+        </distributedMap> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.basicRegistry-1.0,com.ibm.websphere.appserver.securityInfrastructure-1.0"> 
+        <com.ibm.ws.security.registry.internal.UserRegistryRefConfig> 
+        </com.ibm.ws.security.registry.internal.UserRegistryRefConfig> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.builtinAuthentication-2.0,com.ibm.websphere.appserver.jcaSecurity-1.0"> 
+        <kerberos> 
+        </kerberos> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.kernelCore-1.0"> 
+        <org.apache.felix.scr.ScrService ds.info.service="true" ds.cache.metadata="true"> 
+        </org.apache.felix.scr.ScrService> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.webBundleSecurity.internal-1.0,com.ibm.websphere.appserver.builtinAuthorization-1.0"> 
+        <authorization id="defaultAuthorization" useRoleAsGroupName="true"> 
+        </authorization> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.jsonpImpl-2.1.1"> 
+        <javaPermission name="jakarta.json.provider" className="java.util.PropertyPermission" id="jakarta.json.provider" actions="read"> 
+        </javaPermission> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ssl-1.0"> 
+        <sslOptions id="defaultSSLOptions" service.ranking="-1"> 
+        </sslOptions> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.ssl-1.0"> 
+        <variable name="defaultSSLVar" value="defaultSSLOptions"> 
+        </variable> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.jwt1.0.internal.ee-9.0"> 
+        <jwtBuilder id="defaultJWT"> 
+        </jwtBuilder> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.jwt1.0.internal.ee-9.0"> 
+        <jwtConsumer id="defaultJwtConsumer"> 
+        </jwtConsumer> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.webBundle.internal.ee-10.0"> 
+        <com.ibm.wsspi.webcontainer.extension.ExtensionFactory type="WAB"> 
+        </com.ibm.wsspi.webcontainer.extension.ExtensionFactory> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.binary.logging-1.0"> 
+        <logging> 
+            <binaryLog> 
+            </binaryLog> 
+            <binaryTrace> 
+            </binaryTrace>
+		 
+        </logging> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.logging-1.0"> 
+        <logging> 
+        </logging> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="com.ibm.websphere.appserver.appmanager-1.0"> 
+        <com.ibm.ws.app.prereqs id="com.ibm.ws.app.prereqs"> 
+        </com.ibm.ws.app.prereqs> 
+    </defaultInstance> 
+    <defaultInstance providingFeatures="io.openliberty.jsonb-3.0"> 
+        <com.ibm.ws.org.eclipse.yasson.ResourceProvider> 
+        </com.ibm.ws.org.eclipse.yasson.ResourceProvider> 
+    </defaultInstance> 
+</defaultConfiguration> 
+</featureInfo>

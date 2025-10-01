@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.117" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.211" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire12944664785671214464\surefirebooter-20250930222744826_79.jar C:\Users\r-uu\AppData\Local\Temp\surefire12944664785671214464 2025-09-30T22-23-22_052-jvmRun1 surefire-20250930222744826_77tmp surefire_14-20250930222744826_78tmp"/>
+    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire2891690827390057898\surefirebooter-20251001061221689_79.jar C:\Users\r-uu\AppData\Local\Temp\surefire2891690827390057898 2025-10-01T06-06-10_748-jvmRun1 surefire-20251001061221689_77tmp surefire_14-20251001061221689_78tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\core.mapstruct.demo.bidirectional\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\core.mapstruct.demo.bidirectional\target\classes;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\core\target\r-uu.codespace.lib.jpa.core-0.0.1.jar;C:\Users\r-uu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.3\jackson-annotations-2.18.3.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\3.0.0\jakarta.json.bind-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\r-uu\.m2\repository\org\eclipse\yasson\3.0.4\yasson-3.0.4.jar;C:\Users\r-uu\.m2\repository\jakarta\json\jakarta.json-api\2.1.2\jakarta.json-api-2.1.2.jar;C:\Users\r-uu\.m2\repository\org\eclipse\parsson\parsson\1.1.7\parsson-1.1.7.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\util\target\r-uu.codespace.lib.util-0.0.1.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\jpa\core.mapstruct\target\r-uu.codespace.lib.jpa.core.mapstruct-0.0.1.jar;C:\Users\r-uu\develop\github\codespace\r-uu\lib\mapstruct\target\r-uu.codespace.lib.mapstruct-0.0.1.jar;C:\Users\r-uu\.m2\repository\org\mapstruct\mapstruct\1.6.3\mapstruct-1.6.3.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="failsafe.useFile" value="false"/>
-    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire12944664785671214464\surefirebooter-20250930222744826_79.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire2891690827390057898\surefirebooter-20251001061221689_79.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.2+11-jvmci-b01"/>
@@ -55,7 +55,7 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="trimStackTrace" value="false"/>
-    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -63,106 +63,106 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="mapEmptyDepartmentEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.008"/>
-  <testcase name="mapEmptyEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
-  <testcase name="mapValidEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.037">
-    <system-out><![CDATA[22:27:47.130 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
+  <testcase name="mapEmptyDepartmentEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.012"/>
+  <testcase name="mapEmptyEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.005"/>
+  <testcase name="mapValidEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.055">
+    <system-out><![CDATA[06:12:25.126 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
 source
 EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name)
 target
 EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name)
-22:27:47.135 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
-22:27:47.136 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
+06:12:25.137 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
+06:12:25.138 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
 ]]></system-out>
   </testcase>
-  <testcase name="mapValidDepartmentDTOWithEmployees" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.013">
-    <system-out><![CDATA[22:27:47.144 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(35) - 
+  <testcase name="mapValidDepartmentDTOWithEmployees" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.023">
+    <system-out><![CDATA[06:12:25.153 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(35) - 
 source
 DepartmentDTO(super=AbstractDTO(id=null, version=null), name=name, description=null)
 target
 DepartmentEntity(super=AbstractEntity(id=null, version=null), name=name, description=null)
-22:27:47.146 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
-source
-EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.2)
-target
-EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.2)
-22:27:47.146 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
-22:27:47.147 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
-22:27:47.147 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
-source
-EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.1)
-target
-EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.1)
-22:27:47.148 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
-22:27:47.149 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
-22:27:47.149 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
+06:12:25.156 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
 source
 EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.0)
 target
 EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.0)
-22:27:47.149 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
-22:27:47.150 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
+06:12:25.157 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
+06:12:25.159 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
+06:12:25.160 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
+source
+EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.1)
+target
+EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.1)
+06:12:25.161 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
+06:12:25.162 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
+06:12:25.163 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
+source
+EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.2)
+target
+EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.2)
+06:12:25.164 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
+06:12:25.165 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
 ]]></system-out>
   </testcase>
-  <testcase name="mapValidEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.005">
-    <system-out><![CDATA[22:27:47.154 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
+  <testcase name="mapValidEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.006">
+    <system-out><![CDATA[06:12:25.173 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(49) - 
 source
 EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name)
 target
 EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name)
-22:27:47.155 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
-22:27:47.156 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
+06:12:25.174 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(52) - before mapping starting
+06:12:25.174 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeEntity.beforeMapping(53) - before mapping finished
 ]]></system-out>
   </testcase>
-  <testcase name="mapEmptyDepartmentDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
-  <testcase name="mapInvalidNamedDepartmentEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
-  <testcase name="mapInvalidNamedEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.002"/>
-  <testcase name="mapValidDepartmentEntityWithEmployees" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.009">
-    <system-out><![CDATA[22:27:47.173 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(28) - 
+  <testcase name="mapEmptyDepartmentDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.005"/>
+  <testcase name="mapInvalidNamedDepartmentEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.004"/>
+  <testcase name="mapInvalidNamedEmployeeDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.006"/>
+  <testcase name="mapValidDepartmentEntityWithEmployees" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.021">
+    <system-out><![CDATA[06:12:25.213 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(28) - 
 source
 DepartmentEntity(super=AbstractEntity(id=null, version=null), name=name, description=null)
 target
 DepartmentDTO(super=AbstractDTO(id=null, version=null), name=name, description=null)
-22:27:47.174 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
-source
-EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.2)
-target
-EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.2)
-22:27:47.176 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
-22:27:47.176 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
-22:27:47.176 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
-source
-EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.1)
-target
-EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.1)
-22:27:47.177 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
-22:27:47.177 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
-22:27:47.178 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
+06:12:25.215 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
 source
 EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.0)
 target
 EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.0)
-22:27:47.178 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
-22:27:47.178 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
+06:12:25.216 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
+06:12:25.217 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
+06:12:25.218 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
+source
+EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.1)
+target
+EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.1)
+06:12:25.219 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
+06:12:25.220 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
+06:12:25.221 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(42) - 
+source
+EmployeeEntity(super=AbstractEntity(id=null, version=null), name=name.2)
+target
+EmployeeDTO(super=AbstractDTO(id=null, version=null), name=name.2)
+06:12:25.222 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(48) - before mapping starting
+06:12:25.222 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.EmployeeDTO.beforeMapping(49) - before mapping finished
 ]]></system-out>
   </testcase>
   <testcase name="mapValidDepartmentEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003">
-    <system-out><![CDATA[22:27:47.182 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(28) - 
+    <system-out><![CDATA[06:12:25.232 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(28) - 
 source
 DepartmentEntity(super=AbstractEntity(id=null, version=null), name=name, description=null)
 target
 DepartmentDTO(super=AbstractDTO(id=null, version=null), name=name, description=null)
 ]]></system-out>
   </testcase>
-  <testcase name="mapValidDepartmentDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.004">
-    <system-out><![CDATA[22:27:47.187 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(35) - 
+  <testcase name="mapValidDepartmentDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.005">
+    <system-out><![CDATA[06:12:25.239 DEBUG de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.Mapper.beforeMapping(35) - 
 source
 DepartmentDTO(super=AbstractDTO(id=null, version=null), name=name, description=null)
 target
 DepartmentEntity(super=AbstractEntity(id=null, version=null), name=name, description=null)
 ]]></system-out>
   </testcase>
-  <testcase name="mapEmptyEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
-  <testcase name="mapInvalidNamedEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
+  <testcase name="mapEmptyEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.004"/>
+  <testcase name="mapInvalidNamedEmployeeEntity" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.007"/>
   <testcase name="mapInvalidNamedDepartmentDTO" classname="de.ruu.lib.jpa.core.mapstruct.demo.bidirectional.TestMapStruct" time="0.003"/>
 </testsuite>
