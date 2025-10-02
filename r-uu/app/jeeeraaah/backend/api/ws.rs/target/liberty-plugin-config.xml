@@ -21,9 +21,6 @@
     <projectCompileDependency>org.hamcrest:hamcrest:2.2</projectCompileDependency>
     <projectCompileDependency>org.mapstruct:mapstruct:1.6.3</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.app.jeeeraaah.backend.persistence.jpa:0.0.1</projectCompileDependency>
-    <projectCompileDependency>jakarta.transaction:jakarta.transaction-api:2.0.1</projectCompileDependency>
-    <projectCompileDependency>jakarta.enterprise:jakarta.enterprise.cdi-api:4.1.0</projectCompileDependency>
-    <projectCompileDependency>jakarta.enterprise:jakarta.enterprise.lang-model:4.1.0</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.app.jeeeraaah.common.api.bean:0.0.1</projectCompileDependency>
     <projectCompileDependency>org.slf4j:slf4j-api:2.0.16</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.app.jeeeraaah.common.api.domain:0.0.1</projectCompileDependency>
@@ -34,13 +31,10 @@
     <projectCompileDependency>jakarta.el:jakarta.el-api:6.0.1</projectCompileDependency>
     <projectCompileDependency>jakarta.interceptor:jakarta.interceptor-api:2.2.0</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.lib.jpa.core:0.0.1</projectCompileDependency>
-    <projectCompileDependency>jakarta.json.bind:jakarta.json.bind-api:3.0.0</projectCompileDependency>
     <projectCompileDependency>org.eclipse:yasson:3.0.4</projectCompileDependency>
-    <projectCompileDependency>jakarta.json:jakarta.json-api:2.1.2</projectCompileDependency>
     <projectCompileDependency>org.eclipse.parsson:parsson:1.1.7</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.lib.mapstruct:0.0.1</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.lib.util:0.0.1</projectCompileDependency>
-    <projectCompileDependency>jakarta.ws.rs:jakarta.ws.rs-api:3.1.0</projectCompileDependency>
     <projectCompileDependency>r-uu:r-uu.codespace.lib.ws.rs:0.0.1</projectCompileDependency>
     <projectCompileDependency>org.apache.logging.log4j:log4j-slf4j2-impl:2.24.1</projectCompileDependency>
     <projectCompileDependency>org.apache.logging.log4j:log4j-api:2.24.1</projectCompileDependency>

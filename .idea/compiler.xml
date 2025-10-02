@@ -68,8 +68,8 @@
         <module name="r-uu.codespace.app.jeeeraaah.common.api.mapping" />
         <module name="r-uu.codespace.lib.jsonb" />
         <module name="r-uu.codespace.lib.jpa.se.hibernate.postgres.demo" />
-        <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.executable" />
         <module name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs" />
+        <module name="r-uu.codespace.app.jeeeraaah.frontend.ui.fx.executable" />
         <module name="r-uu.codespace.lib.fx.comp.demo" />
         <module name="r-uu.codespace.lib.jackson" />
         <module name="r-uu.codespace.lib.junit" />

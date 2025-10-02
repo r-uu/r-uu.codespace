@@ -6,7 +6,8 @@
 @call mvn -B -q liberty:stop
 :: make sure resources for liberty are provided
 @call mvn -B -DskipTests process-resources
-:: start liberty in dev mode (ohne ANSI-Codes) und schreibe Log zentral nach r-uu/build.log
-@call powershell -noLogo -noProfile -command "mvn '-Dstyle.color=always' liberty:dev | tee \"%dir_root%\build.log\""
+:: start liberty in dev mode und schreibt Log zentral nach r-uu/build.log
+@del %dir_root%\lib-dev.log
+@call powershell -noLogo -noProfile -command "mvn '-Dstyle.color=always' liberty:dev | tee \"%dir_root%\lib-dev.log\""
 :: back to the root
 @cd %dir_root%

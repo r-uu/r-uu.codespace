@@ -17,8 +17,15 @@
 	<dependencies>
 		<!-- Dependencies alphabetisch nach artifactId, Versionen zentral im Root-POM -->
 		<dependency>
+			<groupId>jakarta.ws.rs</groupId>
+			<artifactId>jakarta.ws.rs-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>r-uu</groupId>

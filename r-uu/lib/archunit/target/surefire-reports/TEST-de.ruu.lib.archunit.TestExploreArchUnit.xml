@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.archunit.TestExploreArchUnit" time="1.217" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="de.ruu.lib.archunit.TestExploreArchUnit" time="2.013" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -14,8 +14,8 @@
     <property name="java.vm.specification.version" value="24"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
-    <property name="sun.boot.library.path" value="c:\software\develop\java\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire7772470715025344049\surefirebooter-20251001152216706_26.jar C:\Users\r-uu\AppData\Local\Temp\surefire7772470715025344049 2025-10-01T15-21-02_265-jvmRun1 surefire-20251001152216706_24tmp surefire_6-20251001152216706_25tmp"/>
+    <property name="sun.boot.library.path" value="C:\software\develop\java\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\r-uu\AppData\Local\Temp\surefire11865349672500754327\surefirebooter-20251001161659160_26.jar C:\Users\r-uu\AppData\Local\Temp\surefire11865349672500754327 2025-10-01T16-13-45_289-jvmRun1 surefire-20251001161659160_24tmp surefire_6-20251001161659160_25tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit\target\test-classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit\target\classes;C:\Users\r-uu\develop\github\codespace\r-uu\lib\util\target\r-uu.codespace.lib.util-0.0.1.jar;C:\Users\r-uu\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\r-uu\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\r-uu\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\r-uu\.m2\repository\com\tngtech\archunit\archunit\1.4.1\archunit-1.4.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.1\log4j-slf4j2-impl-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.1\log4j-api-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.1\log4j-core-2.24.1.jar;C:\Users\r-uu\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\r-uu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\r-uu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\r-uu\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -23,7 +23,7 @@
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2025-07-15"/>
-    <property name="java.home" value="c:\software\develop\java\jdk"/>
+    <property name="java.home" value="C:\software\develop\java\jdk"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="C:\Users\r-uu\develop\github\codespace\r-uu\lib\archunit"/>
     <property name="style.color" value="always"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire7772470715025344049\surefirebooter-20251001152216706_26.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\r-uu\AppData\Local\Temp\surefire11865349672500754327\surefirebooter-20251001161659160_26.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.2+11-jvmci-b01"/>
@@ -53,7 +53,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="c:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python313\Scripts\;C:\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.2\bin;C:\software\develop\build\maven\bin;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Flutter\bin;C:\Users\r-uu\AppData\Local\Programs\Windsurf\bin;C:\Users\r-uu\AppData\Roaming\npm;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
+    <property name="java.library.path" value="C:\software\develop\java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Graphviz\bin;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\r-uu\AppData\Local\Programs\Python\Python310\;C:\Users\r-uu\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\r-uu\AppData\Local\GitHubDesktop\bin;C:\software\develop\build\maven\bin;C:\software\develop\java\jdk\bin;C:\Users\r-uu\AppData\Local\JetBrains\Toolbox\scripts;;C:\Users\r-uu\AppData\Roaming\Programs\Zero Install;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\r-uu\develop\github\codespace\config\shell\cmd;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -61,139 +61,139 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="exploreMethodModifiers" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.025">
-    <system-out><![CDATA[15:22:17.840 INFO  com.tngtech.archunit.core.PluginLoader.get(68) - Detected Java version 24.0.2
-15:22:17.844 DEBUG com.tngtech.archunit.core.PluginLoader.get(73) - Current Java version is compatible to JAVA_9 => Loading Plugin com.tngtech.archunit.core.importer.ModuleImportPlugin
-15:22:17.858 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on sun.boot.class.path: []
-15:22:17.861 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on java.class.path: [file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/test-classes/, file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/classes/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/com/tngtech/archunit/archunit/1.4.1/archunit-1.4.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.24.1/log4j-slf4j2-impl-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar!/]
-15:22:18.177 DEBUG com.tngtech.archunit.ArchConfiguration.readProperties(89) - No configuration found in classpath at archunit.properties => Using default configuration
-15:22:18.210 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit$ExtendingAbstractClass'
-15:22:18.300 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/List'
-15:22:18.315 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'lombok/Generated'
-15:22:18.319 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit$AbstractClass'
-15:22:18.322 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit'
-15:22:18.326 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/String'
-15:22:18.342 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/SafeVarargs'
-15:22:18.344 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaModifier'
-15:22:18.349 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/IntrinsicCandidate'
-15:22:18.350 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/ForceInline'
-15:22:18.350 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CharSequence'
-15:22:18.352 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/Stable'
-15:22:18.353 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Deprecated'
-15:22:18.355 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Target'
-15:22:18.356 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/ElementType'
-15:22:18.357 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Retention'
-15:22:18.358 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/Serializable'
-15:22:18.359 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/Test'
-15:22:18.360 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/Constable'
-15:22:18.361 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/BeforeAll'
-15:22:18.361 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ConstantDesc'
-15:22:18.362 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Annotation'
-15:22:18.363 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Object'
-15:22:18.366 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Comparable'
-15:22:18.367 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/SequencedCollection'
-15:22:18.367 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/RetentionPolicy'
-15:22:18.370 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI'
-15:22:18.371 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaModifier$ApplicableType'
-15:22:18.373 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Collection'
-15:22:18.374 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API'
-15:22:18.376 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI$Usage'
-15:22:18.377 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API$Status'
-15:22:18.378 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum'
-15:22:18.380 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Documented'
-15:22:18.381 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/platform/commons/annotation/Testable'
-15:22:18.382 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI$State'
-15:22:18.383 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Inherited'
-15:22:18.383 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Iterable'
-15:22:18.385 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/Internal'
-15:22:18.386 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum$EnumDesc'
-15:22:18.386 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DynamicConstantDesc'
-15:22:18.414 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Set'
-15:22:18.421 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/slf4j/Logger'
-15:22:18.424 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaClass'
-15:22:18.440 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/IntStream'
-15:22:18.445 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Optional'
-15:22:18.448 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Class'
-15:22:18.456 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CloneNotSupportedException'
-15:22:18.458 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamException'
-15:22:18.458 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectInputStream'
-15:22:18.462 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/IOException'
-15:22:18.462 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ClassNotFoundException'
-15:22:18.464 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/invoke/MethodHandles$Lookup'
-15:22:18.472 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ReflectiveOperationException'
-15:22:18.474 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ClassDesc'
-15:22:18.475 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Iterator'
-15:22:18.476 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Consumer'
-15:22:18.477 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Spliterator'
-15:22:18.478 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/InterruptedException'
-15:22:18.480 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Throwable'
-15:22:18.483 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Comparator'
-15:22:18.484 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamField'
-15:22:18.485 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/Charset'
-15:22:18.490 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharacterCodingException'
-15:22:18.493 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharsetDecoder'
-15:22:18.497 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Void'
-15:22:18.498 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/foreign/MemorySegment'
-15:22:18.505 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Function'
-15:22:18.507 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/UnsupportedEncodingException'
-15:22:18.508 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Locale'
-15:22:18.514 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/AbstractStringBuilder'
-15:22:18.522 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/Stream'
-15:22:18.526 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuffer'
-15:22:18.529 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuilder'
-15:22:18.538 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DirectMethodHandleDesc'
-15:22:18.543 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Predicate'
-15:22:18.546 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/IntFunction'
-15:22:18.551 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/ListIterator'
-15:22:18.553 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/UnaryOperator'
-15:22:18.604 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList()
-15:22:18.605 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList(java.util.List)
-15:22:18.605 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.getClass()
-15:22:18.605 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC java.lang.Object.equals(java.lang.Object)
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait()
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PROTECTED java.lang.Object.finalize()
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC java.lang.Object.toString()
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PROTECTED,NATIVE java.lang.Object.clone()
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait(long)
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait(long, int)
-15:22:18.606 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.notify()
-15:22:18.607 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PRIVATE,FINAL,NATIVE java.lang.Object.wait0(long)
-15:22:18.607 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,NATIVE java.lang.Object.hashCode()
-15:22:18.607 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.notifyAll()
+  <testcase name="exploreMethodModifiers" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.055">
+    <system-out><![CDATA[16:17:00.874 INFO  com.tngtech.archunit.core.PluginLoader.get(68) - Detected Java version 24.0.2
+16:17:00.889 DEBUG com.tngtech.archunit.core.PluginLoader.get(73) - Current Java version is compatible to JAVA_9 => Loading Plugin com.tngtech.archunit.core.importer.ModuleImportPlugin
+16:17:00.938 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on sun.boot.class.path: []
+16:17:00.946 DEBUG com.tngtech.archunit.core.importer.UrlSource$From.findUrlsForClassPathProperty(192) - Found URLs on java.class.path: [file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/test-classes/, file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/archunit/target/classes/, jar:file:/C:/Users/r-uu/develop/github/codespace/r-uu/lib/util/target/r-uu.codespace.lib.util-0.0.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/com/tngtech/archunit/archunit/1.4.1/archunit-1.4.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.24.1/log4j-slf4j2-impl-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar!/, jar:file:/C:/Users/r-uu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar!/]
+16:17:01.428 DEBUG com.tngtech.archunit.ArchConfiguration.readProperties(89) - No configuration found in classpath at archunit.properties => Using default configuration
+16:17:01.499 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit$ExtendingAbstractClass'
+16:17:01.664 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/List'
+16:17:01.682 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'lombok/Generated'
+16:17:01.689 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit$AbstractClass'
+16:17:01.690 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'de/ruu/lib/archunit/TestExploreArchUnit'
+16:17:01.695 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/String'
+16:17:01.723 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/SafeVarargs'
+16:17:01.726 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaModifier'
+16:17:01.731 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/IntrinsicCandidate'
+16:17:01.732 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/ForceInline'
+16:17:01.734 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CharSequence'
+16:17:01.742 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'jdk/internal/vm/annotation/Stable'
+16:17:01.743 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Deprecated'
+16:17:01.744 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Target'
+16:17:01.746 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/ElementType'
+16:17:01.749 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Retention'
+16:17:01.750 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/Serializable'
+16:17:01.751 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/Test'
+16:17:01.753 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/Constable'
+16:17:01.755 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/jupiter/api/BeforeAll'
+16:17:01.756 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ConstantDesc'
+16:17:01.758 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Annotation'
+16:17:01.759 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Object'
+16:17:01.761 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Comparable'
+16:17:01.763 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/SequencedCollection'
+16:17:01.765 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/RetentionPolicy'
+16:17:01.767 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI'
+16:17:01.768 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaModifier$ApplicableType'
+16:17:01.770 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Collection'
+16:17:01.774 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API'
+16:17:01.777 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI$Usage'
+16:17:01.779 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/apiguardian/api/API$Status'
+16:17:01.781 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum'
+16:17:01.784 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Documented'
+16:17:01.786 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/junit/platform/commons/annotation/Testable'
+16:17:01.788 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/PublicAPI$State'
+16:17:01.789 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/annotation/Inherited'
+16:17:01.790 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Iterable'
+16:17:01.791 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/Internal'
+16:17:01.792 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Enum$EnumDesc'
+16:17:01.794 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DynamicConstantDesc'
+16:17:01.854 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Set'
+16:17:01.864 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'org/slf4j/Logger'
+16:17:01.869 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'com/tngtech/archunit/core/domain/JavaClass'
+16:17:01.887 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/IntStream'
+16:17:01.898 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectInputStream'
+16:17:01.904 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/IOException'
+16:17:01.905 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ClassNotFoundException'
+16:17:01.907 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Optional'
+16:17:01.910 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Class'
+16:17:01.920 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamException'
+16:17:01.921 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/CloneNotSupportedException'
+16:17:01.925 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/ClassDesc'
+16:17:01.927 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/invoke/MethodHandles$Lookup'
+16:17:01.936 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/ReflectiveOperationException'
+16:17:01.937 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Consumer'
+16:17:01.941 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Iterator'
+16:17:01.943 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Spliterator'
+16:17:01.945 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/InterruptedException'
+16:17:01.949 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Throwable'
+16:17:01.956 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Comparator'
+16:17:01.966 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/ObjectStreamField'
+16:17:01.970 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuffer'
+16:17:01.974 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/Charset'
+16:17:01.978 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/stream/Stream'
+16:17:01.984 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/io/UnsupportedEncodingException'
+16:17:01.985 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/Void'
+16:17:01.987 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/Locale'
+16:17:01.996 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/foreign/MemorySegment'
+16:17:02.005 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/AbstractStringBuilder'
+16:17:02.014 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharacterCodingException'
+16:17:02.017 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Function'
+16:17:02.027 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/nio/charset/CharsetDecoder'
+16:17:02.033 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/StringBuilder'
+16:17:02.044 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/lang/constant/DirectMethodHandleDesc'
+16:17:02.049 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/Predicate'
+16:17:02.053 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/IntFunction'
+16:17:02.058 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/function/UnaryOperator'
+16:17:02.060 DEBUG com.tngtech.archunit.core.importer.JavaClassProcessor.visit(104) - Processing class 'java/util/ListIterator'
+16:17:02.163 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList(java.util.List)
+16:17:02.163 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList()
+16:17:02.164 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait()
+16:17:02.164 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC java.lang.Object.equals(java.lang.Object)
+16:17:02.164 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.notify()
+16:17:02.165 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,NATIVE java.lang.Object.hashCode()
+16:17:02.166 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.getClass()
+16:17:02.166 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait(long, int)
+16:17:02.167 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL,NATIVE java.lang.Object.notifyAll()
+16:17:02.167 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC java.lang.Object.toString()
+16:17:02.167 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PROTECTED java.lang.Object.finalize()
+16:17:02.167 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PRIVATE,FINAL,NATIVE java.lang.Object.wait0(long)
+16:17:02.168 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PROTECTED,NATIVE java.lang.Object.clone()
+16:17:02.168 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreMethodModifiers$0(84) - PUBLIC,FINAL java.lang.Object.wait(long)
 ]]></system-out>
   </testcase>
-  <testcase name="exploreAccessesFromSelf" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.002">
-    <system-out><![CDATA[15:22:18.623 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - stringList
-15:22:18.623 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - stringList
-15:22:18.623 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - <init>
+  <testcase name="exploreAccessesFromSelf" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.006">
+    <system-out><![CDATA[16:17:02.192 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - stringList
+16:17:02.193 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - stringList
+16:17:02.193 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAccessesFromSelf$0(56) - <init>
 ]]></system-out>
   </testcase>
-  <testcase name="exploreAllMethods" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.006">
-    <system-out><![CDATA[15:22:18.627 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.util.List<java.lang.String> de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList()
-15:22:18.627 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList(java.util.List)
-15:22:18.627 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.Class<?> java.lang.Object.getClass()
-15:22:18.627 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - boolean java.lang.Object.equals(java.lang.Object)
-15:22:18.628 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait()
-15:22:18.628 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.finalize()
-15:22:18.628 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.String java.lang.Object.toString()
-15:22:18.628 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.Object java.lang.Object.clone()
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait(long)
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait(long, int)
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.notify()
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait0(long)
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - int java.lang.Object.hashCode()
-15:22:18.629 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.notifyAll()
+  <testcase name="exploreAllMethods" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.011">
+    <system-out><![CDATA[16:17:02.201 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList(java.util.List)
+16:17:02.203 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.util.List<java.lang.String> de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList()
+16:17:02.203 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait()
+16:17:02.204 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - boolean java.lang.Object.equals(java.lang.Object)
+16:17:02.205 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.notify()
+16:17:02.205 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - int java.lang.Object.hashCode()
+16:17:02.205 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.Class<?> java.lang.Object.getClass()
+16:17:02.206 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait(long, int)
+16:17:02.207 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.notifyAll()
+16:17:02.207 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.String java.lang.Object.toString()
+16:17:02.207 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.finalize()
+16:17:02.208 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait0(long)
+16:17:02.208 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - java.lang.Object java.lang.Object.clone()
+16:17:02.208 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllMethods$0(78) - void java.lang.Object.wait(long)
 ]]></system-out>
   </testcase>
-  <testcase name="exploreAllFields" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.003">
-    <system-out><![CDATA[15:22:18.633 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllFields$0(68) - java.util.List<java.lang.String> stringList
-15:22:18.633 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.exploreAllFields(71) - field JavaField{de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList}
+  <testcase name="exploreAllFields" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.004">
+    <system-out><![CDATA[16:17:02.214 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllFields$0(68) - java.util.List<java.lang.String> stringList
+16:17:02.215 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.exploreAllFields(71) - field JavaField{de.ruu.lib.archunit.TestExploreArchUnit$ExtendingAbstractClass.stringList}
 ]]></system-out>
   </testcase>
-  <testcase name="exploreAllAccessesFromSelf" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.002">
-    <system-out><![CDATA[15:22:18.636 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - stringList
-15:22:18.636 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - stringList
-15:22:18.636 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - <init>
+  <testcase name="exploreAllAccessesFromSelf" classname="de.ruu.lib.archunit.TestExploreArchUnit" time="0.005">
+    <system-out><![CDATA[16:17:02.220 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - stringList
+16:17:02.221 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - stringList
+16:17:02.223 DEBUG de.ruu.lib.archunit.TestExploreArchUnit.lambda$exploreAllAccessesFromSelf$0(62) - <init>
 ]]></system-out>
   </testcase>
 </testsuite>

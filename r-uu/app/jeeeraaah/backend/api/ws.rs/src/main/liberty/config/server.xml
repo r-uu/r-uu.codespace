@@ -6,7 +6,8 @@
 		<!--		<platform>jakartaee-10</platform>-->
 		<feature>adminCenter-1.0</feature>
 		<!-- give openliberty access to shared library -->
-		<feature>bells-1.0</feature>
+		<!-- Removed bells-1.0 to avoid CWWKL0055W warnings -->
+		<!-- <feature>bells-1.0</feature> -->
 		<feature>jdbc-4.3</feature>
 		<!-- allow other jpa implementations than eclipselink -->
 		<feature>persistenceContainer-3.1</feature>
@@ -22,7 +23,7 @@
 			Then uncomment the user element. -->
 	<!--
     <basicRegistry id   ="basic"
-	                 realm="BasicRealm">
+	               realm="BasicRealm">
 		<user name    ="${security_username}"
 		      password="${security_password}"/>
 	</basicRegistry>
@@ -49,6 +50,14 @@
 	-->
 	<keyStore password="${security_password}"/>
 
+	<!-- Authentication alias for database credentials
+	     Why: Avoids embedding username/password in the datasource properties,
+	     addresses J2CA8050I, and centralizes secrets.
+	     Note: In production, prefer externalized secrets (env/keystore) instead of plaintext. -->
+	<authData id="datasource_postgresql_auth"
+	          user="${datasource_database_username}"
+	          password="${datasource_database_password}"/>
+
 	<remoteFileAccess>
 		<writeDir>${server.config.dir}</writeDir>
 	</remoteFileAccess>
@@ -63,10 +72,10 @@
 	<library id="library-jdbc-driver-postgresql">
 		<fileset id="PostgreSQLFileset"
 		         dir="${shared.resource.dir}/"
-		         includes="postgresql-42.7.5.jar"/>
+		         includes="postgresql-*.jar"/>
 	</library>
 
-<!--	<jdbcDriver id="jdbc-driver-postgresql"-->
+	<!--	<jdbcDriver id="jdbc-driver-postgresql"-->
 <!--	            jakarta.sql.XADataSource="org.postgresql.xa.PGXADataSource"-->
 <!--	            jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"-->
 <!--	            libraryRef="library-jdbc-driver-postgresql"/>-->
@@ -78,38 +87,30 @@
 		<api.connector>javax.sql.Driver</api.connector>
 	</jdbcDriver>
 
-<!--	<dataSource id="datasource_postgresql"-->
-<!--	            jndiName="jdbc/datasource_postgresql"-->
-<!--	            jdbcDriverRef="jdbc-driver-postgresql"-->
-<!--	            type="javax.sql.ConnectionPoolDataSource"-->
-<!--	            transactional="true">-->
-<!--		<properties.postgresql serverName="${datasource_server_host}"-->
-<!--		                       portNumber="${datasource_server_port}"-->
-<!--		                       databaseName="${datasource_database}"-->
-<!--		                       user="${datasource_database_username}"-->
-<!--		                       password="${datasource_database_password}"/>-->
-<!--	</dataSource>-->
-
+	<!-- Non-XA DataSource with authentication alias (authDataRef)
+	     Pros: simpler setup, fewer XA dependencies, suitable for single-resource transactions.
+	     If you need distributed transactions later, switch back to XA. -->
 	<dataSource id="datasource_postgresql"
 	            jndiName="jdbc/datasource_postgresql"
 	            jdbcDriverRef="jdbc-driver-postgresql"
-	            type="javax.sql.XADataSource"
-	            transactional="true">
-		<properties
-				serverName="${datasource_server_host}"
-				portNumber="${datasource_server_port}"
-				databaseName="${datasource_database}"
-				user="${datasource_database_username}"
-				password="${datasource_database_password}"/>
+	            type="javax.sql.ConnectionPoolDataSource"
+	            transactional="true"
+	            authDataRef="datasource_postgresql_auth">
+		<properties.postgresql
+		        serverName="${datasource_server_host}"
+		        portNumber="${datasource_server_port}"
+		        databaseName="${datasource_database}"/>
 	</dataSource>
 
+	<!-- Removed bells-1.0 usage to suppress warnings: CWWKL0055W -->
+	<!-- <library id="library-hibernate"> -->
 	<library id="library-hibernate">
 		<fileset dir="${shared.resource.dir}/" includes="hibernate-core-6.6.4.Final.jar,jboss-logging-3.6.1.Final.jar"/>
 		<apiTypeVisibility>spec,ibm-api,third-party</apiTypeVisibility>
 		<classLoader>common</classLoader>
 	</library>
 
-	<bell libraryRef="library-hibernate"/>
+	<!-- <bell libraryRef="library-hibernate"/> -->
 
 	<!--	<library id="library-jackson">-->
 	<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
@@ -133,7 +134,7 @@
 			name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
 		<classloader commonLibraryRef="library-hibernate"
 		             apiTypeVisibility="spec, ibm-api, third-party"
-		             delegation="parentLast">
+		             delegation="parentFirst">
 			<fileset dir="${server.config.dir}/lib/global" includes="*.jar" scanInterval="5s"/>
 		</classloader>
 	</webApplication>

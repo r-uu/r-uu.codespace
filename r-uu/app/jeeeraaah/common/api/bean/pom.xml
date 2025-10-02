@@ -8,9 +8,23 @@
 	<artifactId>r-uu.codespace.app.jeeeraaah.common.api.bean</artifactId>
 	<name>${project.artifactId}</name>
 	<dependencies>
+		<!-- Provide jakarta APIs required by module-info and transitive requires from de.ruu.lib.util -->
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.ws.rs</groupId>
+			<artifactId>jakarta.ws.rs-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>

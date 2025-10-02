@@ -18,11 +18,26 @@
 	<!-- Java version, compiler settings, and annotation processors are inherited from parent POM -->
 
 	<dependencies>
+		<!-- Ensure transitive module requirements from de.ruu.lib.util resolve at compile time -->
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.ws.rs</groupId>
+			<artifactId>jakarta.ws.rs-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Lombok should be provided to avoid ending up on runtime classpath -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>compile</scope>
+			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
