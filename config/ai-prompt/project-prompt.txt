@@ -1,0 +1,154 @@
+# Project Prompt Template
+
+This template defines the context, rules, and goals for working on this Java Enterprise project.
+It ensures consistent responses and code modifications across tools like ChatGPT, Claude, or GitHub Copilot.
+
+---------------------------------------------------------------------
+
+## Context
+- Domain: Java Enterprise development
+- Java version: 24
+- Operating System: Windows 11
+- Shell scripting: CMD
+- Build tool: Maven
+- Version control: Git (GitHub)
+- Enterprise frameworks:
+    - Jakarta EE 10
+    - MicroProfile 6
+    - CDI
+    - JPA
+    - JAX-RS
+    - JavaFX
+- Application server: Open Liberty
+- IDE: IntelliJ IDEA Community
+
+---------------------------------------------------------------------
+
+## Rules
+
+### Maven
+- Always use Java 24.
+- Do not use <properties> for dependency/plugin versions.
+- All dependency versions must be managed in the root POM under <dependencyManagement>.
+- All plugin versions must be managed in the root POM under <pluginManagement>.
+- Centralize build configuration in the root POM whenever possible.
+- Sort dependencies by artifactId within each scope.
+- Remove unused dependencies.
+
+### Java
+- Derive coding standards from the existing project code and preserve them in all changes.
+- Before making changes, analyze existing code patterns for:
+    - Naming conventions (classes, methods, variables)
+    - Indentation and formatting style
+    - Error handling patterns
+    - Logging approach
+- When uncertain about patterns, ask before deviating from observed conventions.
+- Ensure consistent JPMS (Java Platform Module System) usage across the project.
+- Remove unused imports.
+- Remove unused requires.
+- Keep requires minimal.
+- Sort imports in this order:
+    1. java.* packages
+    2. javax.* packages
+    3. jakarta.* packages
+    4. Third-party libraries
+    5. Project packages
+    - Use blank lines between each group
+- Sort requires alphabetically by module name.
+- Example module-info.java requires section:
+    requires jakarta.cdi;
+    requires jakarta.persistence;
+    requires java.sql;
+- Example import order in Java files:
+    import java.util.List;
+    (blank line)
+    import jakarta.enterprise.context.ApplicationScoped;
+    import jakarta.persistence.EntityManager;
+    (blank line)
+    import org.eclipse.microprofile.config.Config;
+    (blank line)
+    import com.example.project.domain.Task;
+
+### General
+- All comments must be in English.
+- Replace existing German comments with English.
+
+### Build
+- Root directory is "codespace".
+- The Maven root module is "r-uu" inside "codespace".
+- Builds must be started via:
+  codespace\config\shell\clean-install.cmd
+
+### Liberty
+- Always use the configured PostgreSQL database.
+- To start the Liberty server, use:
+  codespace\config\shell\lib-dev.cmd
+
+---------------------------------------------------------------------
+
+## Constraints
+- Cannot modify Java version (locked to 24).
+- Cannot change application server (must use Open Liberty).
+- Must maintain Windows 11/CMD compatibility.
+- Cannot introduce new enterprise frameworks beyond those listed in Context.
+
+---------------------------------------------------------------------
+
+## Priority Order
+When there are trade-offs, prioritize in this order:
+1. Maven build must succeed without errors
+2. Code must follow existing project conventions
+3. JPMS module integrity
+4. Performance and best practices
+
+---------------------------------------------------------------------
+
+## Goals
+- Fix Maven build errors.
+- Produce a stable codebase with a clean, error-free Maven build.
+- Stop the Liberty server.
+- Start the Liberty server.
+- Execute the request:
+  http://znbk14.mshome.net:9080/jeee-raaah/taskgroup/allFlat
+- Diagnose and fix server-side errors.
+
+---------------------------------------------------------------------
+
+## Debugging Approach
+When errors occur:
+1. Identify root cause before suggesting fixes
+2. Explain WHY the error happened
+3. Provide the complete corrected file
+4. List any side effects or related changes needed
+5. Suggest verification steps
+
+---------------------------------------------------------------------
+
+## Output Requirements
+- Always return full working code blocks (cmd, xml, java, etc.) in Markdown.
+- Use proper code fencing with language identifiers (```java, ```xml, ```cmd).
+- Return complete file contents when:
+    - Fixing compilation/build errors
+    - Modifying POMs
+    - Restructuring modules
+    - Making any changes that affect file structure or dependencies
+- For very minor changes (< 5 lines in a large file), may show context with diff markers, but when in doubt, show the complete file.
+- Explanations in English, unless explicitly requested in German.
+- When fixing errors, show the corrected file in full (not only fragments).
+- Group related changes by file/module for clarity.
+- Provide verification steps after presenting solutions.
+
+---------------------------------------------------------------------
+
+## Example Patterns
+
+### Dependency Declaration (root POM)
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>10.0.0</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>

@@ -10,7 +10,6 @@ module de.ruu.app.jeeeraaah.backend.common.mapping
 	requires de.ruu.app.jeeeraaah.common.api.ws.rs;
 	requires de.ruu.lib.mapstruct;
 
-	requires org.mapstruct;
 	requires static lombok;
 	requires de.ruu.lib.jpa.core;
 	requires de.ruu.app.jeeeraaah.common.api.domain;

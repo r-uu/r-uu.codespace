@@ -14,7 +14,7 @@ import static java.util.Objects.nonNull;
 @Slf4j
 public class TaskRepositoryJPAEE extends TaskRepositoryJPA
 {
-	@PersistenceContext(name = "jeeeraaah") private EntityManager entityManager;
+	@PersistenceContext(unitName = "jeeeraaah_test") private EntityManager entityManager;
 
 	@PostConstruct private void postConstruct() { log.debug("entity manager available: {}", nonNull(entityManager)); }
 

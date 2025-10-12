@@ -12,11 +12,6 @@
         <version>0.0.1</version>
     </parent>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Entfernt, da jetzt zentral in Root-POM -->
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <!-- Internal dependencies alphabetisch nach artifactId -->

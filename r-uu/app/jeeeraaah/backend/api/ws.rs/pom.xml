@@ -66,6 +66,27 @@
 			<groupId>r-uu</groupId>
 			<artifactId>r-uu.codespace.lib.ws.rs</artifactId>
 		</dependency>
+		<!-- EclipseLink as primary JPA provider - works perfectly with OpenLiberty -->
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+		<!-- Hibernate as optional alternative (kept for flexibility) -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.6.4.Final</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- Lombok only for compile-time to satisfy JPMS 'requires static lombok' -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>io.smallrye.config</groupId>
 			<artifactId>smallrye-config</artifactId>
@@ -79,16 +100,6 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j2-impl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.logging</groupId>
@@ -108,10 +119,12 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
-		<!-- MicroProfile APIs: für Compilezeit (JPMS), Laufzeit wird vom Server bereitgestellt -->
+		<!-- Hibernate included as normal WAR dependency for reliable JPA provider loading -->
+		<!-- MicroProfile APIs: Compile-time (JPMS), provided at runtime by the server -->
 		<dependency>
 			<groupId>org.eclipse.microprofile.health</groupId>
 			<artifactId>microprofile-health-api</artifactId>
+			<version>4.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -124,6 +137,7 @@
 			<artifactId>microprofile-openapi-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<!-- Ensure server-provided Jakarta APIs are not bundled into the WAR to avoid classloading conflicts -->
 		<dependency>
 			<groupId>jakarta.annotation</groupId>
 			<artifactId>jakarta.annotation-api</artifactId>
@@ -139,15 +153,9 @@
 			<artifactId>jakarta.persistence-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- Ensure server-provided Jakarta APIs are not bundled into the WAR to avoid classloading conflicts -->
 		<dependency>
 			<groupId>jakarta.ws.rs</groupId>
 			<artifactId>jakarta.ws.rs-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.enterprise</groupId>
-			<artifactId>jakarta.enterprise.cdi-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -184,7 +192,7 @@
 						<default.http.port>9080</default.http.port>
 						<default.https.port>9443</default.https.port>
 						<app.install.root>${project.build.directory}/liberty/wlp/usr/servers/defaultServer/apps</app.install.root>
-						<server.config.dir>${project.basedir}/src/main/resources</server.config.dir>
+						<server.config.dir>${project.basedir}/src/main/liberty/config</server.config.dir>
 					</bootstrapProperties>
 				</configuration>
 				<executions>
@@ -202,33 +210,6 @@
 				<configuration>
 					<failOnError>false</failOnError>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-jboss-logging</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.jboss.logging</groupId>
-									<artifactId>jboss-logging</artifactId>
-									<outputDirectory>${project.basedir}/target/liberty/wlp/usr/shared/resources</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.postgresql</groupId>
-									<artifactId>postgresql</artifactId>
-									<outputDirectory>${project.basedir}/target/liberty/wlp/usr/shared/resources</outputDirectory>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="jeeeraaah_test" transaction-type="JTA">
+        <!-- EclipseLink works perfectly with Payara -->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/datasource_postgresql</jta-data-source>
+
+        <!-- Entity Classes -->
+        <class>de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupJPA</class>
+        <class>de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskJPA</class>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+            <!-- EclipseLink optimized for Payara -->
+            <property name="eclipselink.target-server" value="SunAS9"/>
+            <property name="eclipselink.jpa.uppercase-column-names" value="false"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+
+            <!-- Schema management -->
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+
+            <!-- Performance optimizations -->
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.weaving" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

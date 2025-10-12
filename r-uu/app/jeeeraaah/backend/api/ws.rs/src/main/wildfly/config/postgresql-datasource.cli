@@ -1,0 +1,3 @@
+/subsystem=datasources/data-source=PostgreSQLDS:add(jndi-name=java:jboss/datasources/PostgreSQLDS,driver-name=postgresql,connection-url=jdbc:postgresql://localhost:5432/app_jeeeraaah,user-name=app_jeeeraaah_test,password=app_jeeeraaah_test)
+/subsystem=datasources/data-source=PostgreSQLDS:enable()
+

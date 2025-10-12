@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+	<persistence-unit name="jeeeraaah_test" transaction-type="JTA">
+		<!-- EclipseLink JPA Provider - works perfectly with OpenLiberty -->
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>jdbc/datasource_postgresql</jta-data-source>
+
+		<!-- Explicitly listed entity classes only -->
+		<class>de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskJPA</class>
+		<class>de.ruu.app.jeeeraaah.backend.persistence.jpa.TaskGroupJPA</class>
+
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<validation-mode>AUTO</validation-mode>
+
+		<properties>
+			<!-- Schema generation -->
+			<property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+			<property name="jakarta.persistence.schema-generation.scripts.action" value="create"/>
+			<property name="jakarta.persistence.schema-generation.scripts.create-target" value="create.ddl"/>
+
+			<!-- EclipseLink specific settings -->
+			<property name="eclipselink.logging.level" value="FINE"/>
+			<property name="eclipselink.logging.level.sql" value="FINE"/>
+			<property name="eclipselink.logging.parameters" value="true"/>
+			<property name="eclipselink.target-database" value="PostgreSQL"/>
+
+			<!-- Performance settings -->
+			<property name="eclipselink.batch-writing" value="JDBC"/>
+			<property name="eclipselink.cache.shared.default" value="false"/>
+
+			<!-- No enhancement issues with EclipseLink -->
+			<property name="eclipselink.weaving" value="false"/>
+		</properties>
+	</persistence-unit>
+</persistence>

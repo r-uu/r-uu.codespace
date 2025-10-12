@@ -6,7 +6,7 @@ public interface Paths
 	String BY_ID = "/{id}";
 
 	/** constants for application */
-	String PATH_TO_APP                        = "/jeee-raaah";
+	String PATH_TO_APP                        = ""; // Fixed: empty string to work with Liberty context root /jeee-raaah
 
 	/** constants for domain taskgroup */
 	String PATH_APPENDER_TO_DOMAIN_TASK_GROUP = "/taskgroup";

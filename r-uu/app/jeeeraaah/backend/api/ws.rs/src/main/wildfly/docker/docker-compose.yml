@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  wildfly:
+    image: quay.io/wildfly/wildfly:30.0.1.Final-jdk17
+    container_name: wildfly-jeeeraaah
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    environment:
+      - WILDFLY_USER=admin
+      - WILDFLY_PASS=admin
+    volumes:
+      - ../../../target/r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war:/opt/jboss/wildfly/standalone/deployments/app.war:ro
+      - ./wildfly-init.cli:/opt/jboss/wildfly/bin/init.cli:ro
+    command: >
+      /bin/bash -c "
+      /opt/jboss/wildfly/bin/add-user.sh -u admin -p admin --silent &&
+      /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 --admin-only &
+      sleep 10 &&
+      /opt/jboss/wildfly/bin/jboss-cli.sh --connect --file=/opt/jboss/wildfly/bin/init.cli &&
+      pkill -f standalone.sh &&
+      sleep 2 &&
+      /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+      "
+    depends_on:
+      - postgres
+    networks:
+      - jeeeraaah-net
+
+  postgres:
+    image: postgres:15
+    container_name: postgres-wildfly
+    environment:
+      - POSTGRES_DB=app_jeeeraaah
+      - POSTGRES_USER=app_jeeeraaah_test
+      - POSTGRES_PASSWORD=app_jeeeraaah_test
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    networks:
+      - jeeeraaah-net
+
+volumes:
+  postgres_data:
+
+networks:
+  jeeeraaah-net:
+    driver: bridge

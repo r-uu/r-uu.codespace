@@ -379,8 +379,12 @@ public class Criteria<T>
 	@SuppressWarnings("unchecked")
   private static <T> String getEntityName(Class<T> entity)
 	{
-    Entity entityAnnotation = entity.getAnnotation(Entity.class);
-    return entityAnnotation == null ? entity.getSimpleName() : entityAnnotation.name();
+		Entity entityAnnotation = entity.getAnnotation(Entity.class);
+		if (entityAnnotation != null && !entityAnnotation.name().isEmpty()) {
+			return entityAnnotation.name();
+		}
+		// Fall back to simple class name if annotation name is empty or missing
+		return entity.getSimpleName();
 	}
 
 	/**

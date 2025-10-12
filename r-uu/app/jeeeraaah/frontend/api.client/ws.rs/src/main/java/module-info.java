@@ -20,7 +20,6 @@ module de.ruu.app.jeeeraaah.frontend.api.client.ws.rs
 	requires jakarta.inject;
 	requires jakarta.json;
 	requires jakarta.ws.rs;
-	requires jakarta.xml.bind;
 
 	// MicroProfile
 	requires microprofile.config.api;

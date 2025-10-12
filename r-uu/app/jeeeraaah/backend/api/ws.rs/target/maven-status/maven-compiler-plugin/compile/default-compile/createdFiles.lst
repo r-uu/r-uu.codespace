@@ -5,5 +5,4 @@ de\ruu\app\jeeeraaah\backend\api\ws\rs\TaskService.class
 de\ruu\app\jeeeraaah\backend\api\ws\rs\ExceptionMapping$TaskRelationExceptionMapper.class
 de\ruu\app\jeeeraaah\backend\api\ws\rs\TaskGroupService.class
 module-info.class
-de\ruu\app\jeeeraaah\backend\api\ws\rs\health\SystemStartupCheck.class
 de\ruu\app\jeeeraaah\backend\api\ws\rs\JeeeRaaah.class

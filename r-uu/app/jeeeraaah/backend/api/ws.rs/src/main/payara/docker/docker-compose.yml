@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  payara:
+    image: payara/server-full:6.2024.6
+    container_name: payara-jeeeraaah
+    ports:
+      - "8080:8080"
+      - "4848:4848"
+      - "9009:9009"
+    environment:
+      - PAYARA_ARGS=--deploy /opt/payara/deployments/app.war
+    volumes:
+      - ../../../target/r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war:/opt/payara/deployments/app.war:ro
+      - ../config/glassfish-resources.xml:/opt/payara/config/glassfish-resources.xml:ro
+    depends_on:
+      - postgres
+    networks:
+      - jeeeraaah-net
+
+  postgres:
+    image: postgres:15
+    container_name: postgres-jeeeraaah
+    environment:
+      - POSTGRES_DB=app_jeeeraaah
+      - POSTGRES_USER=app_jeeeraaah_test
+      - POSTGRES_PASSWORD=app_jeeeraaah_test
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - jeeeraaah-net
+
+volumes:
+  postgres_data:
+
+networks:
+  jeeeraaah-net:
+    driver: bridge

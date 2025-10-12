@@ -12,5 +12,4 @@ module de.ruu.app.jeeeraaah.common.api.mapping
 	requires de.ruu.lib.mapstruct;
 	requires jakarta.annotation;
 	requires static lombok;
-	requires org.mapstruct;
 }

@@ -3,7 +3,6 @@ module de.ruu.lib.jpa.core.mapstruct.demo.bidirectional
 	exports de.ruu.lib.jpa.core.mapstruct.demo.bidirectional;
 
 	requires java.compiler;
-	requires org.mapstruct;
 	requires org.slf4j;
 
 	requires de.ruu.lib.jpa.core;

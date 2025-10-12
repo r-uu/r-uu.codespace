@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- PostgreSQL Connection Pool -->
+    <jdbc-connection-pool
+        name="PostgreSQLPool"
+        datasource-classname="org.postgresql.ds.PGConnectionPoolDataSource"
+        res-type="javax.sql.ConnectionPoolDataSource"
+        initial-pool-size="5"
+        max-pool-size="20"
+        pool-resize-quantity="2"
+        idle-timeout-in-seconds="300">
+        <property name="serverName" value="localhost"/>
+        <property name="portNumber" value="5432"/>
+        <property name="databaseName" value="app_jeeeraaah"/>
+        <property name="user" value="app_jeeeraaah_test"/>
+        <property name="password" value="app_jeeeraaah_test"/>
+    </jdbc-connection-pool>
+
+    <!-- JDBC Resource -->
+    <jdbc-resource
+        enabled="true"
+        jndi-name="jdbc/datasource_postgresql"
+        pool-name="PostgreSQLPool"/>
+</resources>

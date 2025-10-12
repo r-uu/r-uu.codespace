@@ -6,8 +6,6 @@ module de.ruu.app.jeeeraaah.backend.api.ws.rs
 	requires jakarta.persistence;
 	requires jakarta.ws.rs;
 	requires jakarta.inject;
-	requires jakarta.xml.bind;
-
 
 	// MicroProfile und Jakarta Validation Automodules für Compile-Zeit
 	requires static jakarta.validation;
@@ -34,8 +32,6 @@ module de.ruu.app.jeeeraaah.backend.api.ws.rs
 	requires jdk.management;
 	requires de.ruu.app.jeeeraaah.common.api.bean;
 	requires de.ruu.lib.cdi.se;
-
-	// Internal modules - these should be automatic modules or named modules
 
 	// Export packages
 	exports de.ruu.app.jeeeraaah.backend.api.ws.rs;

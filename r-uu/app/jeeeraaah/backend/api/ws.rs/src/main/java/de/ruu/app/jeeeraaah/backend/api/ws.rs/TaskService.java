@@ -11,7 +11,7 @@ import de.ruu.app.jeeeraaah.common.api.domain.TaskLazy;
 import de.ruu.app.jeeeraaah.common.api.domain.TaskService.TaskRelationException;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskDTO;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -65,7 +65,7 @@ import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
  * @author r-uu
  */
 // TODO fix exception handling
-@RequestScoped
+@ApplicationScoped
 @Path(PATH_APPENDER_TO_DOMAIN_TASK)
 @Consumes(APPLICATION_JSON)
 @Produces(APPLICATION_JSON)

@@ -7,6 +7,7 @@ module de.ruu.app.jeeeraaah.backend.persistence.jpa
 	requires jakarta.inject;
 	requires jakarta.persistence;
 	requires jakarta.transaction;
+	requires jakarta.ws.rs;
 
 	requires de.ruu.lib.jpa.core;
 	requires de.ruu.lib.mapstruct;
@@ -14,10 +15,9 @@ module de.ruu.app.jeeeraaah.backend.persistence.jpa
 	requires de.ruu.app.jeeeraaah.common.api.domain;
 
 	requires org.slf4j;
-	requires org.mapstruct;
 	requires de.ruu.app.jeeeraaah.common.api.ws.rs;
-    requires static lombok;
+	requires static lombok;
 
-    opens de.ruu.app.jeeeraaah.backend.persistence.jpa;
+	opens de.ruu.app.jeeeraaah.backend.persistence.jpa;
 	opens de.ruu.app.jeeeraaah.backend.persistence.jpa.ee;
 }

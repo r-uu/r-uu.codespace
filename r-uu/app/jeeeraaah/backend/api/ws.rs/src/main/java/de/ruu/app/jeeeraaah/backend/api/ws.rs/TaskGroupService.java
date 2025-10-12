@@ -11,6 +11,7 @@ import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTO;
 import de.ruu.app.jeeeraaah.common.api.ws.rs.TaskGroupDTOFlat;
 import de.ruu.lib.mapstruct.ReferenceCycleTracking;
 import de.ruu.lib.ws.rs.ErrorResponse;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
@@ -45,6 +46,7 @@ import static jakarta.ws.rs.core.Response.Status.*;
  *
  * @author r-uu
  */
+@ApplicationScoped
 @Path(PATH_APPENDER_TO_DOMAIN_TASK_GROUP)
 @OpenAPIDefinition(info = @Info(version = "a version", title = "a title"))
 @Produces(APPLICATION_JSON)

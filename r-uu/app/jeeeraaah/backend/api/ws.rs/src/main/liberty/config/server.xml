@@ -5,9 +5,6 @@
 	<featureManager>
 		<!--		<platform>jakartaee-10</platform>-->
 		<feature>adminCenter-1.0</feature>
-		<!-- give openliberty access to shared library -->
-		<!-- Removed bells-1.0 to avoid CWWKL0055W warnings -->
-		<!-- <feature>bells-1.0</feature> -->
 		<feature>jdbc-4.3</feature>
 		<!-- allow other jpa implementations than eclipselink -->
 		<feature>persistenceContainer-3.1</feature>
@@ -69,31 +66,13 @@
 	              httpsPort="${default_https_port}"
 	              host="${default_host_name}"/>
 
-	<library id="library-jdbc-driver-postgresql">
-		<fileset id="PostgreSQLFileset"
-		         dir="${shared.resource.dir}/"
-		         includes="postgresql-*.jar"/>
-	</library>
-
-	<!--	<jdbcDriver id="jdbc-driver-postgresql"-->
-<!--	            jakarta.sql.XADataSource="org.postgresql.xa.PGXADataSource"-->
-<!--	            jakarta.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"-->
-<!--	            libraryRef="library-jdbc-driver-postgresql"/>-->
-
-	<jdbcDriver id="jdbc-driver-postgresql"
-	            libraryRef="library-jdbc-driver-postgresql">
-		<api.connector>javax.sql.XADataSource</api.connector>
-		<api.connector>javax.sql.ConnectionPoolDataSource</api.connector>
-		<api.connector>javax.sql.Driver</api.connector>
-	</jdbcDriver>
-
-	<!-- Non-XA DataSource with authentication alias (authDataRef)
-	     Pros: simpler setup, fewer XA dependencies, suitable for single-resource transactions.
-	     If you need distributed transactions later, switch back to XA. -->
+	<!--
+	     DataSource Configuration: Simplified without jdbcDriverRef
+	     Liberty will automatically find PostgreSQL driver from the WAR's WEB-INF/lib
+	-->
 	<dataSource id="datasource_postgresql"
 	            jndiName="jdbc/datasource_postgresql"
-	            jdbcDriverRef="jdbc-driver-postgresql"
-	            type="javax.sql.ConnectionPoolDataSource"
+	            type="javax.sql.DataSource"
 	            transactional="true"
 	            authDataRef="datasource_postgresql_auth">
 		<properties.postgresql
@@ -102,41 +81,27 @@
 		        databaseName="${datasource_database}"/>
 	</dataSource>
 
-	<!-- Removed bells-1.0 usage to suppress warnings: CWWKL0055W -->
-	<!-- <library id="library-hibernate"> -->
-	<library id="library-hibernate">
-		<fileset dir="${shared.resource.dir}/" includes="hibernate-core-6.6.4.Final.jar,jboss-logging-3.6.1.Final.jar"/>
-		<apiTypeVisibility>spec,ibm-api,third-party</apiTypeVisibility>
-		<classLoader>common</classLoader>
-	</library>
-
-	<!-- <bell libraryRef="library-hibernate"/> -->
-
-	<!--	<library id="library-jackson">-->
-	<!--		<fileset dir     ="${shared_resource_dir_jackson}/"-->
-	<!--		         includes="${shared_resource_file_jackson}"/>-->
-	<!--	</library>-->
-
-	<!--	<bell libraryRef="library-jackson"/>-->
-
-	<!--	<jsonbContainer id="jsonbContainer-jackson"-->
-	<!--					jsonbProvider="com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider">-->
-	<!--	</jsonbContainer>-->
-
 	<!-- Automatically expand WAR files and EAR files -->
 	<applicationManager autoExpand="true"/>
+
+	<!-- EclipseLink JPA Configuration - works perfectly with OpenLiberty -->
+	<jpa defaultPersistenceProvider="org.eclipse.persistence.jpa.PersistenceProvider"
+	     enableBeanValidation="true"
+	     enableJPA="true"
+	     enableJPAEnhancement="true"/>
 
 	<variable name="de.ruu.app.jeeeraaah.server.system.SystemResource_inMaintenance" value="false"/>
 
 	<webApplication
-			contextRoot="/"
+			contextRoot="/jeee-raaah"
 			location="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs.war"
 			name="r-uu.codespace.app.jeeeraaah.backend.api.ws.rs">
-		<classloader commonLibraryRef="library-hibernate"
-		             apiTypeVisibility="spec, ibm-api, third-party"
-		             delegation="parentFirst">
-			<fileset dir="${server.config.dir}/lib/global" includes="*.jar" scanInterval="5s"/>
-		</classloader>
+		<!--
+		     Clean classloader configuration without any shared libraries
+		     Hibernate and all dependencies are bundled directly in the WAR
+		-->
+		<classloader apiTypeVisibility="spec, ibm-api, third-party"
+		             delegation="parentFirst"/>
 	</webApplication>
 
 	<!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
